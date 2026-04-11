@@ -1,0 +1,3 @@
+tcms-api
+python-docx
+requests

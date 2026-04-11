@@ -1,0 +1,245 @@
+from pathlib import Path
+from typing import Any
+
+from docx import Document
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+from docx.shared import Cm, Pt
+
+import config
+from datetime import datetime
+from app.images import download_image, extract_image_paths
+from app.parser import clean_inline_formatting, split_case_text
+
+
+def _ensure_output_dir() -> Path:
+    output_dir = Path(config.OUTPUT_DIR)
+    output_dir.mkdir(exist_ok=True)
+    return output_dir
+
+
+def _set_paragraph_spacing(paragraph, before: int = 0, after: int = 0, line_spacing: float = 1.0) -> None:
+    fmt = paragraph.paragraph_format
+    fmt.space_before = Pt(before)
+    fmt.space_after = Pt(after)
+    fmt.line_spacing = line_spacing
+
+
+def _set_doc_style(document: Document) -> None:
+    style = document.styles["Normal"]
+    style.font.name = "Calibri"
+    style.font.size = Pt(10.5)
+
+    fmt = style.paragraph_format
+    fmt.space_before = Pt(0)
+    fmt.space_after = Pt(0)
+    fmt.line_spacing = 1.0
+
+    for section in document.sections:
+        section.top_margin = Cm(2)
+        section.bottom_margin = Cm(2)
+        section.left_margin = Cm(2)
+        section.right_margin = Cm(2)
+
+
+def _add_images_to_container(container, raw_text: str | None, width_cm: float) -> None:
+    image_paths = extract_image_paths(raw_text)
+
+    for image_path in image_paths:
+        local_file = download_image(image_path)
+
+        if local_file and local_file.exists():
+            try:
+                paragraph = container.add_paragraph()
+                run = paragraph.add_run()
+                run.add_picture(str(local_file), width=Cm(width_cm))
+                _set_paragraph_spacing(paragraph)
+            except Exception as exc:
+                container.add_paragraph(f"[Nie udało się wstawić obrazka: {local_file.name}]")
+                print(f"Błąd przy wstawianiu obrazka: {exc}")
+
+
+def _add_paragraph(document: Document, text: str) -> None:
+    cleaned = clean_inline_formatting(text)
+    if cleaned:
+        paragraph = document.add_paragraph(cleaned)
+        _set_paragraph_spacing(paragraph)
+
+    _add_images_to_container(document, text, width_cm=12)
+
+
+def _add_bullet(document: Document, text: str) -> None:
+    cleaned = clean_inline_formatting(text)
+    if cleaned:
+        paragraph = document.add_paragraph(style="List Bullet")
+        paragraph.add_run(cleaned)
+
+        fmt = paragraph.paragraph_format
+        fmt.left_indent = Cm(0.6)
+        fmt.first_line_indent = Cm(0)
+        fmt.space_before = Pt(0)
+        fmt.space_after = Pt(0)
+        fmt.line_spacing = 1.0
+
+    _add_images_to_container(document, text, width_cm=12)
+
+
+def _add_sub_bullet(document: Document, text: str) -> None:
+    cleaned = clean_inline_formatting(text)
+
+    if cleaned:
+        p = document.add_paragraph(f"- {cleaned}")  # <- kreska zamiast kropki
+
+        fmt = p.paragraph_format
+        fmt.left_indent = Cm(1.3)   # wcięcie (zostaje)
+        fmt.first_line_indent = Cm(0)
+        fmt.space_before = Pt(0)
+        fmt.space_after = Pt(0)
+        fmt.line_spacing = 1.0
+
+    _add_images_to_container(document, text, width_cm=12)
+
+
+from docx.shared import Cm
+
+
+def _set_column_width(table, col_idx: int, width_cm: float) -> None:
+    """Ustawia szerokość całej kolumny we wszystkich wierszach."""
+    for row in table.rows:
+        row.cells[col_idx].width = Cm(width_cm)
+
+
+def _is_steps_table(rows: list[list[str]]) -> bool:
+    """Sprawdza, czy to tabela kroków testowych."""
+    if not rows:
+        return False
+
+    header = [str(cell).strip().lower() for cell in rows[0]]
+    return len(header) >= 3 and header[0] == "krok"
+
+
+from docx import Document
+from docx.shared import Cm
+
+
+def _set_column_width(table, col_idx: int, width_cm: float) -> None:
+    for row in table.rows:
+        row.cells[col_idx].width = Cm(width_cm)
+
+
+def _is_steps_table(rows: list[list[str]]) -> bool:
+    if not rows:
+        return False
+
+    header = [str(cell).strip().lower() for cell in rows[0]]
+    return len(header) >= 3 and header[0] == "krok"
+
+
+def _add_table(document: Document, rows: list[list[str]]) -> None:
+    if not rows:
+        return
+
+    col_count = max(len(row) for row in rows)
+    table = document.add_table(rows=1, cols=col_count)
+    table.style = "Table Grid"
+    table.autofit = False
+
+    header_cells = table.rows[0].cells
+    for index, value in enumerate(rows[0]):
+        header_cells[index].text = clean_inline_formatting(value)
+
+    for row_data in rows[1:]:
+        row_cells = table.add_row().cells
+        for index, value in enumerate(row_data):
+            if index < len(row_cells):
+                row_cells[index].text = clean_inline_formatting(value)
+                _add_images_to_container(row_cells[index], value, width_cm=6.5)
+
+    if _is_steps_table(rows) and col_count >= 3:
+        # szerokość zbliżona do górnej tabeli
+        widths = [1.2, 8.1, 8.1]   # razem 17.4 cm
+        for col_idx, width in enumerate(widths):
+            _set_column_width(table, col_idx, width)
+
+    document.add_paragraph("")
+
+
+def _add_case_content(document: Document, raw_text: str | None) -> None:
+    blocks = split_case_text(raw_text)
+
+    for block in blocks:
+        block_type = block["type"]
+
+        if block_type == "heading":
+            document.add_paragraph(block["text"], style="Heading 3")
+        elif block_type == "paragraph":
+            _add_paragraph(document, block["text"])
+        elif block_type == "bullet":
+            _add_bullet(document, block["text"])
+        elif block_type == "sub_bullet":
+            _add_sub_bullet(document, block["text"])
+        elif block_type == "table":
+            _add_table(document, block["rows"])
+
+
+def _add_case_section(document: Document, case: dict[str, Any]) -> None:
+    case_id = case.get("id", "")
+    summary = case.get("summary", "Brak nazwy")
+    text = case.get("text", "Brak treści")
+
+    heading = document.add_paragraph(style="Heading 2")
+    heading.add_run(f"TC-{case_id}: {summary}")
+
+    info_table = document.add_table(rows=2, cols=2)
+    info_table.style = "Table Grid"
+    info_table.autofit = False
+
+    # ustaw szerokości kolumn
+    for row in info_table.rows:
+        row.cells[0].width = Cm(2.5)  # etykiety (ID, Nazwa)
+        row.cells[1].width = Cm(15)  # wartości
+
+    # wypełnienie danych
+    row1 = info_table.rows[0].cells
+    row1[0].text = "ID"
+    row1[1].text = str(case_id)
+
+    row2 = info_table.rows[1].cells
+    row2[0].text = "Nazwa"
+    row2[1].text = str(summary)
+
+    document.add_paragraph("")
+    _add_case_content(document, text)
+    document.add_paragraph("")
+
+
+def export_plan_to_docx(plan_name: str, plan_id: int, cases: list[dict[str, Any]]) -> Path:
+    document = Document()
+    _set_doc_style(document)
+
+    title = document.add_paragraph()
+    title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    title_run = title.add_run(f"Test Plan: {plan_name}")
+    title_run.bold = True
+    title_run.font.size = Pt(16)
+
+    subtitle = document.add_paragraph()
+    subtitle.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    subtitle.add_run(f"ID planu: {plan_id}")
+
+    summary = document.add_paragraph()
+    summary.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    summary.add_run(f"Liczba test case: {len(cases)}")
+
+    document.add_paragraph("")
+
+    for case in cases:
+        _add_case_section(document, case)
+
+    output_dir = _ensure_output_dir()
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    safe_name = plan_name.replace(" ", "_")
+
+    output_path = output_dir / f"{safe_name}_{plan_id}_{timestamp}.docx"
+    document.save(output_path)
+
+    return output_path
