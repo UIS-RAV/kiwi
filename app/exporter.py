@@ -236,6 +236,36 @@ def _group_cases_by_category(
 
     return grouped
 
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+
+
+def _add_table_of_contents(document):
+    """Dodaje spis treści do dokumentu Word."""
+    paragraph = document.add_paragraph()
+
+    run = paragraph.add_run()
+    fldChar = OxmlElement('w:fldChar')
+    fldChar.set(qn('w:fldCharType'), 'begin')
+
+    instrText = OxmlElement('w:instrText')
+    instrText.text = 'TOC \\o "1-2" \\h \\z \\u'
+
+    fldChar2 = OxmlElement('w:fldChar')
+    fldChar2.set(qn('w:fldCharType'), 'separate')
+
+    fldChar3 = OxmlElement('w:t')
+    fldChar3.text = "Spis treści (zaktualizuj w Wordzie)"
+
+    fldChar4 = OxmlElement('w:fldChar')
+    fldChar4.set(qn('w:fldCharType'), 'end')
+
+    run._r.append(fldChar)
+    run._r.append(instrText)
+    run._r.append(fldChar2)
+    run._r.append(fldChar3)
+    run._r.append(fldChar4)
+
 def export_plan_to_docx(
     tcms,
     plan_name: str,
@@ -261,6 +291,12 @@ def export_plan_to_docx(
 
     document.add_paragraph("")
 
+    toc_heading = document.add_paragraph(style="Heading 1")
+    toc_heading.add_run("Spis treści")
+    _add_table_of_contents(document)
+
+    document.add_page_break()
+
     grouped_cases = _group_cases_by_category(tcms, cases)
 
     for category_name in sorted(grouped_cases.keys()):
@@ -284,6 +320,7 @@ def export_plan_to_docx(
     return output_path
 
 def export_product_to_docx(
+    tcms,
     product_name: str,
     product_id: int,
     cases: list[dict[str, Any]],
@@ -315,8 +352,28 @@ def export_product_to_docx(
 
     document.add_paragraph("")
 
-    for case in cases:
-        _add_case_section(document, case)
+    toc_heading = document.add_paragraph()
+    toc_run = toc_heading.add_run("Spis treści")
+    toc_run.bold = True
+    toc_run.font.size = Pt(14)
+
+    _add_table_of_contents(document)
+
+    document.add_page_break()
+
+    grouped_cases = _group_cases_by_category(tcms, cases)
+
+    for current_category_name in sorted(grouped_cases.keys()):
+        category_cases = grouped_cases[current_category_name]
+        category_count = len(category_cases)
+
+        category_heading = document.add_paragraph(style="Heading 1")
+        category_heading.add_run(
+            f"Kategoria: {current_category_name} ({category_count} Test Cases)"
+        )
+
+        for case in sorted(category_cases, key=lambda x: x.get("id", 0)):
+            _add_case_section(document, case)
 
     output_dir = _ensure_output_dir()
 
@@ -327,7 +384,7 @@ def export_product_to_docx(
         safe_category_name = re.sub(r"[^a-zA-Z0-9]+", "_", category_name).strip("_")
         file_name = f"Test Cases - Projekt {safe_product_name} - Kategoria {safe_category_name}_{timestamp}.docx"
     else:
-        file_name = f"Test Cases - Projekt {safe_product_name}_(ID_{product_id})_{timestamp}.docx"
+        file_name = f"Test Cases - Projekt {safe_product_name}_{timestamp}.docx"
 
     output_path = output_dir / file_name
     document.save(output_path)

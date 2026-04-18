@@ -123,6 +123,7 @@ def main():
     print(f"Znaleziono {len(cases)} test case")
 
     output_file = export_product_to_docx(
+        tcms=tcms,
         product_name=product_name,
         product_id=selected_product_id,
         cases=cases,
