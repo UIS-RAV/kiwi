@@ -1,3 +1,4 @@
 tcms-api
 python-docx
 requests
+urllib3

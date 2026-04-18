@@ -86,8 +86,10 @@ def get_product_name(products, product_id):
     return f"Product {product_id}"
 
 
-def get_test_cases_from_product(tcms, product_id):
-    """Pobiera wszystkie TC z produktu: z planów i bez planów."""
+def get_test_cases_from_product(tcms, product_id, category_id=None):
+    """Pobiera wszystkie TC z produktu: z planów i bez planów.
+    Jeśli podano category_id, zwraca tylko TC z tej kategorii.
+    """
     unique_cases = {}
 
     # 1. TC z planów należących do produktu
@@ -98,9 +100,11 @@ def get_test_cases_from_product(tcms, product_id):
         cases = tcms.exec.TestCase.filter({"plan": plan_id})
 
         for case in cases:
-            unique_cases[case["id"]] = case
+            case_category_id = case.get("category")
+            if category_id is None or case_category_id == category_id:
+                unique_cases[case["id"]] = case
 
-    # 2. Pobierz wszystkie kategorie i wybierz te należące do produktu
+    # 2. Kategorie produktu
     categories = tcms.exec.Category.filter({})
     category_ids_for_product = {
         category["id"]
@@ -108,14 +112,59 @@ def get_test_cases_from_product(tcms, product_id):
         if category.get("product") == product_id
     }
 
-    # 3. Pobierz wszystkie TC i dołóż te,
-    # które są w kategoriach przypisanych do produktu
+    # 3. TC poza planami
     all_cases = tcms.exec.TestCase.filter({})
 
     for case in all_cases:
-        category_id = case.get("category")
+        case_category_id = case.get("category")
 
-        if category_id in category_ids_for_product:
-            unique_cases[case["id"]] = case
+        if case_category_id in category_ids_for_product:
+            if category_id is None or case_category_id == category_id:
+                unique_cases[case["id"]] = case
 
     return list(unique_cases.values())
+
+def get_categories(tcms):
+    """Pobiera wszystkie kategorie."""
+    return tcms.exec.Category.filter({})
+
+
+def get_categories_for_product(tcms, product_id):
+    """Pobiera kategorie tylko dla wybranego produktu."""
+    categories = tcms.exec.Category.filter({})
+    return [c for c in categories if c.get("product") == product_id]
+
+
+def show_categories(categories):
+    """Wyświetla listę kategorii."""
+    print("\nDostępne kategorie:\n")
+    for category in categories:
+        print(f"ID: {category['id']} | Nazwa: {category['name']}")
+
+
+def ask_for_category_id(categories):
+    """Pyta użytkownika o ID kategorii i sprawdza, czy istnieje."""
+    valid_ids = {category["id"] for category in categories}
+
+    while True:
+        user_input = input("\nPodaj ID kategorii: ").strip()
+
+        if not user_input.isdigit():
+            print("To nie jest liczba. Spróbuj ponownie.")
+            continue
+
+        category_id = int(user_input)
+
+        if category_id not in valid_ids:
+            print("Nie ma takiej kategorii na liście. Spróbuj ponownie.")
+            continue
+
+        return category_id
+
+
+def get_category_name(categories, category_id):
+    """Zwraca nazwę kategorii po ID."""
+    for category in categories:
+        if category["id"] == category_id:
+            return str(category["name"])
+    return f"Category {category_id}"

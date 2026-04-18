@@ -6,6 +6,7 @@ from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Cm, Pt
 
 import config
+import re
 from datetime import datetime
 from app.images import download_image, extract_image_paths
 from app.parser import clean_inline_formatting, split_case_text
@@ -244,19 +245,31 @@ def export_plan_to_docx(plan_name: str, plan_id: int, cases: list[dict[str, Any]
 
     return output_path
 
-def export_product_to_docx(product_name: str, product_id: int, cases: list[dict[str, Any]]) -> Path:
+def export_product_to_docx(
+    product_name: str,
+    product_id: int,
+    cases: list[dict[str, Any]],
+    category_name: str | None = None,
+) -> Path:
     document = Document()
     _set_doc_style(document)
 
+    title_text = f"Test Cases: Projekt {product_name}"
+    if category_name:
+        title_text += f" / Kategoria {category_name}"
+
     title = document.add_paragraph()
     title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
-    title_run = title.add_run(f"Test Cases: Projekt {product_name}")
+    title_run = title.add_run(title_text)
     title_run.bold = True
     title_run.font.size = Pt(16)
 
     subtitle = document.add_paragraph()
     subtitle.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
-    subtitle.add_run(f"ID projektu: {product_id}")
+    subtitle_text = f"ID projektu: {product_id}"
+    if category_name:
+        subtitle_text += f" | Kategoria: {category_name}"
+    subtitle.add_run(subtitle_text)
 
     summary = document.add_paragraph()
     summary.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
@@ -267,16 +280,16 @@ def export_product_to_docx(product_name: str, product_id: int, cases: list[dict[
     for case in cases:
         _add_case_section(document, case)
 
-    from datetime import datetime
-    import re
-
     output_dir = _ensure_output_dir()
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    safe_product_name = re.sub(r"[^a-zA-Z0-9]+", "_", product_name).strip("_")
 
-    safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", product_name).strip("_")
-
-    file_name = f"Test Cases - Projekt {safe_name}_(ID:{product_id})_{timestamp}.docx"
+    if category_name:
+        safe_category_name = re.sub(r"[^a-zA-Z0-9]+", "_", category_name).strip("_")
+        file_name = f"Test Cases - Projekt {safe_product_name} - Kategoria {safe_category_name}_{timestamp}.docx"
+    else:
+        file_name = f"Test Cases - Projekt {safe_product_name}_{timestamp}.docx"
 
     output_path = output_dir / file_name
     document.save(output_path)

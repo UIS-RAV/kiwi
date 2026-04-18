@@ -7,6 +7,10 @@ from app.services import (
     ask_for_product_id,
     get_product_name,
     get_test_cases_from_product,
+    get_categories_for_product,
+    show_categories,
+    ask_for_category_id,
+    get_category_name,
 )
 from app.exporter import export_product_to_docx
 
@@ -19,13 +23,25 @@ def parse_args():
     parser.add_argument(
         "--product-id",
         type=int,
-        help="ID produktu (project). Jeśli brak – tryb interaktywny.",
+        help="ID produktu. Jeśli brak – tryb interaktywny.",
     )
 
     parser.add_argument(
         "--list-products",
         action="store_true",
         help="Wyświetl listę produktów i zakończ.",
+    )
+
+    parser.add_argument(
+        "--category-id",
+        type=int,
+        help="ID kategorii do filtrowania.",
+    )
+
+    parser.add_argument(
+        "--choose-category",
+        action="store_true",
+        help="Po wyborze produktu pokaż kategorie i pozwól wybrać jedną interaktywnie.",
     )
 
     return parser.parse_args()
@@ -49,7 +65,6 @@ def main():
         print("Brak produktów.")
         return
 
-    # tylko lista
     if args.list_products:
         show_products(products)
         return
@@ -69,20 +84,56 @@ def main():
 
     product_name = get_product_name(products, selected_product_id)
 
+    # wybór kategorii
+    selected_category_id = None
+    selected_category_name = None
+
+    if args.choose_category or args.category_id is not None:
+        categories = get_categories_for_product(tcms, selected_product_id)
+
+        if not categories:
+            print("Brak kategorii dla tego produktu.")
+            return
+
+        if args.category_id is not None:
+            if not validate_category_id(categories, args.category_id):
+                print(f"Nie istnieje kategoria o ID {args.category_id} dla produktu {product_name}")
+                print("\nDostępne kategorie:\n")
+                show_categories(categories)
+                return
+
+            selected_category_id = args.category_id
+            selected_category_name = get_category_name(categories, selected_category_id)
+
+        elif args.choose_category:
+            show_categories(categories)
+            selected_category_id = ask_for_category_id(categories)
+            selected_category_name = get_category_name(categories, selected_category_id)
+
     print(f"\nPobieranie test case z produktu ID = {selected_product_id}...")
-    cases = get_test_cases_from_product(tcms, selected_product_id)
+    if selected_category_id is not None:
+        print(f"Filtr kategorii ID = {selected_category_id} ({selected_category_name})")
+
+    cases = get_test_cases_from_product(
+        tcms,
+        selected_product_id,
+        category_id=selected_category_id,
+    )
 
     print(f"Znaleziono {len(cases)} test case")
 
-    # 🔥 używamy tego samego eksportera co dla planów
     output_file = export_product_to_docx(
         product_name=product_name,
         product_id=selected_product_id,
         cases=cases,
+        category_name=selected_category_name,
     )
 
     print(f"\nGotowe. Plik zapisany jako: {output_file}")
 
+def validate_category_id(categories, category_id):
+    valid_ids = {c["id"] for c in categories}
+    return category_id in valid_ids
 
 if __name__ == "__main__":
     main()
