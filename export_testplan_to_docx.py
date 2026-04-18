@@ -69,6 +69,7 @@ def main() -> None:
     cases = get_test_cases_from_plan(tcms, selected_plan_id)
 
     output_file = export_plan_to_docx(
+        tcms=tcms,
         plan_name=plan_name,
         plan_id=selected_plan_id,
         cases=cases,

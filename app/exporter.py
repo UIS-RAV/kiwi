@@ -212,8 +212,36 @@ def _add_case_section(document: Document, case: dict[str, Any]) -> None:
     _add_case_content(document, text)
     document.add_paragraph("")
 
+def _group_cases_by_category(
+    tcms,
+    cases: list[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    """
+    Grupuje test case po kategorii.
+    Jeśli case ma tylko ID kategorii, pobiera nazwy kategorii z Kiwi.
+    """
+    grouped: dict[str, list[dict[str, Any]]] = {}
 
-def export_plan_to_docx(plan_name: str, plan_id: int, cases: list[dict[str, Any]]) -> Path:
+    categories = tcms.exec.Category.filter({})
+    category_map = {
+        category["id"]: category["name"]
+        for category in categories
+    }
+
+    for case in cases:
+        category_id = case.get("category")
+        category_name = category_map.get(category_id, "Bez kategorii")
+
+        grouped.setdefault(str(category_name), []).append(case)
+
+    return grouped
+
+def export_plan_to_docx(
+    tcms,
+    plan_name: str,
+    plan_id: int,
+    cases: list[dict[str, Any]],
+) -> Path:
     document = Document()
     _set_doc_style(document)
 
@@ -233,16 +261,26 @@ def export_plan_to_docx(plan_name: str, plan_id: int, cases: list[dict[str, Any]
 
     document.add_paragraph("")
 
-    for case in cases:
-        _add_case_section(document, case)
+    grouped_cases = _group_cases_by_category(tcms, cases)
+
+    for category_name in sorted(grouped_cases.keys()):
+        category_cases = grouped_cases[category_name]
+        category_count = len(category_cases)
+
+        category_heading = document.add_paragraph(style="Heading 1")
+        category_heading.add_run(
+            f"Kategoria: {category_name} ({category_count} Test Cases)"
+        )
+
+        for case in sorted(category_cases, key=lambda x: x.get("id", 0)):
+            _add_case_section(document, case)
 
     output_dir = _ensure_output_dir()
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    safe_name = plan_name.replace(" ", "_")
+    safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", plan_name).strip("_")
+    output_path = output_dir / f"{safe_name}_(ID_{plan_id})_{timestamp}.docx"
 
-    output_path = output_dir / f"{safe_name}_(ID:{plan_id})_{timestamp}.docx"
     document.save(output_path)
-
     return output_path
 
 def export_product_to_docx(
@@ -289,7 +327,7 @@ def export_product_to_docx(
         safe_category_name = re.sub(r"[^a-zA-Z0-9]+", "_", category_name).strip("_")
         file_name = f"Test Cases - Projekt {safe_product_name} - Kategoria {safe_category_name}_{timestamp}.docx"
     else:
-        file_name = f"Test Cases - Projekt {safe_product_name}_{timestamp}.docx"
+        file_name = f"Test Cases - Projekt {safe_product_name}_(ID_{product_id})_{timestamp}.docx"
 
     output_path = output_dir / file_name
     document.save(output_path)
