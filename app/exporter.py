@@ -239,7 +239,46 @@ def export_plan_to_docx(plan_name: str, plan_id: int, cases: list[dict[str, Any]
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     safe_name = plan_name.replace(" ", "_")
 
-    output_path = output_dir / f"{safe_name}_{plan_id}_{timestamp}.docx"
+    output_path = output_dir / f"{safe_name}_(ID:{plan_id})_{timestamp}.docx"
+    document.save(output_path)
+
+    return output_path
+
+def export_product_to_docx(product_name: str, product_id: int, cases: list[dict[str, Any]]) -> Path:
+    document = Document()
+    _set_doc_style(document)
+
+    title = document.add_paragraph()
+    title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    title_run = title.add_run(f"Test Cases: Projekt {product_name}")
+    title_run.bold = True
+    title_run.font.size = Pt(16)
+
+    subtitle = document.add_paragraph()
+    subtitle.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    subtitle.add_run(f"ID projektu: {product_id}")
+
+    summary = document.add_paragraph()
+    summary.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    summary.add_run(f"Liczba test case: {len(cases)}")
+
+    document.add_paragraph("")
+
+    for case in cases:
+        _add_case_section(document, case)
+
+    from datetime import datetime
+    import re
+
+    output_dir = _ensure_output_dir()
+
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+    safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", product_name).strip("_")
+
+    file_name = f"Test Cases - Projekt {safe_name}_(ID:{product_id})_{timestamp}.docx"
+
+    output_path = output_dir / file_name
     document.save(output_path)
 
     return output_path
