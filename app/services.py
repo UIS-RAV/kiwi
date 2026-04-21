@@ -168,3 +168,24 @@ def get_category_name(categories, category_id):
         if category["id"] == category_id:
             return str(category["name"])
     return f"Category {category_id}"
+
+def get_categories(tcms):
+    """Pobiera wszystkie kategorie."""
+    return tcms.exec.Category.filter({})
+
+
+def get_categories_for_product(tcms, product_id):
+    """Pobiera kategorie przypisane do wybranego produktu."""
+    categories = tcms.exec.Category.filter({})
+    return [category for category in categories if category.get("product") == product_id]
+
+
+def build_category_name_map(categories):
+    """
+    Buduje mapę:
+    nazwa_kategorii_lower -> pełny obiekt kategorii
+    """
+    result = {}
+    for category in categories:
+        result[str(category["name"]).strip().lower()] = category
+    return result

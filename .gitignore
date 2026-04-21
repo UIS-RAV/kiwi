@@ -4,5 +4,6 @@ __pycache__/
 downloaded_images/
 output/
 history/
+tests/
 .idea/
 *.iml
