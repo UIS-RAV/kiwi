@@ -390,3 +390,141 @@ def export_product_to_docx(
     document.save(output_path)
 
     return output_path
+
+def export_run_to_docx(
+    tcms,
+    run_name: str,
+    run_id: int,
+    executions: list[dict[str, Any]],
+) -> Path:
+    document = Document()
+    _set_doc_style(document)
+
+    title = document.add_paragraph()
+    title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    title_run = title.add_run(f"Test Run: {run_name}")
+    title_run.bold = True
+    title_run.font.size = Pt(16)
+
+    subtitle = document.add_paragraph()
+    subtitle.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    subtitle.add_run(f"ID Test Run: {run_id}")
+
+    summary = document.add_paragraph()
+    summary.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    summary.add_run(f"Liczba wykonań: {len(executions)}")
+
+    document.add_paragraph("")
+
+    toc_heading = document.add_paragraph()
+    toc_run = toc_heading.add_run("Spis treści")
+    toc_run.bold = True
+    toc_run.font.size = Pt(14)
+
+    _add_table_of_contents(document)
+    document.add_page_break()
+
+    statuses = tcms.exec.TestExecutionStatus.filter({})
+    status_map = {
+        status["id"]: status["name"]
+        for status in statuses
+    }
+
+    for execution in sorted(executions, key=lambda x: x.get("id", 0)):
+        _add_execution_section(document, tcms, execution, status_map)
+
+    output_dir = _ensure_output_dir()
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", run_name).strip("_")
+    output_path = output_dir / f"Test_Run_{safe_name}_ID-{run_id}_{timestamp}.docx"
+
+    document.save(output_path)
+    return output_path
+
+
+def _get_value_name(value) -> str:
+    if isinstance(value, dict):
+        return str(value.get("name") or value.get("value") or value.get("id") or "")
+    return str(value or "")
+
+
+def _add_execution_section(
+    document: Document,
+    tcms,
+    execution: dict[str, Any],
+    status_map: dict[int, str],
+) -> None:
+    case_id = execution.get("case")
+    execution_id = execution.get("id")
+
+    case = None
+
+    # Pobieramy pełny Test Case.
+    # W Twojej instancji TestCase.filter({"id": ...}) zwraca pełniejsze dane niż TestCase.get().
+    if case_id:
+        try:
+            found_cases = tcms.exec.TestCase.filter({"id": case_id})
+            if found_cases:
+                case = found_cases[0]
+        except Exception:
+            case = None
+
+    if case:
+        case_summary = case.get("summary", "") or f"TC {case_id}"
+        case_text = case.get("text", "")
+    else:
+        case_summary = execution.get("summary") or f"TC {case_id}"
+        case_text = ""
+
+    heading = document.add_paragraph(style="Heading 1")
+    heading.add_run(f"TC-{case_id}: {case_summary}")
+
+    info_table = document.add_table(rows=7, cols=2)
+    info_table.style = "Table Grid"
+    info_table.autofit = False
+
+    for row in info_table.rows:
+        row.cells[0].width = Cm(4)
+        row.cells[1].width = Cm(13.5)
+
+    rows = info_table.rows
+
+    rows[0].cells[0].text = "Execution ID"
+    rows[0].cells[1].text = str(execution_id)
+
+    rows[1].cells[0].text = "Test Case ID"
+    rows[1].cells[1].text = str(case_id)
+
+    rows[2].cells[0].text = "Nazwa testu"
+    rows[2].cells[1].text = str(case_summary)
+
+    status_id = execution.get("status")
+    status_name = status_map.get(status_id, str(status_id))
+
+    rows[3].cells[0].text = "Status"
+    rows[3].cells[1].text = status_name
+
+    rows[4].cells[0].text = "Tester"
+    rows[4].cells[1].text = str(
+        execution.get("tested_by__username")
+        or execution.get("tested_by")
+        or ""
+    )
+
+    rows[5].cells[0].text = "Data rozpoczęcia"
+    rows[5].cells[1].text = str(execution.get("start_date") or "")
+
+    rows[6].cells[0].text = "Data zakończenia"
+    rows[6].cells[1].text = str(execution.get("stop_date") or "")
+
+    actual_result = execution.get("actual_result") or execution.get("notes") or ""
+
+    if actual_result:
+        document.add_paragraph("Actual result", style="Heading 2")
+        _add_case_content(document, actual_result)
+
+    if case_text:
+        document.add_paragraph("Treść test case", style="Heading 2")
+        _add_case_content(document, case_text)
+
+    document.add_paragraph("")

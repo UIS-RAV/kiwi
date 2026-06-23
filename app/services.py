@@ -189,3 +189,56 @@ def build_category_name_map(categories):
     for category in categories:
         result[str(category["name"]).strip().lower()] = category
     return result
+
+def get_test_runs(tcms):
+    """Pobiera wszystkie Test Run."""
+    return tcms.exec.TestRun.filter({})
+
+
+def show_test_runs(runs):
+    """Wyświetla listę Test Run."""
+    print("\nDostępne Test Run:\n")
+    for run in runs:
+        print(
+            f"ID: {run.get('id')} | "
+            f"Nazwa: {run.get('summary') or run.get('name')} | "
+            f"Plan: {run.get('plan')} | "
+            f"Start: {run.get('start_date')} | "
+            f"Stop: {run.get('stop_date')}"
+        )
+
+
+def ask_for_run_id(runs):
+    """Pyta użytkownika o ID Test Run."""
+    valid_ids = {run["id"] for run in runs}
+
+    while True:
+        user_input = input("\nPodaj ID Test Run: ").strip()
+
+        if not user_input.isdigit():
+            print("To nie jest poprawne ID. Spróbuj ponownie.")
+            continue
+
+        run_id = int(user_input)
+
+        if run_id not in valid_ids:
+            print("Nie ma takiego Test Run na liście. Spróbuj ponownie.")
+            continue
+
+        return run_id
+
+
+def validate_run_id(runs, run_id):
+    return run_id in {run["id"] for run in runs}
+
+
+def get_run_name(runs, run_id):
+    for run in runs:
+        if run["id"] == run_id:
+            return str(run.get("summary") or run.get("name") or f"Test Run {run_id}")
+    return f"Test Run {run_id}"
+
+
+def get_test_executions_from_run(tcms, run_id):
+    """Pobiera wykonania testów z Test Run."""
+    return tcms.exec.TestExecution.filter({"run": run_id})
