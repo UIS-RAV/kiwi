@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie prezentacji wpisów w zakładce „Wszystkie” Rejestru umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą podgląd Rejestru umów
+* W Rejestrze umów istnieją wpisy
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka „Wszystkie” prezentuje wpisy ze wszystkich statusów
+* Tabela zawiera kolumny opisujące dane umowy
+* Dla kolumn wskazanych w dokumentacji dostępne są opcje sortowania i filtrowania
+* Dla wpisów z załącznikami widoczna jest ikona załącznika
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | System wyświetla Rejestr umów. |
+| 2 | Otwórz zakładkę „Wszystkie”. | Widoczna jest tabela wpisów rejestru umów. |
+| 3 | Zweryfikuj kolumny tabeli. | Tabela zawiera dane umów zgodne z dokumentacją. |
+| 4 | Zweryfikuj sortowanie i filtrowanie dostępnych kolumn. | Opcje sortowania i filtrowania są dostępne przy właściwych kolumnach. |
+| 5 | Zweryfikuj wpis posiadający załącznik. | Przy wpisie widoczna jest ikona załącznika. |

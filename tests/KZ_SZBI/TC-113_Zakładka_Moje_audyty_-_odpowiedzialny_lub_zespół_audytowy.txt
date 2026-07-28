@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zawartości zakładki „Moje audyty” dla użytkownika z rolą Audytor – wykonawca.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.5 Zakładki rejestru audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Istnieją audyty, w których użytkownik jest i nie jest przypisany jako Odpowiedzialny za zaplanowanie lub Zespół audytowy.
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka zawiera audyty, w których użytkownik jest przypisany jako Odpowiedzialny za zaplanowanie i/lub Zespół audytowy.
+* Nie zawiera audytów bez takiego przypisania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Moje audyty”. | Lista zostaje wyświetlona. |
+| 2 | Zweryfikuj audyt, w którym użytkownik jest Odpowiedzialnym za zaplanowanie. | Audyt jest widoczny. |
+| 3 | Zweryfikuj audyt, w którym użytkownik jest członkiem Zespołu audytowego. | Audyt jest widoczny. |
+| 4 | Zweryfikuj audyt, w którym użytkownik pełni obie role. | Audyt jest widoczny. |
+| 5 | Zweryfikuj audyt bez przypisania użytkownika. | Audyt nie jest widoczny w zakładce „Moje audyty”. |

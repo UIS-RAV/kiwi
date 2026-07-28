@@ -1,0 +1,28 @@
+NAZWA TESTU: Zwróć – wykonanie i historia
+
+<h2> Cel testu </h2>
+
+Weryfikacja przyjęcia zwrotu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.9 Zwróć
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Status zmienia się na na stanie.
+- Historia zawiera Odnotowano zwrot.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Zwróć. | Wyświetla się Przyjmij zwrot. |
+| 2 | Potwierdź operację przyciskiem wykonującym zwrot. | Operacja zostaje wykonana. |
+| 3 | Sprawdź status. | Ma wartość na stanie. |
+| 4 | Sprawdź historię. | Widoczny jest wpis Odnotowano zwrot. |

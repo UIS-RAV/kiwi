@@ -1,0 +1,35 @@
+ID: LOG-017
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Regresyjny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja możliwości zalogowania nowym hasłem po jego poprawnej zmianie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- Hasło użytkownika zostało poprawnie zmienione.
+- Znane jest nowe hasło.
+- Konto jest aktywne i niezablokowane.
+- Użytkownik nie posiada aktywnej sesji.
+
+<h2> Kryteria akceptacji </h2>
+
+- Nowe hasło umożliwia poprawne zalogowanie.
+- System wyświetla widok dostępny po zalogowaniu.
+- Użytkownik uzyskuje dostęp zgodny z posiadanymi uprawnieniami.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do ekranu logowania. | Ekran logowania jest widoczny. |
+| 2 | Wprowadzić nazwę użytkownika oraz nowe hasło. | Dane zostają wprowadzone. |
+| 3 | Wybrać „Zaloguj się”. | System poprawnie uwierzytelnia użytkownika. |
+| 4 | Zweryfikować widok po zalogowaniu. | Dostępne funkcje odpowiadają uprawnieniom użytkownika. |

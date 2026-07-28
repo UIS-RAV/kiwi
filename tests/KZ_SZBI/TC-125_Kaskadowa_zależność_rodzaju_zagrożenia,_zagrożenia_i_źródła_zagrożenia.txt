@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zależnych list wyboru w grupie „Zagrożenie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.6.4 Grupa Zagrożenia
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Słowniki rodzaju zagrożenia, zagrożenia i źródła zagrożenia zawierają powiązane wartości.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wybór rodzaju ogranicza listę zagrożeń.
+* Wybór zagrożenia ogranicza listę źródeł zagrożenia zgodnie z konfiguracją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz ryzyka z grupą „Zagrożenie”. | Widoczne są kolejne pola list wyboru pod jedną etykietą „Zagrożenie”. |
+| 2 | Wybierz rodzaj zagrożenia. | Wartość zostaje ustawiona. |
+| 3 | Rozwiń listę „Zagrożenie”. | Lista zawiera nazwy przypisane do wybranego rodzaju zagrożenia. |
+| 4 | Wybierz zagrożenie. | Wartość zostaje ustawiona. |
+| 5 | Rozwiń listę „Źródło zagrożenia”. | Lista zawiera wartości powiązane z wybranym zagrożeniem. |
+| 6 | Zmień rodzaj zagrożenia. | Lista zagrożeń zostaje dostosowana do nowego rodzaju. |

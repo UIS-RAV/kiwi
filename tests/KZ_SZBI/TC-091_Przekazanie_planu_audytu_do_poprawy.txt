@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przerwania procesu akceptacji i zwrotu planu audytu do poprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.8 Do poprawy
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący i bierze udział w procesie.
+* Istnieje audyt w statusie „w akceptacji”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlane jest ostrzeżenie o przerwaniu procesu akceptacji.
+* Status zmienia się na „planowany”.
+* Proces akceptacji zostaje zakończony.
+* Historia i powiadomienie są zgodne z dokumentacją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „w akceptacji”. | Menu zostaje wyświetlone. |
+| 2 | Wybierz „Do poprawy”. | Wyświetlone zostaje okno z pytaniem i ostrzeżeniem „Uwaga! Proces akceptacji zostanie przerwany.” |
+| 3 | Kliknij „Do poprawy”. | Operacja zostaje wykonana. |
+| 4 | Zweryfikuj status audytu. | Status wynosi „planowany”. |
+| 5 | Zweryfikuj, że proces akceptacji został zakończony. | Audyt nie pozostaje w zakładce „Do zatwierdzenia” dla zakończonego procesu. |
+| 6 | Otwórz historię audytu. | Historia zawiera wpis „Przekazano plan audytu do poprawy”. |
+| 7 | Zweryfikuj powiadomienie odpowiedzialnego. | Powiadomienie ma tytuł „Plan audytu {TYTUŁ} przesłano do poprawy” i opis wykonującego oraz stanowiska. |

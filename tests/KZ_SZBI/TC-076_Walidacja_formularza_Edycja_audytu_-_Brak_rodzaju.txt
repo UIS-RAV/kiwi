@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji formularza edycji audytu dla przypadku: Brak rodzaju.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.2 Edytuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie umożliwiającym edycję.
+
+<h2> Kryteria akceptacji </h2>
+
+* Niepoprawna zmiana nie zostaje zapisana.
+* Błędne pole zostaje oznaczone zgodnie ze standardem systemu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz funkcję „Edytuj audyt” dla audytu w statusie umożliwiającym edycję. | Formularz zostaje wyświetlony z aktualnymi danymi. |
+| 2 | Nie wybieraj wartości w polu „Rodzaj”. | W formularzu ustawiony zostaje wariant testowy. |
+| 3 | Kliknij „Zapisz”. | Pole „Rodzaj” zostaje oznaczone jako wymagane. |
+| 4 | Zweryfikuj, że formularz pozostaje otwarty. | Zmiana nie zostaje zapisana. |
+| 5 | Kliknij „Anuluj”. | Formularz zostaje zamknięty bez zapisania niepoprawnej zmiany. |

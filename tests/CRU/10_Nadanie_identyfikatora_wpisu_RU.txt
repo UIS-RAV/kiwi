@@ -1,0 +1,24 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności nadania identyfikatora wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Nowa umowa została poprawnie zapisana
+
+<h2> Kryteria akceptacji </h2>
+
+* Identyfikator wpisu składa się z symbolu RU, numeru kolejnego i roku
+* Elementy identyfikatora są połączone separatorem kropki
+* Identyfikator jest widoczny przy wpisie w Rejestrze umów
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Dodaj nową umowę do Rejestru umów. | Wpis zostaje utworzony. |
+| 2 | Odszukaj nowo utworzony wpis na liście. | Wpis jest widoczny w Rejestrze umów. |
+| 3 | Zweryfikuj wartość identyfikatora. | Identyfikator ma format RU.nr.rok, np. RU.1.2026. |

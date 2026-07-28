@@ -1,0 +1,30 @@
+NAZWA TESTU: Podgląd przesyłki – sekcja Skład chronologiczny i Dodaj do składu
+
+<h2> Cel testu </h2>
+
+Weryfikacja sekcji Skład chronologiczny w podglądzie.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.4.2 eKancelaria - przesyłki przychodzące – Podgląd; 2.4.3 Podgląd – Dodaj do składu; 2.5 Przesyłka przychodząca – Podgląd
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Sekcja jest widoczna dla każdego użytkownika i na każdym etapie.
+- Brak powiązania daje komunikat Brak powiązanego składu chronologicznego.
+- Powiązanie daje tabelę szczegółów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz podgląd przesyłki bez składu. | Widoczny jest komunikat Brak powiązanego składu chronologicznego. |
+| 2 | Otwórz podgląd przesyłki w składzie. | Widoczna jest tabela z Nazwa składu, Lokalizacja, Należy do, Nazwa pudła, Typ, Lokalizacja pudła i Status. |
+| 3 | Otwórz podgląd z poziomu sprawy. | Sekcja jest analogiczna. |
+| 4 | Zaloguj się jako zwykły użytkownik. | Sekcja nadal jest widoczna. |
+| 5 | Jako operator użyj Dodaj do składu dla dopuszczonej przesyłki. | Powstaje powiązanie, status na stanie i wpis historii. |

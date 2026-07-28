@@ -1,0 +1,29 @@
+NAZWA TESTU: Usuń pudło – dostępność, anulowanie i usunięcie
+
+<h2> Cel testu </h2>
+
+Weryfikacja funkcji Usuń pudło.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.3 Usuń pudło
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Usuń pudło jest dostępne tylko dla pustego pudła.
+- Usuń pudło wykonuje kasowanie twarde.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz menu pudła z obiektem. | Usuń pudło nie jest dostępne. |
+| 2 | Otwórz menu pustego pudła i wybierz Usuń pudło. | Widoczne jest Usunięcie pudła i pytanie z nazwą. |
+| 3 | Wybierz Anuluj. | Pudło pozostaje. |
+| 4 | Ponownie otwórz i wybierz Usuń pudło. | Pudło zostaje usunięte. |
+| 5 | Odśwież listę. | Rekord nie jest widoczny. |

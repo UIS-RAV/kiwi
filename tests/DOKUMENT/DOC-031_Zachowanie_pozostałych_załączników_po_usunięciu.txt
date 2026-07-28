@@ -1,0 +1,37 @@
+ID: DOC-031
+Moduł: DOKUMENT
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Zachowanie pozostałych załączników po usunięciu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: zachowanie pozostałych załączników po usunięciu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Usunięcie załącznika z dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia wymagane do wykonania operacji.
+- Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zachowanie pozostałych załączników po usunięciu” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
+- System wykonuje lub blokuje operację zgodnie z celem testu.
+- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
+- Dane nieobjęte operacją pozostają spójne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję związaną z operacją „Zachowanie pozostałych załączników po usunięciu”. | System udostępnia właściwy widok lub formularz. |
+| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
+| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
+| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |

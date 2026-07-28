@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie prezentacji powiązanego wpisu Rejestru umów w podglądzie dokumentu.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Dokument jest powiązany z wpisem w Rejestrze umów
+
+<h2> Kryteria akceptacji </h2>
+
+* W podglądzie dokumentu w sekcji Rejestr widoczna jest podsekcja „Rejestr Umów”
+* System prezentuje dane powiązanego wpisu w formie tabeli
+* Widoczny jest tylko jeden powiązany wpis
+* Dla wpisu dostępne są funkcje zgodnie z maszyną stanów i uprawnieniami użytkownika
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd dokumentu powiązanego z Rejestrem umów. | Podgląd dokumentu zostaje wyświetlony. |
+| 2 | Przejdź do sekcji „Rejestr”. | Widoczna jest podsekcja „Rejestr Umów”. |
+| 3 | Zweryfikuj prezentowane dane. | Widoczny jest powiązany wpis w formie tabeli. |
+| 4 | Rozwiń menu dostępnych funkcji przy wpisie. | Funkcje są dostępne zgodnie ze statusem wpisu i uprawnieniami użytkownika. |

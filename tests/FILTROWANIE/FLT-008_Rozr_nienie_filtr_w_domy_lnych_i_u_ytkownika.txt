@@ -1,0 +1,37 @@
+ID: FLT-008
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Funkcjonalny
+Priorytet: Średni
+Poziom: Rozszerzony
+
+<h1> Rozróżnienie filtrów domyślnych i użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja funkcjonalnego rozróżnienia filtrów domyślnych od filtrów ustawionych przez użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Wybrana sekcja lub zakładka posiada filtr domyślny.
+- Użytkownik może dodać dodatkowy filtr.
+- UI/UX pozostaje poza zakresem.
+
+<h2> Kryteria akceptacji </h2>
+
+- Filtr domyślny jest możliwy do odróżnienia od filtra użytkownika.
+- Dodanie filtra użytkownika nie usuwa automatycznie filtra domyślnego.
+- Lista uwzględnia oba rodzaje filtrów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do zakładki z filtrem domyślnym. | Lista otwiera się z aktywnym filtrem domyślnym. |
+| 2 | Dodać własne kryterium. | Pojawia się dodatkowy filtr. |
+| 3 | Porównać reprezentację obu filtrów. | Możliwe jest ich jednoznaczne rozpoznanie. |
+| 4 | Zweryfikować wyniki. | Lista uwzględnia oba aktywne filtry. |

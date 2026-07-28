@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji formularza odrzucenia publikacji w CRU bez uzasadnienia.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowAkceptant
+* Modal odrzucenia publikacji w CRU jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Pole uzasadnienia odrzucenia jest wymagane
+* System oznacza pole uzasadnienia jako wymagające uzupełnienia
+* Status wpisu nie zostaje zmieniony
+* Modal pozostaje otwarty do poprawienia danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Pozostaw pole uzasadnienia odrzucenia puste. | Pole uzasadnienia pozostaje puste. |
+| 2 | Kliknij „Odrzuć”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj formularz. | Pole uzasadnienia zostaje oznaczone jako wymagane. |
+| 4 | Zweryfikuj status wpisu. | Status wpisu nie ulega zmianie. |

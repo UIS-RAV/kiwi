@@ -1,0 +1,37 @@
+ID: DEK-071
+Moduł: DEKRETACJA
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Powiadomienie użytkowników z uprawnieniem Kancelaria o zwrocie </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: powiadomienie użytkowników z uprawnieniem kancelaria o zwrocie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Dekretacja — Zwroty i zapamiętywanie dekretacji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada wymagane uprawnienia.
+- przygotowano dokument i stanowiska właściwe dla scenariusza.
+- Środowisko posiada konfigurację, uprawnienie lub funkcję wymaganą dla testu warunkowego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję opisaną jako „Powiadomienie użytkowników z uprawnieniem Kancelaria o zwrocie”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
+| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
+| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Powiadomienie użytkowników z uprawnieniem Kancelaria o zwrocie” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Powiadomienie użytkowników z uprawnieniem Kancelaria o zwrocie” działa zgodnie z instrukcją.
+- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
+- dane nieobjęte operacją pozostają spójne.

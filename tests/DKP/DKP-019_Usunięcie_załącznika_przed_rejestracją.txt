@@ -1,0 +1,37 @@
+ID: DKP-019
+Moduł: DZIENNIK KORESPONDENCJI PRZYCHODZĄCEJ
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Usunięcie załącznika przed rejestracją </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: usunięcie załącznika przed rejestracją.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestrowanie dokumentu — Załączniki
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia wymagane do wykonania operacji.
+- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie załącznika przed rejestracją” jest dostępna dla uprawnionego użytkownika.
+- System wykonuje operację zgodnie z opisanym procesem.
+- Końcowy stan danych odpowiada wykonanej czynności.
+- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję związaną z operacją „Usunięcie załącznika przed rejestracją”. | System udostępnia właściwy widok lub formularz. |
+| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
+| 3 | Wykonać i zatwierdzić operację, o ile scenariusz nie dotyczy anulowania. | System przetwarza operację bez błędu technicznego. |
+| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |

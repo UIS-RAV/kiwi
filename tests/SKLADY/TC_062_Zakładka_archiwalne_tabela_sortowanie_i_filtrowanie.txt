@@ -1,0 +1,28 @@
+NAZWA TESTU: Zakładka archiwalne – tabela, sortowanie i filtrowanie
+
+<h2> Cel testu </h2>
+
+Weryfikacja listy przesyłek o statusach archiwalnych.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.13 Zakładka archiwalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczne są przesyłki archiwalne z pudeł pełne i niepełne odwzorowanie.
+- Tabela zawiera wszystkie kolumny opisane w dokumentacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz archiwalne. | Wyświetla się tabela. |
+| 2 | Sprawdź rekordy. | Widoczne są przesyłki archiwalne obu typów pudeł. |
+| 3 | Sprawdź kolumny. | Widoczne są dane przesyłki, składu, pudła, Typ pudła i Status. |
+| 4 | Sprawdź sortowanie i filtrowanie. | Działają zgodnie z dokumentacją. |

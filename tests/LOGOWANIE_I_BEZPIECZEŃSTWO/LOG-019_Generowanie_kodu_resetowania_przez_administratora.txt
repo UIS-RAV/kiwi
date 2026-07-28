@@ -1,0 +1,35 @@
+ID: LOG-019
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Administracyjny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja możliwości wygenerowania kodu resetowania hasła dla wybranego pracownika przez administratora.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Pracownicy → Zmiana hasła pracownika przez administratora
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Administrator posiada dostęp do sekcji „Administracja” → „Pracownicy”.
+- Istnieje pracownik, dla którego można wygenerować kod resetowania hasła.
+
+<h2> Kryteria akceptacji </h2>
+
+- Administrator może uruchomić funkcję generowania kodu.
+- System generuje kod resetowania dla wybranego pracownika.
+- Kod jest możliwy do przekazania użytkownikowi zgodnie z procedurą organizacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do „Administracja” → „Pracownicy”. | Wyświetlona zostaje lista pracowników. |
+| 2 | Odszukać i wybrać pracownika wymagającego resetu hasła. | Wyświetlane są dane wybranego pracownika. |
+| 3 | Uruchomić funkcję zmiany lub resetowania hasła pracownika. | System wyświetla opcje dostępne dla administratora. |
+| 4 | Wybrać generowanie kodu resetowania hasła. | System generuje kod powiązany z wybranym pracownikiem. |
+| 5 | Zapisać wygenerowany kod do użycia w dalszym teście. | Kod jest dostępny do weryfikacji w trybie „Konto zablokowane”. |

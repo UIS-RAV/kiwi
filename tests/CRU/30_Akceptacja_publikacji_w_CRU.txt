@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie akceptacji publikacji umowy w CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowAkceptant
+* Istnieje wpis w statusie „w akceptacji” przypisany do użytkownika
+
+<h2> Kryteria akceptacji </h2>
+
+* System wyświetla modal akceptacji publikacji umowy w CRU
+* Po akceptacji status wpisu zmienia się na „w przekazaniu”
+* W historii wpisu zostaje zapisana akcja akceptacji przekazania umowy do CRU
+* System wywołuje funkcję przekazania umowy do CRU
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Widoczne są wpisy oczekujące na akceptację. |
+| 2 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 3 | Kliknij „Akceptuj”. | System wyświetla modal akceptacji publikacji w CRU. |
+| 4 | Opcjonalnie uzupełnij komentarz do akceptacji. | Komentarz zostaje wpisany. |
+| 5 | Kliknij „Akceptuj”. | Status wpisu zmienia się na „w przekazaniu”. |
+| 6 | Otwórz historię zmian wpisu. | W historii widoczna jest akcja zaakceptowania przekazania umowy do CRU. |

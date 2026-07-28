@@ -1,0 +1,36 @@
+ID: FLT-013
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Zapamiętanie filtrów po przejściu do innej sekcji </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zapamiętywania wartości filtrów dla sekcji w czasie trwania sesji użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Dostępne są co najmniej dwie sekcje z listami.
+- W sekcji A można zastosować filtr.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po powrocie do sekcji A zastosowany filtr jest nadal aktywny.
+- Lista w sekcji A nadal odpowiada zapamiętanemu kryterium.
+- Filtr nie jest automatycznie przenoszony do sekcji B.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W sekcji A zastosować filtr. | Lista A zostaje przefiltrowana. |
+| 2 | Przejść do sekcji B. | Wyświetla się lista sekcji B. |
+| 3 | Powrócić do sekcji A. | Wyświetla się lista sekcji A. |
+| 4 | Zweryfikować aktywne filtry i wyniki. | Wcześniejszy filtr sekcji A jest nadal aktywny. |

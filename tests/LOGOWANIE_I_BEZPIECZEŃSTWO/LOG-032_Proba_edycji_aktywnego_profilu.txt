@@ -1,0 +1,35 @@
+ID: LOG-032
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny / Reguła biznesowa
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja braku możliwości edycji aktywnego profilu bezpieczeństwa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Hasła → Edytowanie profilu
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Istnieje aktywny profil bezpieczeństwa.
+- Znane są aktualne wartości profilu.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie umożliwia edycji aktywnego profilu.
+- Dane aktywnego profilu nie ulegają zmianie.
+- Reguła ograniczająca edycję do profilu nieaktywnego jest zachowana.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do „Administracja” → „Hasła”. | Lista profili jest widoczna. |
+| 2 | Wyświetlić aktywny profil. | Dane aktywnego profilu są widoczne. |
+| 3 | Sprawdzić dostępność funkcji edycji. | Funkcja jest niedostępna lub nie pozwala przejść do edycji. |
+| 4 | Jeżeli formularz edycji jest technicznie dostępny, spróbować zmienić i zapisać wartość. | System nie zapisuje zmiany aktywnego profilu. |
+| 5 | Ponownie wyświetlić profil. | Dane pozostają niezmienione. |

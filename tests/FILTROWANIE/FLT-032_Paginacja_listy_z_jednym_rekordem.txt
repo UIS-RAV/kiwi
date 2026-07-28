@@ -1,0 +1,34 @@
+ID: FLT-032
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Średni
+Poziom: Rozszerzony
+
+<h1> Paginacja listy z jednym rekordem </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zachowania listy i paginacji, gdy wynik zawiera dokładnie jeden rekord.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Przygotowano filtr lub dane dające dokładnie jeden wynik.
+
+<h2> Kryteria akceptacji </h2>
+
+- Lista prezentuje jeden rekord.
+- Nie powstają puste dodatkowe strony.
+- Kontrolki przechodzenia do kolejnych stron są nieaktywne lub nie powodują zmiany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować kryterium dające dokładnie jeden wynik. | Lista zawiera jeden rekord. |
+| 2 | Zweryfikować wskaźnik liczby stron. | Dostępna jest wyłącznie jedna strona. |
+| 3 | Spróbować przejść dalej. | Strona nie zmienia się. |
+| 4 | Zweryfikować rekord. | Rekord pozostaje widoczny i dostępny. |

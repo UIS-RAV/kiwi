@@ -1,0 +1,29 @@
+NAZWA TESTU: Wypożycz – Podmiot zewnętrzny
+
+<h2> Cel testu </h2>
+
+Weryfikacja wypożyczenia interesantowi i zapisu historii.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.6 Wypożycz; Uwagi_KW_20260708, pkt 5 i 6
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Pole Wypożyczający działa analogicznie jak Interesant przy rejestracji przesyłki.
+- Historia zapisuje właściwego interesanta i Dodatkowe informacje.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Wypożycz i zaznacz Podmiot zewnętrzny. | Pole Wypożyczający przechodzi w tryb interesanta. |
+| 2 | Wyszukaj i wybierz interesanta. | Wskazana zostaje właściwa osoba lub podmiot. |
+| 3 | Uzupełnij datę i Dodatkowe informacje. | Dane zostają przyjęte. |
+| 4 | Wybierz Wypożycz ze składu. | Operacja kończy się powodzeniem. |
+| 5 | Sprawdź historię. | Widoczny jest dokładnie wybrany interesant oraz Dodatkowe informacje. |

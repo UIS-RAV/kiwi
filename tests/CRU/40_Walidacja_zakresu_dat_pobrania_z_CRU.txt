@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji zakresu dat w formularzu pobierania danych z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Modal „Pobierz z CRU” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* System waliduje zakres dat zawarcia umowy
+* Data „od” musi być wcześniejsza niż data „do”
+* Błędnie wypełnione pole zostaje oznaczone zgodnie ze standardem systemu
+* Dane z CRU nie zostają pobrane przy błędnym zakresie dat
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Uzupełnij datę „od” późniejszą niż data „do”. | Formularz zawiera niepoprawny zakres dat. |
+| 2 | Kliknij „Pobierz”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj oznaczenie pól. | Pola zakresu dat zostają oznaczone jako wymagające poprawy. |
+| 4 | Zweryfikuj widok zakładki. | Lista umów z CRU nie zostaje pobrana. |

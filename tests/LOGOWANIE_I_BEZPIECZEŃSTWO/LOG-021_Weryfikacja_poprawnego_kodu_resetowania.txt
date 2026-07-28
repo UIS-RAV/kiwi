@@ -1,0 +1,34 @@
+ID: LOG-021
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnego kodu resetowania hasła i przejścia do formularza nadania nowego hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
+
+<h2> Warunki wstępne </h2>
+
+- Administrator wygenerował kod resetowania dla użytkownika.
+- Znane są nazwa użytkownika i aktualny kod.
+- Otwarty jest tryb „Konto zablokowane”.
+
+<h2> Kryteria akceptacji </h2>
+
+- System uznaje poprawny kod.
+- Po wybraniu „Sprawdź kod” system przechodzi do formularza nadania nowego hasła.
+- Kod jest stosowany do właściwego użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W polu „Nazwa użytkownika” wprowadzić nazwę użytkownika. | Nazwa zostaje wprowadzona. |
+| 2 | W polu „Kod zmiany hasła” wprowadzić kod wygenerowany przez administratora. | Kod zostaje wprowadzony. |
+| 3 | Wybrać przycisk „Sprawdź kod”. | System poprawnie weryfikuje kod. |
+| 4 | Zweryfikować wyświetlony widok. | System prezentuje formularz nadania nowego hasła dla właściwego użytkownika. |

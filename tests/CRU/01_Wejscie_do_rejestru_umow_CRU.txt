@@ -1,0 +1,23 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości przejścia do Rejestru umów z poziomu menu głównego systemu EZD.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą dostęp do Rejestru umów
+
+<h2> Kryteria akceptacji </h2>
+
+* Rejestr umów jest dostępny z poziomu menu Rejestry > Rejestr umów
+* System wyświetla widok Rejestru umów
+* Użytkownik widzi zakładki dostępne zgodnie z posiadanymi uprawnieniami
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu główne „Rejestry”. | Lista dostępnych rejestrów zostaje wyświetlona. |
+| 2 | Wybierz pozycję „Rejestr umów”. | System otwiera widok Rejestru umów. |
+| 3 | Zweryfikuj widok modułu. | Widoczne są zakładki i dane dostępne zgodnie z rolą użytkownika. |

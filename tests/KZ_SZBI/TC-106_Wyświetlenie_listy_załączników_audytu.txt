@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja okna „Załączniki audytu” i prezentowanych danych.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.20 Załączniki audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt z co najmniej jednym załącznikiem.
+
+<h2> Kryteria akceptacji </h2>
+
+* Okno zawiera kolumny Nazwa pliku, Typ załącznika i Rozmiar.
+* Dostępny jest przycisk Pobierz, ikona usuwania i przycisk Dodaj załącznik zgodnie z uprawnieniami i stanem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Kliknij ikonę załączników przy wybranym audycie. | Wyświetlone zostaje okno „Załączniki audytu”. |
+| 3 | Zweryfikuj kolumny tabeli. | Widoczne są kolumny „Nazwa pliku”, „Typ załącznika”, „Rozmiar” oraz kolumna z ikoną usuwania. |
+| 4 | Zweryfikuj funkcję „Pobierz” przy nazwie pliku. | Przycisk „Pobierz” jest dostępny. |
+| 5 | Zweryfikuj przycisk „Dodaj załącznik”. | Przycisk jest dostępny zgodnie z rolą i stanem audytu. |
+| 6 | Posortuj listę po nazwie pliku. | Lista zostaje uporządkowana po nazwie. |
+| 7 | Posortuj listę po typie załącznika. | Lista zostaje uporządkowana po typie. |
+| 8 | Posortuj listę po rozmiarze. | Lista zostaje uporządkowana po rozmiarze. |
+| 9 | Zamknij okno przyciskiem X. | Okno zostaje zamknięte. |

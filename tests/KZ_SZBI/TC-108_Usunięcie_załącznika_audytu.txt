@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja twardego usunięcia załącznika audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.20.1 Usuń załącznik audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w stanie umożliwiającym usunięcie załącznika.
+* Audyt posiada załącznik.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlane jest potwierdzenie z nazwą załącznika.
+* Po potwierdzeniu plik zostaje usunięty.
+* Historia i powiadomienia są zgodne z dokumentacją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz okno „Załączniki audytu”. | Lista załączników zostaje wyświetlona. |
+| 2 | Kliknij ikonę usuwania przy wybranym pliku. | Wyświetlone zostaje okno „Usunięcie załącznika audytu”. |
+| 3 | Zweryfikuj komunikat. | Komunikat zawiera nazwę usuwanego załącznika. |
+| 4 | Kliknij „Usuń”. | Plik zostaje usunięty z bazy, a lista załączników odświeżona. |
+| 5 | Zweryfikuj listę. | Usunięty plik nie jest widoczny. |
+| 6 | Otwórz historię audytu. | Widoczny jest wpis „Usunięcie załącznika {NAZWA_ZAŁĄCZNIKA}”. |
+| 7 | Zweryfikuj powiadomienia wymaganych osób. | Odpowiedzialny i, w odpowiednim wariancie, audytor wewnętrzny otrzymują powiadomienie o usunięciu załącznika. |

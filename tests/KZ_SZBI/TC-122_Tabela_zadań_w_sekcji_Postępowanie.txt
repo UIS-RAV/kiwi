@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja tabeli zadań powiązanych z ryzykiem w trybie postępowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.5 Postępowanie z ryzykiem
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Ryzyko posiada co najmniej dwa zadania postępowania.
+
+<h2> Kryteria akceptacji </h2>
+
+* Tabela zawiera kolumny Identyfikator / Tytuł, Zlecający i Status.
+* Kolumny Zlecający i Status umożliwiają sortowanie.
+* Identyfikator jest linkiem dla użytkownika z dostępem do zadania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd ryzyka i przejdź do sekcji „Postępowanie”. | Widoczna jest tabela zadań. |
+| 2 | Zweryfikuj kolumny. | Widoczne są „Identyfikator / Tytuł”, „Zlecający” i „Status”. |
+| 3 | Posortuj po kolumnie „Zlecający”. | Lista zostaje uporządkowana. |
+| 4 | Posortuj po kolumnie „Status”. | Lista zostaje uporządkowana. |
+| 5 | Dla zadania dostępnego użytkownikowi kliknij identyfikator. | Otwarty zostaje podgląd właściwego zadania. |
+| 6 | Wróć do ryzyka. | Sekcja „Postępowanie” nadal prezentuje listę powiązanych zadań. |

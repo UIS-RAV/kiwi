@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja funkcji powielania i usuwania pola dynamicznego w formularzu ryzyka.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.2 Dodaj ryzyko (krok 2)
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Wybrany kontekst zawiera pole oznaczone w słowniku „Powielenie = TAK”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępna jest ikona dodania kopii pola.
+* Można usunąć ostatnie pole dodane przez użytkownika.
+* Nie można usunąć pola podstawowego pochodzącego z konfiguracji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do kroku 2 dodawania ryzyka dla odpowiedniego kontekstu. | Formularz dynamiczny zostaje wyświetlony. |
+| 2 | Odszukaj pole z funkcją Powiel. | Przy polu dostępna jest ikona dodaj. |
+| 3 | Kliknij ikonę dodaj. | Pojawia się dodatkowa kopia całego pola. |
+| 4 | Ponownie kliknij ikonę dodaj. | Pojawia się kolejna kopia pola. |
+| 5 | Kliknij ikonę usuń. | Usunięta zostaje ostatnia kopia dodana przez użytkownika. |
+| 6 | Ponownie kliknij usuń. | Usunięta zostaje poprzednia kopia dodana przez użytkownika. |
+| 7 | Zweryfikuj pole podstawowe. | Pole podstawowe pozostaje i nie może zostać usunięte jako pole dodane przez konfigurację. |
+| 8 | Anuluj formularz. | Wpis nie zostaje utworzony. |

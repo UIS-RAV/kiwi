@@ -1,0 +1,35 @@
+<h2> Cel testu </h2>
+
+Weryfikacja uzupełnienia szczegółowego zakresu planowanego audytu w stanie „w trakcie” dla audytora wewnętrznego.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.12 Uzupełnij audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „w trakcie”.
+* Zespół audytowy określono jako audytor wewnętrzny.
+
+<h2> Kryteria akceptacji </h2>
+
+* Pola planu audytu są wyświetlane bez możliwości edycji.
+* Sekcja „Szczegółowy zakres planowanego audytu” jest dostępna.
+* Po zaznaczeniu wiersza pojawia się niewymagane pole wielolinijkowe.
+* Historia zawiera wpis „Uzupełnienie audytu”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz funkcję „Uzupełnij audyt”. | Wyświetlone zostaje okno „Uzupełnij audyt”. |
+| 2 | Zweryfikuj pola Tytuł, daty, Rodzaj, Podstawa, Zagadnienia, Czynności/procesy, Sposób, Dotyczy, Odpowiedzialny i Zespół audytowy. | Pola zawierają zapisane wartości i nie są edytowalne. |
+| 3 | Zweryfikuj sekcję „Szczegółowy zakres planowanego audytu”. | Sekcja jest widoczna dla audytora wewnętrznego i zawiera wartości wynikające z wybranych słowników. |
+| 4 | Zaznacz checkbox przy jednym wierszu szczegółowego zakresu. | Przy wierszu pojawia się pole tekstowe wielolinijkowe. |
+| 5 | Pozostaw pole tekstowe puste. | Brak treści jest dozwolony, ponieważ pole nie jest wymagane. |
+| 6 | Zaznacz kolejny wiersz i wprowadź komentarz. | Komentarz zostaje wpisany. |
+| 7 | Kliknij „Zapisz”. | Zmiany zostają zapisane, okno zamknięte, a ekran odświeżony. |
+| 8 | Ponownie otwórz „Uzupełnij audyt”. | Zapisane zaznaczenia i komentarz są widoczne. |
+| 9 | Otwórz historię audytu. | Widoczny jest wpis „Uzupełnienie audytu” z datą, pracownikiem i stanowiskiem. |

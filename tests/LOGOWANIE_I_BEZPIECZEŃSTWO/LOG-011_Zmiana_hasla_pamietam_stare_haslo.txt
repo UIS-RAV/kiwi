@@ -1,0 +1,39 @@
+ID: LOG-011
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnej zmiany hasła użytkownika w trybie „Pamiętam stare hasło”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Istnieje aktywne i niezablokowane konto użytkownika.
+- Znane jest aktualne hasło użytkownika.
+- Przygotowano nowe hasło zgodne z aktywnym profilem bezpieczeństwa.
+- Otwarty jest formularz zarządzania hasłem w trybie „Pamiętam stare hasło”.
+
+<h2> Kryteria akceptacji </h2>
+
+- System przyjmuje poprawne stare hasło.
+- System zapisuje nowe hasło zgodne z aktywnym profilem bezpieczeństwa.
+- Operacja nie powoduje zablokowania konta.
+- Użytkownik może następnie zalogować się przy użyciu nowego hasła.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W polu „Nazwa użytkownika” wprowadzić nazwę użytkownika. | Nazwa użytkownika zostaje wprowadzona. |
+| 2 | W polu „Stare hasło” wprowadzić aktualne hasło użytkownika. | Hasło zostaje wprowadzone i jest prezentowane w sposób maskowany. |
+| 3 | W polu „Nowe hasło” wprowadzić hasło zgodne z aktywnym profilem bezpieczeństwa. | Nowe hasło zostaje wprowadzone. |
+| 4 | W polu potwierdzenia nowego hasła ponownie wprowadzić tę samą wartość. | Obie wartości nowego hasła są zgodne. |
+| 5 | Zatwierdzić zmianę hasła. | System zapisuje nowe hasło i informuje o poprawnym wykonaniu operacji lub przechodzi do dalszego etapu procesu. |
+| 6 | Przejść do ekranu logowania i zalogować się nowym hasłem. | Użytkownik zostaje poprawnie zalogowany. |

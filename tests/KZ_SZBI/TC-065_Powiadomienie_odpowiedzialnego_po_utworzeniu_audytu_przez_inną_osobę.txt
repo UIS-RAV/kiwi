@@ -1,0 +1,34 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wysłania powiadomienia do użytkownika wskazanego jako Odpowiedzialny za zaplanowanie, gdy audyt utworzy inny użytkownik.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.1 Zaplanuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Użytkownik A wykonuje test.
+* Użytkownik B zostanie wskazany jako Odpowiedzialny za zaplanowanie i jest inny niż użytkownik A.
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik B otrzymuje powiadomienie o tytule „Zaplanowano audyt”.
+* Opis powiadomienia wskazuje imię i nazwisko wykonującego oraz stanowisko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zaloguj się jako użytkownik A. | Użytkownik A jest zalogowany. |
+| 2 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 3 | Uzupełnij wszystkie wymagane pola. | Formularz jest kompletny. |
+| 4 | W polu „Odpowiedzialny za zaplanowanie” wybierz użytkownika B. | Użytkownik B zostaje wskazany. |
+| 5 | Kliknij „Zapisz”. | Audyt zostaje utworzony. |
+| 6 | Zaloguj się jako użytkownik B lub otwórz jego powiadomienia. | Dostępna jest lista powiadomień użytkownika B. |
+| 7 | Zweryfikuj nowe powiadomienie. | Powiadomienie ma tytuł „Zaplanowano audyt”. |
+| 8 | Zweryfikuj opis powiadomienia. | Opis ma postać „przez {IMIĘ NAZWISKO} na {STANOWISKO}” zgodnie z danymi użytkownika A. |

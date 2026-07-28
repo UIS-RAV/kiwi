@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja edycji parametrów planu audytu w statusie „w akceptacji” bez zmiany statusu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.2 Edytuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie „w akceptacji”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Funkcja „Edytuj audyt” jest dostępna.
+* Zmiana zostaje zapisana.
+* Status pozostaje „w akceptacji”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Dla audytu w statusie „w akceptacji” wybierz „Edytuj audyt”. | Formularz edycji zostaje wyświetlony. |
+| 3 | Zmień dozwolone pole. | Nowa wartość zostaje ustawiona. |
+| 4 | Kliknij „Zapisz”. | Zmiana zostaje zapisana. |
+| 5 | Zweryfikuj status w rejestrze. | Status pozostaje „w akceptacji”. |
+| 6 | Otwórz historię zmian. | Widoczny jest wpis modyfikacji z wartościami przed i po zmianie. |

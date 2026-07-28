@@ -1,0 +1,36 @@
+ID: DEK-064
+Moduł: DEKRETACJA
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Powrót dokumentu do stanowiska, które dokonało dekretacji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: powrót dokumentu do stanowiska, które dokonało dekretacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Dekretacja — Zwroty i zapamiętywanie dekretacji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada wymagane uprawnienia.
+- przygotowano dokument i stanowiska właściwe dla scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję opisaną jako „Powrót dokumentu do stanowiska, które dokonało dekretacji”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
+| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
+| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Powrót dokumentu do stanowiska, które dokonało dekretacji” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Powrót dokumentu do stanowiska, które dokonało dekretacji” działa zgodnie z instrukcją.
+- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
+- dane nieobjęte operacją pozostają spójne.

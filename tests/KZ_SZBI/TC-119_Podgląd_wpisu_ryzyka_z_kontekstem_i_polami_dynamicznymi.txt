@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja sekcji „Informacje podstawowe” w podglądzie wpisu ryzyka.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.3 Podgląd wpisu w rejestrze ryzyka
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Istnieje wpis ryzyka utworzony z kontekstem i polami dynamicznymi.
+
+<h2> Kryteria akceptacji </h2>
+
+* Podgląd prezentuje kontekst szacowania ryzyka.
+* Prezentuje pola dynamiczne właściwe dla kontekstu.
+* Prezentuje pola stałe Prawdopodobieństwo, Skutek, Poziom i Status.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd wpisu ryzyka. | Wyświetlony zostaje podgląd wpisu. |
+| 2 | Przejdź do sekcji „Informacje podstawowe”. | Sekcja jest widoczna. |
+| 3 | Zweryfikuj pole kontekstu. | Widoczna jest wartość wybrana podczas tworzenia. |
+| 4 | Zweryfikuj pola dynamiczne. | Widoczne są nazwy i wartości właściwe dla wybranego kontekstu. |
+| 5 | Zweryfikuj pola stałe. | Widoczne są Prawdopodobieństwo, Skutek, Poziom i Status z zapisanymi wartościami. |

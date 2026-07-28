@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości ponowienia publikacji umowy w CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis w statusie „błąd przekazania”
+
+<h2> Kryteria akceptacji </h2>
+
+* System wyświetla modal ponowienia publikacji umowy w CRU
+* Po potwierdzeniu status wpisu zmienia się na „w przekazaniu”
+* W historii wpisu zostaje zapisana akcja ponowienia przekazania umowy do CRU
+* System wywołuje funkcję przekazania umowy do CRU
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Odszukaj wpis w statusie „błąd przekazania”. | Wpis jest widoczny na liście. |
+| 2 | Rozwiń menu podręczne wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 3 | Kliknij „Ponów publikację”. | System wyświetla modal ponowienia publikacji. |
+| 4 | Kliknij „Ponów publikację”. | Status wpisu zmienia się na „w przekazaniu”. |
+| 5 | Otwórz historię zmian wpisu. | W historii widoczna jest akcja ponowienia przekazania umowy do CRU. |

@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja, że lista „Zagadnienia, które będzie obejmował audyt” jest uzależniona od wybranej podstawy „ISO/IEC 27001”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.3.3 Zagadnienia audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* W słowniku Zagadnienia audytu istnieją pozycje przypisane do testowanej podstawy.
+
+<h2> Kryteria akceptacji </h2>
+
+* Po wyborze podstawy prezentowane są zagadnienia przypisane do tej podstawy.
+* Zagadnienia niepowiązane z wybraną podstawą nie są prezentowane jako wartości tej grupy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 2 | W polu „Podstawa audytu” zaznacz „ISO/IEC 27001”. | Wartość „ISO/IEC 27001” zostaje zaznaczona. |
+| 3 | Przejdź do pola „Zagadnienia, które będzie obejmował audyt”. | Wyświetlane są wartości zależne od zaznaczonej podstawy. |
+| 4 | Zweryfikuj, że wyświetlane zagadnienia są przypisane do podstawy „ISO/IEC 27001”. | Lista zawiera zagadnienia zdefiniowane w dokumentacji dla testowanej podstawy. |
+| 5 | Zmień wybór podstawy na inną wartość. | Lista zagadnień zostaje dostosowana do nowej podstawy. |
+| 6 | Anuluj formularz. | Formularz zostaje zamknięty bez zapisu. |

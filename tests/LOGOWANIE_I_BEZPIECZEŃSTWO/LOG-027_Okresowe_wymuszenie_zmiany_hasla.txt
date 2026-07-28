@@ -1,0 +1,36 @@
+ID: LOG-027
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Procesowy / Pozytywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja okresowego wymuszenia zmiany hasła zgodnie z ustawieniami aktywnego profilu bezpieczeństwa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji → Hasła
+
+<h2> Warunki wstępne </h2>
+
+- Aktywny profil bezpieczeństwa określa okres ważności hasła.
+- Istnieje konto użytkownika, którego hasło osiągnęło wymagany wiek.
+- Konto jest aktywne i niezablokowane.
+- Znane jest aktualne hasło oraz przygotowano nowe hasło zgodne z profilem.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po poprawnym uwierzytelnieniu system wymusza zmianę przeterminowanego hasła.
+- Użytkownik nie może kontynuować zwykłej pracy bez wykonania wymaganej zmiany.
+- Po zapisaniu poprawnego nowego hasła użytkownik może kontynuować pracę.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do ekranu logowania i wprowadzić poprawne dane użytkownika z przeterminowanym hasłem. | Dane zostają wprowadzone. |
+| 2 | Wybrać „Zaloguj się”. | System rozpoznaje konieczność okresowej zmiany hasła. |
+| 3 | Zweryfikować wyświetlenie formularza zmiany hasła. | System wymusza podanie nowego hasła przed kontynuowaniem pracy. |
+| 4 | Wprowadzić nowe hasło zgodne z aktywnym profilem oraz jego potwierdzenie. | Dane spełniają wymagania profilu. |
+| 5 | Zatwierdzić zmianę. | System zapisuje nowe hasło i umożliwia dalszą pracę. |

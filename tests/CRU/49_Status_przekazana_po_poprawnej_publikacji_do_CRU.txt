@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie ustawienia statusu „przekazana” po poprawnym przekazaniu umowy do CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Istnieje wpis zaakceptowany do publikacji w CRU
+* Wpis znajduje się w statusie „w przekazaniu”
+* Integracja z CRU zwraca poprawną odpowiedź dla przekazania umowy
+
+<h2> Kryteria akceptacji </h2>
+
+* System przekazuje dane umowy do CRU
+* Po poprawnym przekazaniu status wpisu zmienia się na „przekazana”
+* Dla pierwszego przekazania numer systemowy z CRU zostaje zapisany przy wpisie
+* Wpis pozostaje dostępny w Rejestrze umów
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zaakceptuj publikację wpisu w CRU. | Status wpisu zmienia się na „w przekazaniu”. |
+| 2 | Poczekaj na zakończenie przekazania do CRU. | System wykonuje przekazanie danych umowy. |
+| 3 | Zweryfikuj status wpisu. | Status wpisu zmienia się na „przekazana”. |
+| 4 | Zweryfikuj dane wpisu. | Numer systemowy z CRU jest zapisany przy wpisie. |

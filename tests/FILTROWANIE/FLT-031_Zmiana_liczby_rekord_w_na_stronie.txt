@@ -1,0 +1,35 @@
+ID: FLT-031
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zmiana liczby rekordów na stronie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zmiany liczby rekordów prezentowanych na jednej stronie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera więcej rekordów niż największa z dwóch testowanych wartości strony.
+- Dostępny jest wybór liczby rekordów na stronie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wyborze nowej wartości liczba widocznych rekordów odpowiada ustawieniu, z wyjątkiem ostatniej strony.
+- Liczba stron zostaje przeliczona.
+- Lista pozostaje kompletna i nie zawiera duplikatów wynikających ze zmiany limitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapisać bieżący limit i liczbę stron. | Stan początkowy jest znany. |
+| 2 | Wybrać inną liczbę rekordów na stronie. | Lista zostaje odświeżona. |
+| 3 | Policzyć widoczne rekordy. | Liczba odpowiada nowemu limitowi. |
+| 4 | Zweryfikować liczbę stron. | Paginacja została przeliczona zgodnie z nowym limitem. |

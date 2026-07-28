@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zakresu dostępu użytkownika z rolą RejestrUmowAkceptant.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowAkceptant
+* Istnieje wpis przekazany do akceptacji
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik widzi Rejestr umów
+* Użytkownik może wyświetlić szczegóły wpisu
+* Użytkownik może zaakceptować publikację wpisu w CRU
+* Użytkownik może odrzucić publikację wpisu w CRU
+* Użytkownik może wyświetlić historię zmian i listę załączników
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | Rejestr umów jest widoczny. |
+| 2 | Otwórz zakładkę „Do zatwierdzenia”. | Widoczne są wpisy przekazane do akceptacji. |
+| 3 | Rozwiń menu podręczne wpisu. | Dostępne są akcje „Akceptuj” i „Odrzuć”. |
+| 4 | Zweryfikuj dostępność podglądu, historii i listy załączników. | Funkcje informacyjne są dostępne. |

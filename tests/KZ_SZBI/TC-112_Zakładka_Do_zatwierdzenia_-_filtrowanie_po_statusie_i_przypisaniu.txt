@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zawartości zakładki „Do zatwierdzenia”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.5 Zakładki rejestru audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący.
+* Użytkownik jest przypisany do części procesów akceptacji.
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka zawiera audyty o statusie „w akceptacji” i „wykonany w akceptacji”.
+* Widoczne są tylko audyty, dla których użytkownik jest przypisany do aktualnego stanu procesu akceptacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Lista zostaje wyświetlona. |
+| 2 | Zweryfikuj statusy wszystkich widocznych wpisów. | Każdy wpis ma status „w akceptacji” albo „wykonany w akceptacji”. |
+| 3 | Zweryfikuj przypisanie użytkownika do procesu dla każdego wpisu. | Użytkownik jest przypisany do aktualnego stanu procesu akceptacji. |
+| 4 | Sprawdź audyt w odpowiednim statusie, do którego użytkownik nie jest przypisany. | Audyt nie jest widoczny w zakładce użytkownika. |

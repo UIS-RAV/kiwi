@@ -1,0 +1,29 @@
+NAZWA TESTU: Zmień planowaną datę zwrotu – zapis i historia
+
+<h2> Cel testu </h2>
+
+Weryfikacja zapisu nowej daty.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.10 Zmień planowaną datę zwrotu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Nowa data zostaje zapisana.
+- Historia zawiera zmianę z daty poprzedniej na nową.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Zmiana daty zwrotu. | Widoczna jest dotychczasowa data. |
+| 2 | Wprowadź nową poprawną datę. | Pole zostaje uzupełnione. |
+| 3 | Wybierz Zapisz. | Nowa data zostaje zapisana. |
+| 4 | Sprawdź listę. | Widoczna jest nowa data. |
+| 5 | Sprawdź historię. | Opis zawiera Zmiana planowej daty zwrotu z {DATA POPRZEDNIA} na {DATA WSKAZANA NA FORMULARZU}. |

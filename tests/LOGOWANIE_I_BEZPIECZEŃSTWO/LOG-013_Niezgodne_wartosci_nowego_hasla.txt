@@ -1,0 +1,37 @@
+ID: LOG-013
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Walidacja / Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia zmiany hasła, gdy nowe hasło i jego potwierdzenie mają różne wartości.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywne i niezablokowane konto użytkownika.
+- Znane jest aktualne hasło.
+- Otwarty jest tryb „Pamiętam stare hasło”.
+- Przygotowano dwie różne wartości spełniające wymagania profilu bezpieczeństwa.
+- Instrukcja nie określa literalnej treści komunikatu walidacyjnego.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie zapisuje zmiany hasła.
+- Niezgodność wartości nowego hasła zostaje wykryta.
+- Dotychczasowe hasło pozostaje aktywne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić nazwę użytkownika oraz poprawne stare hasło. | Dane użytkownika zostają wprowadzone. |
+| 2 | W polu „Nowe hasło” wprowadzić pierwszą poprawną wartość. | Pierwsza wartość zostaje wprowadzona. |
+| 3 | W polu potwierdzenia wprowadzić inną poprawną wartość. | Wartości w polach nowego hasła są różne. |
+| 4 | Zatwierdzić formularz. | System odrzuca operację i nie zapisuje nowego hasła. |
+| 5 | Zalogować się dotychczasowym hasłem. | Dotychczasowe hasło nadal umożliwia logowanie. |

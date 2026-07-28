@@ -1,0 +1,27 @@
+NAZWA TESTU: Dodaj do składu – wyszukanie po kodzie kreskowym
+
+<h2> Cel testu </h2>
+
+Weryfikacja uzupełnienia Liczba dziennika na podstawie Kod kreskowy przesyłki.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.2 Dodaj do składu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Poprawny kod kreskowy uzupełnia Liczba dziennika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Dodaj do składu. | Wyświetla się okno Dodaj do składu. |
+| 2 | Wprowadź Kod kreskowy przesyłki. | System identyfikuje przesyłkę. |
+| 3 | Sprawdź Liczba dziennika. | Pole zostaje uzupełnione właściwą wartością. |
+| 4 | Rozwiń Skład chronologiczny. | Widoczne są dostępne składy typu przesyłka przychodząca. |

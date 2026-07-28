@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji formularza dodania załącznika bez wskazania pliku.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Modal „Dodaj załącznik” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* System waliduje wymagane pole pliku
+* Pole wymagające poprawy zostaje oznaczone zgodnie ze standardem systemu
+* Załącznik nie zostaje dodany do wpisu
+* Modal pozostaje otwarty do poprawienia danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Nie wskazuj żadnego pliku w formularzu. | Pole pliku pozostaje puste. |
+| 2 | Kliknij „Dodaj”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj oznaczenie pola. | Pole pliku zostaje oznaczone jako wymagające uzupełnienia. |
+| 4 | Zweryfikuj listę załączników. | Nowy załącznik nie zostaje dodany do wpisu. |

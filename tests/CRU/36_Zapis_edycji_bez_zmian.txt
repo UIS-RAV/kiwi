@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zachowania systemu po zapisaniu formularza edycji bez wprowadzania zmian.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis w statusie umożliwiającym edycję
+
+<h2> Kryteria akceptacji </h2>
+
+* Modal edycji zostaje zamknięty po kliknięciu „Zapisz”
+* Widok rejestru zostaje odświeżony
+* Dane wpisu nie ulegają zmianie
+* Status wpisu nie ulega zmianie
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz edycję wybranego wpisu. | System wyświetla modal edycji wpisu. |
+| 2 | Nie zmieniaj żadnych danych w formularzu. | Formularz pozostaje bez zmian. |
+| 3 | Kliknij „Zapisz”. | Modal zostaje zamknięty, a widok odświeżony. |
+| 4 | Zweryfikuj dane i status wpisu. | Dane oraz status wpisu pozostają bez zmian. |

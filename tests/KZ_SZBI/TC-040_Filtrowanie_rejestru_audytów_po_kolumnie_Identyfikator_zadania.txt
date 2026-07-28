@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja filtrowania tabeli audytów po kolumnie „Identyfikator zadania”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4 Audyty
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru audytów.
+* W rejestrze istnieją wpisy umożliwiające weryfikację filtra.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępna jest opcja filtrowania po kolumnie „Identyfikator zadania”.
+* Po zastosowaniu filtra wyświetlane są wpisy spełniające kryterium.
+* Po usunięciu filtra ponownie wyświetlana jest pełna lista.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Tabela audytów zostaje wyświetlona. |
+| 2 | Otwórz filtr kolumny „Identyfikator zadania”. | Wyświetlony zostaje mechanizm filtrowania. |
+| 3 | Wprowadź lub wybierz kryterium odpowiadające istniejącemu wpisowi. | Kryterium zostaje ustawione. |
+| 4 | Zastosuj filtr. | Tabela zostaje ograniczona do wpisów spełniających kryterium. |
+| 5 | Zweryfikuj wszystkie widoczne wiersze. | Każdy widoczny wpis spełnia ustawione kryterium. |
+| 6 | Usuń ustawione kryterium. | Filtr zostaje wyczyszczony. |
+| 7 | Zweryfikuj listę. | Ponownie wyświetlana jest lista bez ograniczenia wynikającego z testowanego filtra. |

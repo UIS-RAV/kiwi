@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie obsługi opcji „Umowa na czas nie określony” w formularzu dodawania umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Checkbox „Umowa na czas nie określony” jest domyślnie odznaczony
+* Po uzupełnieniu wymaganych danych umowa może zostać zapisana z oznaczeniem czasu nieokreślonego
+* Wpis zostaje utworzony w Rejestrze umów
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zweryfikuj domyślny stan checkboxa „Umowa na czas nie określony”. | Checkbox jest odznaczony. |
+| 2 | Zaznacz checkbox „Umowa na czas nie określony”. | Opcja zostaje zaznaczona. |
+| 3 | Uzupełnij pozostałe wymagane pola formularza. | Formularz zawiera wymagane dane. |
+| 4 | Kliknij „Zapisz”. | Umowa zostaje zapisana w Rejestrze umów. |

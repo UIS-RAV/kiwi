@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie odrzucenia publikacji umowy w CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowAkceptant
+* Istnieje wpis w statusie „w akceptacji” przypisany do użytkownika
+
+<h2> Kryteria akceptacji </h2>
+
+* System wyświetla modal odrzucenia publikacji w CRU
+* Pole uzasadnienia odrzucenia jest wymagane
+* Po odrzuceniu status wpisu wraca do właściwego statusu zgodnie z maszyną stanów
+* W historii wpisu zostaje zapisana akcja odrzucenia przekazania umowy do CRU wraz z uzasadnieniem
+* Publikacja umowy w CRU nie zostaje zrealizowana
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Widoczne są wpisy oczekujące na akceptację. |
+| 2 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 3 | Kliknij „Odrzuć”. | System wyświetla modal odrzucenia publikacji w CRU. |
+| 4 | Uzupełnij uzasadnienie odrzucenia. | Uzasadnienie zostaje wpisane. |
+| 5 | Kliknij „Odrzuć”. | Status wpisu zostaje zmieniony zgodnie z maszyną stanów. |
+| 6 | Otwórz historię zmian wpisu. | W historii widoczna jest akcja odrzucenia publikacji wraz z uzasadnieniem. |

@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości edycji wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis w statusie umożliwiającym edycję
+
+<h2> Kryteria akceptacji </h2>
+
+* Modal edycji wpisu zostaje otwarty
+* Użytkownik może zmienić dane wpisu zgodnie z formularzem
+* Po zapisaniu zmian system zapisuje zmodyfikowane dane
+* W historii wpisu zostaje zapisana modyfikacja z informacją o zmienionych polach
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Edytuj”. | System otwiera modal edycji wpisu. |
+| 3 | Zmień wybrane dane formularza. | Dane zostają zmienione w formularzu. |
+| 4 | Kliknij „Zapisz”. | System zapisuje zmiany i odświeża widok. |
+| 5 | Otwórz historię zmian wpisu. | W historii widoczna jest informacja o zmodyfikowanych polach. |

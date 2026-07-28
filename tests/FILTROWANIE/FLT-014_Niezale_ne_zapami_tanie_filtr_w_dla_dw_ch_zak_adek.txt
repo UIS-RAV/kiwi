@@ -1,0 +1,36 @@
+ID: FLT-014
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Niezależne zapamiętanie filtrów dla dwóch zakładek </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja niezależnego zapamiętywania filtrów dla różnych zakładek w tej samej sesji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Sekcja zawiera co najmniej dwie zakładki z możliwością filtrowania.
+- Dostępne są różne wartości testowe dla obu zakładek.
+
+<h2> Kryteria akceptacji </h2>
+
+- Każda zakładka zachowuje własny zestaw filtrów.
+- Przejście między zakładkami nie nadpisuje filtrów drugiej zakładki.
+- Wyniki każdej zakładki odpowiadają jej własnym kryteriom.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W zakładce A zastosować filtr A. | Filtr A jest aktywny. |
+| 2 | Przejść do zakładki B i zastosować filtr B. | Filtr B jest aktywny w zakładce B. |
+| 3 | Powrócić do zakładki A. | Filtr A jest nadal aktywny. |
+| 4 | Ponownie przejść do zakładki B. | Filtr B jest nadal aktywny. |

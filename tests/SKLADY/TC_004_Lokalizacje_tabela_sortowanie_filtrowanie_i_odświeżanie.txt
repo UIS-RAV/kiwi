@@ -1,0 +1,30 @@
+NAZWA TESTU: Lokalizacje – tabela, sortowanie, filtrowanie i odświeżanie
+
+<h2> Cel testu </h2>
+
+Weryfikacja widoku Lokalizacje, kolumn, sortowania, filtrowania i odświeżania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1 Zakładka Lokalizacje
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Tabela zawiera kolumny: Lp., Nazwa, Adres, menu podręczne.
+- Sortowanie i filtrowanie są dostępne zgodnie z dokumentacją: Nazwa, Adres.
+- Funkcja odśwież ponownie pobiera listę.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz ORGANIZACJA -> Składy chronologiczne (zarządzanie) -> Lokalizacje. | Wyświetla się właściwy widok. |
+| 2 | Sprawdź nagłówki tabeli. | Widoczne są kolumny: Lp., Nazwa, Adres, menu podręczne. |
+| 3 | Sprawdź sortowanie dostępnych kolumn. | Kolejność danych zmienia się zgodnie z wybranym sortowaniem. |
+| 4 | Sprawdź filtrowanie. | Lista zawęża się zgodnie z filtrami: Nazwa, Adres. |
+| 5 | Użyj odśwież. | Lista zostaje ponownie pobrana. |

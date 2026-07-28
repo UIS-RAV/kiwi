@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja edycji wpisu ryzyka z wyborem kontekstu w kroku 1 i polami dynamicznymi w kroku 2.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.4 Edytuj wpis w rejestrze ryzyka
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Istnieje wpis ryzyka.
+
+<h2> Kryteria akceptacji </h2>
+
+* Formularz edycji jest podzielony na dwa okna.
+* Po zapisie wpis zostaje zmodyfikowany i wyświetlony w podglądzie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd wpisu ryzyka. | Podgląd zostaje wyświetlony. |
+| 2 | W sekcji „Informacje podstawowe” kliknij „Edytuj”. | Wyświetlone zostaje okno „Edytuj ryzyko (krok 1)”. |
+| 3 | Zweryfikuj pole kontekstu. | Pole jest wymagane i zasilane słownikiem kontekstów. |
+| 4 | Wybierz kontekst i kliknij „Dalej”. | Wyświetlone zostaje okno „Edytuj ryzyko (krok 2)”. |
+| 5 | Zweryfikuj pola dynamiczne i stałe. | Pola odpowiadają wybranemu kontekstowi; widoczne są też Prawdopodobieństwo, Skutek, Poziom i Status. |
+| 6 | Zmień co najmniej jedną wartość dynamiczną. | Nowa wartość zostaje wybrana. |
+| 7 | Zmień co najmniej jedno pole stałe. | Nowa wartość zostaje ustawiona. |
+| 8 | Kliknij „Zapisz”. | Walidacja przechodzi, wpis zostaje zmodyfikowany i wyświetlony w podglądzie. |
+| 9 | Zweryfikuj zmienione wartości. | Podgląd zawiera nowe wartości. |

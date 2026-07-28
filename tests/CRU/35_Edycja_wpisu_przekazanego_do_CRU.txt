@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zmiany statusu wpisu po edycji umowy wcześniej przekazanej do CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis w statusie „przekazana”
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik może edytować wpis w statusie „przekazana”
+* Po zapisaniu zmian status wpisu zmienia się na „przekazana stara wersja”
+* W historii wpisu zostaje zapisana modyfikacja danych
+* Zmieniona wersja wpisu może zostać ponownie przekazana do publikacji w CRU
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Odszukaj wpis w statusie „przekazana”. | Wpis jest widoczny na liście. |
+| 2 | Otwórz edycję wpisu. | System wyświetla modal edycji wpisu. |
+| 3 | Zmień wybrane dane formularza. | Dane zostają zmienione. |
+| 4 | Kliknij „Zapisz”. | System zapisuje zmiany. |
+| 5 | Zweryfikuj status wpisu. | Status wpisu zmienia się na „przekazana stara wersja”. |
+| 6 | Rozwiń menu podręczne wpisu. | Dostępna jest funkcja „Publikuj w CRU”. |

@@ -1,0 +1,36 @@
+ID: FLT-006
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Funkcjonalny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Prezentacja aktywnych filtrów jako kafelków </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja prezentacji zastosowanych kryteriów jako osobnych kafelków na pasku aktywnych filtrów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Na liście zastosowano co najmniej dwa filtry.
+- Ocena estetyki pozostaje poza zakresem.
+
+<h2> Kryteria akceptacji </h2>
+
+- Każde aktywne kryterium jest reprezentowane osobnym kafelkiem.
+- Liczba kafelków odpowiada liczbie zastosowanych kryteriów.
+- Każdy kafelek można powiązać z właściwym kryterium.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dwa różne kryteria filtrowania. | Lista zostaje przefiltrowana. |
+| 2 | Odszukać pasek aktywnych filtrów. | Pasek jest widoczny. |
+| 3 | Policzyć kafelki filtrów. | Widoczne są dwa oddzielne kafelki. |
+| 4 | Porównać kafelki z kryteriami. | Każde kryterium ma własną reprezentację. |

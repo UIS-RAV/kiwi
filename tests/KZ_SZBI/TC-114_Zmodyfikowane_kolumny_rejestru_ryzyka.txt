@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zmian w kolumnach tabeli rejestru ryzyka.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.1 Podgląd rejestru ryzyka – dostępne wpisy
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* W rejestrze istnieją wpisy.
+
+<h2> Kryteria akceptacji </h2>
+
+* Kolumny „Cel organizacji” i „Kategoria ryzyka” nie są prezentowane.
+* Dodana jest kolumna „Kontekst szacowania ryzyka”.
+* Nowa kolumna umożliwia sortowanie i filtrowanie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr ryzyka. | Tabela zostaje wyświetlona. |
+| 2 | Zweryfikuj nagłówki tabeli. | Kolumny „Cel organizacji” i „Kategoria ryzyka” nie są widoczne. |
+| 3 | Zweryfikuj kolumnę „Kontekst szacowania ryzyka”. | Kolumna jest widoczna. |
+| 4 | Posortuj tabelę po nowej kolumnie. | Dane zostają uporządkowane. |
+| 5 | Ustaw filtr w nowej kolumnie. | Tabela zostaje ograniczona do wpisów spełniających kryterium. |
+| 6 | Wyczyść filtr. | Pełna lista zostaje przywrócona. |

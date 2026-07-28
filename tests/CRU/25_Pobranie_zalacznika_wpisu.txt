@@ -1,0 +1,24 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości pobrania załącznika wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą podgląd listy załączników
+* Wpis w Rejestrze umów posiada co najmniej jeden załącznik
+
+<h2> Kryteria akceptacji </h2>
+
+* Lista załączników jest dostępna dla wpisu
+* Dla załącznika dostępny jest przycisk „Pobierz”
+* Plik załącznika może zostać pobrany przez użytkownika
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz listę załączników wybranego wpisu. | System wyświetla modal listy załączników. |
+| 2 | Kliknij „Pobierz” przy wybranym załączniku. | System uruchamia pobieranie pliku. |
+| 3 | Zweryfikuj pobrany plik. | Plik załącznika zostaje pobrany. |

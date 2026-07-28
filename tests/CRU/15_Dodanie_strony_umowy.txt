@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości dodania kolejnej strony umowy w formularzu dodawania umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Pierwsza strona umowy jest zawsze dostępna
+* Przycisk „Dodaj stronę umowy” jest dostępny na ostatniej stronie umowy
+* System dodaje kolejną sekcję strony umowy
+* Dodana strona umowy może zostać uzupełniona i zapisana
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do sekcji stron umowy. | Widoczna jest pierwsza strona umowy. |
+| 2 | Kliknij „Dodaj stronę umowy”. | System dodaje kolejną sekcję strony umowy. |
+| 3 | Uzupełnij wymagane dane dodanej strony. | Dane strony umowy są uzupełnione. |
+| 4 | Zapisz formularz. | Umowa zostaje zapisana wraz z dodaną stroną umowy. |

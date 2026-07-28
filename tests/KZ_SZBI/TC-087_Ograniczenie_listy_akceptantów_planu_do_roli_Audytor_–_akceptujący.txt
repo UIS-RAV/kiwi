@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja, że do procesu akceptacji planu można wskazać wyłącznie użytkowników z rolą Audytor – akceptujący.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.4 Do akceptacji
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie „planowany”.
+* W systemie istnieją użytkownicy z rolą i bez roli Audytor – akceptujący.
+
+<h2> Kryteria akceptacji </h2>
+
+* Lista akceptantów zawiera użytkowników z rolą Audytor – akceptujący.
+* Użytkownicy bez tej roli nie są możliwi do wskazania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz funkcję „Do akceptacji” dla planowanego audytu. | Wyświetlone zostaje okno przekazania planu do akceptacji. |
+| 2 | Otwórz listę użytkowników możliwych do wskazania jako akceptanci. | Lista zostaje wyświetlona. |
+| 3 | Wyszukaj użytkownika posiadającego rolę Audytor – akceptujący. | Użytkownik jest dostępny do wyboru. |
+| 4 | Wyszukaj użytkownika nieposiadającego tej roli. | Użytkownik nie jest dostępny do wskazania jako akceptant. |
+| 5 | Zamknij okno bez uruchamiania procesu. | Status audytu pozostaje „planowany”. |

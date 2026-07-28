@@ -1,0 +1,36 @@
+<h2> Cel testu </h2>
+
+Weryfikacja edycji audytu w statusie „planowany”, zapisu zmodyfikowanych wartości oraz szczegółowego wpisu w historii.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.2 Edytuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie „planowany”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Zmiany zostają zapisane.
+* Status pozostaje „planowany”.
+* Historia zawiera listę zmienionych pól z wartościami przed i po modyfikacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Otwórz menu audytu w statusie „planowany” i wybierz „Edytuj audyt”. | Wyświetlone zostaje okno „Edycja audytu” z uzupełnionymi danymi. |
+| 3 | Zmień tytuł na inną wartość mieszczącą się w limicie 256 znaków. | Nowy tytuł zostaje wpisany. |
+| 4 | Zmień co najmniej jedno dodatkowe pole dozwolone do edycji. | Nowa wartość zostaje ustawiona. |
+| 5 | Kliknij „Zapisz”. | Formularz przechodzi walidację, dane zostają zapisane i okno zostaje zamknięte. |
+| 6 | Zweryfikuj odświeżony wiersz audytu. | Widoczne są zmienione wartości. |
+| 7 | Zweryfikuj status audytu. | Status pozostaje „planowany”. |
+| 8 | Otwórz „Historia zmian”. | Wyświetlona zostaje historia. |
+| 9 | Zweryfikuj wpis modyfikacji. | Wpis zawiera datę, pracownika, stanowisko i opis „Modyfikacja audytu w zakresie”. |
+| 10 | Zweryfikuj szczegóły opisu. | Opis wylicza zmienione pola w formacie zmiany wartości z wartości przed modyfikacją na wartość po modyfikacji. |

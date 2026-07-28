@@ -1,0 +1,36 @@
+ID: LOG-033
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Administracyjny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia nieaktywnego profilu bezpieczeństwa po potwierdzeniu operacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Hasła → Usuwanie profilu
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Istnieje profil bezpieczeństwa, który nie jest aktywny.
+- Profil został przeznaczony wyłącznie do tego testu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja usunięcia jest dostępna dla nieaktywnego profilu.
+- System wymaga potwierdzenia operacji.
+- Po potwierdzeniu profil zostaje usunięty.
+- Usunięty profil nie jest widoczny na liście.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do listy profili bezpieczeństwa. | Lista profili jest widoczna. |
+| 2 | Wybrać nieaktywny profil przeznaczony do usunięcia. | Wyświetlane są dane profilu. |
+| 3 | Uruchomić funkcję usuwania. | System wyświetla prośbę o potwierdzenie. |
+| 4 | Potwierdzić usunięcie. | System usuwa profil. |
+| 5 | Wyszukać profil na liście. | Profil nie jest dostępny. |

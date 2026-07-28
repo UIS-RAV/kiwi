@@ -1,0 +1,35 @@
+ID: FLT-029
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Powrót do poprzedniej strony listy </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja powrotu z kolejnej strony do strony poprzedniej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik znajduje się na stronie o numerze większym niż 1.
+- Znana jest zawartość strony poprzedniej.
+
+<h2> Kryteria akceptacji </h2>
+
+- Wybranie poprzedniej strony przywraca wcześniejszy zestaw rekordów.
+- Wskaźnik aktywnej strony zostaje zaktualizowany.
+- Nie następuje utrata ani dublowanie danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapisać wybrane rekordy aktualnej strony. | Zawartość jest znana. |
+| 2 | Wybrać przejście do poprzedniej strony. | Wyświetla się wcześniejsza strona. |
+| 3 | Zweryfikować numer strony. | Wskaźnik odpowiada poprzedniej stronie. |
+| 4 | Porównać rekordy z wcześniej zapisaną zawartością. | Wyświetlony zestaw jest prawidłowy. |

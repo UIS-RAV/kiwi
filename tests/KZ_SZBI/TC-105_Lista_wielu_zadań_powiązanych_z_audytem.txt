@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja okna modalnego z listą zadań, gdy z audytem powiązano więcej niż jedno zadanie.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.19 Lista zadań w audycie
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Audyt jest powiązany z co najmniej dwoma zadaniami.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępna jest ikona/funkcja listy zadań.
+* Okno zawiera kolumny Identyfikator, Tytuł i Status.
+* Kolumny umożliwiają sortowanie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Widoczny jest audyt z wieloma zadaniami. |
+| 2 | Kliknij ikonę/funkcję listy zadań. | Wyświetlone zostaje okno „Zadania w audycie”. |
+| 3 | Zweryfikuj kolumny tabeli. | Widoczne są kolumny „Identyfikator”, „Tytuł” i „Status”. |
+| 4 | Zweryfikuj liczbę wierszy. | Lista zawiera wszystkie zadania powiązane z audytem. |
+| 5 | Posortuj po kolumnie „Identyfikator”. | Lista zostaje uporządkowana. |
+| 6 | Posortuj po kolumnie „Tytuł”. | Lista zostaje uporządkowana. |
+| 7 | Posortuj po kolumnie „Status”. | Lista zostaje uporządkowana. |
+| 8 | Dla zadania dostępnego użytkownikowi kliknij identyfikator. | Otwarty zostaje podgląd właściwego zadania. |
+| 9 | Wróć do okna i zamknij je przyciskiem X. | Okno zostaje zamknięte. |

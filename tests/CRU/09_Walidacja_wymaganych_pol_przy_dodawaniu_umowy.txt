@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji wymaganych pól formularza dodawania umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* System wykonuje walidację wymaganych pól po kliknięciu „Zapisz”
+* Błędnie zwalidowane pola zostają oznaczone zgodnie ze standardem systemu
+* Wpis w Rejestrze umów nie zostaje utworzony
+* Modal pozostaje otwarty do poprawienia danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Pozostaw niewypełnione wybrane pola wymagane formularza. | Formularz zawiera braki w wymaganych danych. |
+| 2 | Kliknij „Zapisz”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj oznaczenie pól. | Pola wymagające poprawy są oznaczone zgodnie ze standardem systemu. |
+| 4 | Zweryfikuj listę wpisów w rejestrze. | Nowy wpis nie został utworzony. |

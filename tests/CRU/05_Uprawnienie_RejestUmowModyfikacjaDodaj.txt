@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zakresu dostępu użytkownika z rolą RejestUmowModyfikacjaDodaj.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* W Rejestrze umów istnieje co najmniej jeden wpis
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik widzi Rejestr umów
+* Użytkownik może dodać nową umowę
+* Użytkownik może edytować wpis
+* Użytkownik może opublikować wpis w CRU
+* Użytkownik może usunąć wpis zgodnie z maszyną stanów
+* Użytkownik może dodać, wyświetlić i usunąć załącznik
+* Użytkownik może ponowić publikację dla wpisu w statusie błędu przekazania
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | Rejestr umów jest widoczny. |
+| 2 | Zweryfikuj dostępność przycisku „Dodaj umowę”. | Przycisk „Dodaj umowę” jest dostępny. |
+| 3 | Rozwiń menu podręczne wpisu. | Widoczne są funkcje modyfikacji dostępne zgodnie z rolą i statusem wpisu. |
+| 4 | Zweryfikuj dostępność funkcji obsługi załączników. | Funkcje dodania, listy i usunięcia załączników są dostępne zgodnie z uprawnieniami. |

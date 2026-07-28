@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przejścia audytu ze stanu „w trakcie” do stanu „wykonany”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.10 Wykonaj
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „w trakcie”.
+* Użytkownik posiada uprawnienie do realizacji audytu.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „wykonany”.
+* Data zakończenia zostaje ustawiona na datę i godzinę wykonania akcji.
+* Historia zawiera wpis „Audyt oznaczono jako wykonany”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „w trakcie”. | Dostępna jest funkcja „Wykonaj”. |
+| 2 | Wybierz „Wykonaj”. | Wyświetlone zostaje pytanie „Czy na pewno chcesz wykonać audytu {IDENTYFIKATOR AUDYTU}?” |
+| 3 | Kliknij „Wykonaj”. | Operacja zostaje wykonana. |
+| 4 | Zweryfikuj status audytu. | Status wynosi „wykonany”. |
+| 5 | Zweryfikuj datę zakończenia. | Ustawiona jest data i godzina wykonania akcji. |
+| 6 | Otwórz historię audytu. | Historia zawiera wpis „Audyt oznaczono jako wykonany” z wymaganymi danymi. |

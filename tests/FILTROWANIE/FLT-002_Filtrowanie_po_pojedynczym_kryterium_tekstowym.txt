@@ -1,0 +1,37 @@
+ID: FLT-002
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Filtrowanie po pojedynczym kryterium tekstowym </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczenia listy po zastosowaniu jednego tekstowego kryterium filtrowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Lista zawiera rekordy pasujące i niepasujące do przygotowanej wartości tekstowej.
+- Formularz filtrowania zawiera pole tekstowe.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wybraniu „Szukaj” lista zawiera wyłącznie rekordy spełniające kryterium.
+- Rekordy niespełniające kryterium nie są prezentowane.
+- Aktywny filtr jest widoczny na pasku filtrów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Wprowadzić przygotowaną wartość do pola tekstowego. | Wartość zostaje wprowadzona. |
+| 3 | Wybrać „Szukaj”. | System odświeża listę zgodnie z kryterium. |
+| 4 | Zweryfikować wszystkie widoczne rekordy. | Każdy widoczny rekord spełnia zastosowane kryterium. |
+| 5 | Zweryfikować pasek aktywnych filtrów. | Zastosowane kryterium jest widoczne jako aktywny filtr. |

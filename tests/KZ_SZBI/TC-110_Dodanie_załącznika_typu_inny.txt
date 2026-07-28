@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dodania pliku typu „inny” do audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.20.2 Dodaj załącznik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie umożliwiającym dodanie załącznika.
+* Dostępny jest plik testowy na dysku.
+
+<h2> Kryteria akceptacji </h2>
+
+* Plik zostaje dodany z typem „inny”.
+* Lista załączników i historia zostają zaktualizowane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz okno „Załączniki audytu”. | Lista zostaje wyświetlona. |
+| 2 | Kliknij „Dodaj załącznik”. | Formularz zostaje wyświetlony. |
+| 3 | Wskaż plik z dysku. | Plik zostaje wskazany. |
+| 4 | Wybierz typ „inny”. | Typ zostaje wybrany. |
+| 5 | Zapisz załącznik. | Załącznik zostaje dodany. |
+| 6 | Zweryfikuj listę. | Nowy wiersz zawiera prawidłową nazwę, typ „inny” i rozmiar. |
+| 7 | Zweryfikuj historię. | Widoczny jest wpis dodania załącznika. |

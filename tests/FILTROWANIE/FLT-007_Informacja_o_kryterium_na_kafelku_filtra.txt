@@ -1,0 +1,36 @@
+ID: FLT-007
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Funkcjonalny
+Priorytet: Średni
+Poziom: Funkcjonalny
+
+<h1> Informacja o kryterium na kafelku filtra </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja możliwości rozpoznania kryterium reprezentowanego przez kafelek aktywnego filtra.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Na pasku filtrów znajduje się co najmniej jeden aktywny kafelek.
+- Test nie ocenia estetyki sposobu prezentacji.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wskazaniu kafelka system prezentuje informację o kryterium.
+- Informacja odpowiada wartości użytej podczas filtrowania.
+- Wskazanie kafelka nie usuwa ani nie zmienia filtra.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dowolny filtr. | Na pasku pojawia się kafelek. |
+| 2 | Najechać kursorem na kafelek. | System prezentuje informację o kryterium. |
+| 3 | Porównać informację z ustawioną wartością. | Informacja odpowiada aktywnemu kryterium. |
+| 4 | Odsunąć kursor i zweryfikować wyniki. | Filtr nadal pozostaje aktywny. |

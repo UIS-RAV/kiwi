@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości wyświetlenia szczegółów umowy pobranej z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Lista umów z CRU została pobrana
+* API szczegółów umowy z CRU zwraca poprawną odpowiedź
+
+<h2> Kryteria akceptacji </h2>
+
+* System pobiera szczegóły umowy z CRU na podstawie numeru systemowego
+* Modal szczegółów umowy w CRU zostaje otwarty
+* Dane umowy są prezentowane w trybie bez możliwości edycji
+* Pola formularza są wypełnione danymi otrzymanymi z CRU
+* Modal można zamknąć przyciskiem X
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Umowy w CRU” z pobraną listą umów. | Lista umów z CRU jest widoczna. |
+| 2 | Rozwiń menu podręczne wybranej umowy. | Lista dostępnych operacji zostaje wyświetlona. |
+| 3 | Kliknij „Szczegóły umowy w CRU”. | System pobiera szczegóły umowy i otwiera modal. |
+| 4 | Zweryfikuj dane w modalu. | Dane umowy są widoczne i nieedytowalne. |
+| 5 | Zamknij modal przyciskiem X. | Modal zostaje zamknięty. |

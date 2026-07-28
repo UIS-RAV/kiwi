@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja pozytywnego zakończenia procesu akceptacji wyniku audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.16 Zaakceptuj wynik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący i bierze udział w procesie.
+* Istnieje audyt w statusie „wykonany w akceptacji”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „zakończony”.
+* Proces kończy się sukcesem.
+* Odpowiedzialny i audytor wewnętrzny otrzymują wymagane powiadomienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Audyt jest widoczny. |
+| 2 | Wybierz „Zaakceptuj wynik”. | Wyświetlone zostaje okno z identyfikatorem audytu i opcjonalnym komentarzem. |
+| 3 | Wprowadź komentarz do 256 znaków lub pozostaw pole puste. | Formularz umożliwia oba warianty. |
+| 4 | Kliknij „Akceptuję”. | Decyzja zostaje zapisana. |
+| 5 | Zweryfikuj status audytu. | Status wynosi „zakończony”. |
+| 6 | Zweryfikuj powiadomienie odpowiedzialnego. | Powiadomienie ma tytuł „Wynik audytu {IDENTYFIKATOR AUDYTU} został zaakceptowany”. |
+| 7 | Jeżeli zespół to audytor wewnętrzny, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymuje analogiczne powiadomienie. |
+| 8 | Otwórz historię audytu. | Historia zawiera wpis związany z akceptacją wyniku. |

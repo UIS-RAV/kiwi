@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości wyświetlenia listy załączników wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą podgląd listy załączników
+* Wpis w Rejestrze umów posiada co najmniej jeden załącznik
+
+<h2> Kryteria akceptacji </h2>
+
+* Ikona listy załączników jest widoczna dla wpisu posiadającego załącznik
+* System wyświetla modal listy załączników
+* Lista załączników zawiera nazwę pliku, rozmiar i przycisk pobrania
+* W modalu dostępny jest przycisk „Dodaj załącznik” zgodnie z uprawnieniami
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Odszukaj wpis posiadający załącznik. | Przy wpisie widoczna jest ikona załącznika. |
+| 2 | Kliknij ikonę załącznika. | System otwiera modal listy załączników. |
+| 3 | Zweryfikuj dane na liście. | Widoczna jest nazwa pliku, rozmiar oraz przycisk pobrania. |
+| 4 | Zweryfikuj dostępność przycisku „Dodaj załącznik”. | Przycisk jest widoczny zgodnie z uprawnieniami użytkownika. |

@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia zadania z poziomu audytu oraz powiązania obiektów.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.11 Dodaj zadanie
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie, w którym maszyna stanów udostępnia funkcję „Dodaj zadanie”.
+* Użytkownik posiada uprawnienia do utworzenia zadania.
+
+<h2> Kryteria akceptacji </h2>
+
+* Formularz zadania otwiera się z uzupełnionym tytułem.
+* Po utworzeniu zadanie zostaje powiązane z audytem.
+* Historia audytu zawiera identyfikator utworzonego zadania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu podręczne audytu i wybierz „Dodaj zadanie”. | Uruchomiona zostaje aktualna funkcja tworzenia zadania w eZD. |
+| 2 | Zweryfikuj pole „Tytuł”. | Pole jest wstępnie uzupełnione wartością „Zadanie realizacji audytu {IDENTYFIKATOR AUDYTU}”. |
+| 3 | Uzupełnij pozostałe dane wymagane przez obecny formularz zadania. | Formularz jest kompletny. |
+| 4 | Utwórz zadanie. | Zadanie zostaje zapisane i otrzymuje identyfikator. |
+| 5 | Wróć do rejestru audytów. | Rejestr zostaje odświeżony. |
+| 6 | Zweryfikuj dane zadania przy audycie. | Audyt jest powiązany z utworzonym zadaniem. |
+| 7 | Otwórz historię audytu. | Widoczny jest wpis „Utworzono zadanie {IDENTYFIKATOR ZADANIA}” z datą, pracownikiem i stanowiskiem. |

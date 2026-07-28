@@ -1,0 +1,33 @@
+ID: LOG-035
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Bezpieczeństwo
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h2> Cel testu </h2>
+
+Weryfikacja prawidłowego zakończenia pracy użytkownika przy użyciu funkcji „WYLOGUJ SIĘ” / „Wyloguj”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Ogólna budowa systemu; Personalizacja systemu eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest poprawnie zalogowany.
+- Aktywna jest sesja użytkownika.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja wylogowania jest dostępna.
+- Po jej użyciu system kończy dostęp użytkownika do chronionych funkcji.
+- System wyświetla ekran logowania lub inny widok niezalogowany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukać funkcję „WYLOGUJ SIĘ” / „Wyloguj”. | Funkcja jest widoczna dla zalogowanego użytkownika. |
+| 2 | Wybrać funkcję wylogowania. | System kończy bieżącą pracę użytkownika. |
+| 3 | Zweryfikować wyświetlony widok. | Wyświetlony jest ekran logowania lub widok dla niezalogowanego użytkownika. |
+| 4 | Spróbować użyć funkcji wymagającej zalogowania. | Funkcja nie jest dostępna bez ponownego uwierzytelnienia. |

@@ -1,0 +1,39 @@
+ID: LOG-037
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Eksploracyjny / Bezpieczeństwo
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Rozpoznanie zachowania sesji użytkownika po zamknięciu przeglądarki bez użycia funkcji wylogowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Personalizacja systemu eZD – ostrzeżenie dotyczące zamykania okna bez wylogowania
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Otwarty jest chroniony widok.
+- Zapamiętano adres URL widoku.
+- Dokumentacja ostrzega przed zamykaniem okna bez wylogowania, ale nie definiuje jednoznacznego oczekiwanego zachowania sesji.
+- Test ma charakter eksploracyjny i nie powinien być traktowany jako test akceptacyjny bez decyzji właściciela produktu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Zachowanie systemu zostaje udokumentowane.
+- Wynik zawiera informację, czy sesja została zachowana, zakończona lub odtworzona.
+- Wszelkie obserwowane ryzyko dostępu do danych zostaje zgłoszone do decyzji właściciela produktu.
+- Test nie otrzymuje automatycznie wyniku PASS/FAIL bez ustalonego wymagania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapamiętać adres URL chronionego widoku. | Adres jest dostępny do dalszej weryfikacji. |
+| 2 | Zamknąć wszystkie okna używanej przeglądarki bez użycia funkcji wylogowania. | Przeglądarka zostaje zamknięta. |
+| 3 | Ponownie uruchomić tę samą przeglądarkę. | Przeglądarka uruchamia się ponownie. |
+| 4 | Przejść pod zapamiętany adres URL. | System prezentuje zachowanie wynikające z implementacji sesji. |
+| 5 | Udokumentować, czy wymagane jest ponowne logowanie oraz czy widoczne są dane chronione. | Zachowanie sesji i dostępność danych są jednoznacznie opisane. |
+| 6 | Przekazać obserwację do decyzji właściciela produktu. | Ustalono, czy zachowanie ma zostać przyjęte jako wymaganie akceptacyjne. |

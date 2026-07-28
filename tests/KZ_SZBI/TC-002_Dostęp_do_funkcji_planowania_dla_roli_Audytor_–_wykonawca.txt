@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu użytkownika z rolą Audytor – wykonawca do tworzenia i planowania audytów.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępna jest zakładka Audyty.
+* Dostępny jest przycisk „Zaplanuj audyt”.
+* Menu podręczne udostępnia akcje zgodne ze statusem audytu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do „Kontrola zarządcza” → „Audyty” → zakładka „Audyty”. | Wyświetlony zostaje rejestr audytów. |
+| 2 | Zweryfikuj widoczność przycisku „Zaplanuj audyt”. | Przycisk jest dostępny. |
+| 3 | Kliknij „Zaplanuj audyt”. | Wyświetlone zostaje okno modalne „Zaplanuj audyt”. |
+| 4 | Zamknij okno przyciskiem X. | Okno zostaje zamknięte bez utworzenia audytu. |
+| 5 | Otwórz menu podręczne audytu w statusie „planowany”. | Wyświetlone zostają akcje zgodne z maszyną stanów. |
+| 6 | Zweryfikuj dostępność funkcji „Edytuj audyt”, „Usuń audyt”, „Do akceptacji”, „Historia zmian” i „Dodaj załącznik”. | Wymienione funkcje są dostępne zgodnie z dokumentacją i statusem. |

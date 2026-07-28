@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zwrotu audytu ze stanu „wykonany” do stanu „w trakcie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.13 Popraw audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „wykonany” z ustawioną datą zakończenia.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „w trakcie”.
+* Data zakończenia zostaje usunięta.
+* Historia zawiera wpis „Audyt zwrócono do poprawy”.
+* Wysyłane są powiadomienia do wymaganych osób.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „wykonany”. | Dostępna jest funkcja „Popraw audyt”. |
+| 2 | Wybierz „Popraw audyt”. | Wyświetlone zostaje pytanie z identyfikatorem audytu. |
+| 3 | Kliknij „Do poprawy”. | Operacja zostaje wykonana. |
+| 4 | Zweryfikuj status. | Status wynosi „w trakcie”. |
+| 5 | Zweryfikuj datę zakończenia. | Data zakończenia została usunięta. |
+| 6 | Otwórz historię audytu. | Widoczny jest wpis „Audyt zwrócono do poprawy”. |
+| 7 | Zweryfikuj powiadomienie odpowiedzialnego, jeżeli jest inną osobą niż wykonujący. | Powiadomienie ma tytuł „Audyt {IDENTYFIKATOR AUDYTU} zwrócono do poprawy” i opis wykonującego oraz stanowiska. |
+| 8 | Jeżeli zespół to audytor wewnętrzny i jest inną osobą niż wykonujący, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymuje analogiczne powiadomienie. |

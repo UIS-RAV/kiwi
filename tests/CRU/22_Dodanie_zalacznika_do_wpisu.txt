@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości dodania załącznika do wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis, dla którego dodanie załącznika jest dostępne zgodnie z maszyną stanów
+
+<h2> Kryteria akceptacji </h2>
+
+* Modal „Dodaj załącznik” zostaje otwarty
+* Użytkownik może wskazać maksymalnie 5 plików
+* Załącznik zostaje dodany do wpisu po poprawnej walidacji
+* Akcja dodania załącznika zostaje zapisana w historii wpisu
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Dodaj załącznik”. | System otwiera modal „Dodaj załącznik”. |
+| 3 | Wskaż plik do dodania. | Plik zostaje wybrany w formularzu. |
+| 4 | Kliknij „Dodaj”. | Załącznik zostaje dodany do wpisu. |
+| 5 | Otwórz historię zmian wpisu. | W historii widoczna jest informacja o dodaniu załącznika. |

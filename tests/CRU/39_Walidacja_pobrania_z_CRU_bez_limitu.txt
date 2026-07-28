@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji formularza pobierania danych z CRU bez uzupełnionego limitu.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Modal „Pobierz z CRU” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Pole limitu pobranych umów jest wymagane
+* System oznacza pole limitu jako wymagające uzupełnienia
+* Dane z CRU nie zostają pobrane
+* Modal pozostaje otwarty do poprawienia danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Usuń wartość z pola limitu. | Pole limitu pozostaje puste. |
+| 2 | Kliknij „Pobierz”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj formularz. | Pole limitu zostaje oznaczone jako wymagane. |
+| 4 | Zweryfikuj widok zakładki. | Lista umów z CRU nie zostaje pobrana. |

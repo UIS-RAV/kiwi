@@ -1,0 +1,39 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przekazania planowanego audytu do procesu akceptacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.4 Do akceptacji
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie „planowany”.
+* Istnieje użytkownik z rolą Audytor – akceptujący.
+
+<h2> Kryteria akceptacji </h2>
+
+* Proces dotyczy planowanego audytu.
+* Można wskazać wyłącznie użytkowników z rolą Audytor – akceptujący.
+* Status zmienia się na „w akceptacji”.
+* Historia i powiadomienie są zgodne z dokumentacją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „planowany” i wybierz „Do akceptacji”. | Wyświetlone zostaje okno „Przekaż planowany audyty do akceptacji”. |
+| 2 | Zweryfikuj dane tabeli w oknie. | Widoczne są pola „Tytuł” i „Rodzaj”. |
+| 3 | Zweryfikuj funkcję „Podpisz”. | Funkcja jest niedostępna/wyszarzona. |
+| 4 | Zweryfikuj funkcję akceptacji z podpisem odręcznym. | Funkcja jest niedostępna/wyszarzona. |
+| 5 | Zweryfikuj funkcję „Zapisz jako Szablon”. | Funkcja jest niedostępna/wyszarzona. |
+| 6 | Otwórz wybór akceptantów. | Lista zawiera użytkowników systemu eZD z rolą Audytor – akceptujący. |
+| 7 | Wskaż co najmniej jednego akceptanta. | Akceptant zostaje dodany do procesu. |
+| 8 | Uruchom proces akceptacji. | Proces zostaje rozpoczęty, a okno zamknięte. |
+| 9 | Zweryfikuj status audytu. | Status audytu wynosi „w akceptacji”. |
+| 10 | Otwórz historię zmian. | Widoczny jest wpis „Audyt został przekazany do akceptacji”. |
+| 11 | Zweryfikuj powiadomienie akceptanta. | Akceptant otrzymał powiadomienie o tytule „Plan audytu wymaga akceptacji”. |

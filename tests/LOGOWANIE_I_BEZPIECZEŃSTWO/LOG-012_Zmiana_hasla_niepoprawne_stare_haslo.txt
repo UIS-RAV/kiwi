@@ -1,0 +1,38 @@
+ID: LOG-012
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia zmiany hasła po podaniu niepoprawnego starego hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywne i niezablokowane konto użytkownika.
+- Znana jest nazwa użytkownika.
+- Przygotowano niepoprawne stare hasło oraz nowe hasło zgodne z profilem bezpieczeństwa.
+- Otwarty jest tryb „Pamiętam stare hasło”.
+- Instrukcja nie określa literalnej treści komunikatu błędu.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie zmienia hasła użytkownika.
+- System nie uznaje niepoprawnego starego hasła.
+- Dotychczasowe prawidłowe hasło pozostaje aktywne.
+- Użytkownik nie uzyskuje dostępu na podstawie niepoprawnego poświadczenia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić prawidłową nazwę użytkownika. | Nazwa użytkownika zostaje wprowadzona. |
+| 2 | Wprowadzić niepoprawną wartość w polu „Stare hasło”. | Wartość zostaje wprowadzona. |
+| 3 | Wprowadzić poprawne i zgodne wartości nowego hasła oraz jego potwierdzenia. | Formularz zawiera komplet danych. |
+| 4 | Zatwierdzić zmianę hasła. | System odrzuca operację i nie zapisuje nowego hasła. |
+| 5 | Spróbować zalogować się dotychczasowym prawidłowym hasłem. | Użytkownik może zalogować się dotychczasowym hasłem, co potwierdza brak zmiany. |

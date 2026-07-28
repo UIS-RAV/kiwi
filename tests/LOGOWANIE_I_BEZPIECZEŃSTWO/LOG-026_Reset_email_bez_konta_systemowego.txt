@@ -1,0 +1,37 @@
+ID: LOG-026
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny / Integracyjny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja braku możliwości skutecznego wykonania resetu hasła przez e-mail bez wskazanego systemowego konta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie konta systemowego email
+
+<h2> Warunki wstępne </h2>
+
+- W EZD nie wskazano systemowego konta e-mail.
+- Istnieje użytkownik z przypisanym adresem e-mail.
+- Otwarty jest tryb „Odśwież hasło”.
+- Instrukcja nie określa dokładnego zachowania UI w tej sytuacji.
+
+<h2> Kryteria akceptacji </h2>
+
+- Proces resetowania przez e-mail nie zostaje skutecznie wykonany.
+- Wiadomość resetująca nie zostaje dostarczona.
+- System nie zmienia hasła użytkownika.
+- Test nie narzuca literalnej treści komunikatu ani sposobu zablokowania funkcji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Potwierdzić brak wskazanego systemowego konta e-mail w konfiguracji EZD. | Warunek braku konfiguracji jest spełniony. |
+| 2 | Przejść do trybu „Odśwież hasło”. | Formularz jest wyświetlony lub funkcja jest niedostępna zgodnie z implementacją. |
+| 3 | Jeżeli formularz jest dostępny, wprowadzić nazwę użytkownika i wybrać „Wyślij email”. | System nie wykonuje skutecznie wysyłki bez wymaganej konfiguracji. |
+| 4 | Sprawdzić skrzynkę odbiorczą użytkownika. | Wiadomość resetująca nie została dostarczona. |
+| 5 | Zweryfikować dotychczasowe hasło użytkownika. | Dotychczasowe hasło pozostaje bez zmian. |

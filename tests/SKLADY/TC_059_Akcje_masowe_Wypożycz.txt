@@ -1,0 +1,30 @@
+NAZWA TESTU: Akcje – masowe Wypożycz
+
+<h2> Cel testu </h2>
+
+Weryfikacja operacji masowej Wypożycz.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.12 Akcje
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Okno lub komunikat zawiera wszystkie zaznaczone liczby dziennika.
+- Przesyłki niespełniające warunków maszyny stanów są pomijane.
+- Pozostałe otrzymują wynik: status wypożyczona.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaznacz przesyłki spełniające i niespełniające warunków. | Akcje staje się aktywne. |
+| 2 | Wybierz Akcje -> Wypożycz. | Okno lub komunikat zawiera wszystkie zaznaczone liczby dziennika. |
+| 3 | Uzupełnij formularz, jeśli jest prezentowany, i potwierdź. | Operacja zostaje wykonana. |
+| 4 | Sprawdź przesyłki spełniające warunki. | Uzyskały wynik: status wypożyczona. |
+| 5 | Sprawdź pozostałe przesyłki. | Zostały pominięte bez zmiany. |

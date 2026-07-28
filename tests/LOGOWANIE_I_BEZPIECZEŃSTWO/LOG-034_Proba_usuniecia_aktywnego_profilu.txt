@@ -1,0 +1,35 @@
+ID: LOG-034
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny / Reguła biznesowa
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja braku możliwości usunięcia aktywnego profilu bezpieczeństwa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Hasła → Usuwanie profilu
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Istnieje aktywny profil bezpieczeństwa.
+- Znane są dane aktywnego profilu.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie umożliwia usunięcia aktywnego profilu.
+- Profil pozostaje aktywny i dostępny.
+- Konfiguracja bezpieczeństwa nie zostaje usunięta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do „Administracja” → „Hasła”. | Lista profili jest widoczna. |
+| 2 | Wyświetlić aktywny profil. | Dane aktywnego profilu są widoczne. |
+| 3 | Sprawdzić dostępność funkcji usunięcia. | Funkcja jest niedostępna lub operacja jest blokowana. |
+| 4 | Jeżeli dostępne jest polecenie usunięcia, spróbować je wykonać. | System nie usuwa aktywnego profilu. |
+| 5 | Ponownie wyświetlić aktywny profil. | Profil nadal istnieje i pozostaje aktywny. |

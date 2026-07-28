@@ -1,0 +1,33 @@
+ID: LOG-029
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny / UI
+Priorytet: Średni
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja zamknięcia formularza nowego profilu bezpieczeństwa bez zapisywania danych po użyciu przycisku „Anuluj”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Otwarty jest formularz dodawania nowego profilu.
+- Przygotowano unikalną nazwę profilu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Przycisk „Anuluj” zamyka formularz lub przerywa dodawanie.
+- Nowy profil nie zostaje utworzony.
+- Wprowadzone dane nie pojawiają się na liście profili.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić unikalną nazwę i dowolne poprawne parametry profilu. | Formularz zawiera dane możliwe do zapisania. |
+| 2 | Wybrać przycisk „Anuluj”. | System przerywa proces dodawania i wraca do poprzedniego widoku. |
+| 3 | Wyszukać profil po wprowadzonej nazwie. | Profil nie istnieje na liście. |

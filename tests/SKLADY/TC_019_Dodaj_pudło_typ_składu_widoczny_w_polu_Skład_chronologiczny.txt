@@ -1,0 +1,27 @@
+NAZWA TESTU: Dodaj pudło – typ składu widoczny w polu Skład chronologiczny
+
+<h2> Cel testu </h2>
+
+Weryfikacja prezentacji typu składu podczas tworzenia pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.1 Dodaj Pudło; Uwagi_KW_20260708, pkt 1
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Każda pozycja listy pozwala rozpoznać typ składu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie pudła. | Widoczny jest formularz. |
+| 2 | Rozwiń Skład chronologiczny. | Wyświetla się lista składów. |
+| 3 | Sprawdź pozycje różnych typów. | Każda pozycja zawiera informację o typie składu, np. Przychodzące. |
+| 4 | Wybierz pozycję. | Wybrana wartość nadal pozwala rozpoznać typ składu. |

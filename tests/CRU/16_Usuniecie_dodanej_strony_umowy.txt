@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości usunięcia dodanej strony umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+* Do formularza dodano dodatkową stronę umowy
+
+<h2> Kryteria akceptacji </h2>
+
+* Przycisk usunięcia strony umowy jest dostępny tylko dla dodanych stron
+* Przycisk usunięcia nie jest dostępny dla pierwszej strony umowy
+* Dodana strona umowy zostaje usunięta z formularza
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zweryfikuj pierwszą stronę umowy. | Dla pierwszej strony nie jest dostępny przycisk usunięcia. |
+| 2 | Zweryfikuj dodaną stronę umowy. | Dla dodanej strony dostępny jest przycisk usunięcia. |
+| 3 | Kliknij przycisk usunięcia dodanej strony umowy. | Dodana sekcja strony umowy zostaje usunięta. |

@@ -1,0 +1,33 @@
+ID: LOG-015
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Funkcjonalny / UI
+Priorytet: Średni
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja wyświetlania wymagań dla nowego hasła po użyciu zielonego znaku zapytania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Zmiana hasła pracownika przez administratora
+
+<h2> Warunki wstępne </h2>
+
+- Wyświetlony jest formularz nadania nowego hasła.
+- Aktywny jest profil bezpieczeństwa zawierający określone wymagania hasła.
+
+<h2> Kryteria akceptacji </h2>
+
+- Zielony znak zapytania jest dostępny przy polu nowego hasła.
+- Po jego użyciu system prezentuje wymagania wynikające z aktywnego profilu bezpieczeństwa.
+- Informacja pomocnicza nie zmienia wprowadzonych danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukać zielony znak zapytania przy polu nowego hasła. | Element pomocy jest widoczny. |
+| 2 | Kliknąć zielony znak zapytania. | System wyświetla wymagania dla nowego hasła. |
+| 3 | Porównać wyświetlone wymagania z aktywnym profilem bezpieczeństwa. | Wyświetlone informacje odpowiadają konfiguracji aktywnego profilu. |
+| 4 | Zamknąć informację pomocniczą. | Formularz pozostaje dostępny, a wcześniej wprowadzone dane nie są utracone. |

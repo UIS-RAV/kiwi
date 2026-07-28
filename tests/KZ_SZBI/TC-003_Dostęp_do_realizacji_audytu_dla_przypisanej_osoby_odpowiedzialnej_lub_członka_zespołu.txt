@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu do czynności realizacji audytu dla użytkownika przypisanego jako Odpowiedzialny za zaplanowanie i/lub Zespół audytowy.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Użytkownik jest przypisany do audytu jako Odpowiedzialny za zaplanowanie i/lub Zespół audytowy.
+* Audyt posiada status umożliwiający realizację.
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik może wykonywać akcje realizacyjne zgodnie z maszyną stanów.
+* Dostępność akcji zależy od statusu audytu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Odszukaj audyt, do którego użytkownik jest przypisany. | Audyt jest widoczny na liście. |
+| 3 | Otwórz menu podręczne audytu. | Menu podręczne zostaje wyświetlone. |
+| 4 | Dla audytu w statusie „zaplanowany” zweryfikuj funkcję „Rozpocznij audyt”. | Funkcja jest dostępna. |
+| 5 | Dla audytu w statusie „w trakcie” zweryfikuj funkcje „Wykonaj”, „Dodaj zadanie” i „Uzupełnij audyt”. | Funkcje są dostępne zgodnie z maszyną stanów. |
+| 6 | Dla audytu w statusie „wykonany” zweryfikuj funkcje „Do akceptacji wynik”, „Popraw audyt”, „Dodaj zadanie” i „Dodaj załącznik”. | Funkcje są dostępne zgodnie z maszyną stanów. |

@@ -1,0 +1,35 @@
+ID: FLT-025
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Sortowanie dat chronologicznie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja chronologicznego sortowania wartości daty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Kolumna daty jest sortowalna.
+- Lista zawiera daty z różnych dni, miesięcy i lat.
+
+<h2> Kryteria akceptacji </h2>
+
+- Sortowanie rosnące porządkuje daty od najwcześniejszej do najpóźniejszej.
+- Sortowanie malejące porządkuje daty od najpóźniejszej do najwcześniejszej.
+- Daty nie są sortowane jako zwykły tekst.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać sortowanie rosnące po kolumnie daty. | Lista zostaje uporządkowana. |
+| 2 | Zweryfikować kolejność chronologiczną. | Daty rosną od najwcześniejszej. |
+| 3 | Zmienić kierunek sortowania. | Lista zostaje uporządkowana malejąco. |
+| 4 | Ponownie zweryfikować daty. | Daty maleją od najpóźniejszej. |

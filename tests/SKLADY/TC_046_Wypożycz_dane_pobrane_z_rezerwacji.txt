@@ -1,0 +1,27 @@
+NAZWA TESTU: Wypożycz – dane pobrane z rezerwacji
+
+<h2> Cel testu </h2>
+
+Weryfikacja wykorzystania danych rezerwacji w formularzu wypożyczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.6 Wypożycz
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Dane dostępne w rezerwacji są prezentowane w formularzu Wypożycz.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Wypożycz dla przesyłki w statusie rezerwacja. | Wyświetla się formularz. |
+| 2 | Sprawdź Podmiot zewnętrzny i Wypożyczający. | Pola odpowiadają danym rezerwacji. |
+| 3 | Uzupełnij brakujące dane i wypożycz. | Status zmienia się na wypożyczona. |
+| 4 | Sprawdź historię. | Dane są zgodne z rezerwacją i formularzem. |

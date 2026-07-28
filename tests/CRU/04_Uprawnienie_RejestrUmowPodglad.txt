@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zakresu dostępu użytkownika z rolą RejestrUmowPodglad.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodglad
+* W Rejestrze umów istnieje co najmniej jeden wpis
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik widzi Rejestr umów
+* Użytkownik może otworzyć podgląd wpisu
+* Użytkownik może wyświetlić historię zmian
+* Użytkownik widzi listę załączników
+* Funkcje modyfikujące wpis nie są dostępne dla użytkownika
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | Rejestr umów jest widoczny. |
+| 2 | Rozwiń menu podręczne wybranego wpisu. | Widoczne są funkcje dostępne dla roli podglądowej. |
+| 3 | Otwórz podgląd wpisu. | System wyświetla szczegóły wpisu w trybie podglądu. |
+| 4 | Otwórz historię zmian wpisu. | System wyświetla historię zmian. |
+| 5 | Zweryfikuj brak funkcji modyfikujących. | Funkcje dodania, edycji, publikacji, usunięcia i obsługi załączników modyfikujących nie są dostępne. |

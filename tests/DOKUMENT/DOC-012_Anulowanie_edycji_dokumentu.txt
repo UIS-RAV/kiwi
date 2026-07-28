@@ -1,0 +1,37 @@
+ID: DOC-012
+Moduł: DOKUMENT
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Anulowanie edycji dokumentu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: anulowanie edycji dokumentu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Anulowanie edycji dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia wymagane do wykonania operacji.
+- Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Anulowanie edycji dokumentu” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
+- System wykonuje lub blokuje operację zgodnie z celem testu.
+- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
+- Dane nieobjęte operacją pozostają spójne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję związaną z operacją „Anulowanie edycji dokumentu”. | System udostępnia właściwy widok lub formularz. |
+| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
+| 3 | Wybrać anulowanie operacji. | Operacja zostaje przerwana bez zapisania zmiany. |
+| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |

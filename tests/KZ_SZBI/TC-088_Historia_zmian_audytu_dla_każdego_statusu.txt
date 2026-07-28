@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dostępności historii zmian audytu niezależnie od jego statusu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.5 Historia zmian
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* W rejestrze istnieją audyty w różnych statusach.
+
+<h2> Kryteria akceptacji </h2>
+
+* Funkcja „Historia zmian” jest dostępna dla każdego statusu.
+* Okno zawiera kolumny Lp., Data akcji, Pracownik, Ze stanowiska i Opis zmiany.
+* Kolumny umożliwiają sortowanie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Dla audytu w pierwszym dostępnym statusie wybierz „Historia zmian”. | Wyświetlone zostaje okno „Historia zmian”. |
+| 3 | Zweryfikuj kolumny. | Widoczne są kolumny Lp., Data akcji, Pracownik, Ze stanowiska i Opis zmiany. |
+| 4 | Posortuj kolejno każdą kolumnę. | Tabela reaguje na sortowanie każdej kolumny. |
+| 5 | Zamknij okno przyciskiem X. | Okno zostaje zamknięte. |
+| 6 | Powtórz otwarcie historii dla audytów w pozostałych dostępnych statusach. | Funkcja jest dostępna dla każdego statusu i prezentuje właściwą historię. |

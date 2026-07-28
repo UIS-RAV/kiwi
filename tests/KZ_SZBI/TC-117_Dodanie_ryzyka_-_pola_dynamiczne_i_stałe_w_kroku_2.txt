@@ -1,0 +1,34 @@
+<h2> Cel testu </h2>
+
+Weryfikacja formularza „Dodaj ryzyko (krok 2)” i utworzenia wpisu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.2 Dodaj ryzyko (krok 2)
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Wybrany kontekst ma skonfigurowane pola dynamiczne w słowniku „Ryzyko – pola”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Pola dynamiczne odpowiadają wybranemu kontekstowi, kolejności i słownikom.
+* Widoczne są pola stałe Prawdopodobieństwo, Skutek, Poziom i Status.
+* Po zapisie tworzony jest wpis i wyświetlany jego podgląd.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Uruchom dodawanie ryzyka i w kroku 1 wybierz kontekst. | Wybrany zostaje kontekst. |
+| 2 | Kliknij „Dalej”. | Wyświetlony zostaje krok 2. |
+| 3 | Zweryfikuj pola dynamiczne. | Nazwy i kolejność odpowiadają słownikowi „Ryzyko – pola”, a listy pobierają wartości z powiązanych słowników. |
+| 4 | Zweryfikuj wymaganie pól dynamicznych. | Każde pole dynamiczne jest wymagane. |
+| 5 | Zweryfikuj pola stałe. | Widoczne są Prawdopodobieństwo, Skutek, Poziom i Status. |
+| 6 | Uzupełnij wszystkie pola dynamiczne. | Wartości zostają wybrane. |
+| 7 | Uzupełnij pola stałe zgodnie z obecną funkcjonalnością systemu. | Pola zostają uzupełnione. |
+| 8 | Kliknij „Zapisz”. | Walidacja przechodzi i wpis zostaje utworzony. |
+| 9 | Zweryfikuj ekran po zapisie. | Wyświetlony zostaje podgląd utworzonego wpisu w rejestrze ryzyka. |

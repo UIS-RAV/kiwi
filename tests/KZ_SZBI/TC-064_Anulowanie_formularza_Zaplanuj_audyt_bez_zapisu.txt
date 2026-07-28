@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja działania przycisku „Anuluj” na formularzu planowania audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.1 Zaplanuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+
+<h2> Kryteria akceptacji </h2>
+
+* Okno zostaje zamknięte.
+* Audyt nie zostaje utworzony.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 2 | Uzupełnij wybrane pola. | Dane są widoczne w formularzu. |
+| 3 | Kliknij „Anuluj”. | Okno zostaje zamknięte. |
+| 4 | Zweryfikuj rejestr audytów. | Nie utworzono nowego audytu. |

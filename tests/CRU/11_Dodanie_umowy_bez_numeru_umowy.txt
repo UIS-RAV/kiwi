@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zachowania pola numeru umowy po odznaczeniu opcji dostępności numeru umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Po odznaczeniu checkboxa „Czy dostępny numer umowy?” pole numeru umowy staje się nieaktywne
+* Pole numeru umowy nie jest wymagane
+* Umowa może zostać zapisana bez numeru umowy przy poprawnym uzupełnieniu pozostałych wymaganych pól
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Odznacz checkbox „Czy dostępny numer umowy?”. | Pole numeru umowy staje się nieaktywne. |
+| 2 | Uzupełnij pozostałe wymagane pola formularza. | Formularz zawiera wymagane dane poza numerem umowy. |
+| 3 | Kliknij „Zapisz”. | System zapisuje umowę bez numeru umowy. |
+| 4 | Zweryfikuj wpis w rejestrze. | Wpis zostaje utworzony i widoczny na liście. |

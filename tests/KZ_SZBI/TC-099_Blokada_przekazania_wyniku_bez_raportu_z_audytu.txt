@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja blokady przekazania wyniku audytu do akceptacji, gdy nie dołączono pliku typu „raport z audytu”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.15 Do akceptacji wynik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „wykonany”.
+* Audyt nie posiada załącznika typu „raport z audytu”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlany jest komunikat „Aby przekazać wynik audyty do akceptacji dołącz raport z audytu.”
+* Status pozostaje „wykonany”.
+* Proces akceptacji nie zostaje rozpoczęty.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „wykonany”. | Dostępna jest funkcja „Do akceptacji wynik”. |
+| 2 | Wybierz „Do akceptacji wynik”. | System sprawdza obecność raportu z audytu. |
+| 3 | Zweryfikuj komunikat. | Wyświetlany jest komunikat „Aby przekazać wynik audyty do akceptacji dołącz raport z audytu.” |
+| 4 | Zamknij komunikat. | Komunikat zostaje zamknięty. |
+| 5 | Zweryfikuj status audytu. | Status nadal wynosi „wykonany”. |
+| 6 | Zweryfikuj zakładkę „Do zatwierdzenia”. | Nie utworzono procesu akceptacji wyniku dla audytu. |

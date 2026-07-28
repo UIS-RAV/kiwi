@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie pobierania listy umów z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Zakładka „Umowy w CRU” jest dostępna
+* Integracja z API CRU zwraca poprawną odpowiedź
+
+<h2> Kryteria akceptacji </h2>
+
+* Modal „Pobierz z CRU” zostaje otwarty
+* Użytkownik może wskazać parametry pobierania danych
+* Pole limitu pobranych umów jest wymagane
+* Po poprawnej walidacji system wywołuje pobranie danych z CRU
+* Po odpowiedzi poprawnej system wyświetla listę umów pobranych z CRU
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Umowy w CRU”. | Zakładka zostaje wyświetlona. |
+| 2 | Kliknij „Pobierz z CRU”. | System otwiera modal „Pobierz z CRU”. |
+| 3 | Uzupełnij parametry pobierania, w tym limit. | Parametry pobierania są uzupełnione. |
+| 4 | Kliknij „Pobierz”. | System pobiera dane z CRU. |
+| 5 | Zweryfikuj wynik pobierania. | Lista umów pobranych z CRU jest widoczna. |

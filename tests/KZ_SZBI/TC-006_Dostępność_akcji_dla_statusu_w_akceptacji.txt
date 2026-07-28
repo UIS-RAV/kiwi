@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zestawu akcji udostępnianych przez maszynę stanów dla audytu w statusie „w akceptacji”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.2 Maszyna stanów
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „w akceptacji”.
+* Użytkownik posiada rolę i przypisanie wymagane do wykonania akcji w danym stanie.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępne akcje odpowiadają dokumentacji dla stanu „w akceptacji”.
+* Akcje właściwe wyłącznie dla innych stanów nie są udostępnione.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Odszukaj audyt w statusie „w akceptacji”. | Audyt jest widoczny. |
+| 3 | Otwórz menu podręczne audytu. | Menu zostaje wyświetlone. |
+| 4 | Zweryfikuj dostępne akcje. | Dostępny zestaw obejmuje: Zaakceptuj, Odrzuć, Do poprawy, Edytuj audyt. |
+| 5 | Porównaj menu z akcjami zdefiniowanymi dla pozostałych stanów. | Nie są udostępnione akcje procesowe nieprzewidziane dla testowanego stanu. |

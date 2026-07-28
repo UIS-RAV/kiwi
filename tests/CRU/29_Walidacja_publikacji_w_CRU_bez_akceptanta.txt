@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie walidacji formularza publikacji w CRU bez wskazania akceptanta.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Modal „Publikuj w CRU” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Pole „Akceptant” jest wymagane
+* System oznacza pole „Akceptant” jako wymagające uzupełnienia
+* Status wpisu nie zostaje zmieniony na „w akceptacji”
+* Modal pozostaje otwarty do poprawienia danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Nie wybieraj wartości w polu „Akceptant”. | Pole „Akceptant” pozostaje puste. |
+| 2 | Kliknij „Przekaż”. | System uruchamia walidację formularza. |
+| 3 | Zweryfikuj formularz. | Pole „Akceptant” zostaje oznaczone jako wymagane. |
+| 4 | Zweryfikuj status wpisu. | Status wpisu nie ulega zmianie. |

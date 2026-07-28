@@ -1,0 +1,29 @@
+NAZWA TESTU: Dodaj skład – walidacja wymaganych pól
+
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji formularza składu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.2.1 Dodaj skład
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa składu, Typ składu, Lokalizacja i Należy do są wymagane.
+- Nazwa składu ma maksymalnie 256 znaków.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie składu chronologicznego. | Widoczny jest formularz. |
+| 2 | Pozostaw pola puste i wybierz Zapisz skład. | Pola wymagane są oznaczone jako błędne. |
+| 3 | Wprowadź nazwę dłuższą niż 256 znaków. | System blokuje zapis lub oznacza błąd. |
+| 4 | Wybierz X. | Okno zamyka się bez zapisu. |
+| 5 | Powtórz i wybierz Anuluj. | Okno zamyka się bez zapisu. |

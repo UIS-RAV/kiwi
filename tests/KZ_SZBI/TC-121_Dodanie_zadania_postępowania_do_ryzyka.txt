@@ -1,0 +1,35 @@
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia zadania w sekcji „Postępowanie” wpisu ryzyka.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.5 Postępowanie z ryzykiem
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Istnieje wpis ryzyka z identyfikatorem.
+* Użytkownik posiada uprawnienie do tworzenia zadania.
+
+<h2> Kryteria akceptacji </h2>
+
+* W sekcji „Postępowanie” dostępny jest przycisk „+Dodaj”.
+* Formularz zadania ma wstępnie uzupełniony tytuł.
+* Zadanie zostaje powiązane z ryzykiem w trybie postępowania.
+* Historia ryzyka zostaje uzupełniona.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd wpisu ryzyka. | Podgląd zostaje wyświetlony. |
+| 2 | Przejdź do sekcji „Postępowanie”. | Sekcja jest widoczna. |
+| 3 | Kliknij „+Dodaj”. | Uruchomiona zostaje funkcja tworzenia zadania. |
+| 4 | Zweryfikuj pole „Tytuł”. | Pole jest wstępnie uzupełnione wartością „Postępowanie w ryzyku {IDENTYFIKATOR RYZYKA}”. |
+| 5 | Uzupełnij pozostałe wymagane dane zadania. | Formularz jest kompletny. |
+| 6 | Utwórz zadanie. | Zadanie zostaje zapisane i otrzymuje identyfikator. |
+| 7 | Zweryfikuj sekcję „Postępowanie”. | Na liście widoczne jest utworzone zadanie powiązane z ryzykiem. |
+| 8 | Otwórz historię ryzyka. | Widoczny jest wpis „Utworzono zadanie postępowania {IDENTYFIKATOR ZADANIA}” z datą, pracownikiem i stanowiskiem. |

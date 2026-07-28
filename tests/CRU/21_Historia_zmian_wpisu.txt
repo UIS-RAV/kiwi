@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości wyświetlenia historii zmian wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą wyświetlenie historii zmian
+* W Rejestrze umów istnieje wpis
+
+<h2> Kryteria akceptacji </h2>
+
+* Funkcja „Historia zmian” jest dostępna dla wpisu
+* System wyświetla modal historii zmian
+* Historia zmian jest prezentowana w formie tabeli
+* Tabela zawiera kolumny: Lp., Data akcji, Pracownik, Ze stanowiska, Opis zmiany
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Historia zmian”. | System wyświetla modal historii zmian. |
+| 3 | Zweryfikuj tabelę historii. | Widoczne są kolumny opisujące historię zmian wpisu. |
+| 4 | Zamknij modal przyciskiem X. | Modal zostaje zamknięty. |

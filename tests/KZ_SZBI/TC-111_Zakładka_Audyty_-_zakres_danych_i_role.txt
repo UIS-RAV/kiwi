@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zakładki Audyty, która zawiera wszystkie obiekty audytu i jest dostępna dla trzech ról audytowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.5 Zakładki rejestru audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka jest dostępna dla ról Audytor – podgląd, Audytor – wykonawca i Audytor – akceptujący.
+* Zakładka zawiera wszystkie obiekty audytu dostępne użytkownikowi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zaloguj się jako użytkownik z rolą Audytor – podgląd i otwórz moduł Audyty. | Zakładka „Audyty” jest dostępna. |
+| 2 | Zweryfikuj zawartość. | Widoczna jest lista obiektów audytu. |
+| 3 | Powtórz jako Audytor – wykonawca. | Zakładka jest dostępna. |
+| 4 | Powtórz jako Audytor – akceptujący. | Zakładka jest dostępna. |

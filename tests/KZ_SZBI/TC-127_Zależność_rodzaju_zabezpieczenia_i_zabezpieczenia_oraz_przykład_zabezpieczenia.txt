@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja zależnych list wyboru w grupie „Stosowane zabezpieczenia” i prezentacji przykładu zabezpieczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.6.6 Grupa Stosowane zabezpieczenia
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Słowniki rodzaju zabezpieczenia i zabezpieczenia zawierają powiązane wartości oraz przykłady zabezpieczeń.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wybór rodzaju ogranicza listę zabezpieczeń.
+* Po wyborze zabezpieczenia wyświetlany jest przypisany przykład zabezpieczenia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz ryzyka z grupą „Stosowane zabezpieczenia”. | Widoczne są zależne pola wyboru. |
+| 2 | Wybierz rodzaj zabezpieczenia. | Wartość zostaje ustawiona. |
+| 3 | Rozwiń listę zabezpieczeń. | Lista zawiera wartości przypisane do wybranego rodzaju. |
+| 4 | Wybierz zabezpieczenie. | Wartość zostaje ustawiona. |
+| 5 | Zweryfikuj tekst pod listą. | Wyświetlany jest „Przykład zabezpieczenia” przypisany do wybranej wartości. |
+| 6 | Zmień zabezpieczenie. | Przykład zostaje zaktualizowany. |

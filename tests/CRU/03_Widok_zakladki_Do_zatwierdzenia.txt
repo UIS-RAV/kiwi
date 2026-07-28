@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie prezentacji wpisów oczekujących na zatwierdzenie w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowAkceptant
+* Istnieje wpis w statusie „w akceptacji” przypisany do zalogowanego użytkownika
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka „Do zatwierdzenia” prezentuje wpisy w statusie „w akceptacji”
+* Widoczne są wpisy przypisane do zalogowanego akceptanta
+* Tabela ma strukturę analogiczną do zakładki „Wszystkie”
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | System wyświetla Rejestr umów. |
+| 2 | Otwórz zakładkę „Do zatwierdzenia”. | Wyświetlana jest lista wpisów oczekujących na akceptację. |
+| 3 | Zweryfikuj widoczne wpisy. | Widoczne są wpisy przypisane do zalogowanego użytkownika. |
+| 4 | Zweryfikuj strukturę tabeli. | Tabela jest analogiczna do tabeli w zakładce „Wszystkie”. |

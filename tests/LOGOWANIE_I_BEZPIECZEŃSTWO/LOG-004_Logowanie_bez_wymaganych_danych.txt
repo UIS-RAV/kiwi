@@ -1,0 +1,35 @@
+ID: LOG-004
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Walidacja / Negatywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja, że brak nazwy użytkownika lub hasła uniemożliwia poprawne zalogowanie do systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Użytkownik nie posiada aktywnej sesji.
+- Instrukcja nie określa literalnych komunikatów ani wizualnego sposobu oznaczenia pustych pól.
+
+<h2> Kryteria akceptacji </h2>
+
+- Żaden z wariantów z nieuzupełnionym wymaganym polem nie prowadzi do poprawnej autoryzacji.
+- System nie udostępnia widoku dostępnego po zalogowaniu.
+- Użytkownik pozostaje na ekranie logowania lub otrzymuje informację o brakujących danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do ekranu logowania systemu EZD. | Zostaje wyświetlony ekran logowania. |
+| 2 | Pozostawić pola „Nazwa użytkownika” i „Hasło” puste, a następnie wybrać „Zaloguj się”. | System nie loguje użytkownika i nie udostępnia chronionego widoku. |
+| 3 | Wprowadzić prawidłową nazwę użytkownika, pozostawić puste pole „Hasło” i wybrać „Zaloguj się”. | System nie loguje użytkownika i sygnalizuje brak danych niezbędnych do autoryzacji. |
+| 4 | Usunąć nazwę użytkownika, wprowadzić dowolną wartość w polu „Hasło” i wybrać „Zaloguj się”. | System nie loguje użytkownika i sygnalizuje brak danych niezbędnych do autoryzacji. |
+| 5 | Zweryfikować, czy po wszystkich wariantach nie została utworzona sesja użytkownika. | Użytkownik nadal nie ma dostępu do funkcji wymagających zalogowania. |

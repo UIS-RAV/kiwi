@@ -1,0 +1,36 @@
+ID: FLT-016
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Filtrowanie według własnego zakresu dat </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja filtrowania rekordów według samodzielnie wskazanego zakresu dat od–do.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera rekordy przed, w obrębie i po przygotowanym zakresie.
+- Formularz posiada pola daty początkowej i końcowej.
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczne są wyłącznie rekordy należące do wskazanego zakresu.
+- Rekordy wcześniejsze i późniejsze nie są prezentowane.
+- Zakres dat pozostaje widoczny jako aktywny filtr.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Ustawić datę początkową. | Data zostaje przyjęta. |
+| 3 | Ustawić datę końcową. | Data zostaje przyjęta. |
+| 4 | Wybrać „Szukaj”. | Lista zostaje ograniczona do zakresu. |
+| 5 | Zweryfikować daty wyników. | Każda data należy do wskazanego zakresu. |

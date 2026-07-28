@@ -1,0 +1,37 @@
+ID: LOG-002
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny / Bezpieczeństwo
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia próby logowania przy użyciu nazwy użytkownika, która nie istnieje w systemie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Użytkownik nie posiada aktywnej sesji.
+- Przygotowano nazwę użytkownika, która nie istnieje w systemie.
+- Treść komunikatu błędu nie jest określona w instrukcji; w teście oceniany jest skutek funkcjonalny.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie uwierzytelnia użytkownika.
+- System nie wyświetla chronionego widoku dostępnego po zalogowaniu.
+- Użytkownik pozostaje na ekranie logowania lub otrzymuje informację o nieudanej autoryzacji.
+- System nie ujawnia danych kont innych użytkowników.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do ekranu logowania systemu EZD. | Zostaje wyświetlony ekran logowania. |
+| 2 | W polu „Nazwa użytkownika” wprowadzić nazwę, która nie istnieje w systemie. | Wartość zostaje wprowadzona do pola. |
+| 3 | W polu „Hasło” wprowadzić dowolną wartość. | Wartość hasła zostaje wprowadzona i jest prezentowana w sposób maskowany. |
+| 4 | Wybrać przycisk „Zaloguj się”. | System odrzuca próbę logowania i nie udostępnia chronionego widoku. |
+| 5 | Zweryfikować stan aplikacji po odrzuceniu logowania. | Użytkownik nadal nie posiada aktywnej sesji i nie ma dostępu do funkcji wymagających zalogowania. |

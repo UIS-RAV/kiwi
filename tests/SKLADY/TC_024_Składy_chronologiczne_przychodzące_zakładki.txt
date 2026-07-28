@@ -1,0 +1,29 @@
+NAZWA TESTU: Składy chronologiczne (przychodzące) – zakładki
+
+<h2> Cel testu </h2>
+
+Weryfikacja zakładek pełne odwzorowanie, niepełne odwzorowanie i archiwalne.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3 Obsługa składów; 2.3.2 Składy chronologiczne (przychodzące)
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Dostępne są wszystkie trzy zakładki.
+- Przesyłki są prezentowane zgodnie z typem pudła i statusem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz eKancelaria -> Składy chronologiczne (przychodzące). | Wyświetla się widok obsługi. |
+| 2 | Sprawdź zakładki. | Widoczne są pełne odwzorowanie, niepełne odwzorowanie i archiwalne. |
+| 3 | Otwórz pełne odwzorowanie. | Widoczne są przesyłki w pudłach pełne odwzorowanie oraz w trakcie przekazania. |
+| 4 | Otwórz niepełne odwzorowanie. | Widoczne są przesyłki w pudłach niepełne odwzorowanie oraz w trakcie przekazania. |
+| 5 | Otwórz archiwalne. | Widoczne są przesyłki o statusach archiwalnych. |

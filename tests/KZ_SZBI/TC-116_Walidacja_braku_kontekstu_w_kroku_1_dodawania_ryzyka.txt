@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wymagania wyboru kontekstu szacowania ryzyka w pierwszym kroku.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.1 Dodaj ryzyko (krok 1)
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+
+<h2> Kryteria akceptacji </h2>
+
+* Bez wyboru kontekstu krok 2 nie jest otwierany.
+* Pole jest oznaczone jako błędnie zwalidowane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Uruchom funkcję dodawania ryzyka. | Wyświetlony zostaje krok 1. |
+| 2 | Pozostaw pole kontekstu puste. | Brak wartości w polu. |
+| 3 | Kliknij „Dalej”. | Pole zostaje oznaczone jako wymagane, a krok 2 nie zostaje otwarty. |
+| 4 | Kliknij „Anuluj”. | Okno zostaje zamknięte bez utworzenia wpisu. |

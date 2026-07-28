@@ -1,0 +1,37 @@
+ID: FLT-010
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Wyczyszczenie wszystkich filtrów </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia wszystkich aktywnych ograniczeń funkcją „Wyczyść filtry”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Aktywnych jest kilka filtrów.
+- Lista bez filtrów zawiera większy zbiór danych.
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja usuwa wszystkie filtry użytkownika.
+- Kafelki usuniętych filtrów nie są widoczne.
+- Lista nie jest ograniczana usuniętymi kryteriami.
+- System nie zgłasza błędu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować co najmniej dwa filtry. | Lista jest ograniczona, a kafelki widoczne. |
+| 2 | Wybrać „Wyczyść filtry”. | System usuwa aktywne filtry. |
+| 3 | Zweryfikować pasek filtrów. | Kafelki filtrów użytkownika nie są widoczne. |
+| 4 | Zweryfikować listę. | Dane nie są ograniczane usuniętymi filtrami. |

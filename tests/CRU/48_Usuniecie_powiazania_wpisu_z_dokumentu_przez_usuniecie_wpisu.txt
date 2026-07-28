@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zapisania informacji w historii dokumentu po usunięciu wpisu powiązanego z dokumentem.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Dokument jest powiązany z wpisem w Rejestrze umów
+* Wpis może zostać usunięty zgodnie z maszyną stanów
+
+<h2> Kryteria akceptacji </h2>
+
+* Wpis zostaje usunięty z Rejestru umów
+* Powiązanie dokumentu z wpisem zostaje usunięte
+* W historii dokumentu zostaje zapisana informacja o usunięciu powiązania w Rejestrze umów
+* Sekcja Rejestr Umów w dokumencie wskazuje brak powiązania
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz sekcję Rejestr Umów w podglądzie powiązanego dokumentu. | Widoczny jest powiązany wpis. |
+| 2 | Uruchom funkcję usunięcia wpisu. | System wyświetla modal potwierdzenia usunięcia. |
+| 3 | Potwierdź usunięcie wpisu. | Wpis zostaje usunięty. |
+| 4 | Otwórz historię dokumentu. | Widoczna jest informacja o usunięciu powiązania w Rejestrze umów. |
+| 5 | Zweryfikuj sekcję Rejestr Umów. | Widoczny jest komunikat o braku powiązania dokumentu. |

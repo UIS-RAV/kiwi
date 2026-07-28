@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie wyboru opiekuna umowy typu komórka.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+* W strukturze organizacyjnej istnieją komórki organizacyjne
+
+<h2> Kryteria akceptacji </h2>
+
+* Po wyborze typu opiekuna „komórka” system prezentuje komórki organizacyjne
+* Lista zawiera komórki w formacie nazwa komórki i symbol komórki
+* Wartość opiekuna może zostać wybrana i zapisana z umową
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | W polu typu opiekuna wybierz „komórka”. | System przełącza listę opiekunów na komórki organizacyjne. |
+| 2 | Rozwiń listę komórek organizacyjnych. | Widoczne są komórki organizacyjne ze struktury. |
+| 3 | Wybierz komórkę i zapisz umowę. | Wpis zostaje zapisany z wybranym opiekunem. |

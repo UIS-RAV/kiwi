@@ -1,0 +1,31 @@
+NAZWA TESTU: Dodaj do składu – poprawne powiązanie
+
+<h2> Cel testu </h2>
+
+Weryfikacja dodania przesyłki do pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.2 Dodaj do składu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Powstaje powiązanie z pudłem.
+- Status zmienia się na na stanie.
+- Historia zawiera Dodano do składu chronologicznego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Dodaj do składu. | Widoczny jest formularz. |
+| 2 | Wprowadź Kod kreskowy przesyłki albo Liczba dziennika. | System identyfikuje przesyłkę. |
+| 3 | Wybierz Skład chronologiczny i Pudło. | Pola zostają uzupełnione. |
+| 4 | Wybierz Dodaj do składu. | Operacja kończy się powodzeniem. |
+| 5 | Sprawdź listę. | Przesyłka jest w wybranym pudle ze statusem na stanie. |
+| 6 | Sprawdź historię. | Widoczny jest wpis z Data akcji, Pracownik, Ze stanowiska i Opis zmiany: Dodano do składu chronologicznego. |

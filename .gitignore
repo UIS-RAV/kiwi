@@ -2,8 +2,8 @@ __pycache__/
 *.pyc
 .venv/
 downloaded_images/
+DOKUMENTACJA_TESTOW/
 output/
 history/
-tests/
 .idea/
 *.iml

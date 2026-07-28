@@ -1,0 +1,28 @@
+NAZWA TESTU: Odrzuć przyjęcie – powiadomienie
+
+<h2> Cel testu </h2>
+
+Weryfikacja powiadomienia dla przekazującego.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.5 Odrzuć przyjęcie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Powiadomienie ma tytuł Odrzucenie przyjęcia przesyłki przychodzącej.
+- Link prowadzi do właściwej przesyłki.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wykonaj Odrzuć przyjęcie. | Operacja kończy się powodzeniem. |
+| 2 | Zaloguj się jako przekazujący. | Widoczne jest powiadomienie. |
+| 3 | Sprawdź tytuł i opis. | Zawierają liczbę dziennika, osobę odrzucającą i stanowisko. |
+| 4 | Otwórz link. | Otwiera się podgląd właściwej przesyłki. |

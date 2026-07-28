@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości podglądu wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę umożliwiającą podgląd wpisu
+* W Rejestrze umów istnieje wpis
+
+<h2> Kryteria akceptacji </h2>
+
+* Modal podglądu wpisu zostaje otwarty
+* Dane wpisu są prezentowane w trybie bez możliwości edycji
+* Widoczne są pola opisujące umowę, strony umowy i opiekuna umowy
+* Modal można zamknąć przyciskiem X
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Podgląd”. | System otwiera modal podglądu wpisu. |
+| 3 | Zweryfikuj dane w formularzu. | Dane wpisu są widoczne i nieedytowalne. |
+| 4 | Zamknij modal przyciskiem X. | Modal zostaje zamknięty. |

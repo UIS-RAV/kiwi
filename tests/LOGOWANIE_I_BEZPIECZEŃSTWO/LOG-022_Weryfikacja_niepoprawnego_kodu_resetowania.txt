@@ -1,0 +1,36 @@
+ID: LOG-022
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia niepoprawnego kodu resetowania hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje użytkownik wymagający resetu hasła.
+- Otwarty jest tryb „Konto zablokowane”.
+- Przygotowano kod, który nie jest poprawnym kodem dla użytkownika.
+- Instrukcja nie określa literalnej treści komunikatu.
+
+<h2> Kryteria akceptacji </h2>
+
+- System odrzuca niepoprawny kod.
+- Formularz nadania nowego hasła nie zostaje wyświetlony.
+- Hasło użytkownika nie ulega zmianie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić prawidłową nazwę użytkownika. | Nazwa zostaje wprowadzona. |
+| 2 | Wprowadzić niepoprawny kod zmiany hasła. | Kod zostaje wprowadzony. |
+| 3 | Wybrać „Sprawdź kod”. | System odrzuca kod. |
+| 4 | Zweryfikować brak formularza nadania nowego hasła. | Użytkownik nie może kontynuować procesu resetu. |
+| 5 | Zweryfikować możliwość logowania dotychczasowym hasłem, o ile konto nie jest zablokowane. | Dotychczasowe hasło nie zostało zmienione. |

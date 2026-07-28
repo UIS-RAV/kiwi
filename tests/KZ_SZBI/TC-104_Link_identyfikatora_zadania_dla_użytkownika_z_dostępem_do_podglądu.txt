@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja linku do zadania w rejestrze audytów dla użytkownika posiadającego co najmniej prawo podglądu zadania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.19 Lista zadań w audycie
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Audyt jest powiązany z jednym zadaniem.
+* Użytkownik posiada co najmniej dostęp do podglądu tego zadania.
+
+<h2> Kryteria akceptacji </h2>
+
+* Identyfikator zadania jest linkiem.
+* Kliknięcie otwiera podgląd właściwego zadania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Widoczny jest audyt z powiązanym zadaniem. |
+| 2 | Zweryfikuj identyfikator zadania. | Identyfikator jest prezentowany jako link. |
+| 3 | Kliknij identyfikator zadania. | Otwarty zostaje właściwy obiekt zadania. |
+| 4 | Zweryfikuj identyfikator i tytuł otwartego zadania. | Dane odpowiadają zadaniu powiązanemu z audytem. |

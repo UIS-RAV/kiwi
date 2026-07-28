@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wartości słownika „Typ załącznika w audycie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.3.4 Typ załącznika w audycie
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do dodawania załącznika do audytu.
+* Istnieje audyt w statusie umożliwiającym dodanie załącznika.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępne są wartości „raport z audytu” oraz „inny”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Rejestr zostaje wyświetlony. |
+| 2 | Uruchom funkcję „Dodaj załącznik” dla wybranego audytu. | Wyświetlony zostaje formularz dodawania załącznika. |
+| 3 | Rozwiń pole „Typ załącznika”. | Lista wartości zostaje wyświetlona. |
+| 4 | Zweryfikuj dostępne wartości. | Widoczne są wartości „raport z audytu” i „inny”. |
+| 5 | Zamknij formularz przyciskiem „Anuluj”. | Formularz zostaje zamknięty bez dodania pliku. |

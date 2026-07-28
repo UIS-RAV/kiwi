@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie ustawienia statusu „błąd przekazania” po nieudanym przekazaniu umowy do CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Istnieje wpis zaakceptowany do publikacji w CRU
+* Wpis znajduje się w statusie „w przekazaniu”
+* Integracja z CRU zwraca błąd przekazania
+
+<h2> Kryteria akceptacji </h2>
+
+* System wykonuje próby ponowienia przekazania do CRU
+* Próby ponowienia są realizowane zgodnie z konfiguracją: po 1, 5 i 60 minutach
+* Po trzeciej nieudanej próbie status wpisu zmienia się na „błąd przekazania”
+* Dla wpisu w statusie błędu dostępna jest funkcja „Ponów publikację” zgodnie z uprawnieniami
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zaakceptuj publikację wpisu w CRU przy niedostępnej lub błędnej odpowiedzi CRU. | Status wpisu zmienia się na „w przekazaniu”. |
+| 2 | Zweryfikuj mechanizm ponowień. | System podejmuje kolejne próby przekazania do CRU. |
+| 3 | Poczekaj na zakończenie trzeciej nieudanej próby. | System kończy proces przekazania błędem. |
+| 4 | Zweryfikuj status wpisu. | Status wpisu zmienia się na „błąd przekazania”. |
+| 5 | Rozwiń menu podręczne wpisu. | Dostępna jest funkcja „Ponów publikację”. |

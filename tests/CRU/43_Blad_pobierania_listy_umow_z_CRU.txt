@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie obsługi błędu podczas pobierania listy umów z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* API pobierania listy umów z CRU zwraca odpowiedź błędną
+
+<h2> Kryteria akceptacji </h2>
+
+* System pozostawia otwarty modal „Pobierz z CRU”
+* System wyświetla komunikat o błędzie pobierania umów z CRU
+* Lista umów z CRU nie zostaje odświeżona błędnymi danymi
+* Użytkownik otrzymuje informację o konieczności ponowienia próby lub kontaktu z administratorem
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz modal „Pobierz z CRU”. | Modal zostaje wyświetlony. |
+| 2 | Uzupełnij poprawne parametry pobierania. | Formularz zawiera poprawne dane. |
+| 3 | Kliknij „Pobierz”. | System próbuje pobrać dane z CRU. |
+| 4 | Zweryfikuj komunikat błędu. | Widoczny jest komunikat o błędzie pobierania umów z CRU. |
+| 5 | Zweryfikuj listę umów. | Lista nie zostaje odświeżona błędnymi danymi. |

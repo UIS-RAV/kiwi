@@ -1,0 +1,37 @@
+ID: LOG-025
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Integracyjny / Pozytywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja rozpoczęcia procesu resetowania hasła przez wiadomość e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie konta systemowego email
+
+<h2> Warunki wstępne </h2>
+
+- W EZD wskazano działające systemowe konto e-mail.
+- Użytkownik posiada przypisany poprawny adres e-mail.
+- Dostępna jest skrzynka odbiorcza użytkownika.
+- Otwarty jest tryb „Odśwież hasło”.
+
+<h2> Kryteria akceptacji </h2>
+
+- System przyjmuje żądanie dla istniejącego użytkownika.
+- Wiadomość dotycząca resetu hasła zostaje wysłana z użyciem skonfigurowanego konta systemowego.
+- Wiadomość dociera na adres użytkownika.
+- Proces nie ujawnia danych innych użytkowników.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić nazwę użytkownika posiadającego przypisany adres e-mail. | Nazwa użytkownika zostaje wprowadzona. |
+| 2 | Wybrać przycisk „Wyślij email”. | System inicjuje wysłanie wiadomości resetującej. |
+| 3 | Otworzyć skrzynkę odbiorczą użytkownika. | Skrzynka jest dostępna. |
+| 4 | Odszukać wiadomość dotyczącą resetowania hasła. | Wiadomość została dostarczona. |
+| 5 | Zweryfikować, że wiadomość dotyczy właściwego użytkownika i systemu EZD. | Treść pozwala zidentyfikować właściwy proces resetowania hasła. |

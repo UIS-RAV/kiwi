@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie sekcji Rejestr Umów w podglądzie dokumentu bez powiązania z wpisem w rejestrze.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada uprawnienie umożliwiające podgląd dokumentu
+* Dokument przychodzący, wewnętrzny lub wychodzący nie jest powiązany z wpisem w Rejestrze umów
+
+<h2> Kryteria akceptacji </h2>
+
+* W podglądzie dokumentu w sekcji Rejestr widoczna jest podsekcja „Rejestr Umów”
+* System wyświetla komunikat o braku powiązania dokumentu
+* Dostępny jest przycisk „Dodaj do rejestru umów” zgodnie z uprawnieniami
+* Przycisk otwiera modal „Dodaj umowę”
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz podgląd dokumentu niepowiązanego z Rejestrem umów. | Podgląd dokumentu zostaje wyświetlony. |
+| 2 | Przejdź do sekcji „Rejestr”. | Widoczna jest podsekcja „Rejestr Umów”. |
+| 3 | Zweryfikuj treść sekcji. | Widoczny jest komunikat „--- brak powiązania dokumentu ---”. |
+| 4 | Kliknij „Dodaj do rejestru umów”. | System otwiera modal „Dodaj umowę”. |

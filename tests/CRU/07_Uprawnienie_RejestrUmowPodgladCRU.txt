@@ -1,0 +1,25 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zakresu dostępu użytkownika z rolą RejestrUmowPodgladCRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik widzi zakładkę „Umowy w CRU”
+* Użytkownik może pobrać listę umów z CRU
+* Użytkownik może wyświetlić listę umów dostępnych w CRU
+* Użytkownik może podejrzeć szczegóły umowy w CRU
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | System wyświetla Rejestr umów. |
+| 2 | Otwórz zakładkę „Umowy w CRU”. | Zakładka „Umowy w CRU” jest dostępna. |
+| 3 | Zweryfikuj dostępność przycisku „Pobierz z CRU”. | Przycisk pobierania danych z CRU jest widoczny. |
+| 4 | Zweryfikuj możliwość otwarcia szczegółów umowy po pobraniu danych. | Funkcja szczegółów umowy w CRU jest dostępna. |

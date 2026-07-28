@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wartości oraz podpowiedzi słownika „Rodzaj audytu” w formularzu planowania audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.3.1 Rodzaj audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+
+<h2> Kryteria akceptacji </h2>
+
+* Lista zawiera sześć wartości określonych w dokumentacji.
+* Dla każdej wartości prezentowana jest właściwa podpowiedź.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 2 | Rozwiń pole „Rodzaj”. | Lista wartości zostaje wyświetlona. |
+| 3 | Wybierz „Audyt wewnętrzny (I strony)”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Audyt realizowany przez jednostkę na własne potrzeby”. |
+| 4 | Wybierz „Audyt zewnętrzny (II strony)”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Audyt realizowany przez lub na zlecenie stron zainteresowanych”. |
+| 5 | Wybierz „Audyt certyfikujący/recertyfikujący (III strony)”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Audyt realizowany przez jednostkę certyfikującą”. |
+| 6 | Wybierz „Audyt nadzoru (III strony)”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Okresowy audyt jednostki certyfikującej w trakcie cyklu certyfikacji”. |
+| 7 | Wybierz „Audyt doraźny / specjalny”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Audyt wynikający z incydentu, skargi lub istotnej zmiany w organizacji”. |
+| 8 | Wybierz „Audyt dostawcy / podwykonawcy”. | Pod polem wyświetlana jest podpowiedź odpowiadająca wartości: „Audyt realizowany u dostawcy w ramach zarządzania łańcuchem dostaw”. |
+| 9 | Zamknij formularz przyciskiem „Anuluj”. | Formularz zostaje zamknięty bez zapisu. |

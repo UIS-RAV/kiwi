@@ -1,0 +1,28 @@
+NAZWA TESTU: Edytuj pudło – blokada pól po powiązaniu obiektu
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczeń edycji pudła zawierającego obiekt.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.2 Edytuj pudło
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa i Lokalizacja są edytowalne.
+- Rok utworzenia, Typ i Skład chronologiczny nie są edytowalne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Edycja pudła dla pudła z obiektem. | Widoczne są aktualne dane. |
+| 2 | Zmień Nazwa i Lokalizacja. | Zmiana jest możliwa. |
+| 3 | Spróbuj zmienić Rok utworzenia, Typ i Skład chronologiczny. | Zmiana nie jest dozwolona. |
+| 4 | Wybierz Zapisz. | Dozwolone zmiany zostają zapisane. |

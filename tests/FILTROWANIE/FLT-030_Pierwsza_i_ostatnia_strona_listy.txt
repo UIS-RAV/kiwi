@@ -1,0 +1,36 @@
+ID: FLT-030
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Pierwsza i ostatnia strona listy </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zachowania mechanizmu paginacji na pierwszej i ostatniej stronie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista posiada co najmniej dwie strony.
+- Dostępne są kontrolki przechodzenia między stronami.
+
+<h2> Kryteria akceptacji </h2>
+
+- Na pierwszej stronie nie można przejść do strony wcześniejszej niż pierwsza.
+- Na ostatniej stronie nie można przejść do strony późniejszej niż ostatnia.
+- Ostatnia strona prezentuje wyłącznie dostępne rekordy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść na pierwszą stronę. | Pierwsza strona jest aktywna. |
+| 2 | Spróbować przejść do strony wcześniejszej. | Operacja jest niedostępna lub nie zmienia strony. |
+| 3 | Przejść na ostatnią stronę. | Ostatnia strona jest aktywna. |
+| 4 | Spróbować przejść do strony późniejszej. | Operacja jest niedostępna lub nie zmienia strony. |
+| 5 | Zweryfikować liczbę rekordów ostatniej strony. | Nie przekracza ustawionego limitu. |

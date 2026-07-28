@@ -1,0 +1,36 @@
+ID: LOG-023
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja nadania nowego hasła po poprawnej weryfikacji kodu resetowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Pracownicy → Zmiana hasła pracownika przez administratora; Zmień hasło → Konto zablokowane
+
+<h2> Warunki wstępne </h2>
+
+- Kod resetowania został poprawnie zweryfikowany.
+- Wyświetlony jest formularz nadania nowego hasła.
+- Znane są wymagania aktywnego profilu bezpieczeństwa.
+- Przygotowano nowe hasło zgodne z profilem.
+
+<h2> Kryteria akceptacji </h2>
+
+- System zapisuje nowe hasło.
+- Nowe hasło spełnia wymagania aktywnego profilu bezpieczeństwa.
+- Użytkownik może zalogować się nowym hasłem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadzić nowe hasło zgodne z aktywnym profilem bezpieczeństwa. | Nowe hasło zostaje wprowadzone. |
+| 2 | Ponownie wprowadzić tę samą wartość w polu potwierdzenia. | Wartości są zgodne. |
+| 3 | Zatwierdzić nadanie hasła. | System zapisuje nowe hasło. |
+| 4 | Przejść do ekranu logowania. | Ekran logowania jest widoczny. |
+| 5 | Zalogować się przy użyciu nowego hasła. | Użytkownik zostaje poprawnie zalogowany. |

@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie wyboru opiekuna umowy typu stanowisko.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+* W strukturze organizacyjnej istnieją stanowiska
+
+<h2> Kryteria akceptacji </h2>
+
+* Domyślny typ opiekuna umowy to stanowisko
+* Lista opiekunów zawiera stanowiska ze struktury organizacyjnej
+* Wartość opiekuna może zostać wybrana i zapisana z umową
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do pola „Opiekun umowy”. | Widoczny jest typ opiekuna umowy. |
+| 2 | Zweryfikuj wartość domyślną typu opiekuna. | Domyślnie wybrana jest wartość „stanowisko”. |
+| 3 | Rozwiń listę stanowisk. | Widoczne są stanowiska ze struktury organizacyjnej. |
+| 4 | Wybierz stanowisko i zapisz umowę. | Wpis zostaje zapisany z wybranym opiekunem. |

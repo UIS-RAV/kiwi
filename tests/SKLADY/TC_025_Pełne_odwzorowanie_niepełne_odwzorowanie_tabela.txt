@@ -1,0 +1,30 @@
+NAZWA TESTU: Pełne odwzorowanie / niepełne odwzorowanie – tabela
+
+<h2> Cel testu </h2>
+
+Weryfikacja widoku Pełne odwzorowanie / niepełne odwzorowanie, kolumn, sortowania, filtrowania i odświeżania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.1 pełne odwzorowanie / niepełne odwzorowanie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Tabela zawiera kolumny: Lp., checkbox, Liczba dziennika, Data wpływu, Nazwa składu, Lokalizacja, Należy do, Nazwa pudła, Lokalizacja pudła, Wypożyczono do, Rezerwacja do, Status, menu podręczne.
+- Sortowanie i filtrowanie są dostępne zgodnie z dokumentacją: wszystkie kolumny wskazane w dokumentacji.
+- Funkcja odśwież ponownie pobiera listę.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz eKancelaria -> Składy chronologiczne (przychodzące). | Wyświetla się właściwy widok. |
+| 2 | Sprawdź nagłówki tabeli. | Widoczne są kolumny: Lp., checkbox, Liczba dziennika, Data wpływu, Nazwa składu, Lokalizacja, Należy do, Nazwa pudła, Lokalizacja pudła, Wypożyczono do, Rezerwacja do, Status, menu podręczne. |
+| 3 | Sprawdź sortowanie dostępnych kolumn. | Kolejność danych zmienia się zgodnie z wybranym sortowaniem. |
+| 4 | Sprawdź filtrowanie. | Lista zawęża się zgodnie z filtrami: wszystkie kolumny wskazane w dokumentacji. |
+| 5 | Użyj odśwież. | Lista zostaje ponownie pobrana. |

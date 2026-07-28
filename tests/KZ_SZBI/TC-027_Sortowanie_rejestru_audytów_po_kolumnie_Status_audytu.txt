@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja sortowania tabeli audytów po kolumnie „Status audytu”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4 Audyty
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru audytów.
+* W tabeli znajdują się co najmniej dwa wpisy z różnymi wartościami w testowanej kolumnie.
+
+<h2> Kryteria akceptacji </h2>
+
+* Dostępna jest opcja sortowania po kolumnie „Status audytu”.
+* Pierwsze użycie sortowania porządkuje dane w jednym kierunku.
+* Ponowne użycie odwraca kierunek sortowania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz rejestr audytów. | Tabela audytów zostaje wyświetlona. |
+| 2 | Kliknij kontrolkę sortowania w kolumnie „Status audytu”. | Dane zostają uporządkowane według wartości kolumny „Status audytu” w pierwszym kierunku. |
+| 3 | Zweryfikuj kolejność co najmniej dwóch wpisów. | Kolejność jest zgodna z wartościami kolumny „Status audytu”. |
+| 4 | Ponownie kliknij kontrolkę sortowania w kolumnie „Status audytu”. | Kierunek sortowania zostaje odwrócony. |
+| 5 | Ponownie zweryfikuj kolejność wpisów. | Kolejność jest odwrotna względem poprzedniego sortowania. |

@@ -1,0 +1,35 @@
+<h2> Cel testu </h2>
+
+Weryfikacja pozytywnego zakończenia procesu akceptacji planu audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.6 Zaakceptuj
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący i bierze udział w procesie.
+* Istnieje audyt w statusie „w akceptacji” bez biznesowego identyfikatora.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „zaplanowany”.
+* Audyt otrzymuje biznesowy identyfikator.
+* Historia zostaje uzupełniona.
+* Odpowiedzialny oraz audytor wewnętrzny otrzymują wymagane powiadomienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Widoczny jest audyt w statusie „w akceptacji”. |
+| 2 | Otwórz menu audytu i wybierz „Zaakceptuj”. | Wyświetlone zostaje okno potwierdzenia z tytułem audytu. |
+| 3 | Wprowadź opcjonalny komentarz o długości do 256 znaków. | Komentarz zostaje wpisany. |
+| 4 | Kliknij „Akceptuję”. | Decyzja zostaje zapisana, a okno zamknięte. |
+| 5 | Zweryfikuj status audytu. | Status wynosi „zaplanowany”. |
+| 6 | Zweryfikuj identyfikator audytu. | Audyt posiada nadany identyfikator biznesowy. |
+| 7 | Otwórz historię audytu. | Historia zawiera wpis związany z akceptacją. |
+| 8 | Zweryfikuj powiadomienie odpowiedzialnego. | Odpowiedzialny otrzymał powiadomienie „Plan audytu {IDENTYFIKATOR} został zaakceptowany”. |
+| 9 | Jeżeli zespół ustawiono na audytora wewnętrznego, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymał powiadomienie o tym samym tytule. |

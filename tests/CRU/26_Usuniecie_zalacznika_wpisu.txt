@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości usunięcia załącznika wpisu w Rejestrze umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Wpis posiada co najmniej jeden załącznik
+* Usunięcie załącznika jest dostępne zgodnie z maszyną stanów
+
+<h2> Kryteria akceptacji </h2>
+
+* System wyświetla modal potwierdzenia usunięcia załącznika
+* Po potwierdzeniu plik zostaje usunięty z bazy
+* Akcja usunięcia załącznika zostaje zapisana w historii wpisu
+* Widok zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz listę załączników wpisu. | System wyświetla modal listy załączników. |
+| 2 | Kliknij ikonę usunięcia przy załączniku. | System wyświetla modal potwierdzenia usunięcia załącznika. |
+| 3 | Kliknij „Usuń”. | Załącznik zostaje usunięty. |
+| 4 | Otwórz historię zmian wpisu. | W historii widoczna jest informacja o usunięciu załącznika. |

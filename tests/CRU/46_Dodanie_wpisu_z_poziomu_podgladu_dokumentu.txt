@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie utworzenia wpisu w Rejestrze umów z poziomu podglądu dokumentu.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Dokument nie jest powiązany z wpisem w Rejestrze umów
+* Modal „Dodaj umowę” został otwarty z poziomu podglądu dokumentu
+
+<h2> Kryteria akceptacji </h2>
+
+* Wpis zostaje utworzony w Rejestrze umów
+* Wpis zostaje powiązany z dokumentem
+* W historii wpisu zostaje zapisana informacja o utworzeniu wpisu na podstawie dokumentu
+* W historii dokumentu zostaje zapisana informacja o dodaniu powiązania w Rejestrze umów
+* Podgląd dokumentu zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Uzupełnij wymagane dane w modalu „Dodaj umowę”. | Formularz zawiera wymagane dane. |
+| 2 | Kliknij „Zapisz”. | System tworzy wpis i zamyka modal. |
+| 3 | Zweryfikuj sekcję Rejestr Umów w podglądzie dokumentu. | Widoczny jest powiązany wpis w Rejestrze umów. |
+| 4 | Otwórz historię wpisu. | W historii widoczna jest informacja o utworzeniu wpisu na podstawie dokumentu. |
+| 5 | Otwórz historię dokumentu. | W historii dokumentu widoczna jest informacja o dodaniu powiązania w Rejestrze umów. |

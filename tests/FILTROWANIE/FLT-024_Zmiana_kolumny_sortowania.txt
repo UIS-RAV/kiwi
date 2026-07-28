@@ -1,0 +1,35 @@
+ID: FLT-024
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Zmiana kolumny sortowania </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja przełączenia sortowania z jednej kolumny na inną.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera co najmniej dwie sortowalne kolumny.
+- Dane pozwalają rozróżnić kolejności wynikające z obu kolumn.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wybraniu drugiej kolumny lista jest uporządkowana według jej wartości.
+- Poprzednia kolumna nie pozostaje nadrzędnym kryterium sortowania, o ile interfejs nie przewiduje sortowania wielokolumnowego.
+- Liczba rekordów nie zmienia się.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Posortować listę po pierwszej kolumnie. | Lista jest uporządkowana według pierwszej kolumny. |
+| 2 | Wybrać sortowanie po drugiej kolumnie. | Lista zostaje uporządkowana ponownie. |
+| 3 | Zweryfikować kolejność według drugiej kolumny. | Kolejność odpowiada drugiej kolumnie. |
+| 4 | Zweryfikować kompletność listy. | Żaden rekord nie został utracony. |

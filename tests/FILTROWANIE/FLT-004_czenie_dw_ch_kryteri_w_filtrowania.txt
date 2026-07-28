@@ -1,0 +1,38 @@
+ID: FLT-004
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Łączenie dwóch kryteriów filtrowania </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja jednoczesnego zastosowania dwóch kryteriów filtrowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Lista zawiera dane obejmujące różne kombinacje dwóch kryteriów.
+- Znany jest co najmniej jeden rekord spełniający oba kryteria.
+
+<h2> Kryteria akceptacji </h2>
+
+- Lista zawiera wyłącznie rekordy spełniające oba kryteria jednocześnie.
+- Rekord spełniający tylko jedno kryterium nie jest prezentowany.
+- Oba kryteria są widoczne jako aktywne filtry.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Uzupełnić pierwsze kryterium. | Pierwsze kryterium zostaje ustawione. |
+| 3 | Uzupełnić drugie kryterium. | Drugie kryterium zostaje ustawione. |
+| 4 | Wybrać „Szukaj”. | System filtruje listę według obu wartości. |
+| 5 | Zweryfikować wyniki. | Każdy rekord spełnia oba kryteria. |
+| 6 | Zweryfikować pasek filtrów. | Widoczne są dwa aktywne filtry. |

@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Weryfikacja pobrania pliku z listy załączników audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.20 Załączniki audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt z załącznikiem.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wybrany plik zostaje pobrany.
+* Pobrany plik odpowiada załącznikowi wskazanemu na liście.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz okno „Załączniki audytu”. | Lista załączników zostaje wyświetlona. |
+| 2 | Przy wybranym pliku kliknij „Pobierz”. | Rozpoczyna się pobieranie pliku. |
+| 3 | Zweryfikuj pobrany plik. | Nazwa i zawartość odpowiadają załącznikowi z audytu. |

@@ -1,0 +1,35 @@
+ID: FLT-020
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Szybki filtr ostatnie 7 dni </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja szybkiego filtra ograniczającego listę do ostatnich 7 dni.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera rekordy wewnątrz i poza siedmiodniowym okresem.
+- Dostępny jest szybki filtr „ostatnie 7 dni”.
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczne są wyłącznie rekordy należące do okresu filtra.
+- Rekord na granicy okresu jest uwzględniony.
+- Rekord starszy niż okres nie jest prezentowany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać szybki filtr „ostatnie 7 dni”. | Filtr zostaje aktywowany. |
+| 2 | Zweryfikować rekordy wewnątrz okresu. | Rekordy są widoczne. |
+| 3 | Zweryfikować rekord graniczny. | Rekord jest widoczny. |
+| 4 | Zweryfikować rekord starszy. | Rekord nie jest widoczny. |

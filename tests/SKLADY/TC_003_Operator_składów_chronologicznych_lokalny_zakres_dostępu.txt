@@ -1,0 +1,28 @@
+NAZWA TESTU: Operator składów chronologicznych – lokalny – zakres dostępu
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczenia operatora lokalnego do składów przypisanych do komórki pracy.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczne są wyłącznie obiekty ze składów przypisanych do komórki pracy użytkownika.
+- Obiekty innych komórek nie są dostępne do zarządzania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się jako Operator składów chronologicznych – lokalny. | Logowanie kończy się powodzeniem. |
+| 2 | Otwórz listę składów przychodzących. | Wyświetla się lista przesyłek. |
+| 3 | Wyszukaj obiekt ze składu własnej komórki. | Obiekt jest widoczny. |
+| 4 | Wyszukaj obiekt ze składu innej komórki. | Obiekt nie jest dostępny. |

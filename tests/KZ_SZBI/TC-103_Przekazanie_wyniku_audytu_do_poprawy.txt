@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przerwania procesu akceptacji wyniku i powrotu audytu do stanu „w trakcie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.18 Do poprawy wynik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący i bierze udział w procesie.
+* Istnieje audyt w statusie „wykonany w akceptacji”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlane jest ostrzeżenie o przerwaniu procesu.
+* Status zmienia się na „w trakcie”.
+* Proces akceptacji zostaje zakończony.
+* Historia i powiadomienia są zgodne z dokumentacją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Wybierz „Do poprawy wynik”. | Wyświetlone zostaje pytanie z identyfikatorem audytu i ostrzeżeniem o przerwaniu procesu. |
+| 2 | Kliknij „Do poprawy”. | Operacja zostaje wykonana. |
+| 3 | Zweryfikuj status audytu. | Status wynosi „w trakcie”. |
+| 4 | Zweryfikuj zakończenie procesu akceptacji. | Audyt nie pozostaje w aktywnym procesie akceptacji wyniku. |
+| 5 | Otwórz historię. | Widoczny jest wpis „Przekazano wynik audytu do poprawy”. |
+| 6 | Zweryfikuj powiadomienie odpowiedzialnego. | Powiadomienie ma tytuł „Wynik audytu {IDENTYFIKATOR AUDYTU} przesłano do poprawy”. |
+| 7 | Jeżeli zespół to audytor wewnętrzny, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymuje analogiczne powiadomienie. |

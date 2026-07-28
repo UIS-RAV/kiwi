@@ -1,0 +1,30 @@
+NAZWA TESTU: Rezerwuj – podmiot wewnętrzny
+
+<h2> Cel testu </h2>
+
+Weryfikacja rezerwacji dla aktywnego użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.7 Rezerwuj
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Wypożyczający zawiera aktywnych użytkowników.
+- Rezerwacja do jest wymagana i ma minimum data bieżąca + 1.
+- Status zmienia się na rezerwacja.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Rezerwuj. | Wyświetla się Rezerwacja. |
+| 2 | Pozostaw Podmiot zewnętrzny odznaczone i wybierz Wypożyczający. | Dostępni są aktywni użytkownicy. |
+| 3 | Ustaw poprawną Rezerwacja do. | Data zostaje przyjęta. |
+| 4 | Wybierz Rezerwuj. | Status zmienia się na rezerwacja. |
+| 5 | Sprawdź historię. | Opis zawiera właściwego rezerwującego i datę. |

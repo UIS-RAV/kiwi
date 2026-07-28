@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja, że słownik grupy aktywów dostarcza nazwę i podpowiedź do pola listy wyboru.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.6.3 Grupa aktywów
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Kontekst wykorzystuje pole oparte na grupie aktywów.
+
+<h2> Kryteria akceptacji </h2>
+
+* Lista prezentuje nazwy wartości.
+* Po wyborze prezentowana jest podpowiedź przypisana do wartości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do formularza ryzyka zawierającego pole grupy aktywów. | Pole jest widoczne. |
+| 2 | Rozwiń listę. | Wyświetlone zostają nazwy ze słownika. |
+| 3 | Wybierz wartość. | Wartość zostaje wybrana. |
+| 4 | Zweryfikuj obszar podpowiedzi. | Wyświetlana jest podpowiedź przypisana do wybranej wartości. |

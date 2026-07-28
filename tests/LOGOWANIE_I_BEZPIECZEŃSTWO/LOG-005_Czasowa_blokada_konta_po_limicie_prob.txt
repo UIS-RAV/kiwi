@@ -1,0 +1,39 @@
+ID: LOG-005
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Procesowy / Negatywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja czasowej blokady konta po osiągnięciu liczby nieudanych prób logowania określonej w aktywnym profilu bezpieczeństwa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji → Hasła
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Istnieje oddzielne aktywne konto przeznaczone do testów blokady.
+- Konto nie jest zablokowane, a licznik nieudanych prób został wyzerowany.
+- W aktywnym profilu bezpieczeństwa skonfigurowano limit nieudanych prób logowania równy N.
+- Znane są prawidłowa nazwa użytkownika i aktualne hasło.
+- Przygotowano niepoprawne hasło.
+
+<h2> Kryteria akceptacji </h2>
+
+- Próby od 1 do N-1 są odrzucane bez wcześniejszego zablokowania konta.
+- Po wykonaniu N-tej nieudanej próby konto zostaje czasowo zablokowane.
+- W okresie blokady użytkownik nie może zalogować się do systemu.
+- System nie udostępnia chronionego widoku.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odczytać z aktywnego profilu bezpieczeństwa wartość limitu nieudanych prób logowania N. | Znana jest liczba prób, po której konto powinno zostać czasowo zablokowane. |
+| 2 | Przejść do ekranu logowania i wprowadzić prawidłową nazwę użytkownika oraz niepoprawne hasło. | Dane są wprowadzone do odpowiednich pól. |
+| 3 | Powtarzać próbę logowania niepoprawnym hasłem do momentu wykonania N-1 prób. | Każda próba jest odrzucana; do wartości N-1 konto nie zostaje zablokowane. |
+| 4 | Wykonać N-tą próbę logowania przy użyciu niepoprawnego hasła. | System odrzuca próbę i czasowo blokuje konto zgodnie z aktywnym profilem bezpieczeństwa. |
+| 5 | Bez oczekiwania na zakończenie blokady wprowadzić prawidłowe hasło i wybrać „Zaloguj się”. | System nie umożliwia zalogowania w okresie aktywnej blokady. |

@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu użytkownika z rolą Audytor – podgląd do rejestru audytów oraz funkcji podglądu.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – podgląd.
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik ma dostęp do zakładki Audyty.
+* Lista audytów jest widoczna.
+* Dostępna jest funkcja Podgląd.
+* Funkcje tworzenia i realizacji audytu nie są udostępnione tej roli.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu „Kontrola zarządcza”. | Menu zostaje rozwinięte. |
+| 2 | Przejdź do pozycji „Audyty”. | Wyświetlony zostaje moduł Audyty. |
+| 3 | Otwórz zakładkę „Audyty”. | Wyświetlony zostaje rejestr audytów. |
+| 4 | Zweryfikuj widoczność tabeli audytów. | Tabela audytów jest widoczna. |
+| 5 | Otwórz menu podręczne wybranego audytu. | Menu podręczne zostaje wyświetlone. |
+| 6 | Zweryfikuj dostępność funkcji „Podgląd”. | Funkcja „Podgląd” jest dostępna. |
+| 7 | Zweryfikuj brak funkcji „Zaplanuj audyt”. | Funkcja „Zaplanuj audyt” nie jest dostępna. |
+| 8 | Otwórz podgląd audytu. | Wyświetlone zostaje okno „Podgląd audytu” z polami tylko do odczytu. |

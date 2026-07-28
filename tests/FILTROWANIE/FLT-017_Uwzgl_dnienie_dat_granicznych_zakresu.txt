@@ -1,0 +1,36 @@
+ID: FLT-017
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Uwzględnienie dat granicznych zakresu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja uwzględniania rekordów znajdujących się dokładnie na początku i końcu zakresu dat.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rekord z datą równą dacie początkowej.
+- Istnieje rekord z datą równą dacie końcowej.
+- Istnieją rekordy tuż poza zakresem.
+
+<h2> Kryteria akceptacji </h2>
+
+- Rekordy z datami równymi obu granicom są uwzględnione.
+- Rekordy wcześniejsze od początku i późniejsze od końca nie są uwzględnione.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Ustawić zakres obejmujący przygotowane daty graniczne. | Zakres zostaje ustawiony. |
+| 2 | Wykonać wyszukiwanie. | Lista zostaje przefiltrowana. |
+| 3 | Odszukać rekord z datą początkową. | Rekord jest widoczny. |
+| 4 | Odszukać rekord z datą końcową. | Rekord jest widoczny. |
+| 5 | Zweryfikować rekordy poza zakresem. | Nie są widoczne. |

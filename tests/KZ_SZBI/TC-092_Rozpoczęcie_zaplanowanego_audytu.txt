@@ -1,0 +1,33 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przejścia audytu ze stanu „zaplanowany” do stanu „w trakcie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.9 Rozpocznij audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada uprawnienie do realizacji audytu i jest przypisany do audytu.
+* Istnieje audyt w statusie „zaplanowany” z identyfikatorem biznesowym.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „w trakcie”.
+* Data rozpoczęcia jest ustawiana na datę i godzinę wykonania akcji.
+* Historia zawiera wpis „Rozpoczęto audyt”.
+* Szczegółowy zakres planowanego audytu zostaje uzupełniony zgodnie ze słownikami.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu w statusie „zaplanowany”. | Dostępna jest funkcja „Rozpocznij audyt”. |
+| 2 | Wybierz „Rozpocznij audyt”. | Wyświetlone zostaje pytanie „Czy na pewno chcesz rozpocząć audytu {IDENTYFIKATOR AUDYTU}?” |
+| 3 | Kliknij „Rozpocznij”. | Operacja zostaje wykonana, okno zamknięte, a rejestr odświeżony. |
+| 4 | Zweryfikuj status audytu. | Status wynosi „w trakcie”. |
+| 5 | Zweryfikuj kolumnę „Data rozpoczęcia”. | Ustawiona jest data i godzina wykonania akcji. |
+| 6 | Otwórz historię audytu. | Historia zawiera wpis „Rozpoczęto audyt” z datą, pracownikiem i stanowiskiem. |
+| 7 | Otwórz podgląd lub uzupełnienie audytu. | Szczegółowy zakres planowanego audytu jest dostępny zgodnie z określonymi słownikami. |

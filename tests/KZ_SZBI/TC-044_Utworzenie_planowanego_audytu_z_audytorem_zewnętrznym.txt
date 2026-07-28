@@ -1,0 +1,46 @@
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnego utworzenia audytu z zespołem audytowym wskazanym jako audytor zewnętrzny.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.1 Zaplanuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* W słowniku interesantów istnieje pozycja możliwa do wskazania jako audytor zewnętrzny.
+
+<h2> Kryteria akceptacji </h2>
+
+* Audyt zostaje utworzony w statusie „planowany”.
+* Audytor zewnętrzny zostaje zapisany w zespole audytowym.
+* Historia zawiera wpis „Utworzono audyt”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do „Kontrola zarządcza” → „Audyty” → zakładka „Audyty”. | Wyświetlony zostaje rejestr audytów. |
+| 2 | Kliknij „Zaplanuj audyt”. | Wyświetlone zostaje okno modalne „Zaplanuj audyt”. |
+| 3 | Wprowadź tytuł o długości nieprzekraczającej 256 znaków. | Tytuł zostaje wpisany. |
+| 4 | Wybierz planowaną datę „od” równą dacie bieżącej lub przyszłej. | Data zostaje ustawiona. |
+| 5 | Wybierz planowaną datę „do” nie wcześniejszą niż data „od”. | Data zostaje ustawiona. |
+| 6 | Wybierz jedną wartość pola „Rodzaj”. | Wartość zostaje wybrana, a pod polem wyświetlana jest podpowiedź. |
+| 7 | Zaznacz co najmniej jedną wartość pola „Podstawa audytu”. | Wartość zostaje zaznaczona. |
+| 8 | Zaznacz co najmniej jedno zagadnienie dostępne dla wybranej podstawy. | Zagadnienie zostaje zaznaczone. |
+| 9 | Uzupełnij pole „Czynności lub procesy przetwarzania, które będzie obejmował audyt” tekstem do 1024 znaków. | Treść zostaje wpisana. |
+| 10 | Zaznacz co najmniej jedną wartość pola „Sposób przeprowadzenia audytu”. | Wartość zostaje zaznaczona. |
+| 11 | W polu „Dotyczy” wybierz element struktury organizacyjnej. | Wartość zostaje dodana; pole umożliwia wybór urzędu, stanowiska lub użytkownika. |
+| 12 | Wybierz użytkownika i stanowisko w polu „Odpowiedzialny za zaplanowanie”. | Użytkownik zostaje wskazany. |
+| 13 | W sekcji „Zespół audytowy” zaznacz „audytor zewnętrzny”. | Udostępnione zostaje pole wyboru wartości ze słownika interesantów. |
+| 14 | Wybierz audytora zewnętrznego ze słownika interesantów. | Audytor zewnętrzny zostaje wskazany. |
+| 15 | Kliknij „Zapisz”. | Formularz zostaje zwalidowany i audyt zostaje utworzony. |
+| 16 | Zweryfikuj zamknięcie okna i odświeżenie rejestru. | Okno zostaje zamknięte, a nowy audyt jest widoczny w rejestrze. |
+| 17 | Zweryfikuj status utworzonego audytu. | Audyt posiada status „planowany”. |
+| 18 | Zweryfikuj brak biznesowego identyfikatora audytu. | Nowy audyt nie posiada jeszcze przyporządkowanego biznesowego identyfikatora. |
+| 19 | Otwórz „Historia zmian” utworzonego audytu. | Wyświetlona zostaje historia audytu. |
+| 20 | Zweryfikuj najnowszy wpis historii. | Wpis zawiera datę i godzinę, pracownika, stanowisko oraz opis „Utworzono audyt”. |

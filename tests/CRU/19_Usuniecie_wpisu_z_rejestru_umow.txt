@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości usunięcia wpisu z Rejestru umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis możliwy do usunięcia zgodnie z maszyną stanów
+
+<h2> Kryteria akceptacji </h2>
+
+* System wyświetla modal potwierdzenia usunięcia umowy
+* Po potwierdzeniu wpis zostaje trwale usunięty z rejestru
+* Nadany identyfikator zostaje zwolniony
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wybranego wpisu. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Usuń”. | System wyświetla modal potwierdzenia usunięcia umowy. |
+| 3 | Kliknij „Usuń” w modalu. | Wpis zostaje usunięty z rejestru. |
+| 4 | Zweryfikuj listę wpisów. | Usunięty wpis nie jest widoczny w Rejestrze umów. |

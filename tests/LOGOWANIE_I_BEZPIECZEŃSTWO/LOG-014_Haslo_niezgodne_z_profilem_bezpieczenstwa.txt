@@ -1,0 +1,38 @@
+ID: LOG-014
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Walidacja / Reguła biznesowa
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji nowego hasła względem wymagań aktywnego profilu bezpieczeństwa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł administracji → Hasła; Rozpoczęcie pracy z systemem → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- Aktywny profil bezpieczeństwa zawiera wymagania dotyczące małych liter, wielkich liter, cyfr i znaków specjalnych.
+- Istnieje aktywne konto użytkownika.
+- Znane jest aktualne hasło.
+- Otwarty jest formularz zmiany hasła.
+- Przygotowano osobne hasła niespełniające kolejno każdego z wymagań aktywnego profilu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Każde hasło niespełniające co najmniej jednego wymogu profilu zostaje odrzucone.
+- System nie zapisuje hasła niezgodnego z profilem bezpieczeństwa.
+- Dotychczasowe hasło pozostaje aktywne po każdym odrzuconym wariancie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odczytać wymagania aktywnego profilu bezpieczeństwa. | Znane są wymagane grupy znaków i pozostałe parametry hasła. |
+| 2 | Wprowadzić nowe hasło niespełniające wymagania dotyczącego małych liter i zatwierdzić zmianę. | System odrzuca hasło. |
+| 3 | Powtórzyć test z hasłem bez wymaganej wielkiej litery. | System odrzuca hasło. |
+| 4 | Powtórzyć test z hasłem bez wymaganej cyfry. | System odrzuca hasło. |
+| 5 | Powtórzyć test z hasłem bez wymaganego znaku specjalnego. | System odrzuca hasło. |
+| 6 | Zweryfikować logowanie dotychczasowym hasłem. | Dotychczasowe hasło nadal działa. |

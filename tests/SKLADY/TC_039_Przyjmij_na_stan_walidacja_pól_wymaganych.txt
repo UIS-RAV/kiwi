@@ -1,0 +1,27 @@
+NAZWA TESTU: Przyjmij na stan – walidacja pól wymaganych
+
+<h2> Cel testu </h2>
+
+Weryfikacja wymaganych pól.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.4 Przyjmij na stan
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Skład chronologiczny i Pudło są wymagane.
+- Brak danych nie zmienia statusu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Przyjmij na stan. | Widoczny jest formularz. |
+| 2 | Pozostaw pola puste i wybierz Dodaj do składu. | Pola są oznaczone jako błędne. |
+| 3 | Zamknij okno. | Przesyłka pozostaje w trakcie przekazania. |

@@ -1,0 +1,35 @@
+ID: LOG-008
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h2> Cel testu </h2>
+
+Weryfikacja możliwości ponownego zalogowania po zakończeniu okresu czasowej blokady konta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji → Hasła
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Konto użytkownika zostało czasowo zablokowane.
+- Znana jest wartość czasu blokady wynikająca z konfiguracji środowiska.
+- Znane są prawidłowa nazwa użytkownika oraz aktualne hasło.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po upływie skonfigurowanego czasu blokady system ponownie umożliwia uwierzytelnienie użytkownika.
+- Poprawne dane logowania prowadzą do wyświetlenia widoku dostępnego po zalogowaniu.
+- System nie wymaga użycia nieudokumentowanego sposobu obejścia blokady.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Potwierdzić, że konto jest aktualnie czasowo zablokowane. | Próba logowania podczas blokady jest odrzucana. |
+| 2 | Odczytać czas blokady obowiązujący w środowisku testowym. | Znany jest moment, po którym należy ponowić próbę logowania. |
+| 3 | Odczekać do upływu skonfigurowanego czasu blokady. | Okres blokady konta kończy się. |
+| 4 | Wprowadzić prawidłową nazwę użytkownika oraz aktualne hasło i wybrać „Zaloguj się”. | System poprawnie uwierzytelnia użytkownika i wyświetla widok dostępny po zalogowaniu. |

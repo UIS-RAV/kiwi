@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie możliwości dodania nowej umowy do Rejestru umów.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Dostępne są wymagane wartości słownikowe i dane struktury organizacyjnej
+
+<h2> Kryteria akceptacji </h2>
+
+* Formularz „Dodaj umowę” zostaje otwarty
+* Po poprawnej walidacji tworzony jest nowy wpis w Rejestrze umów
+* Nowemu wpisowi zostaje nadany identyfikator
+* Status wpisu zostaje ustawiony na „nowa”
+* W historii wpisu zostaje zapisana akcja utworzenia wpisu
+* Formularz zostaje zamknięty, a widok rejestru odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | System wyświetla Rejestr umów. |
+| 2 | Kliknij „Dodaj umowę”. | System otwiera modal „Dodaj umowę”. |
+| 3 | Uzupełnij wszystkie wymagane dane formularza. | Dane wymagane są uzupełnione. |
+| 4 | Kliknij „Zapisz”. | System wykonuje walidację formularza. |
+| 5 | Zweryfikuj wynik zapisu. | Wpis zostaje utworzony w statusie „nowa” i widoczny w rejestrze. |
+| 6 | Otwórz historię zmian utworzonego wpisu. | W historii widoczna jest akcja „Utworzono wpis”. |

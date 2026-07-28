@@ -1,0 +1,30 @@
+NAZWA TESTU: Dodaj do składu – brak przesyłki
+
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji: Brak przesyłki o wskazanej liczbie dziennika.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.2 Dodaj do składu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczny jest dokładny komunikat: Brak przesyłki o wskazanej liczbie dziennika.
+- Nie powstaje nowe powiązanie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Dodaj do składu. | Widoczny jest formularz. |
+| 2 | Wprowadź dane odpowiadające scenariuszowi. | Wartość zostaje wpisana. |
+| 3 | Wybierz skład i pudło. | Pola zostają uzupełnione. |
+| 4 | Wybierz Dodaj do składu. | System wykonuje walidację. |
+| 5 | Sprawdź pole Liczba dziennika i komunikat. | Pole jest oznaczone jako błędne, widoczny jest komunikat: Brak przesyłki o wskazanej liczbie dziennika. |
+| 6 | Sprawdź dane. | Nie powstaje powiązanie ze składem. |

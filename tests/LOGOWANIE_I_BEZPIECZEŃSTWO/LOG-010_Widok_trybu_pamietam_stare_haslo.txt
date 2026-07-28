@@ -1,0 +1,36 @@
+ID: LOG-010
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Funkcjonalny / UI
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja pól prezentowanych w formularzu zmiany hasła po wybraniu trybu „Pamiętam stare hasło”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Otwarty jest formularz zarządzania hasłem wywołany opcją „Zmień hasło”.
+
+<h2> Kryteria akceptacji </h2>
+
+- Możliwe jest wybranie trybu „Pamiętam stare hasło”.
+- Formularz prezentuje pola „Nazwa użytkownika”, „Stare hasło”, „Nowe hasło” oraz pole potwierdzenia nowego hasła.
+- Formularz nie wymaga kodu zmiany hasła właściwego dla trybu „Konto zablokowane”.
+- Formularz umożliwia zapisanie zmiany po uzupełnieniu prawidłowych danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na formularzu zarządzania hasłem wybrać tryb „Pamiętam stare hasło”. | System aktywuje formularz właściwy dla użytkownika pamiętającego dotychczasowe hasło. |
+| 2 | Zweryfikować obecność pola „Nazwa użytkownika”. | Pole „Nazwa użytkownika” jest widoczne. |
+| 3 | Zweryfikować obecność pola „Stare hasło”. | Pole „Stare hasło” jest widoczne. |
+| 4 | Zweryfikować obecność pola „Nowe hasło”. | Pole „Nowe hasło” jest widoczne. |
+| 5 | Zweryfikować obecność pola służącego do potwierdzenia nowego hasła. | Pole potwierdzenia nowego hasła jest widoczne. |
+| 6 | Zweryfikować, że formularz nie prezentuje pola „Kod zmiany hasła” jako wymaganego elementu tego trybu. | Pole właściwe dla trybu „Konto zablokowane” nie jest wymagane w trybie „Pamiętam stare hasło”. |

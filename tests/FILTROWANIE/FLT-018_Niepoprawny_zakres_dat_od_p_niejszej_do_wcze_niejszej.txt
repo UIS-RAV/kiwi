@@ -1,0 +1,35 @@
+ID: FLT-018
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Niepoprawny zakres dat od późniejszej do wcześniejszej </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja bezpiecznej obsługi zakresu, w którym data początkowa jest późniejsza od daty końcowej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Formularz filtrowania zawiera zakres dat.
+- Możliwe jest podjęcie próby ustawienia daty początkowej późniejszej od końcowej.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie prezentuje wyników jako poprawnego zakresu od–do.
+- Użytkownik otrzymuje walidację lub system blokuje wykonanie niepoprawnego wyszukiwania.
+- Nie występuje błąd techniczny ani utrata danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Ustawić datę początkową późniejszą od daty końcowej. | Niepoprawny układ dat zostaje wprowadzony lub zablokowany. |
+| 3 | Spróbować wykonać wyszukiwanie. | System waliduje zakres albo uniemożliwia wykonanie operacji. |
+| 4 | Zweryfikować zachowanie listy. | Nie dochodzi do błędu technicznego ani prezentacji mylących wyników. |

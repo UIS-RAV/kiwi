@@ -1,0 +1,31 @@
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji formularza planowania audytu dla przypadku: Brak daty do.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.1 Zaplanuj audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+
+<h2> Kryteria akceptacji </h2>
+
+* Formularz nie zostaje zapisany przy niespełnieniu opisanej reguły.
+* Błędne pole zostaje oznaczone zgodnie ze standardem systemu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 2 | Uzupełnij wszystkie pola wymagane poprawnymi wartościami, z wyjątkiem pola objętego testem. | Formularz jest przygotowany do weryfikacji pojedynczej reguły. |
+| 3 | Pozostaw pole daty planowanego rozpoczęcia „do” puste. | Wprowadzony zostaje wariant testowy. |
+| 4 | Kliknij „Zapisz”. | Pole daty „do” zostaje oznaczone jako błędnie zwalidowane. |
+| 5 | Zweryfikuj, że okno formularza pozostaje otwarte. | Formularz nie zostaje zamknięty i audyt nie zostaje utworzony. |
+| 6 | Popraw testowaną wartość na zgodną z dokumentacją. | Pole przestaje być oznaczone jako błędne po ponownej walidacji. |
+| 7 | Kliknij „Anuluj”. | Formularz zostaje zamknięty bez utworzenia audytu. |

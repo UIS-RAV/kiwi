@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu użytkownika z rolą Audytor – akceptujący, przypisanego do aktualnego stanu procesu akceptacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący.
+* Użytkownik jest przypisany do aktualnego stanu procesu akceptacji audytu.
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka „Do zatwierdzenia” jest dostępna.
+* Widoczne są audyty o statusie „w akceptacji” i „wykonany w akceptacji”, do których użytkownik jest przypisany.
+* Dostępne są właściwe akcje akceptacyjne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do modułu Audyty. | Moduł zostaje wyświetlony. |
+| 2 | Otwórz zakładkę „Do zatwierdzenia”. | Zakładka zostaje otwarta. |
+| 3 | Zweryfikuj listę audytów. | Widoczne są audyty o statusach „w akceptacji” lub „wykonany w akceptacji”, przypisane do użytkownika. |
+| 4 | Otwórz menu audytu w statusie „w akceptacji”. | Dostępne są akcje „Zaakceptuj”, „Odrzuć” i „Do poprawy”. |
+| 5 | Otwórz menu audytu w statusie „wykonany w akceptacji”. | Dostępne są akcje „Zaakceptuj wynik”, „Odrzuć wynik” i „Do poprawy wynik”. |

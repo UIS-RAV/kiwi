@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Weryfikacja anulowania operacji rozpoczęcia audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.9 Rozpocznij audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „zaplanowany”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status pozostaje „zaplanowany”.
+* Data rozpoczęcia nie zostaje ustawiona przez anulowaną akcję.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Wybierz „Rozpocznij audyt”. | Wyświetlone zostaje okno potwierdzenia. |
+| 2 | Kliknij „Anuluj”. | Okno zostaje zamknięte. |
+| 3 | Zweryfikuj status i datę rozpoczęcia. | Status nadal wynosi „zaplanowany”, a anulowana akcja nie ustawia daty rozpoczęcia. |

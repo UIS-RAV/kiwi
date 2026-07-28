@@ -1,0 +1,36 @@
+ID: DEK-038
+Moduł: DEKRETACJA
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Prezentacja stanowiska źródłowego dekretacji w imieniu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: prezentacja stanowiska źródłowego dekretacji w imieniu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Dekretacja — Dekretacja w imieniu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada wymagane uprawnienia.
+- przygotowano dokument i stanowiska właściwe dla scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję opisaną jako „Prezentacja stanowiska źródłowego dekretacji w imieniu”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
+| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
+| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Prezentacja stanowiska źródłowego dekretacji w imieniu” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Prezentacja stanowiska źródłowego dekretacji w imieniu” działa zgodnie z instrukcją.
+- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
+- dane nieobjęte operacją pozostają spójne.

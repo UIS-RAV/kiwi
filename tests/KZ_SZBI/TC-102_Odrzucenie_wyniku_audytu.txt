@@ -1,0 +1,32 @@
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia wyniku audytu w procesie akceptacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.17 Odrzuć wynik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – akceptujący i bierze udział w procesie.
+* Istnieje audyt w statusie „wykonany w akceptacji”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Status zmienia się na „odrzucony”.
+* Stan jest końcowy dla ścieżki odrzucenia wyniku.
+* Wysyłane są wymagane powiadomienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu audytu i wybierz „Odrzuć wynik”. | Wyświetlone zostaje okno z identyfikatorem audytu i opcjonalnym polem „Podaj powód”. |
+| 2 | Wprowadź powód do 256 znaków. | Powód zostaje wpisany. |
+| 3 | Kliknij „Odrzucam”. | Decyzja zostaje zapisana. |
+| 4 | Zweryfikuj status audytu. | Status wynosi „odrzucony”. |
+| 5 | Zweryfikuj powiadomienie odpowiedzialnego. | Powiadomienie ma tytuł „Wynik audytu {IDENTYFIKATOR AUDYTU} został odrzucony”. |
+| 6 | Jeżeli zespół to audytor wewnętrzny, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymuje analogiczne powiadomienie. |
+| 7 | Zweryfikuj dostępne akcje. | Audyt znajduje się w stanie końcowym ścieżki odrzucenia wyniku. |

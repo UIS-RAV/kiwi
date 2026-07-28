@@ -1,0 +1,30 @@
+NAZWA TESTU: Wypożycz – podmiot wewnętrzny
+
+<h2> Cel testu </h2>
+
+Weryfikacja formularza i wypożyczenia aktywnemu użytkownikowi.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.6 Wypożycz
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Wypożyczający zawiera aktywnych użytkowników.
+- Planowana data zwrotu ma minimum data bieżąca + 1.
+- Status zmienia się na wypożyczona.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Wypożycz. | Wyświetla się Wypożycz ze składu. |
+| 2 | Pozostaw Podmiot zewnętrzny odznaczone i wybierz Wypożyczający. | Dostępni są aktywni użytkownicy. |
+| 3 | Uzupełnij poprawną Planowana data zwrotu i Dodatkowe informacje. | Dane zostają przyjęte. |
+| 4 | Wybierz Wypożycz ze składu. | Status zmienia się na wypożyczona. |
+| 5 | Sprawdź historię. | Opis zawiera właściwego użytkownika, termin i dodatkowe informacje. |

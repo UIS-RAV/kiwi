@@ -1,0 +1,37 @@
+ID: FLT-009
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pojedynczego filtra krzyżykiem </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia jednego wskazanego filtra bez usuwania pozostałych kryteriów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Aktywne są co najmniej dwa filtry.
+- Każdy filtr jest prezentowany jako osobny kafelek.
+
+<h2> Kryteria akceptacji </h2>
+
+- Kliknięcie krzyżyka usuwa wyłącznie wskazany filtr.
+- Pozostały filtr nadal ogranicza wyniki.
+- Usunięty kafelek znika.
+- Lista zostaje zaktualizowana.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dwa filtry. | Na pasku widoczne są dwa kafelki. |
+| 2 | Wybrać krzyżyk na pierwszym kafelku. | Wskazany filtr zostaje usunięty. |
+| 3 | Zweryfikować pasek filtrów. | Pozostaje tylko drugi filtr. |
+| 4 | Zweryfikować wyniki. | Wyniki uwzględniają tylko pozostałe kryterium. |

@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Weryfikacja kompletności kolumn tabeli w zakładce Audyty.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4 Audyty
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada co najmniej rolę Audytor – podgląd.
+* W rejestrze istnieją audyty.
+
+<h2> Kryteria akceptacji </h2>
+
+* Tabela zawiera wszystkie kolumny wskazane w dokumentacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do „Kontrola zarządcza” → „Audyty” → zakładka „Audyty”. | Wyświetlony zostaje rejestr audytów. |
+| 2 | Zweryfikuj nagłówki tabeli. | Widoczne są kolumny: Lp., Identyfikator, Tytuł, Rodzaj, Dotyczy, Data planowanego rozpoczęcia (od-do), Data rozpoczęcia, Data zakończenia, Status audytu, Odpowiedzialny za zaplanowanie, Zespół audytowy, Załączniki, Identyfikator zadania, Tytuł zadania, Status zadania. |
+| 3 | Zweryfikuj kolumnę bez nazwy przeznaczoną na ikonę załączników. | Widoczna jest ikona reprezentująca funkcję załączników audytu. |
+| 4 | Zweryfikuj dane co najmniej jednego wiersza. | Dane audytu są prezentowane w odpowiednich kolumnach. |

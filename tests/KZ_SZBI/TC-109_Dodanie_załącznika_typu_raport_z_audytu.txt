@@ -1,0 +1,34 @@
+<h2> Cel testu </h2>
+
+Weryfikacja dodania pliku typu „raport z audytu” do audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.20.2 Dodaj załącznik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie umożliwiającym dodanie załącznika.
+* Dostępny jest plik testowy na dysku.
+
+<h2> Kryteria akceptacji </h2>
+
+* Plik zostaje dodany do audytu z typem „raport z audytu”.
+* Historia zawiera wpis „Dodano załącznik {NAZWA_ZAŁĄCZNIKA}”.
+* Wysyłane są wymagane powiadomienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz okno „Załączniki audytu”. | Wyświetlona zostaje lista załączników. |
+| 2 | Kliknij „Dodaj załącznik”. | Wyświetlony zostaje formularz dodawania pliku. |
+| 3 | Wskaż plik z dysku. | Nazwa pliku zostaje ustawiona. |
+| 4 | Wybierz typ „raport z audytu”. | Typ zostaje wybrany. |
+| 5 | Zapisz załącznik. | Plik zostaje dodany, formularz zamknięty, a lista odświeżona. |
+| 6 | Zweryfikuj nowy wiersz. | Widoczna jest nazwa, typ „raport z audytu” i rozmiar pliku. |
+| 7 | Otwórz historię audytu. | Widoczny jest wpis „Dodano załącznik {NAZWA_ZAŁĄCZNIKA}”. |
+| 8 | Zweryfikuj powiadomienie odpowiedzialnego, jeżeli jest inną osobą niż wykonujący. | Powiadomienie ma tytuł „Dodano załącznik {NAZWA_ZAŁĄCZNIKA}” i opis wykonującego oraz stanowiska. |
+| 9 | Jeżeli zespół to audytor wewnętrzny i jest inną osobą niż wykonujący, zweryfikuj jego powiadomienie. | Audytor wewnętrzny otrzymuje analogiczne powiadomienie. |

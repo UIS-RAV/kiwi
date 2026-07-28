@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie przekazania wpisu do publikacji w CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Istnieje wpis w statusie umożliwiającym publikację w CRU
+* W systemie istnieje użytkownik z rolą RejestrUmowAkceptant
+
+<h2> Kryteria akceptacji </h2>
+
+* System otwiera modal „Publikuj w CRU”
+* Użytkownik może wskazać akceptanta z listy użytkowników z rolą RejestrUmowAkceptant
+* Po przekazaniu status wpisu zmienia się na „w akceptacji”
+* W historii wpisu zostaje zapisana akcja przekazania do publikacji w CRU
+* Do wskazanego akceptanta zostaje wysłane powiadomienie
+* Widok rejestru zostaje odświeżony
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Rozwiń menu podręczne wpisu możliwego do publikacji. | Lista dostępnych operacji zostaje wyświetlona. |
+| 2 | Kliknij „Publikuj w CRU”. | System otwiera modal „Publikuj w CRU”. |
+| 3 | Wskaż akceptanta. | Akceptant zostaje wybrany. |
+| 4 | Kliknij „Przekaż”. | Status wpisu zmienia się na „w akceptacji”. |
+| 5 | Otwórz historię zmian wpisu. | W historii widoczna jest informacja o przekazaniu do publikacji w CRU. |

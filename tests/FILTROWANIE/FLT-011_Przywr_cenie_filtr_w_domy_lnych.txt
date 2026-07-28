@@ -1,0 +1,36 @@
+ID: FLT-011
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Przywrócenie filtrów domyślnych </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja działania funkcji „Przywróć domyślne” dla zakładki posiadającej filtry domyślne.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Zakładka posiada co najmniej jeden filtr domyślny.
+- Użytkownik zmienił wartości filtrów lub dodał własne kryteria.
+
+<h2> Kryteria akceptacji </h2>
+
+- Wartości ustawione przez użytkownika zostają usunięte lub zastąpione.
+- Filtry domyślne zostają ponownie aktywowane.
+- Lista zostaje odświeżona zgodnie z filtrami domyślnymi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do zakładki z filtrami domyślnymi. | Filtry domyślne są aktywne. |
+| 2 | Zmienić filtry i wykonać wyszukiwanie. | Lista uwzględnia ustawienia użytkownika. |
+| 3 | Wybrać „Przywróć domyślne”. | System przywraca wartości domyślne. |
+| 4 | Zweryfikować pasek filtrów i wyniki. | Widoczne są filtry domyślne, a lista odpowiada ich wartościom. |

@@ -1,0 +1,29 @@
+NAZWA TESTU: Odrzuć przyjęcie – wykonanie i historia
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia przyjęcia.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.5 Odrzuć przyjęcie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kryteria akceptacji </h2>
+
+- Powiązanie zostaje usunięte.
+- Historia zawiera Odrzucenie przyjęcia ze składu chronologicznego z powodu: {POWÓD}.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Odrzuć przyjęcie. | Widoczny jest formularz. |
+| 2 | Wprowadź poprawny Powód. | Wartość zostaje przyjęta. |
+| 3 | Wybierz Odrzuć. | Operacja zostaje wykonana. |
+| 4 | Sprawdź listę. | Przesyłka nie jest dostępna do przyjęcia. |
+| 5 | Sprawdź historię. | Widoczny jest wpis z powodem. |

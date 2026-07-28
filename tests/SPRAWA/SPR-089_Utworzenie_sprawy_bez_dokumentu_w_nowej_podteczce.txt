@@ -1,0 +1,36 @@
+ID: SPR-089
+Moduł: SPRAWA
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Utworzenie sprawy bez dokumentu w nowej podteczce </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: utworzenie sprawy bez dokumentu w nowej podteczce.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł sprawy — Podteczki
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada stanowisko i uprawnienia wymagane dla scenariusza.
+- przygotowano dane sprawy, dokumenty, JRWA, użytkowników lub komórki organizacyjne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Utworzenie sprawy bez dokumentu w nowej podteczce”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać sprawę, dokument, projekt, podteczkę, stanowisko lub parametr wymagany w scenariuszu. | System przyjmuje wskazaną sprawę, dokument, projekt, podteczkę, stanowisko lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat w podglądzie sprawy, historii, projekcie, podteczce, nadzorze lub na liście. | Rezultat funkcji „Utworzenie sprawy bez dokumentu w nowej podteczce” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Utworzenie sprawy bez dokumentu w nowej podteczce” działa zgodnie z instrukcją.
+- system zapisuje albo odrzuca operację zgodnie z warunkami.
+- dane sprawy oraz powiązanych obiektów pozostają spójne.

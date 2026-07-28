@@ -1,0 +1,38 @@
+ID: LOG-028
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny / Administracyjny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja dodania nowego profilu bezpieczeństwa z definicją wymagań dla hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
+
+<h2> Warunki wstępne </h2>
+
+- Administrator jest zalogowany.
+- Administrator posiada dostęp do sekcji „Administracja” → „Hasła”.
+- Przygotowano unikalną nazwę profilu.
+- Przygotowano wartości konfiguracji, w tym wymagania dla a-z, A-Z, 0-9 i znaków specjalnych.
+
+<h2> Kryteria akceptacji </h2>
+
+- Formularz nowego profilu jest dostępny po użyciu „Dodaj nowy profil”.
+- System umożliwia określenie wymagań hasła.
+- Po wybraniu „Zapisz” nowy profil zostaje utworzony.
+- Profil jest widoczny na liście profili.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do „Administracja” → „Hasła”. | Wyświetlona zostaje sekcja profili bezpieczeństwa. |
+| 2 | Wybrać „Dodaj nowy profil”. | System otwiera formularz nowego profilu. |
+| 3 | Wprowadzić unikalną nazwę profilu. | Nazwa zostaje wprowadzona. |
+| 4 | Uzupełnić parametry profilu, w tym wymagania dotyczące a-z, A-Z, 0-9 i znaków specjalnych. | Konfiguracja zostaje wprowadzona. |
+| 5 | Wybrać „Zapisz”. | System tworzy profil. |
+| 6 | Odszukać utworzony profil na liście. | Nowy profil jest widoczny z zapisanymi danymi. |

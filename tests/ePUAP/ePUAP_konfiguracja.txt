@@ -1,0 +1,20 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie dostępu do konfiguracji ePUAP.
+
+<h2> Warunki wstępne </h2>
+
+* System działa
+* Użytkownik zalogowany
+
+<h2> Kryteria akceptacji </h2>
+
+* Użytkownik może otworzyć konfigurację ePUAP
+* System wyświetla ustawienia
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do ustawień systemu. | Wyświetlone ustawienia. |
+| 2 | Otwórz sekcję ePUAP. | Widoczna konfiguracja ePUAP. |

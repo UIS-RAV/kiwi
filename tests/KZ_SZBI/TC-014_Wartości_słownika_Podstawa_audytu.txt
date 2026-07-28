@@ -1,0 +1,29 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wartości słownika „Podstawa audytu” dostępnych w formularzu audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.3.2 Podstawa audytu
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+
+<h2> Kryteria akceptacji </h2>
+
+* Pole zawiera wartości KRI, UoKSC, ISO/IEC 27001, ISO 22301 oraz RODO.
+* Pole umożliwia wybór wartości w formie checkboxów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz formularz „Zaplanuj audyt”. | Formularz zostaje wyświetlony. |
+| 2 | Przejdź do pola „Podstawa audytu”. | Pole jest widoczne. |
+| 3 | Zweryfikuj dostępne wartości. | Widoczne są wartości: KRI, UoKSC, ISO/IEC 27001, ISO 22301, RODO. |
+| 4 | Zaznacz kolejno każdą z wartości. | Każda wartość może zostać zaznaczona. |
+| 5 | Zaznacz więcej niż jedną wartość. | Pole umożliwia wielokrotny wybór zgodnie z typem checkbox. |
+| 6 | Anuluj formularz. | Formularz zostaje zamknięty bez zapisu. |

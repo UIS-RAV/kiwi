@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja pierwszego kroku formularza dodawania ryzyka.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.1 Dodaj ryzyko (krok 1)
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Słownik „Kontekstu szacowania ryzyka” zawiera wartości.
+
+<h2> Kryteria akceptacji </h2>
+
+* Okno „Dodaj ryzyko (krok 1)” zawiera wymagane pole kontekstu.
+* Po poprawnym wyborze przycisk „Dalej” otwiera krok 2.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Uruchom funkcję dodawania ryzyka. | Wyświetlone zostaje okno „Dodaj ryzyko (krok 1)”. |
+| 2 | Zweryfikuj pole „Kontekstu szacowania ryzyka”. | Pole jest listą jednokrotnego wyboru, zasilaną właściwym słownikiem i jest wymagane. |
+| 3 | Rozwiń listę i wybierz wartość. | Kontekst zostaje wybrany. |
+| 4 | Kliknij „Dalej”. | Walidacja przechodzi poprawnie i wyświetlone zostaje okno „Dodaj ryzyko (krok 2)”. |

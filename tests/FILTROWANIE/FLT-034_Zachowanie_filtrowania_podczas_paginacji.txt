@@ -1,0 +1,36 @@
+ID: FLT-034
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Zachowanie filtrowania podczas paginacji </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja utrzymania aktywnych filtrów podczas przechodzenia między stronami wyników.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie i stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Przefiltrowany wynik obejmuje co najmniej dwie strony.
+- Znane są kryteria aktywnego filtra.
+
+<h2> Kryteria akceptacji </h2>
+
+- Po przejściu na następną stronę filtry pozostają aktywne.
+- Każdy rekord kolejnej strony spełnia kryteria.
+- Powrót na poprzednią stronę nie usuwa filtrów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować filtr dający wynik wielostronicowy. | Filtr jest aktywny. |
+| 2 | Zweryfikować rekordy pierwszej strony. | Każdy spełnia kryterium. |
+| 3 | Przejść na następną stronę. | Wyświetla się kolejna strona wyników. |
+| 4 | Zweryfikować filtr i rekordy. | Filtr nadal jest aktywny, a wszystkie rekordy go spełniają. |
+| 5 | Wrócić na poprzednią stronę. | Filtr nadal pozostaje aktywny. |

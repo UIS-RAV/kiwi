@@ -1,0 +1,32 @@
+ID: LOG-024
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Funkcjonalny / UI
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h2> Cel testu </h2>
+
+Weryfikacja elementów formularza dostępnych w trybie „Odśwież hasło”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Otwarty jest formularz zarządzania hasłem.
+
+<h2> Kryteria akceptacji </h2>
+
+- Możliwe jest wybranie trybu „Odśwież hasło”.
+- Formularz prezentuje pole „Nazwa użytkownika”.
+- Dostępny jest przycisk „Wyślij email”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać tryb „Odśwież hasło”. | System wyświetla formularz właściwy dla resetu przez e-mail. |
+| 2 | Zweryfikować obecność pola „Nazwa użytkownika”. | Pole jest widoczne. |
+| 3 | Zweryfikować obecność przycisku „Wyślij email”. | Przycisk jest dostępny. |

@@ -1,0 +1,26 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie zachowania pól zależnych dla wyłączenia jawności przedmiotu umowy.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestUmowModyfikacjaDodaj
+* Formularz „Dodaj umowę” jest otwarty
+
+<h2> Kryteria akceptacji </h2>
+
+* Dla wartości „brak” pola zależne dotyczące wyłączenia jawności nie są widoczne
+* Dla wartości różnej od „brak” pola zależne są widoczne
+* Dla wartości „INNA” pole komentarza jest wymagane
+* Umowa zostaje zapisana po poprawnym uzupełnieniu wymaganych danych
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Zweryfikuj domyślną wartość pola „Wyłączenie jawności przedmiotu umowy”. | Wartość domyślna to „brak”, a pola zależne nie są widoczne. |
+| 2 | Zmień wartość na inną niż „brak”. | Pola zależne zostają wyświetlone. |
+| 3 | Wybierz wartość „INNA”. | Pole komentarza jest widoczne i wymagane. |
+| 4 | Uzupełnij wymagane dane i zapisz formularz. | Umowa zostaje zapisana. |

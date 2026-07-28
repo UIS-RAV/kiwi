@@ -1,0 +1,36 @@
+<h2> Cel testu </h2>
+
+Weryfikacja przekazania wyniku wykonanego audytu do procesu akceptacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.15 Do akceptacji wynik
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „wykonany”.
+* Audyt posiada załącznik typu „raport z audytu”.
+* Istnieje użytkownik z rolą Audytor – akceptujący.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlane jest okno „Przekaż wynik audytu do akceptacji”.
+* Można wskazać tylko użytkowników z rolą Audytor – akceptujący.
+* Status zmienia się na „wykonany w akceptacji”.
+* Historia i powiadomienia są zgodne z dokumentacją.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Wybierz „Do akceptacji wynik”. | Wyświetlone zostaje okno „Przekaż wynik audytu do akceptacji”. |
+| 2 | Zweryfikuj dane tabeli. | Widoczne są pola „Tytuł” i „Rodzaj”. |
+| 3 | Zweryfikuj funkcję akceptacji z podpisem odręcznym. | Funkcja jest niedostępna/wyszarzona. |
+| 4 | Zweryfikuj „Zapisz jako Szablon”. | Funkcja jest niedostępna/wyszarzona. |
+| 5 | Wybierz akceptanta z rolą Audytor – akceptujący. | Akceptant zostaje wskazany. |
+| 6 | Uruchom proces akceptacji. | Proces zostaje rozpoczęty. |
+| 7 | Zweryfikuj status audytu. | Status wynosi „wykonany w akceptacji”. |
+| 8 | Otwórz historię audytu. | Widoczny jest wpis „Wynik audytu został przekazany do akceptacji”. |
+| 9 | Zweryfikuj powiadomienie akceptanta. | Powiadomienie ma tytuł „Wynik audytu wymaga akceptacji”. |

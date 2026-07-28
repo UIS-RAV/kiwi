@@ -1,0 +1,38 @@
+ID: LOG-001
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h2> Cel testu </h2>
+
+Weryfikacja możliwości poprawnego zalogowania aktywnego użytkownika do systemu EZD przy użyciu prawidłowej nazwy użytkownika i aktualnego hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Istnieje aktywne konto użytkownika.
+- Konto użytkownika nie jest czasowo zablokowane.
+- Znana jest prawidłowa nazwa użytkownika oraz aktualne hasło.
+- Użytkownik nie posiada aktywnej sesji w używanej przeglądarce.
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik zostaje poprawnie uwierzytelniony.
+- System wyświetla widok dostępny po zalogowaniu.
+- System nie prezentuje informacji o błędzie logowania.
+- Użytkownik uzyskuje dostęp wyłącznie w zakresie wynikającym z posiadanych uprawnień.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchomić obsługiwaną przeglądarkę internetową i przejść pod adres systemu EZD. | Zostaje wyświetlony ekran logowania do systemu EZD. |
+| 2 | W polu „Nazwa użytkownika” wprowadzić prawidłową nazwę aktywnego użytkownika. | Wprowadzona wartość jest widoczna w polu „Nazwa użytkownika”. |
+| 3 | W polu „Hasło” wprowadzić aktualne hasło użytkownika. | Wartość hasła zostaje wprowadzona i jest prezentowana w sposób maskowany. |
+| 4 | Wybrać przycisk „Zaloguj się”. | System poprawnie uwierzytelnia użytkownika i wyświetla widok dostępny po zalogowaniu. |
+| 5 | Zweryfikować, czy widoczne funkcje odpowiadają uprawnieniom zalogowanego użytkownika. | Użytkownik ma dostęp do funkcji zgodnych z posiadanymi uprawnieniami. |

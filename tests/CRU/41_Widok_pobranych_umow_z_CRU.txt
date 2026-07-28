@@ -1,0 +1,27 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie prezentacji danych po pobraniu listy umów z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Lista umów z CRU została pobrana poprawnie
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka „Umowy w CRU” prezentuje pobrane dane w formie tabeli
+* Tabela zawiera kolumny: Lp., Numer umowy, Numer systemowy, Status procesowy, Przedmiot umowy, Data zawarcia umowy
+* Nad tabelą widoczny jest przycisk „Pobierz z CRU”
+* Nad tabelą widoczny jest komunikat z parametrami użytymi do pobrania danych
+* Dla wierszy tabeli dostępna jest funkcja „Szczegóły umowy w CRU”
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz zakładkę „Umowy w CRU” po pobraniu danych. | Widoczna jest tabela pobranych umów. |
+| 2 | Zweryfikuj kolumny tabeli. | Tabela zawiera kolumny zgodne z dokumentacją. |
+| 3 | Zweryfikuj komunikat nad tabelą. | Widoczne są parametry użyte do pobrania danych. |
+| 4 | Rozwiń menu podręczne wybranego wiersza. | Dostępna jest funkcja „Szczegóły umowy w CRU”. |

@@ -1,0 +1,36 @@
+ID: SPR-148
+Moduł: SPRAWA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Akceptacja przekazania sprawy w obrębie tej samej komórki organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: akceptacja przekazania sprawy w obrębie tej samej komórki organizacyjnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł sprawy — Przekazywanie spraw
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada stanowisko i uprawnienia wymagane dla scenariusza.
+- przygotowano dane sprawy, dokumenty, JRWA, użytkowników lub komórki organizacyjne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Akceptacja przekazania sprawy w obrębie tej samej komórki organizacyjnej”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać sprawę, dokument, projekt, podteczkę, stanowisko lub parametr wymagany w scenariuszu. | System przyjmuje wskazaną sprawę, dokument, projekt, podteczkę, stanowisko lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat w podglądzie sprawy, historii, projekcie, podteczce, nadzorze lub na liście. | Rezultat funkcji „Akceptacja przekazania sprawy w obrębie tej samej komórki organizacyjnej” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Akceptacja przekazania sprawy w obrębie tej samej komórki organizacyjnej” działa zgodnie z instrukcją.
+- system zapisuje albo odrzuca operację zgodnie z warunkami.
+- dane sprawy oraz powiązanych obiektów pozostają spójne.

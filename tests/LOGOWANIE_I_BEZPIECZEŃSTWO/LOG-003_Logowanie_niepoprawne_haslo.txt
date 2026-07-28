@@ -1,0 +1,38 @@
+ID: LOG-003
+Moduł: LOGOWANIE I BEZPIECZEŃSTWO
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia próby logowania przy użyciu prawidłowej nazwy użytkownika i niepoprawnego hasła.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rozpoczęcie pracy z systemem → Logowanie do systemu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest dostępny.
+- Istnieje aktywne i niezablokowane konto użytkownika.
+- Znana jest prawidłowa nazwa użytkownika.
+- Licznik nieudanych prób logowania jest niższy od limitu określonego w aktywnym profilu bezpieczeństwa.
+- Przygotowano hasło różne od aktualnego hasła użytkownika.
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie uwierzytelnia użytkownika.
+- System nie wyświetla widoku dostępnego po zalogowaniu.
+- Konto nie zostaje zablokowane, jeżeli po wykonaniu testu liczba nieudanych prób pozostaje niższa od skonfigurowanego limitu.
+- System nie zmienia aktualnego hasła użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do ekranu logowania systemu EZD. | Zostaje wyświetlony ekran logowania. |
+| 2 | W polu „Nazwa użytkownika” wprowadzić prawidłową nazwę aktywnego użytkownika. | Wartość zostaje wprowadzona. |
+| 3 | W polu „Hasło” wprowadzić niepoprawne hasło. | Wartość zostaje wprowadzona i jest prezentowana w sposób maskowany. |
+| 4 | Wybrać przycisk „Zaloguj się”. | System odrzuca próbę logowania i nie wyświetla chronionego widoku. |
+| 5 | Zweryfikować, czy konto nie zostało zablokowane przed osiągnięciem limitu określonego w profilu bezpieczeństwa. | Konto pozostaje niezablokowane, jeżeli limit nieudanych prób nie został osiągnięty. |

@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja wykorzystania parametrów Nazwa, Kolejność i Powielenie ze słownika „Ryzyko – pola”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.6.2 Ryzyko – pola
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada dostęp do rejestru ryzyka.
+* Skonfigurowano kontekst z co najmniej dwoma polami dynamicznymi o różnej kolejności i ustawieniu Powielenie.
+
+<h2> Kryteria akceptacji </h2>
+
+* Nazwa określa etykietę pola.
+* Kolejność określa pozycję pola.
+* Powielenie określa dostępność funkcji powielania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz krok 2 dodawania ryzyka dla skonfigurowanego kontekstu. | Pola dynamiczne zostają wyświetlone. |
+| 2 | Porównaj etykiety pól z wartościami „Nazwa” w słowniku. | Etykiety są zgodne. |
+| 3 | Porównaj kolejność pól z parametrem „Kolejność”. | Pola są wyświetlone w skonfigurowanej kolejności. |
+| 4 | Zweryfikuj pole z Powielenie = TAK. | Dostępna jest funkcja dodania kopii pola. |
+| 5 | Zweryfikuj pole z Powielenie = NIE. | Funkcja powielenia nie jest dostępna. |

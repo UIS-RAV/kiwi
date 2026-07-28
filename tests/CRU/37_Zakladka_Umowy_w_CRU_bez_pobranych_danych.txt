@@ -1,0 +1,24 @@
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie widoku zakładki „Umowy w CRU” przed pobraniem danych z CRU.
+
+<h2> Warunki wstępne </h2>
+
+* System EZD jest uruchomiony i dostępny
+* Użytkownik jest zalogowany do systemu EZD
+* Użytkownik posiada rolę RejestrUmowPodgladCRU
+* Dane z CRU nie zostały jeszcze pobrane
+
+<h2> Kryteria akceptacji </h2>
+
+* Zakładka „Umowy w CRU” jest dostępna
+* System wyświetla komunikat informujący o konieczności pobrania danych z CRU
+* Przycisk „Pobierz z CRU” jest dostępny
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Przejdź do Rejestry > Rejestr umów. | System wyświetla Rejestr umów. |
+| 2 | Otwórz zakładkę „Umowy w CRU”. | Zakładka zostaje otwarta. |
+| 3 | Zweryfikuj widok zakładki. | Widoczny jest komunikat oraz przycisk „Pobierz z CRU”. |

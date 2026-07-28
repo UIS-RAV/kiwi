@@ -1,0 +1,28 @@
+<h2> Cel testu </h2>
+
+Weryfikacja niewyświetlania sekcji „Szczegółowy zakres planowanego audytu” dla zespołu określonego jako audytor zewnętrzny.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.12 Uzupełnij audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Istnieje audyt w statusie „w trakcie”.
+* Zespół audytowy określono jako audytor zewnętrzny.
+
+<h2> Kryteria akceptacji </h2>
+
+* Sekcja szczegółowego zakresu nie jest dostępna.
+* Pozostałe dane planu są widoczne bez możliwości edycji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz funkcję „Uzupełnij audyt”. | Wyświetlone zostaje okno formularza. |
+| 2 | Zweryfikuj zapisane dane audytu. | Dane są widoczne i nieedytowalne. |
+| 3 | Przejdź do miejsca, w którym dla audytora wewnętrznego prezentowana jest sekcja szczegółowego zakresu. | Sekcja „Szczegółowy zakres planowanego audytu” nie jest dostępna. |
+| 4 | Zamknij okno przyciskiem X. | Okno zostaje zamknięte bez zmian. |

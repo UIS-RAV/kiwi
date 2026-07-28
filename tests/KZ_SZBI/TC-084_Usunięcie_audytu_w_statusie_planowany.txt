@@ -1,0 +1,30 @@
+<h2> Cel testu </h2>
+
+Weryfikacja twardego usunięcia audytu w statusie „planowany”.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.3 Usuń audyt
+
+<h2> Warunki wstępne </h2>
+
+* System eZD jest uruchomiony i dostępny.
+* Użytkownik jest zalogowany do systemu eZD.
+* Użytkownik posiada rolę Audytor – wykonawca.
+* Słowniki wymagane przez formularz zawierają wartości.
+* Istnieje audyt w statusie „planowany”.
+
+<h2> Kryteria akceptacji </h2>
+
+* Wyświetlane jest potwierdzenie zawierające tytuł audytu.
+* Po potwierdzeniu audyt zostaje usunięty z bazy i znika z rejestru.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|------|----------|---------------------|
+| 1 | Otwórz menu podręczne audytu w statusie „planowany”. | Menu zostaje wyświetlone. |
+| 2 | Wybierz „Usuń audyt”. | Wyświetlone zostaje okno „Usunięcie audytu”. |
+| 3 | Zweryfikuj treść pytania. | Komunikat zawiera pytanie „Czy na pewno chcesz usunąć audyt: {TYTUŁ_AUDYTU}?” z prawidłowym tytułem. |
+| 4 | Kliknij „Usuń”. | Audyt zostaje usunięty, okno zamknięte, a rejestr odświeżony. |
+| 5 | Wyszukaj usunięty audyt po tytule. | Audyt nie jest dostępny w rejestrze. |
