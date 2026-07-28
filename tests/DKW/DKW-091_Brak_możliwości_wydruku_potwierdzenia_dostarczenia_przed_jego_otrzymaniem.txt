@@ -1,0 +1,37 @@
+ID: DKW-091
+Moduł: DZIENNIK KORESPONDENCJI WYCHODZĄCEJ
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Brak możliwości wydruku potwierdzenia dostarczenia przed jego otrzymaniem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: brak możliwości wydruku potwierdzenia dostarczenia przed jego otrzymaniem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Dziennik korespondencji wychodzącej — Potwierdzenia i doręczenia
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada wymagane uprawnienia.
+- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Środowisko posiada konfigurację, uprawnienie lub funkcję wymaganą dla testu warunkowego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję opisaną jako „Brak możliwości wydruku potwierdzenia dostarczenia przed jego otrzymaniem”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Brak możliwości wydruku potwierdzenia dostarczenia przed jego otrzymaniem” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Brak możliwości wydruku potwierdzenia dostarczenia przed jego otrzymaniem” działa zgodnie z instrukcją.
+- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
+- dane nieobjęte operacją pozostają spójne.

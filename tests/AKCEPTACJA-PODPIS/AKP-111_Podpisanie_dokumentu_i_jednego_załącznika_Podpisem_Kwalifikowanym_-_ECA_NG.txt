@@ -1,0 +1,38 @@
+ID: AKP-111
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpisanie dokumentu i jednego załącznika Podpisem Kwalifikowanym - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie dokumentu i jednego załącznika podpisem kwalifikowanym - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument zawierający co najmniej jeden załącznik. | System wyświetla dokument i dostępne załączniki. |
+| 2 | Uruchomić podpis kwalifikowany i zaznaczyć dokument oraz jeden wskazany załącznik. | Do podpisu wybrane są wyłącznie wskazane elementy. |
+| 3 | Wykonać podpis poprawnym certyfikatem. | Operacja kończy się poprawnie. |
+| 4 | Sprawdzić podpis dokumentu, wybranego załącznika i pozostałych załączników. | Podpis otrzymują dokument i jeden wybrany załącznik; pozostałe załączniki nie są podpisane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie dokumentu i jednego załącznika Podpisem Kwalifikowanym - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

@@ -1,0 +1,37 @@
+ID: AKP-163
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Pobranie raportu podpisu kwalifikowanego załącznika </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: pobranie raportu podpisu kwalifikowanego załącznika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Weryfikacja podpisów elektronicznych
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć wynik weryfikacji podpisanego dokumentu lub załącznika. | Wynik weryfikacji jest dostępny. |
+| 2 | Wybrać funkcję pobrania raportu. | System inicjuje pobieranie raportu. |
+| 3 | Zapisać plik raportu. | Plik zostaje pobrany. |
+| 4 | Otworzyć pobrany plik i sprawdzić jego zawartość. | Raport jest czytelny i dotyczy właściwego dokumentu lub załącznika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Pobranie raportu podpisu kwalifikowanego załącznika” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

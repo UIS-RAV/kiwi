@@ -1,0 +1,35 @@
+ID: AKP-030
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Ponowne przekazanie dokumentu po odrzuceniu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: ponowne przekazanie dokumentu po odrzuceniu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Obsługa akceptacji dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument wcześniej odrzucony. | Odrzucony dokument jest dostępny do dalszej obsługi. |
+| 2 | Wprowadzić wymaganą poprawkę lub przygotować dokument do ponownej akceptacji. | System pozwala przygotować dokument do ponownego przekazania. |
+| 3 | Ponownie przekazać dokument do akceptacji. | Nowy etap akceptacji zostaje uruchomiony. |
+| 4 | Sprawdzić status, odbiorcę i historię procesu. | Status i historia wskazują ponowne przekazanie dokumentu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Ponowne przekazanie dokumentu po odrzuceniu” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

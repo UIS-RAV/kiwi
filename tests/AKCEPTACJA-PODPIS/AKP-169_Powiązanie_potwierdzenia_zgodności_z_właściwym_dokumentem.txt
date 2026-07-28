@@ -1,0 +1,35 @@
+ID: AKP-169
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Powiązanie potwierdzenia zgodności z właściwym dokumentem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: powiązanie potwierdzenia zgodności z właściwym dokumentem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Potwierdzenie zgodności podpisanego dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć podpisany dokument lub podpisany załącznik. | Podpisany element jest dostępny. |
+| 2 | Wybrać funkcję wygenerowania potwierdzenia zgodności. | System udostępnia generowanie potwierdzenia. |
+| 3 | Zatwierdzić generowanie. | Potwierdzenie zostaje wygenerowane. |
+| 4 | Sprawdzić wygenerowane potwierdzenie i jego powiązanie z elementem źródłowym. | Dokument potwierdzenia zawiera właściwe dane i jest powiązany z prawidłowym elementem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Powiązanie potwierdzenia zgodności z właściwym dokumentem” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

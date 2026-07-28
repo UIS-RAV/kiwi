@@ -1,0 +1,37 @@
+ID: AKP-058
+Moduł: AKCEPTACJA I PODPIS
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Anulowanie podpisu przez użytkownika - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: anulowanie podpisu przez użytkownika - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja podpisu eCA NG
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument i uruchomić wskazaną operację podpisania. | Proces podpisywania zostaje rozpoczęty. |
+| 2 | Po przejściu do aplikacji podpisującej wybrać anulowanie lub zamknąć operację. | Aplikacja przerywa operację bez utworzenia podpisu. |
+| 3 | Powrócić do EZD. | EZD odbiera informację o anulowaniu albo braku wyniku. |
+| 4 | Sprawdzić status dokumentu, akceptacji i listę podpisów. | Dokument nie zostaje podpisany, a proces nie jest błędnie oznaczony jako zakończony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Anulowanie podpisu przez użytkownika - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

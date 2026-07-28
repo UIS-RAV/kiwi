@@ -1,0 +1,37 @@
+ID: AKP-116
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Podpisanie załącznika z opcją eTW </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie załącznika z opcją etw.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument z załącznikiem przeznaczonym dla eTW. | Załącznik jest dostępny do podpisania. |
+| 2 | Uruchomić podpisanie załącznika i włączyć opcję eTW. | System stosuje wariant podpisu wymagany dla eTW. |
+| 3 | Wykonać podpis kwalifikowany. | Podpis zostaje utworzony. |
+| 4 | Sprawdzić format i możliwość weryfikacji podpisanego załącznika. | Podpisany załącznik ma właściwą postać i może zostać zweryfikowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie załącznika z opcją eTW” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

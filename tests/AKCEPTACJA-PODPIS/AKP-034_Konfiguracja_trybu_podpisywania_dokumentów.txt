@@ -1,0 +1,35 @@
+ID: AKP-034
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Konfiguracja trybu podpisywania dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: konfiguracja trybu podpisywania dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja podpisu eCA NG
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Konfiguracja trybu podpisywania dokumentów”. | System wyświetla właściwy widok lub funkcję. |
+| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
+| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
+| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Konfiguracja trybu podpisywania dokumentów” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Konfiguracja trybu podpisywania dokumentów” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

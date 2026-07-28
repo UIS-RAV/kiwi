@@ -1,0 +1,37 @@
+ID: AKP-104
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpis dokumentu metodą zewnętrzną (XAdES) - Szafir </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpis dokumentu metodą zewnętrzną (xades) - szafir.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano podpis kwalifikowany KIR Szafir oraz komponent Szafir Host, chyba że test dotyczy jego braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument przeznaczony do podpisania. | System udostępnia operację podpisania. |
+| 2 | Wybrać podpis kwalifikowany oraz metodę zewnętrzną XAdES. | Wybrana zostaje metoda XAdES. |
+| 3 | Wskazać certyfikat, podać poprawny PIN i zatwierdzić podpis. | Podpis zostaje poprawnie utworzony. |
+| 4 | Sprawdzić dokument oraz utworzony podpis zewnętrzny. | EZD zapisuje podpis zewnętrzny i umożliwia jego wyświetlenie lub weryfikację. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpis dokumentu metodą zewnętrzną (XAdES) - Szafir” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

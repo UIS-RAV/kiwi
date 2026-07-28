@@ -1,0 +1,36 @@
+ID: DKW-018
+Moduł: DZIENNIK KORESPONDENCJI WYCHODZĄCEJ
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Wyświetlenie statusu dokumentu oczekującego na doręczenie </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: wyświetlenie statusu dokumentu oczekującego na doręczenie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Dziennik korespondencji wychodzącej — Statusy i oznaczenia wysyłki
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada wymagane uprawnienia.
+- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję opisaną jako „Wyświetlenie statusu dokumentu oczekującego na doręczenie”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Wyświetlenie statusu dokumentu oczekującego na doręczenie” jest zgodny z instrukcją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyświetlenie statusu dokumentu oczekującego na doręczenie” działa zgodnie z instrukcją.
+- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
+- dane nieobjęte operacją pozostają spójne.

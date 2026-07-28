@@ -1,0 +1,38 @@
+ID: AKP-114
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpisanie wyłącznie dokumentu bez załączników - Szafir </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie wyłącznie dokumentu bez załączników - szafir.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- Skonfigurowano podpis kwalifikowany KIR Szafir oraz komponent Szafir Host, chyba że test dotyczy jego braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument zawierający co najmniej jeden załącznik. | System wyświetla dokument wraz z załącznikami. |
+| 2 | Uruchomić podpis i wybrać wyłącznie dokument. | Do podpisu wybrany jest wyłącznie dokument. |
+| 3 | Wykonać podpis poprawnym certyfikatem. | Dokument zostaje podpisany. |
+| 4 | Sprawdzić dokument oraz załączniki. | Załączniki pozostają bez nowego podpisu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie wyłącznie dokumentu bez załączników - Szafir” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

@@ -1,0 +1,35 @@
+ID: AKP-147
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Wyświetlenie wyniku poprawnej weryfikacji podpisu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: wyświetlenie wyniku poprawnej weryfikacji podpisu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Weryfikacja podpisów elektronicznych
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Wyświetlenie wyniku poprawnej weryfikacji podpisu”. | System wyświetla właściwy widok lub funkcję. |
+| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
+| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
+| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Wyświetlenie wyniku poprawnej weryfikacji podpisu” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyświetlenie wyniku poprawnej weryfikacji podpisu” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

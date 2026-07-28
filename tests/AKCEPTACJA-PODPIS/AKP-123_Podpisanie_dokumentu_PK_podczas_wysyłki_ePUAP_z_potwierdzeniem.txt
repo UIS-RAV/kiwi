@@ -1,0 +1,37 @@
+ID: AKP-123
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Podpisanie dokumentu PK podczas wysyłki ePUAP z potwierdzeniem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie dokumentu pk podczas wysyłki epuap z potwierdzeniem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Akceptacja z podpisem i ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano połączenie z ePUAP i dostępny jest właściwy sposób podpisania.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Podpisanie dokumentu PK podczas wysyłki ePUAP z potwierdzeniem”. | System wyświetla właściwy widok lub funkcję. |
+| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
+| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
+| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Podpisanie dokumentu PK podczas wysyłki ePUAP z potwierdzeniem” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie dokumentu PK podczas wysyłki ePUAP z potwierdzeniem” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

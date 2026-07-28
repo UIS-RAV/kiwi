@@ -1,0 +1,37 @@
+ID: AKP-031
+Moduł: AKCEPTACJA I PODPIS
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Odrzucenie dokumentu z poziomu listy „Do zatwierdzenia” po zaznaczeniu checkboxa </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: odrzucenie dokumentu z poziomu listy „do zatwierdzenia” po zaznaczeniu checkboxa.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Obsługa akceptacji dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Dokument został przekazany do akceptacji i jest dostępny dla wskazanego użytkownika.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument oczekujący na akceptację z poziomu wskazanego w nazwie testu. | Dokument jest dostępny do obsługi. |
+| 2 | Wybrać operację odrzucenia dokumentu. | System udostępnia odrzucenie. |
+| 3 | Wprowadzić komentarz, gdy przewiduje go scenariusz, i zatwierdzić. | Odrzucenie zostaje zapisane. |
+| 4 | Sprawdzić status dokumentu, komentarz i historię procesu. | Dokument otrzymuje właściwy status, a komentarz i operacja są widoczne w historii. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Odrzucenie dokumentu z poziomu listy „Do zatwierdzenia” po zaznaczeniu checkboxa” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

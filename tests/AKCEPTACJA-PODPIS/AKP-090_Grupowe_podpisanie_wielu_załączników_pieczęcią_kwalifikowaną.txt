@@ -1,0 +1,37 @@
+ID: AKP-090
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Grupowe podpisanie wielu załączników pieczęcią kwalifikowaną </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: grupowe podpisanie wielu załączników pieczęcią kwalifikowaną.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- Skonfigurowano pieczęć kwalifikowaną i nadano wymagane uprawnienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument zawierający wiele załączników. | System wyświetla listę załączników. |
+| 2 | Uruchomić podpis kwalifikowany i zaznaczyć dokument oraz wiele załączników. | Możliwe jest wybranie wielu elementów. |
+| 3 | Wykonać podpis poprawnym certyfikatem. | Operacja kończy się poprawnie. |
+| 4 | Sprawdzić podpisy wszystkich zaznaczonych elementów. | Dokument i wszystkie wybrane załączniki posiadają prawidłowy podpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Grupowe podpisanie wielu załączników pieczęcią kwalifikowaną” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

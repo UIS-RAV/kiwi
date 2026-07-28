@@ -1,0 +1,37 @@
+ID: AKP-055
+Moduł: AKCEPTACJA I PODPIS
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpis dokumentu z błędnym PIN - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpis dokumentu z błędnym pin - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja podpisu eCA NG
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument i uruchomić podpis kwalifikowany właściwą aplikacją. | System przekazuje dokument do aplikacji podpisującej. |
+| 2 | Wybrać certyfikat i wprowadzić nieprawidłowy PIN. | Aplikacja przyjmuje dane do weryfikacji, ale PIN jest niepoprawny. |
+| 3 | Zatwierdzić próbę podpisania. | Podpisanie zostaje odrzucone. |
+| 4 | Sprawdzić komunikat, status dokumentu i brak nowego podpisu. | Dokument pozostaje niepodpisany, a system prezentuje czytelny komunikat o błędzie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpis dokumentu z błędnym PIN - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

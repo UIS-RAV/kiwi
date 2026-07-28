@@ -1,0 +1,35 @@
+ID: AKP-018
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Przekazanie dokumentu do poprawy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: przekazanie dokumentu do poprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Obsługa akceptacji dokumentu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Przekazanie dokumentu do poprawy”. | System wyświetla właściwy widok lub funkcję. |
+| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
+| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
+| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Przekazanie dokumentu do poprawy” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przekazanie dokumentu do poprawy” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

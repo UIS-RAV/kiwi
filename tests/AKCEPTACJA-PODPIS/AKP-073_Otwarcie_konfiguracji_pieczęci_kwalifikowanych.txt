@@ -1,0 +1,36 @@
+ID: AKP-073
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Otwarcie konfiguracji pieczęci kwalifikowanych </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: otwarcie konfiguracji pieczęci kwalifikowanych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja pieczęci kwalifikowanej
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano pieczęć kwalifikowaną i nadano wymagane uprawnienia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Otwarcie konfiguracji pieczęci kwalifikowanych”. | System wyświetla właściwy widok lub funkcję. |
+| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
+| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
+| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Otwarcie konfiguracji pieczęci kwalifikowanych” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Otwarcie konfiguracji pieczęci kwalifikowanych” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

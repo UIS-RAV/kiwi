@@ -1,0 +1,38 @@
+ID: AKP-112
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpisanie dokumentu i wielu załączników Podpisem Kwalifikowanym - Szafir </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie dokumentu i wielu załączników podpisem kwalifikowanym - szafir.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- Skonfigurowano podpis kwalifikowany KIR Szafir oraz komponent Szafir Host, chyba że test dotyczy jego braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument zawierający wiele załączników. | System wyświetla listę załączników. |
+| 2 | Uruchomić podpis kwalifikowany i zaznaczyć dokument oraz wiele załączników. | Możliwe jest wybranie wielu elementów. |
+| 3 | Wykonać podpis poprawnym certyfikatem. | Operacja kończy się poprawnie. |
+| 4 | Sprawdzić podpisy wszystkich zaznaczonych elementów. | Dokument i wszystkie wybrane załączniki posiadają prawidłowy podpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie dokumentu i wielu załączników Podpisem Kwalifikowanym - Szafir” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

@@ -1,0 +1,36 @@
+ID: AKP-164
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Weryfikacja podpisów elektronicznych
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przygotować dokument posiadający wiele podpisów kwalifikowanych. | Dokument zawiera wiele podpisów. |
+| 2 | Otworzyć funkcję weryfikacji podpisów. | System rozpoznaje wszystkie podpisy. |
+| 3 | Uruchomić weryfikację wszystkich podpisów. | Każdy podpis jest analizowany. |
+| 4 | Sprawdzić wynik i dane każdego podpisu. | Wynik prezentuje osobno status i dane wszystkich podpisów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

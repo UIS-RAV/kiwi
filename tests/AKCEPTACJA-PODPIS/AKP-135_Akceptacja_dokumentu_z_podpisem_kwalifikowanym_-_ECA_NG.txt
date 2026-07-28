@@ -1,0 +1,38 @@
+ID: AKP-135
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Akceptacja dokumentu z podpisem kwalifikowanym - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: akceptacja dokumentu z podpisem kwalifikowanym - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Akceptacja z podpisem i ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Dokument został przekazany do akceptacji i jest dostępny dla wskazanego użytkownika.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument oczekujący na akceptację z poziomu wskazanego w scenariuszu. | Dokument jest dostępny do akceptacji. |
+| 2 | Wybrać akceptację z podpisem kwalifikowanym. | System uruchamia akceptację połączoną z podpisem kwalifikowanym. |
+| 3 | Dodać komentarz lub wybrać załącznik, jeżeli wymaga tego wariant. | Dane dodatkowe są uwzględnione zgodnie ze scenariuszem. |
+| 4 | Wykonać podpis właściwą aplikacją i sprawdzić wynik procesu. | Dokument zostaje zaakceptowany i podpisany, a wynik jest zapisany w historii. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Akceptacja dokumentu z podpisem kwalifikowanym - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

@@ -1,0 +1,38 @@
+ID: AKP-118
+Moduł: AKCEPTACJA I PODPIS
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Podpisanie samego załącznika Podpisem Kwalifikowanym - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: podpisanie samego załącznika podpisem kwalifikowanym - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Podpisywanie dokumentów i załączników
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć dokument zawierający załącznik. | System prezentuje dokument i załącznik. |
+| 2 | Wybrać operację podpisania i wskazać wyłącznie załącznik. | Do podpisu wybrany jest tylko załącznik. |
+| 3 | Wykonać podpis poprawnym certyfikatem. | Załącznik zostaje podpisany. |
+| 4 | Sprawdzić załącznik oraz dokument główny. | Dokument główny nie otrzymuje nowego podpisu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podpisanie samego załącznika Podpisem Kwalifikowanym - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

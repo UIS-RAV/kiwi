@@ -1,0 +1,36 @@
+ID: AKP-068
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Obsługa błędu niedostępnej wtyczki Szafir </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: obsługa błędu niedostępnej wtyczki szafir.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja podpisu KIR Szafir
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano podpis kwalifikowany KIR Szafir oraz komponent Szafir Host, chyba że test dotyczy jego braku.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapewnić brak komponentu, czytnika albo karty wskazanej w nazwie testu. | Warunek negatywny jest spełniony. |
+| 2 | Otworzyć dokument i uruchomić podpis kwalifikowany. | System podejmuje próbę uruchomienia podpisu. |
+| 3 | Poczekać na odpowiedź EZD lub aplikacji podpisującej. | Operacja nie może zostać wykonana i prezentowany jest komunikat diagnostyczny. |
+| 4 | Sprawdzić komunikat oraz stan dokumentu. | Dokument nie otrzymuje podpisu i zachowuje poprzedni stan. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Obsługa błędu niedostępnej wtyczki Szafir” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

@@ -1,0 +1,37 @@
+ID: AKP-160
+Moduł: AKCEPTACJA I PODPIS
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Wyświetlenie informacji o podpisie kwalifikowanym załącznika </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: wyświetlenie informacji o podpisie kwalifikowanym załącznika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Weryfikacja podpisów elektronicznych
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Do dokumentu dodano załącznik lub załączniki wymagane w scenariuszu.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć podpisany dokument lub podpisany załącznik. | Podpisany element jest dostępny. |
+| 2 | Wybrać funkcję informacji o podpisie. | System wyświetla szczegóły podpisu. |
+| 3 | Przejrzeć dane podpisu, certyfikatu, osoby podpisującej oraz czasu. | Dane są kompletne i czytelne. |
+| 4 | Porównać dane z użytym certyfikatem i podpisanym elementem. | Informacje odpowiadają właściwemu dokumentowi lub załącznikowi i użytemu certyfikatowi. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyświetlenie informacji o podpisie kwalifikowanym załącznika” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.

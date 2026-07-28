@@ -1,0 +1,37 @@
+ID: AKP-056
+Moduł: AKCEPTACJA I PODPIS
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Brak czytnika/karty podczas podpisu - ECA NG </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie funkcji: brak czytnika/karty podczas podpisu - eca ng.
+
+<h2> Rozdział dokumentacji </h2>
+
+Akceptacja i podpis — Konfiguracja podpisu eCA NG
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD i posiada uprawnienia wymagane dla scenariusza.
+- Przygotowano dokument w stanie umożliwiającym wykonanie operacji.
+- Skonfigurowano aplikację eCA NG, chyba że test dotyczy jej braku.
+- W środowisku dostępna jest konfiguracja lub integracja warunkowa wymagana dla testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapewnić brak komponentu, czytnika albo karty wskazanej w nazwie testu. | Warunek negatywny jest spełniony. |
+| 2 | Otworzyć dokument i uruchomić podpis kwalifikowany. | System podejmuje próbę uruchomienia podpisu. |
+| 3 | Poczekać na odpowiedź EZD lub aplikacji podpisującej. | Operacja nie może zostać wykonana i prezentowany jest komunikat diagnostyczny. |
+| 4 | Sprawdzić komunikat oraz stan dokumentu. | Dokument nie otrzymuje podpisu i zachowuje poprzedni stan. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Brak czytnika/karty podczas podpisu - ECA NG” działa zgodnie z opisanym scenariuszem.
+- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
+- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
