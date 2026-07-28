@@ -1,0 +1,34 @@
+ID: EML-024
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Wyłączenie i ponowne włączenie wątkowania wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wpływu ustawienia na prezentację powiązanych wiadomości.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Wyłącz wątkowanie wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieją wiadomości należące do jednego wątku korespondencji.
+
+<h2> Kryteria akceptacji </h2>
+
+- Ustawienie poprawnie steruje prezentacją wątków.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Włącz opcję „Wyłącz wątkowanie wiadomości” i zapisz. | Ustawienie zostaje aktywowane. |
+| 2 | Otwórz wiadomość należącą do wątku. | Pod wiadomością nie jest wyświetlana sekcja z wątkami. |
+| 3 | Wyłącz opcję „Wyłącz wątkowanie wiadomości” i zapisz. | Analiza powiązań zostaje ponownie aktywowana. |
+| 4 | Otwórz powiązaną wiadomość. | Wiadomości mogą być grupowane w jednym wątku. |

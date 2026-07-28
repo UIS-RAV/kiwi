@@ -1,0 +1,33 @@
+ID: EPU-003
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Zmiana trybu pracy skrytki ePUAP na PULL </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ustawienia trybu PULL wymaganego do pobierania dokumentów przez EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Zamiana trybu pracy skrytki ePUAP na PULL
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administracyjne na platformie ePUAP.
+- Istnieje skrytka przeznaczona do integracji z EZD.
+
+<h2> Kryteria akceptacji </h2>
+
+- Skrytka ePUAP działa w trybie PULL.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację wskazanej skrytki na platformie ePUAP. | Wyświetlają się ustawienia skrytki. |
+| 2 | Zmień tryb pracy skrytki na PULL. | Tryb PULL zostaje wskazany w konfiguracji. |
+| 3 | Zapisz ustawienia. | Zmiana zostaje utrwalona. |
+| 4 | Otwórz ponownie ustawienia skrytki. | Skrytka nadal pracuje w trybie PULL. |

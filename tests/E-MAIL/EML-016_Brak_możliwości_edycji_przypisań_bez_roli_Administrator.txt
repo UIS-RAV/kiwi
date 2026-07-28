@@ -1,0 +1,31 @@
+ID: EML-016
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Brak możliwości edycji przypisań bez roli Administrator </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczenia uprawnień do zarządzania przypisaniami.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Przypisywanie adresu e-mail do użytkowników i stanowisk
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD.
+- Użytkownik nie posiada roli Administrator.
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik bez roli Administrator nie może edytować ani zapisywać przypisań.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dostępny widok modułu Poczta i spróbuj przejść do zarządzania przypisaniami. | Funkcja edycji przypisań nie jest dostępna. |
+| 2 | Spróbuj zapisać zmianę przypisania, jeżeli formularz został otwarty inną ścieżką. | System nie pozwala zapisać zmian. |

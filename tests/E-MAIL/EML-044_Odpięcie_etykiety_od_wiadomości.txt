@@ -1,0 +1,34 @@
+ID: EML-044
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Odpięcie etykiety od wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia przyporządkowania etykiety.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Przyporządkowanie etykiety do wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- Wiadomość ma przypisaną etykietę.
+
+<h2> Kryteria akceptacji </h2>
+
+- Przyporządkowanie etykiety zostaje usunięte.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaznacz checkbox przy wiadomości i otwórz akcję „Etykiety”. | Wyświetlają się etykiety, w tym aktualnie przypisana. |
+| 2 | Kliknij przycisk odpięcia przy przypisanej etykiecie. | Powiązanie zostaje usunięte. |
+| 3 | Sprawdź wiadomość. | Etykieta nie jest już widoczna przy wiadomości. |

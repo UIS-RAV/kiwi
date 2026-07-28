@@ -1,0 +1,33 @@
+ID: EML-033
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Średni
+Poziom: Funkcjonalny
+
+<h1> Zmiana czcionki, rozmiaru i koloru tekstu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ustawień wyglądu czcionki.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Tworzenie nowej wiadomości e-mail / Edytowanie tekstu wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kryteria akceptacji </h2>
+
+- Rodzina, rozmiar i kolor czcionki działają zgodnie z wyborem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wpisz tekst i zaznacz fragment. | Fragment jest aktywny. |
+| 2 | Zmień Font family, Font size i kolor przez „More colour”. | Wybrane właściwości są widoczne w edytorze. |
+| 3 | Wyślij i otwórz wiadomość u odbiorcy. | Właściwości tekstu są zachowane. |

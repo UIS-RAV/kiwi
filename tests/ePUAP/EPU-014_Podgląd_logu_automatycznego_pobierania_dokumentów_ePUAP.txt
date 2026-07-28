@@ -1,0 +1,34 @@
+ID: EPU-014
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Podgląd logu automatycznego pobierania dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja rejestrowania zdarzeń zainicjowanych automatycznie przez system.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Log ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Automatyczna synchronizacja wykonała pobranie dokumentów.
+
+<h2> Kryteria akceptacji </h2>
+
+- Log zawiera zdarzenia automatycznego pobierania dokumentów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Log ePUAP. | Wyświetla się lista zdarzeń. |
+| 2 | Odszukaj zdarzenie zainicjowane przez System (cron). | Log zawiera automatyczne pobranie. |
+| 3 | Sprawdź informacje o wiadomościach i załącznikach. | Dane operacji są dostępne w logu. |

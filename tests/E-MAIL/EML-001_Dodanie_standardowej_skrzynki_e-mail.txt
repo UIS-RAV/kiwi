@@ -1,0 +1,34 @@
+ID: EML-001
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Dodanie standardowej skrzynki e-mail </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnego utworzenia standardowego konta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie standardowej skrzynki e-mail
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+
+<h2> Kryteria akceptacji </h2>
+
+- Standardowa skrzynka zostaje utworzona.
+- Zapisane konto jest widoczne na liście kont e-mail.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → Poczta. | Wyświetla się lista kont e-mail. |
+| 2 | Wybierz „Dodaj nowy e-mail”. | Wyświetla się formularz konfigurowania adresu e-mail. |
+| 3 | Uzupełnij wszystkie pola oznaczone czerwoną gwiazdką „*” poprawnymi danymi standardowej skrzynki. | Formularz przyjmuje wprowadzone dane. |
+| 4 | Wybierz „Zapisz”. | Konto zostaje zapisane i jest widoczne na liście kont e-mail. |

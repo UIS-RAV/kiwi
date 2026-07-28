@@ -1,0 +1,34 @@
+ID: EPU-008
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Pozytywny test konfiguracji skrytki ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja gotowości poprawnie skonfigurowanej skrytki.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Przeprowadzenie testu poprawności konfiguracji ePUAP w systemie
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Połączenie i skrytka zostały skonfigurowane poprawnymi danymi.
+
+<h2> Kryteria akceptacji </h2>
+
+- Pozytywny test oznacza, że skrytka jest gotowa do użycia w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP. | Wyświetla się sekcja skrytek. |
+| 2 | Kliknij przycisk testu zlokalizowany przy nazwie skrytki. | System wykonuje test konfiguracji. |
+| 3 | Zweryfikuj wynik testu. | Wyświetlany jest pozytywny rezultat testu. |

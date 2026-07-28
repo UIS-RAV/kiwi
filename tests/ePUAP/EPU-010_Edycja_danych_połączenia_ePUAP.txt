@@ -1,0 +1,36 @@
+ID: EPU-010
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Edycja danych połączenia ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja aktualizacji istniejących danych połączenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Usunięcie / edycja połączenia ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje skonfigurowane połączenie ePUAP.
+- Dostępne są nowe poprawne dane.
+
+<h2> Kryteria akceptacji </h2>
+
+- Zmodyfikowane połączenie działa z nowymi danymi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP i wybierz „Edytuj ustawienia”. | Wyświetlają się aktualne dane połączenia. |
+| 2 | Usuń nieaktualne wartości i wprowadź aktualne dane. | Formularz zawiera nowe wartości. |
+| 3 | Zapisz zmiany. | Nowe dane zostają zapisane. |
+| 4 | Wykonaj test konfiguracji skrytki. | Test potwierdza działanie połączenia po zmianie. |

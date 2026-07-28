@@ -1,0 +1,34 @@
+ID: EML-051
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Odpowiedź na wiadomość z podglądu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wysłania odpowiedzi do nadawcy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Opcje dostępne w podglądzie wiadomości email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- W Skrzynce odbiorczej znajduje się wiadomość od kontrolowanego nadawcy.
+
+<h2> Kryteria akceptacji </h2>
+
+- Odpowiedź zostaje wysłana do nadawcy otwartej wiadomości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wiadomość i wybierz „Odpowiedz”. | Wyświetla się formularz wiadomości automatycznie zaadresowany do nadawcy. |
+| 2 | Uzupełnij treść i wybierz „Wyślij”. | Odpowiedź zostaje wysłana. |
+| 3 | Sprawdź skrzynkę pierwotnego nadawcy. | Nadawca otrzymuje odpowiedź. |

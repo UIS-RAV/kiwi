@@ -1,0 +1,34 @@
+ID: EPU-031
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Wejście do modułu ePUAP i weryfikacja zakładek dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu do modułu ePUAP oraz dostępności podstawowych zakładek dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Pobieranie dokumentów w ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik może wejść do modułu ePUAP.
+- W module dostępne są cztery podstawowe zakładki dokumentów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń panel boczny i w sekcji „Korespondencja” wybierz „ePUAP”. | System otwiera moduł ePUAP. |
+| 2 | Sprawdź dostępne zakładki dokumentów. | Widoczne są zakładki: „Skrzynka odbiorcza”, „Wysłane”, „Wersje robocze” i „Zarchiwizowane”. |
+| 3 | Otwórz kolejno każdą zakładkę. | Każda zakładka prezentuje właściwą listę dokumentów. |

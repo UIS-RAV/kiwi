@@ -1,0 +1,33 @@
+ID: EML-014
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Przypisanie stanowiska do wysyłki wiadomości ze sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wpływu przypisania stanowiska na wysyłkę ze sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Przypisywanie adresu e-mail do użytkowników i stanowisk
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje aktywne stanowisko, sprawa prowadzona na tym stanowisku i skonfigurowana skrzynka.
+
+<h2> Kryteria akceptacji </h2>
+
+- Stanowisko może wysyłać wiadomości ze sprawy przez przypisane konto.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W formularzu przypisań wskaż stanowisko i wybierz tryb „Wysyłka”. | Stanowisko jest przygotowane do przypisania. |
+| 2 | Zapisz zmiany. | Przypisanie jest widoczne z niebieską ikoną. |
+| 3 | Zaloguj się na przypisane stanowisko, otwórz sprawę i uruchom wysyłkę e-mail. | Przypisana skrzynka jest dostępna do wysyłki ze sprawy. |

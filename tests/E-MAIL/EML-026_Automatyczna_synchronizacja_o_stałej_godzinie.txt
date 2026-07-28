@@ -1,0 +1,35 @@
+ID: EML-026
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Automatyczna synchronizacja o stałej godzinie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pobierania wiadomości o wskazanej godzinie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfiguracja automatycznej synchronizacji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Rozszerzenie automatycznej synchronizacji jest aktywne.
+- Dostępne jest konto e-mail z nową wiadomością.
+
+<h2> Kryteria akceptacji </h2>
+
+- Synchronizacja jest wykonywana o ustawionej godzinie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację synchronizacji i wybierz „Edytuj”. | Formularz konfiguracji jest dostępny. |
+| 2 | Aktywuj usługę i ustaw stałą godzinę wywołania. | Godzina jest zapisana w formularzu. |
+| 3 | Zapisz i poczekaj do wskazanej godziny. | Usługa wykonuje synchronizację. |
+| 4 | Sprawdź skrzynkę. | Nowa wiadomość jest dostępna w EZD. |

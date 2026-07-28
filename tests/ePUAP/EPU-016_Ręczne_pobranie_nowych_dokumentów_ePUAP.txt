@@ -1,0 +1,36 @@
+ID: EPU-016
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Ręczne pobranie nowych dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pobrania dokumentów ze skrytki przez użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Pobieranie dokumentów w ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na skrytce ePUAP znajduje się co najmniej jeden nowy dokument.
+
+<h2> Kryteria akceptacji </h2>
+
+- Nowe dokumenty zostają pobrane i są dostępne w module ePUAP.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł ePUAP. | Wyświetla się lista dokumentów. |
+| 2 | Wybierz „Pobierz dokumenty”. | System inicjuje pobieranie ze skrytki. |
+| 3 | Po zakończeniu operacji odśwież listę. | Nowy dokument jest widoczny na liście. |
+| 4 | Otwórz Log ePUAP jako administrator. | W logu zapisano ręcznie zainicjowane pobranie. |

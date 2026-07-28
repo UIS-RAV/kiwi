@@ -1,0 +1,33 @@
+ID: EML-031
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Anulowanie tworzenia wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zamknięcia formularza bez wysyłki.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Tworzenie nowej wiadomości e-mail
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kryteria akceptacji </h2>
+
+- Anulowanie zamyka okno i nie wysyła wiadomości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz nową wiadomość i uzupełnij pola. | Formularz zawiera dane. |
+| 2 | Wybierz „Anuluj”. | Okno zostaje zamknięte. |
+| 3 | Sprawdź zakładkę Wysłane. | Wiadomość nie została wysłana. |

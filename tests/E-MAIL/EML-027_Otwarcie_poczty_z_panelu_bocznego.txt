@@ -1,0 +1,32 @@
+ID: EML-027
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Otwarcie poczty z panelu bocznego </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu do skrzynki przez panel boczny.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Wiadomości email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kryteria akceptacji </h2>
+
+- Moduł Poczta jest dostępny, a pięć zakładek wiadomości jest widocznych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń panel boczny i wybierz Poczta → Poczta. | Wyświetla się komponent skrzynki odbiorczej. |
+| 2 | Sprawdź dostępne zakładki. | Widoczne są: Skrzynka odbiorcza, Wysłane, Oznaczone gwiazdką, Wersje robocze i Kosz. |

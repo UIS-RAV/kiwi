@@ -1,0 +1,33 @@
+ID: EML-048
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Usunięcie wiadomości do Kosza </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia wiadomości z bieżącej listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Opcje dostępne po zaznaczeniu checkboxa
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- W odpowiedniej zakładce znajduje się wiadomość testowa.
+
+<h2> Kryteria akceptacji </h2>
+
+- Usunięta wiadomość trafia do Kosza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaznacz checkbox przy wiadomości i wybierz akcję usunięcia. | Wiadomość znika z bieżącej zakładki. |
+| 2 | Otwórz Kosz. | Usunięta wiadomość jest widoczna w Koszu. |

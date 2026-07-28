@@ -1,0 +1,35 @@
+ID: EPU-029
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Drukowanie dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja przygotowania dokumentu do wydruku.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Drukowanie dokumentu ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje dokument ePUAP możliwy do otwarcia.
+
+<h2> Kryteria akceptacji </h2>
+
+- Dokument ePUAP może zostać poprawnie wydrukowany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP. | Wyświetla się podgląd. |
+| 2 | Wybierz funkcję drukowania. | System generuje podgląd lub wydruk dokumentu. |
+| 3 | Zweryfikuj zawartość wydruku. | Wydruk odpowiada treści dokumentu. |

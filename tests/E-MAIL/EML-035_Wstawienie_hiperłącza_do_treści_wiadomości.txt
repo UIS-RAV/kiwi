@@ -1,0 +1,34 @@
+ID: EML-035
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Wstawienie hiperłącza do treści wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia aktywnego odnośnika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Tworzenie nowej wiadomości e-mail / Edytowanie tekstu wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kryteria akceptacji </h2>
+
+- Hiperłącze jest poprawnie osadzone i aktywne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz ikonę spinacza służącą do wstawienia hiperłącza. | Wyświetla się okno wstawiania linku. |
+| 2 | Uzupełnij Text to display i adres URL; opcjonalnie zaznacz Open in new window. | Dane linku są kompletne. |
+| 3 | Wybierz „Insert link”. | Hiperłącze pojawia się w treści. |
+| 4 | Wyślij wiadomość i kliknij link u odbiorcy. | Link prowadzi do wskazanego adresu zgodnie z ustawieniem otwierania. |

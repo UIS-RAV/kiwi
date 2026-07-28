@@ -1,0 +1,33 @@
+ID: EPU-035
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Dostępność podglądu XML w zakładkach Do dekretacji i Stanowisko </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja dostępności wizualizacji dokumentu XML po przekazaniu dokumentu do dalszej obsługi.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Podgląd załącznika XML dołączonego do wiadomości ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Dokument pochodzący z ePUAP znajduje się w zakładce „Do dekretacji” oraz na stanowisku użytkownika.
+- Dokument zawiera źródłowy XML.
+
+<h2> Kryteria akceptacji </h2>
+
+- Podgląd XML jest dostępny zarówno w zakładce „Do dekretacji”, jak i „Stanowisko”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument w zakładce „Do dekretacji”. | Dokument jest dostępny. |
+| 2 | Uruchom podgląd XML. | System wyświetla modal z wizualizacją XML. |
+| 3 | Otwórz ten dokument z poziomu zakładki „Stanowisko”. | Dokument jest dostępny na stanowisku. |
+| 4 | Uruchom podgląd XML. | System ponownie wyświetla modal z wizualizacją XML. |

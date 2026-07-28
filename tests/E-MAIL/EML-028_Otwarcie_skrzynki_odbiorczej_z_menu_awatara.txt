@@ -1,0 +1,32 @@
+ID: EML-028
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Otwarcie skrzynki odbiorczej z menu awatara </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja alternatywnej ścieżki do poczty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Wiadomości email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kryteria akceptacji </h2>
+
+- Skrzynka odbiorcza otwiera się z menu awatara.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Kliknij awatar użytkownika. | Wyświetla się lista poleceń użytkownika. |
+| 2 | Wybierz „Skrzynka odbiorcza”. | System przenosi użytkownika do poczty e-mail. |

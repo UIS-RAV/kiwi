@@ -1,0 +1,35 @@
+ID: EPU-023
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Wyodrębnienie załącznika z podpisu otaczającego </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja uzyskania właściwego pliku z podpisanego kontenera.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Wyodrębnianie załącznika podpisanego podpisem otaczającym
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Wiadomość ePUAP zawiera załącznik podpisany podpisem otaczającym.
+
+<h2> Kryteria akceptacji </h2>
+
+- Załącznik zostaje prawidłowo wyodrębniony z podpisu otaczającego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wiadomość i przejdź do podpisanego załącznika. | Dostępne są operacje dotyczące załącznika. |
+| 2 | Uruchom operację wyodrębnienia załącznika. | System wydziela plik z podpisanego kontenera. |
+| 3 | Otwórz lub pobierz wyodrębniony plik. | Plik jest dostępny i odpowiada podpisanej zawartości. |

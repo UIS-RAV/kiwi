@@ -1,0 +1,33 @@
+ID: EML-018
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Zmiana konta systemowego na inną skrzynkę </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja reguły jednego konta systemowego.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Ustawienie konta systemowego email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieją co najmniej dwa konta; jedno ma status systemowego.
+
+<h2> Kryteria akceptacji </h2>
+
+- W danym momencie tylko jedno konto posiada status systemowy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Dla drugiego konta wybierz „Ustaw jako systemowy”. | Wyświetla się okno potwierdzenia. |
+| 2 | Potwierdź operację. | Drugie konto otrzymuje status systemowy. |
+| 3 | Sprawdź oba konta na liście. | Nowe konto ma gwiazdkę, a poprzednie utraciło status systemowy. |

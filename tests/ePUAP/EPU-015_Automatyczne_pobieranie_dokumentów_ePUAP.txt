@@ -1,0 +1,36 @@
+ID: EPU-015
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Automatyczne pobieranie dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja cyklicznego pobierania dokumentów ze skonfigurowanej skrytki.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja automatycznej synchronizacji
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Rozszerzenie automatycznej synchronizacji jest dostępne.
+- Na skrytce ePUAP znajduje się nowy dokument.
+
+<h2> Kryteria akceptacji </h2>
+
+- Dokumenty są automatycznie pobierane zgodnie z harmonogramem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację automatycznej synchronizacji rozszerzeń. | Wyświetlają się ustawienia usługi. |
+| 2 | Aktywuj synchronizację ePUAP i ustaw harmonogram. | Konfiguracja jest gotowa do zapisu. |
+| 3 | Zapisz ustawienia i poczekaj na wykonanie harmonogramu. | System inicjuje automatyczne pobranie. |
+| 4 | Otwórz moduł ePUAP oraz Log ePUAP. | Dokument jest dostępny, a w logu widnieje zdarzenie cron. |

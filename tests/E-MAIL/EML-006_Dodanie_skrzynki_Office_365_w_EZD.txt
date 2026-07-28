@@ -1,0 +1,34 @@
+ID: EML-006
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Dodanie skrzynki Office 365 w EZD </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnego utworzenia konta Office 365 w EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie poczty Microsoft 365 do pracy z EZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Dostępne są poprawne dane aplikacji pozyskane z Azure Microsoft.
+
+<h2> Kryteria akceptacji </h2>
+
+- Konto Office 365 zostaje utworzone w EZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → Poczta i wybierz „Dodaj nowy e-mail”. | Wyświetla się formularz konfiguracji. |
+| 2 | Wybierz typ konfiguracji „Office 365”. | Formularz prezentuje pola właściwe dla Office 365. |
+| 3 | Uzupełnij pola danymi pozyskanymi z Azure Microsoft. | Formularz jest kompletny. |
+| 4 | Wybierz „Zapisz”. | Konto Office 365 zostaje zapisane i widoczne na liście. |

@@ -1,0 +1,37 @@
+ID: EPU-027
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Odpowiedź na dokument ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja przygotowania i wysłania odpowiedzi na otrzymany dokument.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Odpowiadanie na dokument
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje odebrany dokument ePUAP, na który można odpowiedzieć.
+- Dostępny jest dokument odpowiedzi.
+
+<h2> Kryteria akceptacji </h2>
+
+- Odpowiedź zostaje wysłana do nadawcy dokumentu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP i wybierz operację odpowiedzi. | Wyświetla się formularz odpowiedzi powiązany z dokumentem źródłowym. |
+| 2 | Wskaż dokument odpowiedzi i uzupełnij wymagane dane. | Formularz jest gotowy do wysłania. |
+| 3 | Zatwierdź wysyłkę. | Odpowiedź zostaje wysłana przez ePUAP. |
+| 4 | Sprawdź rezultat wysyłki. | System prezentuje potwierdzenie wykonania operacji. |

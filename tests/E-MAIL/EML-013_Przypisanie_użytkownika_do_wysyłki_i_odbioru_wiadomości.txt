@@ -1,0 +1,34 @@
+ID: EML-013
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Przypisanie użytkownika do wysyłki i odbioru wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja przypisania użytkownika w trybie Wysyłka / Odbiór.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Przypisywanie adresu e-mail do użytkowników i stanowisk
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje aktywny użytkownik i skonfigurowana skrzynka.
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik ma pełny dostęp do skrzynki zgodnie z przypisaniem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz przypisań skrzynki. | Formularz przypisań jest dostępny. |
+| 2 | Wskaż użytkownika, wybierz „Wysyłka / Odbiór” i określ zakres w polu Synchronizacja. | Przypisanie jest przygotowane do zapisu. |
+| 3 | Zapisz zmiany. | Przypisanie zostaje oznaczone zieloną ikoną i uruchamia synchronizację w zadanym zakresie. |
+| 4 | Zaloguj się jako użytkownik i otwórz kafelek E-mail. | Użytkownik ma dostęp do wysyłki i odebranych wiadomości. |

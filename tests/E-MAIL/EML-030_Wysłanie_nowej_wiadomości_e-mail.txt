@@ -1,0 +1,35 @@
+ID: EML-030
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Wysłanie nowej wiadomości e-mail </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja podstawowego procesu utworzenia i wysłania wiadomości.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Tworzenie nowej wiadomości e-mail
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- Dostępny jest kontrolowany adres odbiorcy.
+
+<h2> Kryteria akceptacji </h2>
+
+- Wiadomość zostaje poprawnie wysłana do wskazanego odbiorcy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Utwórz nową wiadomość”. | Wyświetla się okno tworzenia wiadomości. |
+| 2 | W polu Od wybierz konto nadawcy, uzupełnij Do, Temat i treść. | Formularz zawiera komplet danych. |
+| 3 | Wybierz „Wyślij”. | Wiadomość zostaje wysłana. |
+| 4 | Sprawdź wiadomość u odbiorcy oraz zakładkę Wysłane. | Wiadomość jest dostarczona i widoczna w Wysłanych. |

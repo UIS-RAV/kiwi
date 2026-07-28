@@ -1,0 +1,34 @@
+ID: EPU-026
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Podgląd dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wyświetlenia treści i danych dokumentu.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Podgląd dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na liście znajduje się dokument ePUAP.
+
+<h2> Kryteria akceptacji </h2>
+
+- Podgląd prezentuje kompletny dokument ePUAP.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Kliknij wiersz dokumentu na liście. | System otwiera podgląd dokumentu. |
+| 2 | Sprawdź treść, dane dokumentu i dostępne załączniki. | Informacje odpowiadają pobranej wiadomości. |

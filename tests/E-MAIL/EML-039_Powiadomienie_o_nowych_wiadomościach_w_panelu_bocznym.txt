@@ -1,0 +1,34 @@
+ID: EML-039
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Powiadomienie o nowych wiadomościach w panelu bocznym </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja licznika nowych wiadomości.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Odbieranie wiadomości e-mail
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- Na serwerze pocztowym znajduje się co najmniej jedna nowa wiadomość.
+
+<h2> Kryteria akceptacji </h2>
+
+- Licznik informuje o liczbie nowych wiadomości, a wiadomość jest dostępna w skrzynce.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odśwież system lub poczekaj na synchronizację. | System rozpoznaje nowe wiadomości. |
+| 2 | Sprawdź sekcję Poczta w panelu bocznym. | Na pomarańczowym tle widoczna jest liczba wiadomości znajdujących się na serwerze. |
+| 3 | Otwórz Skrzynkę odbiorczą. | Nowa wiadomość jest widoczna na liście. |

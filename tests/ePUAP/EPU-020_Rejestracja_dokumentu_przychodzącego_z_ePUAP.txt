@@ -1,0 +1,35 @@
+ID: EPU-020
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Rejestracja dokumentu przychodzącego z ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia dokumentu w EZD na podstawie wiadomości ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Rejestrowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na liście znajduje się niezarejestrowany dokument ePUAP.
+
+<h2> Kryteria akceptacji </h2>
+
+- Dokument ePUAP zostaje zarejestrowany w systemie EZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP i wybierz operację rejestracji. | System otwiera formularz rejestrowania dokumentu. |
+| 2 | Uzupełnij wymagane dane i zatwierdź rejestrację. | Dokument zostaje zarejestrowany. |
+| 3 | Otwórz zarejestrowany dokument w EZD. | Widoczne są dane dokumentu, źródłowy XML, UPP i załączniki zgodnie z zawartością wiadomości. |

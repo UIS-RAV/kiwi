@@ -1,0 +1,33 @@
+ID: EML-019
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usuwania skrzynki </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pozostawienia konta po anulowaniu operacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Usuwanie konta
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje konto przeznaczone do testu.
+
+<h2> Kryteria akceptacji </h2>
+
+- Anulowanie nie usuwa konta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń menu konta i wybierz „Usuń skrzynkę”. | Wyświetla się komunikat potwierdzenia. |
+| 2 | Wybierz „Anuluj”. | Okno zostaje zamknięte. |
+| 3 | Sprawdź listę kont. | Konto nadal jest widoczne. |
