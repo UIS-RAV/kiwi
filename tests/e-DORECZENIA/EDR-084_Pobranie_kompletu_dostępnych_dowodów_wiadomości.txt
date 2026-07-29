@@ -1,0 +1,37 @@
+ID: EDR-084
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Pobranie kompletu dostępnych dowodów wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Pobranie kompletu dostępnych dowodów wiadomości” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dowodów technicznych i archiwum wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Wiadomość posiada co najmniej jeden dowód techniczny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Otwórz sekcję dowodów technicznych. | Lista dostępnych dowodów jest widoczna. |
+| 3 | Uruchom pobranie kompletu. | System przygotowuje pliki. |
+| 4 | Otwórz pobrane dowody. | Pakiet zawiera wszystkie dowody dostępne dla etapu wiadomości. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Pobranie kompletu dostępnych dowodów wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

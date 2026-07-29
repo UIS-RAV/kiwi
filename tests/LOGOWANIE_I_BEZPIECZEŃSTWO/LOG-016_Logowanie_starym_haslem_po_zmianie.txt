@@ -1,7 +1,7 @@
 ID: LOG-016
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny / Regresyjny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
 - Znane są stare i nowe hasło.
 - Użytkownik nie posiada aktywnej sesji.
 
-<h2> Kryteria akceptacji </h2>
-
-- Stare hasło nie umożliwia zalogowania.
-- System nie udostępnia chronionego widoku.
-- Nowe hasło pozostaje aktywne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -32,3 +26,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
 | 2 | Wprowadzić nazwę użytkownika i stare hasło. | Dane zostają wprowadzone. |
 | 3 | Wybrać „Zaloguj się”. | System odrzuca próbę logowania. |
 | 4 | Zweryfikować brak aktywnej sesji użytkownika. | Użytkownik nie ma dostępu do chronionych funkcji. |
+| 5 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 6 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Stare hasło nie umożliwia zalogowania.
+- System nie udostępnia chronionego widoku.
+- Nowe hasło pozostaje aktywne.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

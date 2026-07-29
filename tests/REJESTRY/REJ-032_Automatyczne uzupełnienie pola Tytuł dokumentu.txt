@@ -1,0 +1,40 @@
+ID: REJ-032
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Automatyczne uzupełnienie pola Tytuł dokumentu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie działania pola automatycznego skonfigurowanego w szablonie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Dodanie dokumentu do utworzonego rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr z automatycznym polem Tytuł dokumentu i dwa dokumenty o różnych tytułach.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz dodawania dokumentu w rejestrze. | Formularz zawiera pole Tytuł dokumentu. |
+| 2 | Wskaż pierwszy dokument. | Pole Tytuł dokumentu zostaje uzupełnione jego tytułem. |
+| 3 | Zmień wybór na drugi dokument. | Pole automatyczne aktualizuje się do tytułu drugiego dokumentu. |
+| 4 | Zweryfikuj brak możliwości wprowadzenia sprzecznej ręcznej wartości, jeżeli pole jest tylko do odczytu. | Pole zachowuje charakter automatyczny. |
+| 5 | Uzupełnij pozostałe wymagane pola. | Formularz jest kompletny. |
+| 6 | Zapisz wpis. | Dokument zostaje dodany. |
+| 7 | Otwórz wpis ponownie. | Tytuł odpowiada ostatecznie wybranemu dokumentowi. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Pole automatyczne przyjmuje tytuł aktualnie wybranego dokumentu i nie wymaga ręcznego wprowadzania.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

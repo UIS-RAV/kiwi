@@ -1,7 +1,7 @@
 ID: LOG-020
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Uprawnienia / Negatywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora
 - Użytkownik jest zalogowany.
 - Instrukcja nie określa literalnego komunikatu odmowy.
 
-<h2> Kryteria akceptacji </h2>
-
-- Użytkownik bez uprawnień nie może wygenerować kodu resetowania.
-- Funkcja nie jest dostępna lub operacja zostaje odrzucona.
-- Nie zostaje utworzony kod dla pracownika.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora
 | 3 | Jeżeli widok pracowników jest dostępny, wybrać dowolnego pracownika. | Funkcje dostępne dla wybranego pracownika nie obejmują nieautoryzowanego resetu hasła. |
 | 4 | Spróbować uruchomić generowanie kodu resetowania, jeżeli funkcja jest widoczna. | System odrzuca operację i nie generuje kodu. |
 | 5 | Zweryfikować, że dla pracownika nie utworzono nowego kodu. | Stan danych pracownika pozostaje bez zmian. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik bez uprawnień nie może wygenerować kodu resetowania.
+- Funkcja nie jest dostępna lub operacja zostaje odrzucona.
+- Nie zostaje utworzony kod dla pracownika.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

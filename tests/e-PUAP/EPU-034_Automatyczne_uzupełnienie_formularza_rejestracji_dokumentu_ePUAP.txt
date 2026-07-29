@@ -1,0 +1,37 @@
+ID: EPU-034
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Automatyczne uzupełnienie formularza rejestracji dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Automatyczne uzupełnienie formularza rejestracji dokumentu ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Rejestrowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- W module ePUAP znajduje się niezarejestrowany dokument zawierający dane interesanta i załączniki.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom opcję „Zarejestruj dokument” dla wskazanego dokumentu. | System otwiera formularz rejestracji. |
+| 2 | Sprawdź dane interesanta. | Dane interesanta są uzupełnione automatycznie. |
+| 3 | Sprawdź dane dokumentu i informacje wymagane do rejestracji. | Dane dokumentu są uzupełnione automatycznie. |
+| 4 | Sprawdź załączniki. | Załączniki z wiadomości są dostępne w formularzu. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Automatyczne uzupełnienie formularza rejestracji dokumentu ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

@@ -1,0 +1,38 @@
+ID: EML-009
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zmiana hasła standardowej skrzynki </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zmiana hasła standardowej skrzynki” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Zmiana hasła poczty
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje standardowa skrzynka e-mail.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz edycję skrzynki i wybierz „Zmień hasło”. | Wyświetla się formularz zmiany hasła. |
+| 2 | Wpisz nowe hasło i powtórz je w kolejnym polu. | Oba pola zawierają zgodne wartości. |
+| 3 | Wybierz „Zapisz zmiany”. | System zapisuje nowe hasło. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zmiana hasła standardowej skrzynki” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

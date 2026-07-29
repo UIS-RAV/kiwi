@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: usunięcie wpisu z sekcji dekretacja przed zapisem.
+Zweryfikowanie, że funkcja „Usunięcie wpisu z sekcji Dekretacja przed zapisem” działa zgodnie z opisanym scenariuszem i prawidłowo wpływa na stan dokumentu, wpisy dekretacji oraz dostępność dokumentu na stanowiskach.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,23 @@ Dekretacja — Przekazanie dokumentu do dekretacji
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
+- Użytkownik posiada wymagane uprawnienia.
 - przygotowano dokument i stanowiska właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Usunięcie wpisu z sekcji Dekretacja przed zapisem”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
-| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
-| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Usunięcie wpisu z sekcji Dekretacja przed zapisem” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i rozpocznij rejestrację dokumentu. | System wyświetla formularz rejestracji dokumentu. |
+| 2 | Uzupełnij minimalny zakres danych wymaganych do zapisania dokumentu. | Dane dokumentu są poprawne i możliwe jest przejście do sekcji dekretacji. |
+| 3 | Dodaj co najmniej dwa wpisy dekretacji. | Oba wpisy są widoczne w sekcji. |
+| 4 | Usuń jeden wybrany wpis przed zapisaniem dokumentu. | Wybrany wpis znika, a pozostały wpis pozostaje bez zmian. |
+| 5 | Zapisz rejestrację dokumentu. | System zapisuje wyłącznie pozostałe wpisy. |
+| 6 | Otwórz dokument ponownie. | Usunięty wpis nie występuje w zapisanej dekretacji. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Usunięcie wpisu z sekcji Dekretacja przed zapisem” działa zgodnie z instrukcją.
-- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Usunięcie wpisu z sekcji Dekretacja przed zapisem” kończy się rezultatem zgodnym z celem testu.
+- Stanowisko źródłowe, stanowisko docelowe, typ przekazania i notatka są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Dostępność dokumentu na stanowiskach odpowiada wykonanej dekretacji.
+- Rezultat pozostaje spójny po odświeżeniu widoku lub ponownym otwarciu dokumentu.

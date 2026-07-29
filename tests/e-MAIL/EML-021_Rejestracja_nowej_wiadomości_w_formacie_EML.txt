@@ -1,0 +1,39 @@
+ID: EML-021
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Rejestracja nowej wiadomości w formacie EML </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Rejestracja nowej wiadomości w formacie EML” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Zmiana formatu zapisywania wiadomości email podczas rejestracji dokumentu w EZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Dostępna jest nowa wiadomość, która nie została jeszcze pobrana do EZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę Ustawienia modułu poczty. | Dostępne są ustawienia rejestracji wiadomości. |
+| 2 | Włącz „Zapisywanie plików .eml”, ustaw Typ przekazania e-maila do rejestracji na „.EML” i wybierz „Zapisz”. | Konfiguracja zostaje zapisana. |
+| 3 | Pobierz nową wiadomość i zarejestruj ją jako dokument. | Dokument zostaje utworzony. |
+| 4 | Sprawdź plik dołączony do dokumentu. | Treść wiadomości jest dołączona jako plik .eml. |
+| 5 | Otwórz zarejestrowany dokument w EZD. | Dokument zawiera wiadomość w formacie zgodnym z konfiguracją. |
+| 6 | Porównaj nadawcę, odbiorców, temat, treść i załączniki z wiadomością źródłową. | Zarejestrowany dokument zachowuje komplet danych wiadomości. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Rejestracja nowej wiadomości w formacie EML” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

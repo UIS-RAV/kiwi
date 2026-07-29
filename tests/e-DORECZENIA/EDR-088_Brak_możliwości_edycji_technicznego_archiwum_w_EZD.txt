@@ -1,0 +1,37 @@
+ID: EDR-088
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Średni
+Poziom: Zaawansowany
+
+<h1> Brak możliwości edycji technicznego archiwum w EZD </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak możliwości edycji technicznego archiwum w EZD” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dowodów technicznych i archiwum wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Archiwum techniczne zostało pobrane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Otwórz techniczne archiwum wiadomości w EZD. | Archiwum jest dostępne do podglądu lub pobrania. |
+| 3 | Spróbuj uruchomić edycję. | System nie udostępnia edycji archiwum. |
+| 4 | Zweryfikuj integralność pliku. | Archiwum pozostaje niezmienione. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak możliwości edycji technicznego archiwum w EZD”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

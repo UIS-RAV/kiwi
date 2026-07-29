@@ -1,0 +1,37 @@
+ID: FLT-029
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Powrót do poprzedniej strony listy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Powrót do poprzedniej strony listy” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik znajduje się na stronie o numerze większym niż 1.
+- Znana jest zawartość strony poprzedniej.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapisać wybrane rekordy aktualnej strony. | Zawartość jest znana. |
+| 2 | Wybrać przejście do poprzedniej strony. | Wyświetla się wcześniejsza strona. |
+| 3 | Zweryfikować numer strony. | Wskaźnik odpowiada poprzedniej stronie. |
+| 4 | Porównać rekordy z wcześniej zapisaną zawartością. | Wyświetlony zestaw jest prawidłowy. |
+| 5 | Porównać rekordy z pierwotnym widokiem. | Lista prezentuje ten sam zestaw rekordów co przed przejściem dalej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Powrót do poprzedniej strony listy” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: anulowanie usunięcia dokumentu.
+Zweryfikowanie, że funkcja „Anulowanie usunięcia dokumentu” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,20 @@ Usuwanie dokumentu
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Anulowanie usunięcia dokumentu” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Scenariusz „Anulowanie usunięcia dokumentu” kończy się bez niezamierzonego zapisu lub zmiany danych.
+- System blokuje niedozwoloną operację albo prawidłowo anuluje działanie.
+- Komunikat lub stan formularza jednoznacznie wskazuje wymagane działanie użytkownika.
+- Pozostałe dokumenty, załączniki i powiązania pozostają bez zmian.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Anulowanie usunięcia dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wybrać anulowanie operacji. | Operacja zostaje przerwana bez wprowadzenia zmiany. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Uruchom usunięcie wybranego dokumentu. | System wyświetla komunikat potwierdzający. |
+| 2 | Wybierz anulowanie. | Komunikat zostaje zamknięty bez usunięcia. |
+| 3 | Odśwież listę DKP. | Dokument nadal jest widoczny. |
+| 4 | Otwórz dokument. | Dane i załączniki pozostają dostępne. |

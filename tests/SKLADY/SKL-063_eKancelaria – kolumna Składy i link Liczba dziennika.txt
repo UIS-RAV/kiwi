@@ -1,0 +1,41 @@
+ID: SKL-063
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> eKancelaria – kolumna Składy i link Liczba dziennika </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja kolumny Składy oraz linku Liczba dziennika.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.4 eKancelaria - przesyłki przychodzące; Uwagi_KW_20260708, pkt 8b
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz eZD / eKancelaria / Przychodzące. | Widoczna jest kolumna Składy. |
+| 2 | Zastosuj filtr TAK, potem NIE. | Lista pokazuje odpowiednio przesyłki w składzie i poza składem. |
+| 3 | Sprawdź sortowanie. | Dane są sortowane. |
+| 4 | Kliknij ikonę dla przesyłki w składzie. | Otwiera się okno szczegółów. |
+| 5 | W widoku składów kliknij Liczba dziennika. | Otwiera się podgląd właściwej przesyłki. |
+| 6 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 7 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Kolumna Składy obsługuje sortowanie i filtr Czy w składzie? TAK/NIE.
+- Ikona reprezentuje obecność i status w składzie.
+- Liczba dziennika w składach prowadzi do podglądu przesyłki.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

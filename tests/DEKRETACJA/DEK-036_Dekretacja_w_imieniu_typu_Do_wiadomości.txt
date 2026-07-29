@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: dekretacja w imieniu typu do wiadomości.
+Zweryfikowanie, że funkcja „Dekretacja w imieniu typu Do wiadomości” działa zgodnie z opisanym scenariuszem i prawidłowo wpływa na stan dokumentu, wpisy dekretacji oraz dostępność dokumentu na stanowiskach.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,24 @@ Dekretacja — Dekretacja w imieniu
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
+- Użytkownik posiada wymagane uprawnienia.
 - przygotowano dokument i stanowiska właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Dekretacja w imieniu typu Do wiadomości”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
-| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
-| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Dekretacja w imieniu typu Do wiadomości” jest zgodny z instrukcją. |
+| 1 | Zaloguj się jako użytkownik posiadający uprawnienie do dekretowania w imieniu wskazanego stanowiska. | Użytkownik ma dostęp do funkcji dekretacji w imieniu. |
+| 2 | Wskaż stanowisko źródłowe i stanowisko docelowe dekretacji. | System prezentuje oba stanowiska we właściwych polach. |
+| 3 | Wybierz typ przekazania „Do wiadomości”. | Przy wpisie dekretacji widoczny jest typ „Do wiadomości”. |
+| 4 | Zatwierdź dekretację. | System zapisuje przekazanie zgodnie z wybranym typem. |
+| 5 | Otwórz dokument na stanowisku docelowym i sprawdź sposób jego udostępnienia. | Dokument jest dostępny zgodnie ze znaczeniem wybranego typu przekazania. |
+| 6 | Otwórz historię dokumentu. | Historia zawiera wpis dekretacji z właściwym typem, stanowiskiem źródłowym i docelowym. |
+| 7 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Dekretacja w imieniu typu Do wiadomości” działa zgodnie z instrukcją.
-- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Dekretacja w imieniu typu Do wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Stanowisko źródłowe, stanowisko docelowe, typ przekazania i notatka są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Dostępność dokumentu na stanowiskach odpowiada wykonanej dekretacji.
+- Rezultat pozostaje spójny po odświeżeniu widoku lub ponownym otwarciu dokumentu.

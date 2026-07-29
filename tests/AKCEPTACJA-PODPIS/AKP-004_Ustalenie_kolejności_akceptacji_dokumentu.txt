@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: ustalenie kolejności akceptacji dokumentu.
+Zweryfikowanie, że funkcja „Ustalenie kolejności akceptacji dokumentu” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,18 @@ Akceptacja i podpis — Przekazanie dokumentu do akceptacji
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Ustalenie kolejności akceptacji dokumentu”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Ustalenie kolejności akceptacji dokumentu” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do przekazania do akceptacji. | Dokument jest dostępny w stanie umożliwiającym rozpoczęcie procesu akceptacji. |
+| 2 | Uruchom funkcję przekazania dokumentu do akceptacji. | System wyświetla formularz konfiguracji procesu akceptacji. |
+| 3 | Dodaj co najmniej dwóch akceptujących. | Użytkownicy są widoczni na liście procesu. |
+| 4 | Ustaw kolejność akceptacji zgodnie ze scenariuszem. | System prezentuje ustaloną kolejność wykonania. |
+| 5 | Przekaż dokument do akceptacji. | Proces zostaje uruchomiony dla pierwszego użytkownika w kolejności. |
+| 6 | Zweryfikuj dostępność dokumentu dla kolejnego akceptującego przed zakończeniem pierwszego etapu. | Dokument nie jest przedwcześnie udostępniony do wykonania kolejnego etapu. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 8 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Ustalenie kolejności akceptacji dokumentu” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Ustalenie kolejności akceptacji dokumentu” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

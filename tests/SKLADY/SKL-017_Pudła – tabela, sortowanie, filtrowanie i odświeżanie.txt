@@ -1,0 +1,41 @@
+ID: SKL-017
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Pudła – tabela, sortowanie, filtrowanie i odświeżanie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja widoku Pudła, kolumn, sortowania, filtrowania i odświeżania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3 Zakładka Pudła
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz ORGANIZACJA -> Składy chronologiczne (zarządzanie) -> Pudła. | Wyświetla się właściwy widok. |
+| 2 | Sprawdź nagłówki tabeli. | Widoczne są kolumny: Lp., Nazwa, Rok utworzenia, Typ, Skład chronologiczny, Lokalizacja pudła, menu podręczne. |
+| 3 | Sprawdź sortowanie dostępnych kolumn. | Kolejność danych zmienia się zgodnie z wybranym sortowaniem. |
+| 4 | Sprawdź filtrowanie. | Lista zawęża się zgodnie z filtrami: Nazwa, Rok utworzenia, Typ, Skład chronologiczny, Lokalizacja pudła. |
+| 5 | Użyj odśwież. | Lista zostaje ponownie pobrana. |
+| 6 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 7 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Tabela zawiera kolumny: Lp., Nazwa, Rok utworzenia, Typ, Skład chronologiczny, Lokalizacja pudła, menu podręczne.
+- Sortowanie i filtrowanie są dostępne zgodnie z dokumentacją: Nazwa, Rok utworzenia, Typ, Skład chronologiczny, Lokalizacja pudła.
+- Funkcja odśwież ponownie pobiera listę.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

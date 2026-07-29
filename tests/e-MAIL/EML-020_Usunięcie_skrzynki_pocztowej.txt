@@ -1,0 +1,38 @@
+ID: EML-020
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie skrzynki pocztowej </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie skrzynki pocztowej” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Usuwanie konta
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje konto przeznaczone do usunięcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń menu konta i wybierz „Usuń skrzynkę”. | Wyświetla się komunikat potwierdzenia. |
+| 2 | Wybierz „Ok”. | System usuwa konto. |
+| 3 | Sprawdź listę kont. | Usunięta skrzynka nie jest widoczna. |
+| 4 | Odśwież listę kont e-mail. | Stan konta odpowiada zatwierdzonej lub anulowanej operacji. |
+| 5 | Zweryfikuj inne skonfigurowane skrzynki. | Operacja nie wpływa na pozostałe konta. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie skrzynki pocztowej” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

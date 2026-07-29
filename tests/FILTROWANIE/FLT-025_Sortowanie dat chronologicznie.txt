@@ -1,0 +1,37 @@
+ID: FLT-025
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Sortowanie dat chronologicznie </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Sortowanie dat chronologicznie” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Kolumna daty jest sortowalna.
+- Lista zawiera daty z różnych dni, miesięcy i lat.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać sortowanie rosnące po kolumnie daty. | Lista zostaje uporządkowana. |
+| 2 | Zweryfikować kolejność chronologiczną. | Daty rosną od najwcześniejszej. |
+| 3 | Zmienić kierunek sortowania. | Lista zostaje uporządkowana malejąco. |
+| 4 | Ponownie zweryfikować daty. | Daty maleją od najpóźniejszej. |
+| 5 | Zweryfikować kolejność dat wraz z godzinami, jeżeli są prezentowane. | Daty są uporządkowane chronologicznie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Sortowanie dat chronologicznie” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

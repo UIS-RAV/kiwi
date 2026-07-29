@@ -1,0 +1,39 @@
+ID: SKL-042
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Odrzuć przyjęcie – powiadomienie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja powiadomienia dla przekazującego.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.5 Odrzuć przyjęcie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wykonaj Odrzuć przyjęcie. | Operacja kończy się powodzeniem. |
+| 2 | Zaloguj się jako przekazujący. | Widoczne jest powiadomienie. |
+| 3 | Sprawdź tytuł i opis. | Zawierają liczbę dziennika, osobę odrzucającą i stanowisko. |
+| 4 | Otwórz link. | Otwiera się podgląd właściwej przesyłki. |
+| 5 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 6 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Powiadomienie ma tytuł Odrzucenie przyjęcia przesyłki przychodzącej.
+- Link prowadzi do właściwej przesyłki.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

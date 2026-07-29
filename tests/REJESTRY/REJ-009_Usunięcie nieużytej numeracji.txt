@@ -1,0 +1,39 @@
+ID: REJ-009
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Usunięcie nieużytej numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie usunięcia numeracji, która nie została użyta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Usunięcie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje nieużyta numeracja.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę numeracji. | Lista jest widoczna. |
+| 2 | Otwórz menu opcji przy nieużytej numeracji. | Dostępna jest akcja Usuń numerację. |
+| 3 | Kliknij Usuń numerację. | System żąda potwierdzenia. |
+| 4 | Potwierdź usunięcie. | System wykonuje operację. |
+| 5 | Odśwież listę. | Usunięta numeracja nie jest widoczna. |
+| 6 | Spróbuj wyszukać ją po nazwie. | System nie zwraca usuniętej pozycji. |
+| 7 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 8 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Numeracja zostaje usunięta i nie jest widoczna na liście.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

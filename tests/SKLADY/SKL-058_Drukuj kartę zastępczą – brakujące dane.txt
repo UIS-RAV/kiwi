@@ -1,0 +1,38 @@
+ID: SKL-058
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Drukuj kartę zastępczą – brakujące dane </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wartości dla nieuzupełnionych atrybutów.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.11 Drukuj kartę zastępczą
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wygeneruj kartę dla przesyłki z brakującymi danymi. | Powstaje PDF. |
+| 2 | Otwórz dokument. | Plik jest poprawny. |
+| 3 | Sprawdź pola bez danych. | Każde ma wartość -. |
+| 4 | Sprawdź pola uzupełnione. | Prezentują poprawne wartości. |
+| 5 | Otwórz wygenerowaną kartę zastępczą. | Karta zawiera dane elementu, wypożyczającego i terminu zwrotu. |
+| 6 | Porównaj dane karty z danymi elementu w systemie. | Dane na wydruku są kompletne i zgodne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Brakujący atrybut ma na wydruku wartość -.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

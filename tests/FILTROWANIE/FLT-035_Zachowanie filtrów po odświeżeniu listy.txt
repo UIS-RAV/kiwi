@@ -1,0 +1,39 @@
+ID: FLT-035
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Zachowanie filtrów po odświeżeniu listy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zachowanie filtrów po odświeżeniu listy” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie i odświeżanie list
+
+<h2> Warunki wstępne </h2>
+
+- Na liście aktywny jest co najmniej jeden filtr.
+- Dostępna jest funkcja „Odśwież”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować filtr. | Lista zostaje ograniczona. |
+| 2 | Zapisać aktywne kryterium i przykładowe wyniki. | Stan jest znany. |
+| 3 | Wybrać „Odśwież”. | Lista zostaje zaktualizowana. |
+| 4 | Zweryfikować pasek filtrów. | Filtr pozostaje aktywny. |
+| 5 | Zweryfikować wyniki. | Każdy widoczny rekord nadal spełnia kryterium. |
+| 6 | Odświeżyć listę. | Aktywne filtry pozostają zastosowane. |
+| 7 | Zweryfikować wyniki po odświeżeniu. | Lista nadal zawiera wyłącznie rekordy zgodne z filtrami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zachowanie filtrów po odświeżeniu listy” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

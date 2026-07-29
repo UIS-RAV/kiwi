@@ -1,0 +1,40 @@
+ID: EPU-004
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapis konfiguracji połączenia ePUAP w EZD </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zapis konfiguracji połączenia ePUAP w EZD” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja połączenia ePUAP w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Dostępne są poprawne wartości: Epuap ID, klucz prywatny i klucz publiczny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP. | Wyświetla się sekcja konfiguracji ePUAP. |
+| 2 | Przejdź do ustawień połączenia. | Dostępne są pola Epuap ID, Klucz prywatny i Klucz publiczny. |
+| 3 | Uzupełnij wszystkie trzy pola poprawnymi danymi. | Formularz zawiera komplet danych. |
+| 4 | Wybierz „Zapisz”. | Pola ID w systemie ePUAP, Klucz publiczny i Klucz prywatny zostają uzupełnione. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zapis konfiguracji połączenia ePUAP w EZD” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

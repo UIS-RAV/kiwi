@@ -1,0 +1,37 @@
+ID: EML-005
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Wygenerowanie klucza tajnego i pobranie identyfikatorów aplikacji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wygenerowanie klucza tajnego i pobranie identyfikatorów aplikacji” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie poczty Microsoft 365 do pracy z EZD
+
+<h2> Warunki wstępne </h2>
+
+- Uprawnienia Microsoft Graph zostały zaakceptowane przez administratora Azure.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Certyfikaty i klucze tajne → Wpisy tajne klienta. | Wyświetla się lista kluczy tajnych. |
+| 2 | Wybierz „Nowy klucz tajny klienta”, podaj opis i termin wygaśnięcia, a następnie wybierz „Dodaj”. | Klucz zostaje wygenerowany. |
+| 3 | Skopiuj wartość klucza tajnego. | Wartość jest dostępna do użycia w konfiguracji EZD. |
+| 4 | W podglądzie aplikacji skopiuj identyfikator aplikacji i identyfikator katalogu. | Wszystkie dane wymagane do konfiguracji są dostępne. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wygenerowanie klucza tajnego i pobranie identyfikatorów aplikacji” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

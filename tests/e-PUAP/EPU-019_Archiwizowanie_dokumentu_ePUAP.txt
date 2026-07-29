@@ -1,0 +1,40 @@
+ID: EPU-019
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Archiwizowanie dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Archiwizowanie dokumentu ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Archiwizowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na liście znajduje się dokument nieprzeznaczony do rejestracji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz dokument na liście ePUAP. | Dokument zostaje wskazany. |
+| 2 | Uruchom operację archiwizacji. | Dokument zostaje oznaczony jako zarchiwizowany. |
+| 3 | Sprawdź bieżącą listę i widok archiwalny. | Dokument nie znajduje się na liście aktywnej i jest dostępny w archiwum. |
+| 4 | Otwórz zakładkę Zarchiwizowane. | Dokument jest widoczny w Archiwum. |
+| 5 | Porównaj dane i załączniki z dokumentem źródłowym. | Archiwizacja zachowuje komplet informacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Archiwizowanie dokumentu ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

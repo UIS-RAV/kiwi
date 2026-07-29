@@ -1,0 +1,38 @@
+ID: EML-010
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja niezgodnych wartości nowego hasła </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Walidacja niezgodnych wartości nowego hasła” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Zmiana hasła poczty
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje standardowa skrzynka e-mail.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz zmiany hasła. | Formularz jest dostępny. |
+| 2 | Wpisz różne wartości w polu nowego hasła i jego powtórzenia. | Formularz zawiera niezgodne wartości. |
+| 3 | Wybierz „Zapisz zmiany”. | System nie zapisuje zmiany hasła. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Walidacja niezgodnych wartości nowego hasła”.
+- Niedozwolona, anulowana albo niekompletna operacja nie powoduje zapisania nieprawidłowych danych.
+- Użytkownik otrzymuje jednoznaczny komunikat walidacyjny albo funkcja pozostaje niedostępna.
+- Dotychczasowa konfiguracja, wiadomości i załączniki pozostają niezmienione po odświeżeniu widoku.

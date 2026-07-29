@@ -1,0 +1,40 @@
+ID: EPU-020
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Rejestracja dokumentu przychodzącego z ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Rejestracja dokumentu przychodzącego z ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Rejestrowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na liście znajduje się niezarejestrowany dokument ePUAP.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP i wybierz operację rejestracji. | System otwiera formularz rejestrowania dokumentu. |
+| 2 | Uzupełnij wymagane dane i zatwierdź rejestrację. | Dokument zostaje zarejestrowany. |
+| 3 | Otwórz zarejestrowany dokument w EZD. | Widoczne są dane dokumentu, źródłowy XML, UPP i załączniki zgodnie z zawartością wiadomości. |
+| 4 | Otwórz utworzony dokument w EZD. | Dokument zawiera dane wiadomości ePUAP. |
+| 5 | Porównaj nadawcę, adres skrytki, identyfikatory i załączniki. | Zarejestrowane dane odpowiadają wiadomości źródłowej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Rejestracja dokumentu przychodzącego z ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

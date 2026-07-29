@@ -1,0 +1,40 @@
+ID: REJ-003
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Utworzenie nieaktywnej numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie możliwości zapisania numeracji ze statusem nieaktywnym.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz Dodaj numerację. | Formularz jest widoczny. |
+| 2 | Wprowadź nazwę i opis. | Dane są przyjęte. |
+| 3 | Wybierz status nieaktywny. | Formularz wskazuje nieaktywny status. |
+| 4 | Wybierz obsługiwany typ numeracji. | Typ zostaje ustawiony. |
+| 5 | Dodaj obowiązkowy element NR. | Szablon zawiera Numer dokumentu w rejestrze NR. |
+| 6 | Zapisz numerację. | System zapisuje numerację. |
+| 7 | Zweryfikuj status na liście. | Numeracja jest oznaczona jako nieaktywna. |
+| 8 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 9 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Numeracja zostaje zapisana jako nieaktywna.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

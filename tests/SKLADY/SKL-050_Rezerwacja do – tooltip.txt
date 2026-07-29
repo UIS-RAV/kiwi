@@ -1,0 +1,37 @@
+ID: SKL-050
+Moduł: Składy chronologiczne
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Rezerwacja do – tooltip </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja tooltipu wskazującego, dla kogo wykonano rezerwację.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.1 pełne odwzorowanie / niepełne odwzorowanie; Uwagi_KW_20260708, pkt 8a
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Znajdź zarezerwowaną przesyłkę. | W kolumnie Rezerwacja do widoczna jest data. |
+| 2 | Najedź na datę. | Wyświetla się tooltip. |
+| 3 | Sprawdź treść. | Tooltip wskazuje właściwą osobę lub podmiot zgodnie z historią. |
+| 4 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 5 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po najechaniu na datę Rezerwacja do widoczny jest właściwy rezerwujący.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

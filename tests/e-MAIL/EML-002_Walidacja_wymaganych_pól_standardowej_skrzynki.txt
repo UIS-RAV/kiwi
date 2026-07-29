@@ -1,0 +1,37 @@
+ID: EML-002
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja wymaganych pól standardowej skrzynki </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Walidacja wymaganych pól standardowej skrzynki” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie standardowej skrzynki e-mail
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → Poczta i wybierz „Dodaj nowy e-mail”. | Wyświetla się formularz. |
+| 2 | Pozostaw co najmniej jedno pole oznaczone „*” puste. | Formularz pozostaje niekompletny. |
+| 3 | Wybierz „Zapisz”. | System nie zapisuje konta i wskazuje brakujące dane. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Walidacja wymaganych pól standardowej skrzynki”.
+- Niedozwolona, anulowana albo niekompletna operacja nie powoduje zapisania nieprawidłowych danych.
+- Użytkownik otrzymuje jednoznaczny komunikat walidacyjny albo funkcja pozostaje niedostępna.
+- Dotychczasowa konfiguracja, wiadomości i załączniki pozostają niezmienione po odświeżeniu widoku.

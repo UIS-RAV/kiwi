@@ -1,0 +1,37 @@
+ID: FLT-032
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Średni
+Poziom: Rozszerzony
+
+<h1> Paginacja listy z jednym rekordem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Paginacja listy z jednym rekordem” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Przygotowano filtr lub dane dające dokładnie jeden wynik.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować kryterium dające dokładnie jeden wynik. | Lista zawiera jeden rekord. |
+| 2 | Zweryfikować wskaźnik liczby stron. | Dostępna jest wyłącznie jedna strona. |
+| 3 | Spróbować przejść dalej. | Strona nie zmienia się. |
+| 4 | Zweryfikować rekord. | Rekord pozostaje widoczny i dostępny. |
+| 5 | Zweryfikować elementy nawigacji stron. | Przejście do innej strony jest niedostępne. |
+| 6 | Odświeżyć listę. | Jedyny rekord pozostaje widoczny bez błędu paginacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Paginacja listy z jednym rekordem”.
+- Niepoprawne, graniczne albo niedające wyników kryterium nie powoduje błędnego stanu listy.
+- Użytkownik otrzymuje jednoznaczny komunikat albo system prezentuje poprawny stan pusty.
+- Filtry, sortowanie, paginacja i liczba rekordów pozostają spójne po odświeżeniu lub ponownym otwarciu listy.

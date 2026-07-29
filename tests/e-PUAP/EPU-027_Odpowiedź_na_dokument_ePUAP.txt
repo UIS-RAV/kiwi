@@ -1,0 +1,42 @@
+ID: EPU-027
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Odpowiedź na dokument ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Odpowiedź na dokument ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Odpowiadanie na dokument
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje odebrany dokument ePUAP, na który można odpowiedzieć.
+- Dostępny jest dokument odpowiedzi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP i wybierz operację odpowiedzi. | Wyświetla się formularz odpowiedzi powiązany z dokumentem źródłowym. |
+| 2 | Wskaż dokument odpowiedzi i uzupełnij wymagane dane. | Formularz jest gotowy do wysłania. |
+| 3 | Zatwierdź wysyłkę. | Odpowiedź zostaje wysłana przez ePUAP. |
+| 4 | Sprawdź rezultat wysyłki. | System prezentuje potwierdzenie wykonania operacji. |
+| 5 | Otwórz wysłaną odpowiedź. | Treść, odbiorca i powiązanie z dokumentem źródłowym są poprawne. |
+| 6 | Zweryfikuj status odpowiedzi. | System prezentuje właściwy etap wysyłki. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Odpowiedź na dokument ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

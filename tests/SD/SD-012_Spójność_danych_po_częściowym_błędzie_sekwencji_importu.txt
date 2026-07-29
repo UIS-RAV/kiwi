@@ -1,0 +1,37 @@
+ID: SD-012
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Spójność danych po częściowym błędzie sekwencji importu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Spójność danych po częściowym błędzie sekwencji importu.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Utwórz sprawę i dokument przez API SD. | Oba obiekty zostają utworzone. |
+| 2 | Wywołaj kolejny krok z błędnymi danymi, np. dodanie interesanta. | API odrzuca tylko błędną operację. |
+| 3 | Otwórz sprawę i dokument w EZD. | Poprawnie wykonane operacje pozostają spójne, a błędna operacja nie pozostawia niepełnych danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

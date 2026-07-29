@@ -1,0 +1,37 @@
+ID: FLT-026
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Sortowanie wartości liczbowych </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Sortowanie wartości liczbowych” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Kolumna liczbowa jest sortowalna.
+- Lista zawiera wartości pozwalające odróżnić sortowanie numeryczne od tekstowego, np. 1, 2, 10, 20.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać sortowanie rosnące po kolumnie liczbowej. | Lista zostaje uporządkowana. |
+| 2 | Zweryfikować kolejność wartości. | Kolejność jest numeryczna. |
+| 3 | Zmienić kierunek sortowania. | Lista zostaje uporządkowana malejąco. |
+| 4 | Zweryfikować kolejność ponownie. | Kolejność jest odwrotna numerycznie. |
+| 5 | Porównać wartości liczbowe w kolejnych rekordach. | Sortowanie odbywa się według wartości liczbowej, a nie tekstowej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Sortowanie wartości liczbowych” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

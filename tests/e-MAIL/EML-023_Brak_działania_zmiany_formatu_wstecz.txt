@@ -1,0 +1,38 @@
+ID: EML-023
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Brak działania zmiany formatu wstecz </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak działania zmiany formatu wstecz” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Zmiana formatu zapisywania wiadomości email podczas rejestracji dokumentu w EZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- W EZD znajduje się wiadomość pobrana przed zmianą formatu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zmień format przekazania wiadomości i zapisz ustawienia. | Nowa konfiguracja zostaje aktywowana. |
+| 2 | Zarejestruj wiadomość pobraną przed zmianą. | System przetwarza ją zgodnie z ustawieniami obowiązującymi w momencie pobrania. |
+| 3 | Pobierz i zarejestruj nową wiadomość. | Nowa wiadomość jest przetwarzana według zmienionej konfiguracji. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak działania zmiany formatu wstecz”.
+- Niedozwolona, anulowana albo niekompletna operacja nie powoduje zapisania nieprawidłowych danych.
+- Użytkownik otrzymuje jednoznaczny komunikat walidacyjny albo funkcja pozostaje niedostępna.
+- Dotychczasowa konfiguracja, wiadomości i załączniki pozostają niezmienione po odświeżeniu widoku.

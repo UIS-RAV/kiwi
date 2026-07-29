@@ -1,0 +1,40 @@
+ID: REJ-031
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Podgląd dokumentu dodanego do rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie przejścia z wpisu rejestru do podglądu powiązanego dokumentu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Podgląd dokumentu, który został dodany do rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje wpis powiązany z dokumentem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr. | Lista wpisów jest widoczna. |
+| 2 | Wybierz wpis powiązany z dokumentem. | Właściwa pozycja jest wskazana. |
+| 3 | Uruchom podgląd dokumentu. | System otwiera dokument źródłowy. |
+| 4 | Zweryfikuj tytuł dokumentu. | Tytuł odpowiada wartości prezentowanej w rejestrze. |
+| 5 | Zweryfikuj podstawowe metadane. | Podgląd dotyczy właściwego dokumentu. |
+| 6 | Powróć do rejestru. | System wraca do poprzedniej listy. |
+| 7 | Zweryfikuj zachowanie kontekstu. | Wpis nadal jest dostępny i nie został zmieniony. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System wyświetla podgląd właściwego dokumentu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

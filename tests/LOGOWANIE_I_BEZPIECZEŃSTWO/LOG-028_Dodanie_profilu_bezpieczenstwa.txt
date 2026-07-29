@@ -1,7 +1,7 @@
 ID: LOG-028
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Administracyjny
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -19,13 +19,6 @@ Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
 - Przygotowano unikalną nazwę profilu.
 - Przygotowano wartości konfiguracji, w tym wymagania dla a-z, A-Z, 0-9 i znaków specjalnych.
 
-<h2> Kryteria akceptacji </h2>
-
-- Formularz nowego profilu jest dostępny po użyciu „Dodaj nowy profil”.
-- System umożliwia określenie wymagań hasła.
-- Po wybraniu „Zapisz” nowy profil zostaje utworzony.
-- Profil jest widoczny na liście profili.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -36,3 +29,14 @@ Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
 | 4 | Uzupełnić parametry profilu, w tym wymagania dotyczące a-z, A-Z, 0-9 i znaków specjalnych. | Konfiguracja zostaje wprowadzona. |
 | 5 | Wybrać „Zapisz”. | System tworzy profil. |
 | 6 | Odszukać utworzony profil na liście. | Nowy profil jest widoczny z zapisanymi danymi. |
+| 7 | Odświeżyć listę profili bezpieczeństwa i ponownie wyszukać testowany profil. | Profil jest widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Zweryfikować aktywność profilu oraz dostępność operacji edycji i usunięcia. | Dostępne akcje odpowiadają aktywności profilu i uprawnieniom użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Formularz nowego profilu jest dostępny po użyciu „Dodaj nowy profil”.
+- System umożliwia określenie wymagań hasła.
+- Po wybraniu „Zapisz” nowy profil zostaje utworzony.
+- Profil jest widoczny na liście profili.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

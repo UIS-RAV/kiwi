@@ -1,0 +1,39 @@
+ID: REJ-006
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja braku elementu NR w szablonie numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie wymaganego elementu Numer dokumentu w rejestrze NR.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz tworzenia numeracji. | Formularz jest widoczny. |
+| 2 | Uzupełnij nazwę, status i typ. | Pola podstawowe są kompletne. |
+| 3 | Dodaj wyłącznie nieobowiązkowe elementy szablonu. | W szablonie nie ma elementu NR. |
+| 4 | Kliknij Zapisz numerację. | System blokuje zapis. |
+| 5 | Zweryfikuj komunikat walidacyjny. | Komunikat wskazuje wymóg użycia elementu Numer dokumentu w rejestrze NR. |
+| 6 | Sprawdź listę numeracji. | Błędna numeracja nie została utworzona. |
+| 7 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 8 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie zapisuje numeracji bez obowiązkowego elementu NR.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

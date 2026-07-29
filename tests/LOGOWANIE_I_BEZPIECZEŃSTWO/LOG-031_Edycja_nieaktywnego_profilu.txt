@@ -1,7 +1,7 @@
 ID: LOG-031
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Administracyjny
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Administracja → Hasła → Edytowanie profilu
 - Istnieje profil bezpieczeństwa, który nie jest aktywny.
 - Przygotowano nowe wartości konfiguracji.
 
-<h2> Kryteria akceptacji </h2>
-
-- System umożliwia otwarcie edycji nieaktywnego profilu.
-- Zmodyfikowane wartości mogą zostać zapisane.
-- Po ponownym otwarciu profilu widoczne są nowe wartości.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Administracja → Hasła → Edytowanie profilu
 | 3 | Uruchomić edycję profilu. | Pola możliwe do zmiany są dostępne. |
 | 4 | Zmienić wybrany parametr i zapisać formularz. | System zapisuje zmiany. |
 | 5 | Ponownie otworzyć profil. | Wyświetlona jest zmieniona wartość. |
+| 6 | Odświeżyć listę profili bezpieczeństwa i ponownie wyszukać testowany profil. | Profil jest widoczny w stanie zgodnym z wykonaną operacją. |
+| 7 | Zweryfikować aktywność profilu oraz dostępność operacji edycji i usunięcia. | Dostępne akcje odpowiadają aktywności profilu i uprawnieniom użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System umożliwia otwarcie edycji nieaktywnego profilu.
+- Zmodyfikowane wartości mogą zostać zapisane.
+- Po ponownym otwarciu profilu widoczne są nowe wartości.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

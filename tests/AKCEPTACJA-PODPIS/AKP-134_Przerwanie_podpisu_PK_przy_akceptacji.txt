@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: przerwanie podpisu pk przy akceptacji.
+Zweryfikowanie, że funkcja „Przerwanie podpisu PK przy akceptacji” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,16 @@ Akceptacja i podpis — Akceptacja z podpisem i ePUAP
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument i uruchomić wskazaną operację podpisania. | Proces podpisywania zostaje rozpoczęty. |
-| 2 | Po przejściu do aplikacji podpisującej wybrać anulowanie lub zamknąć operację. | Aplikacja przerywa operację bez utworzenia podpisu. |
-| 3 | Powrócić do EZD. | EZD odbiera informację o anulowaniu albo braku wyniku. |
-| 4 | Sprawdzić status dokumentu, akceptacji i listę podpisów. | Dokument nie zostaje podpisany, a proces nie jest błędnie oznaczony jako zakończony. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do podpisania. | Dokument oraz wymagane załączniki są dostępne w wersji przeznaczonej do podpisu. |
+| 2 | Uruchom funkcję podpisania lub akceptacji z podpisem wskazaną w scenariuszu. | System wyświetla dostępne metody podpisu i elementy możliwe do objęcia operacją. |
+| 3 | Rozpocznij podpisanie dokumentu właściwą metodą. | System uruchamia proces podpisu. |
+| 4 | Anuluj operację przed jej zakończeniem. | Komponent podpisujący kończy operację bez złożenia podpisu. |
+| 5 | Powróć do EZD i odśwież dokument. | Dokument nie posiada nowego podpisu. |
+| 6 | Zweryfikuj status i historię. | Status procesu odpowiada anulowanej operacji i nie wskazuje skutecznego podpisania. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Przerwanie podpisu PK przy akceptacji” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Przerwanie podpisu PK przy akceptacji” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

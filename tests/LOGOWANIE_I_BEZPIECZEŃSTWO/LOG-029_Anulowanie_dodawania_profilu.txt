@@ -1,7 +1,7 @@
 ID: LOG-029
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny / UI
-Priorytet: Średni
+Priorytet: normalny
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
 - Otwarty jest formularz dodawania nowego profilu.
 - Przygotowano unikalną nazwę profilu.
 
-<h2> Kryteria akceptacji </h2>
-
-- Przycisk „Anuluj” zamyka formularz lub przerywa dodawanie.
-- Nowy profil nie zostaje utworzony.
-- Wprowadzone dane nie pojawiają się na liście profili.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -31,3 +25,13 @@ Administracja → Hasła → Dodawanie nowego profilu bezpieczeństwa
 | 1 | Wprowadzić unikalną nazwę i dowolne poprawne parametry profilu. | Formularz zawiera dane możliwe do zapisania. |
 | 2 | Wybrać przycisk „Anuluj”. | System przerywa proces dodawania i wraca do poprzedniego widoku. |
 | 3 | Wyszukać profil po wprowadzonej nazwie. | Profil nie istnieje na liście. |
+| 4 | Odświeżyć listę profili bezpieczeństwa i ponownie wyszukać testowany profil. | Profil jest widoczny w stanie zgodnym z wykonaną operacją. |
+| 5 | Zweryfikować aktywność profilu oraz dostępność operacji edycji i usunięcia. | Dostępne akcje odpowiadają aktywności profilu i uprawnieniom użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Przycisk „Anuluj” zamyka formularz lub przerywa dodawanie.
+- Nowy profil nie zostaje utworzony.
+- Wprowadzone dane nie pojawiają się na liście profili.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -1,0 +1,37 @@
+ID: EDR-086
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Brak niedostępnych dowodów dla wiadomości na wczesnym etapie obsługi </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak niedostępnych dowodów dla wiadomości na wczesnym etapie obsługi” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dowodów technicznych i archiwum wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Wiadomość jest na wczesnym etapie przetwarzania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Otwórz wiadomość na wczesnym etapie obsługi. | Wiadomość nie posiada jeszcze wszystkich dowodów. |
+| 3 | Otwórz sekcję dowodów. | System pokazuje tylko dowody faktycznie dostępne. |
+| 4 | Zweryfikuj brak akcji dla niewygenerowanych dowodów. | System nie udostępnia pustych lub błędnych plików. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak niedostępnych dowodów dla wiadomości na wczesnym etapie obsługi”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

@@ -1,7 +1,7 @@
 ID: LOG-030
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Odczyt
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Administracja → Hasła → Podgląd aktywnego profilu
 - Istnieje aktywny profil bezpieczeństwa.
 - Administrator posiada dostęp do sekcji „Administracja” → „Hasła”.
 
-<h2> Kryteria akceptacji </h2>
-
-- Przycisk „Pokaż aktywny profil” jest dostępny.
-- System wyświetla profil aktualnie oznaczony jako aktywny.
-- Prezentowane dane odpowiadają zapisanej konfiguracji profilu.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -31,3 +25,13 @@ Administracja → Hasła → Podgląd aktywnego profilu
 | 1 | Przejść do „Administracja” → „Hasła”. | Wyświetlona zostaje sekcja profili bezpieczeństwa. |
 | 2 | Wybrać „Pokaż aktywny profil”. | System wyświetla dane aktywnego profilu. |
 | 3 | Porównać nazwę i parametry z konfiguracją środowiska. | Wyświetlane dane odpowiadają aktywnemu profilowi. |
+| 4 | Odświeżyć listę profili bezpieczeństwa i ponownie wyszukać testowany profil. | Profil jest widoczny w stanie zgodnym z wykonaną operacją. |
+| 5 | Zweryfikować aktywność profilu oraz dostępność operacji edycji i usunięcia. | Dostępne akcje odpowiadają aktywności profilu i uprawnieniom użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Przycisk „Pokaż aktywny profil” jest dostępny.
+- System wyświetla profil aktualnie oznaczony jako aktywny.
+- Prezentowane dane odpowiadają zapisanej konfiguracji profilu.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

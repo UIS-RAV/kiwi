@@ -1,0 +1,39 @@
+ID: SKL-049
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Rezerwuj – walidacja formularza </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wymaganych pól i daty.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.7 Rezerwuj
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Rezerwacja. | Widoczny jest formularz. |
+| 2 | Pozostaw pola puste i wybierz Rezerwuj. | Pola są oznaczone jako wymagane. |
+| 3 | Wprowadź datę bieżącą lub wcześniejszą. | Data nie jest akceptowana. |
+| 4 | Wprowadź poprawną datę. | Pole przyjmuje wartość. |
+| 5 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 6 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wypożyczający i Rezerwacja do są wymagane.
+- Minimalna data to data bieżąca + 1.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

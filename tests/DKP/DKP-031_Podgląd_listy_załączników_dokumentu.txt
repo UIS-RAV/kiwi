@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: podgląd listy załączników dokumentu.
+Zweryfikowanie, że funkcja „Podgląd listy załączników dokumentu” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,20 @@ Podgląd dokumentu w DKP
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Podgląd listy załączników dokumentu” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Funkcja „Podgląd listy załączników dokumentu” jest dostępna dla uprawnionego użytkownika i kończy się zgodnie z celem testu.
+- Dane dokumentu, interesantów, załączników lub dekretacji odpowiadają wykonanej operacji.
+- Rezultat jest widoczny we właściwym widoku i pozostaje spójny po ponownym otwarciu danych.
+- Operacja nie powoduje niezamierzonych zmian w innych dokumentach ani rekordach.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Podgląd listy załączników dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wykonać i zatwierdzić operację, o ile scenariusz nie dotyczy anulowania. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Otwórz dokument posiadający kilka załączników. | Podgląd dokumentu jest dostępny. |
+| 2 | Przejdź do sekcji załączników. | System wyświetla listę plików. |
+| 3 | Porównaj liczbę, nazwy i kolejność załączników z zapisanym dokumentem. | Lista jest kompletna i spójna. |
+| 4 | Odśwież widok lub otwórz wynik operacji ponownie. | Rezultat pozostaje zapisany i spójny po ponownym odczycie danych. |

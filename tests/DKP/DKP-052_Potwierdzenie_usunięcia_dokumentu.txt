@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: potwierdzenie usunięcia dokumentu.
+Zweryfikowanie, że funkcja „Potwierdzenie usunięcia dokumentu” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,20 @@ Usuwanie dokumentu
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Potwierdzenie usunięcia dokumentu” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Funkcja „Potwierdzenie usunięcia dokumentu” jest dostępna dla uprawnionego użytkownika i kończy się zgodnie z celem testu.
+- Dane dokumentu, interesantów, załączników lub dekretacji odpowiadają wykonanej operacji.
+- Rezultat jest widoczny we właściwym widoku i pozostaje spójny po ponownym otwarciu danych.
+- Operacja nie powoduje niezamierzonych zmian w innych dokumentach ani rekordach.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Potwierdzenie usunięcia dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wykonać i zatwierdzić operację, o ile scenariusz nie dotyczy anulowania. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Uruchom usunięcie dokumentu. | System wyświetla komunikat potwierdzający. |
+| 2 | Potwierdź operację. | System usuwa dokument albo przenosi go do stanu przewidzianego w instrukcji. |
+| 3 | Odśwież listę DKP i wyszukaj dokument. | Dokument nie jest dostępny w aktywnym rejestrze. |
+| 4 | Zweryfikuj historię lub miejsce przechowywania usuniętych elementów, jeśli jest dostępne. | System zachowuje informacje zgodnie z zasadami usuwania. |

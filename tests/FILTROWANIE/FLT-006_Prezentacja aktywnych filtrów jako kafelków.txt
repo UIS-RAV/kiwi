@@ -1,0 +1,39 @@
+ID: FLT-006
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Funkcjonalny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Prezentacja aktywnych filtrów jako kafelków </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Prezentacja aktywnych filtrów jako kafelków” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Na liście zastosowano co najmniej dwa filtry.
+- Ocena estetyki pozostaje poza zakresem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dwa różne kryteria filtrowania. | Lista zostaje przefiltrowana. |
+| 2 | Odszukać pasek aktywnych filtrów. | Pasek jest widoczny. |
+| 3 | Policzyć kafelki filtrów. | Widoczne są dwa oddzielne kafelki. |
+| 4 | Porównać kafelki z kryteriami. | Każde kryterium ma własną reprezentację. |
+| 5 | Porównać liczbę kafelków z liczbą zastosowanych filtrów. | Każde kryterium jest reprezentowane przez osobny kafelek. |
+| 6 | Usunąć jeden filtr z poziomu kafelka. | Odpowiedni kafelek znika, a lista zostaje odświeżona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Prezentacja aktywnych filtrów jako kafelków” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

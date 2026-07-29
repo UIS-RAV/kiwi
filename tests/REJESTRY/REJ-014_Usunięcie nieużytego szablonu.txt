@@ -1,0 +1,39 @@
+ID: REJ-014
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Usunięcie nieużytego szablonu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie usunięcia nieużytego szablonu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Usunięcie szablonu
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje szablon nieprzypisany do rejestru.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę szablonów. | Lista jest widoczna. |
+| 2 | Otwórz menu opcji przy nieużytym szablonie. | Dostępna jest akcja usunięcia. |
+| 3 | Wybierz Usuń. | System żąda potwierdzenia. |
+| 4 | Potwierdź operację. | System usuwa szablon. |
+| 5 | Odśwież listę. | Szablon nie jest widoczny. |
+| 6 | Wyszukaj go po nazwie. | Brak wyników dla usuniętego szablonu. |
+| 7 | Odśwież listę szablonów i ponownie wyszukaj testowany szablon. | Szablon pozostaje widoczny w stanie zgodnym z wynikiem scenariusza. |
+| 8 | Otwórz szczegóły szablonu albo formularz edycji, jeżeli operacja jest dostępna. | Pola standardowe, automatyczne i wymagane ustawienia są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Szablon zostaje usunięty.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

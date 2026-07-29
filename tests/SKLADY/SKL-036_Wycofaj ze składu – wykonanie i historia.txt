@@ -1,0 +1,39 @@
+ID: SKL-036
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Wycofaj ze składu – wykonanie i historia </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja usunięcia powiązania przesyłki z pudłem.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.3 Wycofaj ze składu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Wycofaj ze składu. | Wyświetla się okno potwierdzenia. |
+| 2 | Wybierz Usuń ze składu. | Powiązanie zostaje usunięte. |
+| 3 | Sprawdź listę. | Przesyłka nie jest widoczna w dotychczasowym pudle. |
+| 4 | Sprawdź historię. | Widoczny jest wpis Usunięcie ze składu chronologicznego. |
+| 5 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 6 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Powiązanie zostaje usunięte.
+- Historia zawiera Usunięcie ze składu chronologicznego.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

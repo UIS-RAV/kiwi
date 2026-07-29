@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wybór stanowiska z grupy w imieniu.
+Zweryfikowanie, że funkcja „Wybór stanowiska z grupy W imieniu” działa zgodnie z opisanym scenariuszem i prawidłowo wpływa na stan dokumentu, wpisy dekretacji oraz dostępność dokumentu na stanowiskach.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dekretacja — Dekretacja w imieniu
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
+- Użytkownik posiada wymagane uprawnienia.
 - przygotowano dokument i stanowiska właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Wybór stanowiska z grupy W imieniu”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
-| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
-| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Wybór stanowiska z grupy W imieniu” jest zgodny z instrukcją. |
+| 1 | Zaloguj się jako użytkownik posiadający uprawnienie do dekretowania w imieniu wskazanego stanowiska. | Użytkownik ma dostęp do funkcji dekretacji w imieniu. |
+| 2 | Uruchom wybór stanowiska docelowego sposobem wskazanym w tytule testu. | System wyświetla listę lub mechanizm wyszukiwania stanowisk. |
+| 3 | Wyszukaj i wskaż stanowisko docelowe. | Wybrane stanowisko zostaje dodane do wpisu dekretacji. |
+| 4 | Zweryfikuj nazwę stanowiska i przypisaną osobę. | System prezentuje dane zgodne z wybranym stanowiskiem. |
+| 5 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wybór stanowiska z grupy W imieniu” działa zgodnie z instrukcją.
-- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Wybór stanowiska z grupy W imieniu” kończy się rezultatem zgodnym z celem testu.
+- Stanowisko źródłowe, stanowisko docelowe, typ przekazania i notatka są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Dostępność dokumentu na stanowiskach odpowiada wykonanej dekretacji.
+- Rezultat pozostaje spójny po odświeżeniu widoku lub ponownym otwarciu dokumentu.

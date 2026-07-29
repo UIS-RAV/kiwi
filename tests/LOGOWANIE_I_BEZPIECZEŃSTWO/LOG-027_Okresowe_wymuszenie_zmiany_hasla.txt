@@ -1,7 +1,7 @@
 ID: LOG-027
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Procesowy / Pozytywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 - Konto jest aktywne i niezablokowane.
 - Znane jest aktualne hasło oraz przygotowano nowe hasło zgodne z profilem.
 
-<h2> Kryteria akceptacji </h2>
-
-- Po poprawnym uwierzytelnieniu system wymusza zmianę przeterminowanego hasła.
-- Użytkownik nie może kontynuować zwykłej pracy bez wykonania wymaganej zmiany.
-- Po zapisaniu poprawnego nowego hasła użytkownik może kontynuować pracę.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +28,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 | 3 | Zweryfikować wyświetlenie formularza zmiany hasła. | System wymusza podanie nowego hasła przed kontynuowaniem pracy. |
 | 4 | Wprowadzić nowe hasło zgodne z aktywnym profilem oraz jego potwierdzenie. | Dane spełniają wymagania profilu. |
 | 5 | Zatwierdzić zmianę. | System zapisuje nowe hasło i umożliwia dalszą pracę. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po poprawnym uwierzytelnieniu system wymusza zmianę przeterminowanego hasła.
+- Użytkownik nie może kontynuować zwykłej pracy bez wykonania wymaganej zmiany.
+- Po zapisaniu poprawnego nowego hasła użytkownik może kontynuować pracę.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: rejestracja dokumentu bez dekretacji.
+Zweryfikowanie, że funkcja „Rejestracja dokumentu bez dekretacji” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,20 @@ Rejestrowanie dokumentu
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Rejestracja dokumentu bez dekretacji” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Funkcja „Rejestracja dokumentu bez dekretacji” jest dostępna dla uprawnionego użytkownika i kończy się zgodnie z celem testu.
+- Dane dokumentu, interesantów, załączników lub dekretacji odpowiadają wykonanej operacji.
+- Rezultat jest widoczny we właściwym widoku i pozostaje spójny po ponownym otwarciu danych.
+- Operacja nie powoduje niezamierzonych zmian w innych dokumentach ani rekordach.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Rejestracja dokumentu bez dekretacji”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wykonać i zatwierdzić operację, o ile scenariusz nie dotyczy anulowania. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Otwórz formularz rejestracji i uzupełnij wymagane dane. | Dokument jest gotowy do zapisu. |
+| 2 | Nie dodawaj wpisu w sekcji dekretacji. | Sekcja pozostaje pusta. |
+| 3 | Zarejestruj dokument. | System tworzy dokument bez dekretacji. |
+| 4 | Otwórz dokument i jego historię. | Brak wpisu dekretacji jest zgodny ze scenariuszem. |

@@ -1,0 +1,39 @@
+ID: REJ-010
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Blokada usunięcia użytej numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie zakazu usunięcia numeracji użytej przez rejestr.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Usunięcie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje numeracja użyta w rejestrze.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę numeracji. | Lista jest widoczna. |
+| 2 | Odszukaj używaną numerację. | Pozycja jest zidentyfikowana. |
+| 3 | Otwórz menu opcji. | Akcja Usuń jest niedostępna albo kontrolowana. |
+| 4 | Spróbuj usunąć numerację, jeżeli akcja jest dostępna. | System blokuje operację. |
+| 5 | Zweryfikuj komunikat. | Komunikat wskazuje, że można usunąć tylko numerację nieużytą. |
+| 6 | Odśwież listę. | Numeracja nadal istnieje. |
+| 7 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 8 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie usuwa użytej numeracji.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

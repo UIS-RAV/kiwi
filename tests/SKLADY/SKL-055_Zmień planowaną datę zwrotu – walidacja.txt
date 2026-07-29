@@ -1,0 +1,39 @@
+ID: SKL-055
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Zaawansowany
+
+<h1> Zmień planowaną datę zwrotu – walidacja </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wymagalności i minimalnej daty.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.10 Zmień planowaną datę zwrotu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Zmień planowaną datę zwrotu. | Wyświetla się Zmiana daty zwrotu. |
+| 2 | Usuń datę i wybierz Zapisz. | Pole jest oznaczone jako wymagane. |
+| 3 | Wprowadź datę bieżącą lub wcześniejszą. | Data nie jest akceptowana. |
+| 4 | Wprowadź poprawną datę. | Pole przyjmuje wartość. |
+| 5 | Wybierz Anuluj. | Zmiana nie zostaje zapisana. |
+| 6 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 7 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Planowana data zwrotu jest wymagana i ma minimum data bieżąca + 1.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

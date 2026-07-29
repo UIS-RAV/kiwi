@@ -1,0 +1,39 @@
+ID: REJ-015
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Blokada usunięcia szablonu używanego przez rejestr </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie ochrony szablonu wykorzystywanego przez rejestr.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Usunięcie szablonu
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje szablon przypisany do rejestru.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę szablonów. | Lista jest widoczna. |
+| 2 | Odszukaj szablon przypisany do rejestru. | Właściwa pozycja jest wskazana. |
+| 3 | Otwórz menu opcji. | Akcja usunięcia jest niedostępna albo kontrolowana. |
+| 4 | Spróbuj usunąć szablon, jeżeli akcja jest dostępna. | System blokuje operację. |
+| 5 | Zweryfikuj komunikat. | Użytkownik otrzymuje informację o istniejącym użyciu szablonu. |
+| 6 | Odśwież listę. | Szablon nadal istnieje. |
+| 7 | Odśwież listę szablonów i ponownie wyszukaj testowany szablon. | Szablon pozostaje widoczny w stanie zgodnym z wynikiem scenariusza. |
+| 8 | Otwórz szczegóły szablonu albo formularz edycji, jeżeli operacja jest dostępna. | Pola standardowe, automatyczne i wymagane ustawienia są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie usuwa szablonu używanego przez rejestr.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: brak komponentu eca ng.
+Zweryfikowanie, że funkcja „Brak komponentu ECA NG” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,17 @@ Akceptacja i podpis — Konfiguracja podpisu eCA NG
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Zapewnić brak komponentu, czytnika albo karty wskazanej w nazwie testu. | Warunek negatywny jest spełniony. |
-| 2 | Otworzyć dokument i uruchomić podpis kwalifikowany. | System podejmuje próbę uruchomienia podpisu. |
-| 3 | Poczekać na odpowiedź EZD lub aplikacji podpisującej. | Operacja nie może zostać wykonana i prezentowany jest komunikat diagnostyczny. |
-| 4 | Sprawdzić komunikat oraz stan dokumentu. | Dokument nie otrzymuje podpisu i zachowuje poprzedni stan. |
+| 1 | Zaloguj się do EZD jako użytkownik posiadający uprawnienia do konfiguracji wskazanej funkcji. | Użytkownik uzyskuje dostęp do funkcji administracyjnych wymaganych w scenariuszu. |
+| 2 | Otwórz obszar konfiguracji odpowiadający funkcji opisanej w tytule testu. | System wyświetla właściwy formularz lub listę ustawień. |
+| 3 | Upewnij się, że wskazany komponent, czytnik lub karta nie jest dostępna. | Środowisko spełnia warunek negatywny scenariusza. |
+| 4 | Rozpocznij operację podpisu. | System wykrywa brak wymaganego elementu. |
+| 5 | Zweryfikuj komunikat. | Komunikat wskazuje rzeczywistą przyczynę niemożności podpisania. |
+| 6 | Zweryfikuj stan dokumentu po zamknięciu komunikatu. | Dokument nie jest podpisany ani uszkodzony, a proces może zostać ponowiony po usunięciu przyczyny. |
+| 7 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Brak komponentu ECA NG” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Brak komponentu ECA NG” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

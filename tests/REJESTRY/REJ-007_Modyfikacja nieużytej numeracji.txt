@@ -1,0 +1,40 @@
+ID: REJ-007
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Modyfikacja nieużytej numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie edycji numeracji, która nie została użyta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Modyfikacja numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje nieużyta numeracja. Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry/Numeracja. | Lista numeracji jest widoczna. |
+| 2 | Otwórz menu opcji przy nieużytej numeracji. | Dostępna jest akcja Edytuj. |
+| 3 | Wybierz Edytuj. | System otwiera formularz z bieżącymi wartościami. |
+| 4 | Zmień opis oraz wybrane dopuszczalne pole. | Nowe wartości są widoczne w formularzu. |
+| 5 | Kliknij Zapisz numerację. | System zapisuje zmiany. |
+| 6 | Otwórz numerację ponownie. | Zmodyfikowane wartości zostały zachowane. |
+| 7 | Zweryfikuj pozostałe pola. | Pola nieobjęte zmianą zachowały wcześniejsze wartości. |
+| 8 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 9 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zmiany zostają zapisane i są widoczne po ponownym otwarciu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

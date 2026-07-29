@@ -1,0 +1,39 @@
+ID: FLT-016
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Filtrowanie według własnego zakresu dat </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Filtrowanie według własnego zakresu dat” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera rekordy przed, w obrębie i po przygotowanym zakresie.
+- Formularz posiada pola daty początkowej i końcowej.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Ustawić datę początkową. | Data zostaje przyjęta. |
+| 3 | Ustawić datę końcową. | Data zostaje przyjęta. |
+| 4 | Wybrać „Szukaj”. | Lista zostaje ograniczona do zakresu. |
+| 5 | Zweryfikować daty wyników. | Każda data należy do wskazanego zakresu. |
+| 6 | Odświeżyć widok lub otworzyć listę ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Sprawdzić, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe ustawienia listy pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Filtrowanie według własnego zakresu dat” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

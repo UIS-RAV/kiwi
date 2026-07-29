@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wyświetlenie statusu dokumentu przekazanego do poprawy.
+Zweryfikowanie, że funkcja „Wyświetlenie statusu dokumentu przekazanego do poprawy” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -23,13 +23,16 @@ Akceptacja i podpis — Statusy, historia i ograniczenia
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Wyświetlenie statusu dokumentu przekazanego do poprawy”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Wyświetlenie statusu dokumentu przekazanego do poprawy” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się jako użytkownik uczestniczący w przygotowanym procesie akceptacji. | Użytkownik ma dostęp do dokumentu i operacji właściwych dla jego roli. |
+| 2 | Otwórz dokument lub listę dokumentów odpowiadającą stanowi wymaganemu w scenariuszu. | System prezentuje właściwy dokument wraz z bieżącym statusem procesu. |
+| 3 | Doprowadź dokument do stanu wskazanego w tytule testu. | Operacja procesowa kończy się zgodnie ze scenariuszem. |
+| 4 | Odśwież listę lub podgląd dokumentu. | System prezentuje aktualny stan. |
+| 5 | Zweryfikuj nazwę i znaczenie statusu. | Status odpowiada rzeczywistemu etapowi akceptacji lub podpisu. |
+| 6 | Otwórz historię dokumentu. | Historia zawiera zdarzenie, które spowodowało zmianę statusu. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wyświetlenie statusu dokumentu przekazanego do poprawy” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Wyświetlenie statusu dokumentu przekazanego do poprawy” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

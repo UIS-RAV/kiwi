@@ -1,0 +1,41 @@
+ID: SKL-011
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Dodaj skład – utworzenie składu przesyłek przychodzących </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia składu typu przesyłki przychodzące.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.2.1 Dodaj skład
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Dodaj skład. | Wyświetla się Tworzenie składu chronologicznego. |
+| 2 | Wprowadź Nazwa składu. | Wartość zostaje przyjęta. |
+| 3 | Wybierz Typ składu = przesyłki przychodzące. | Typ zostaje ustawiony. |
+| 4 | Wybierz Lokalizacja. | Lista prezentuje nazwę i adres. |
+| 5 | Wybierz Należy do. | Dostępne są aktywne komórki posiadające symbol. |
+| 6 | Wybierz Zapisz skład. | Skład zostaje utworzony i widoczny na liście. |
+| 7 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 8 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Skład zostaje zapisany z nazwą, typem, lokalizacją i wartością Należy do.
+- Lista lokalizacji ma format {NAZWA_LOKALIZACJI} / {ADRES_LOKALIZACJI}.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

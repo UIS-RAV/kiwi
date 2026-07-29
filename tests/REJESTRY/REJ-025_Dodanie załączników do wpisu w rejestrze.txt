@@ -1,0 +1,40 @@
+ID: REJ-025
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie załączników do wpisu w rejestrze </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie dodania załączników do istniejącego wpisu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Dodanie załączników do wpisu w rejestrze
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje wpis w rejestrze oraz plik możliwy do dołączenia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr zawierający wpis. | Lista wpisów jest widoczna. |
+| 2 | Otwórz właściwy wpis. | Szczegóły wpisu są dostępne. |
+| 3 | Uruchom funkcję dodawania załączników. | System otwiera obszar wyboru plików. |
+| 4 | Wskaż plik. | Plik pojawia się na liście załączników. |
+| 5 | Zapisz zmiany. | System zapisuje załącznik. |
+| 6 | Otwórz wpis ponownie. | Załącznik nadal jest widoczny. |
+| 7 | Pobierz lub otwórz załącznik. | Plik jest dostępny i odpowiada dodanemu plikowi. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Załącznik zostaje zapisany przy właściwym wpisie.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

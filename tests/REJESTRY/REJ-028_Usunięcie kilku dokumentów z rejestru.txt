@@ -1,0 +1,40 @@
+ID: REJ-028
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Usunięcie kilku dokumentów z rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie operacji grupowego usuwania wpisów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Usunięcie kilku dokumentów z rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr zawierający co najmniej trzy wpisy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr zawierający kilka wpisów. | Lista jest widoczna. |
+| 2 | Zaznacz co najmniej dwa wpisy. | Wybrane pozycje są oznaczone. |
+| 3 | Zanotuj numery zaznaczonych i jednego niezaznaczonego wpisu. | Zakres operacji jest jednoznaczny. |
+| 4 | Uruchom grupową akcję usuwania. | System żąda potwierdzenia. |
+| 5 | Potwierdź operację. | System usuwa zaznaczone wpisy. |
+| 6 | Odśwież listę. | Usunięte wpisy nie są widoczne. |
+| 7 | Wyszukaj niezaznaczony wpis. | Niezaznaczony dokument nadal znajduje się w rejestrze. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zaznaczone wpisy zostają usunięte, a niezaznaczone pozostają.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

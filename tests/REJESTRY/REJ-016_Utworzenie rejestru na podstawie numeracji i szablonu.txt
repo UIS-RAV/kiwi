@@ -1,0 +1,43 @@
+ID: REJ-016
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Funkcjonalny
+
+<h1> Utworzenie rejestru na podstawie numeracji i szablonu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie utworzenia rejestru wykorzystującego wcześniej przygotowaną numerację i szablon.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywna numeracja oraz poprawny szablon.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry/Rejestry. | Widoczna jest lista rejestrów. |
+| 2 | Kliknij Dodaj rejestr. | System otwiera formularz tworzenia rejestru. |
+| 3 | Zweryfikuj pola konfiguracji rejestru. | Formularz umożliwia wskazanie danych rejestru, numeracji i szablonu. |
+| 4 | Uzupełnij nazwę i opis rejestru. | Dane są przyjęte. |
+| 5 | Wybierz utworzoną aktywną numerację. | Numeracja zostaje przypisana. |
+| 6 | Wybierz utworzony szablon. | Szablon zostaje przypisany. |
+| 7 | Uzupełnij pozostałe wymagane ustawienia. | Formularz nie wskazuje braków. |
+| 8 | Zapisz rejestr. | System zapisuje rejestr. |
+| 9 | Odszukaj rejestr na liście administracyjnej. | Rejestr jest widoczny. |
+| 10 | Otwórz go ponownie. | Numeracja, szablon i pozostałe dane zostały zachowane. |
+| 11 | Odśwież listę rejestrów i ponownie wyszukaj testowany rejestr. | Rejestr pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 12 | Otwórz konfigurację rejestru albo jego podgląd, jeżeli operacja jest dostępna. | Przypisana numeracja, szablon, aktywność i dostępne akcje są spójne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Rejestr zostaje zapisany i jest dostępny w konfiguracji oraz w obszarze użytkowym zgodnie z nadanymi ustawieniami.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

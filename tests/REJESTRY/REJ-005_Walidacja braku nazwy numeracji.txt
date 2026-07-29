@@ -1,0 +1,40 @@
+ID: REJ-005
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja braku nazwy numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie obowiązkowości pola nazwy numeracji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz Dodaj numerację. | Formularz jest widoczny. |
+| 2 | Pozostaw pole nazwy puste. | Pole wymagane nie zawiera wartości. |
+| 3 | Uzupełnij pozostałe wymagane dane. | Pozostałe dane są kompletne. |
+| 4 | Dodaj element Numer dokumentu w rejestrze NR. | Szablon zawiera element obowiązkowy. |
+| 5 | Kliknij Zapisz numerację. | System blokuje zapis. |
+| 6 | Zweryfikuj komunikat lub oznaczenie pola nazwy. | Użytkownik otrzymuje informację o wymaganej nazwie. |
+| 7 | Powróć do listy numeracji. | Nie powstała numeracja bez nazwy. |
+| 8 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 9 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie zapisuje numeracji bez nazwy i wskazuje brak wymaganej wartości.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

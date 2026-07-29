@@ -1,0 +1,38 @@
+ID: EDR-027
+Moduł: e-DORĘCZENIA
+Typ: Funkcjonalny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Filtrowanie wiadomości po nadawcy lub odbiorcy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Filtrowanie wiadomości po nadawcy lub odbiorcy” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Filtrowanie dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- Istnieją wiadomości od różnych nadawców lub do różnych odbiorców.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia zawierający zróżnicowane wiadomości. | Lista wiadomości jest dostępna i umożliwia filtrowanie. |
+| 2 | Wprowadź wartość filtra dla kryterium: nadawcy lub odbiorcy. | Kryterium jest przyjęte. |
+| 3 | Zastosuj filtr. | Lista zawiera tylko wiadomości zgodne z kryterium. |
+| 4 | Porównaj wyniki z danymi wiadomości. | Wszystkie wyniki spełniają warunek. |
+| 5 | Wyczyść filtr. | Pełna lista zostaje przywrócona. |
+| 6 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Filtrowanie wiadomości po nadawcy lub odbiorcy” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

@@ -1,7 +1,7 @@
 ID: LOG-033
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Administracyjny
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,13 +18,6 @@ Administracja → Hasła → Usuwanie profilu
 - Istnieje profil bezpieczeństwa, który nie jest aktywny.
 - Profil został przeznaczony wyłącznie do tego testu.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja usunięcia jest dostępna dla nieaktywnego profilu.
-- System wymaga potwierdzenia operacji.
-- Po potwierdzeniu profil zostaje usunięty.
-- Usunięty profil nie jest widoczny na liście.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +27,14 @@ Administracja → Hasła → Usuwanie profilu
 | 3 | Uruchomić funkcję usuwania. | System wyświetla prośbę o potwierdzenie. |
 | 4 | Potwierdzić usunięcie. | System usuwa profil. |
 | 5 | Wyszukać profil na liście. | Profil nie jest dostępny. |
+| 6 | Odświeżyć listę profili bezpieczeństwa i ponownie wyszukać testowany profil. | Profil jest widoczny w stanie zgodnym z wykonaną operacją. |
+| 7 | Zweryfikować aktywność profilu oraz dostępność operacji edycji i usunięcia. | Dostępne akcje odpowiadają aktywności profilu i uprawnieniom użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja usunięcia jest dostępna dla nieaktywnego profilu.
+- System wymaga potwierdzenia operacji.
+- Po potwierdzeniu profil zostaje usunięty.
+- Usunięty profil nie jest widoczny na liście.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

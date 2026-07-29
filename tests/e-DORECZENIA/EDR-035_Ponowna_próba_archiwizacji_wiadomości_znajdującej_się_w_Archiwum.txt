@@ -1,0 +1,37 @@
+ID: EDR-035
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Średni
+Poziom: Rozszerzony
+
+<h1> Ponowna próba archiwizacji wiadomości znajdującej się w Archiwum </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Ponowna próba archiwizacji wiadomości znajdującej się w Archiwum” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Archiwizowanie dokumentu z eDoręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Wiadomość znajduje się w Archiwum.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz wiadomość e-Doręczeń przygotowaną zgodnie z warunkami testu. | Wiadomość jest dostępna wraz z funkcją archiwizacji. |
+| 2 | Otwórz wiadomość już znajdującą się w Archiwum. | Wiadomość jest dostępna. |
+| 3 | Spróbuj uruchomić archiwizację ponownie. | Funkcja jest niedostępna albo system blokuje operację. |
+| 4 | Zweryfikuj położenie wiadomości. | Wiadomość pozostaje w Archiwum bez duplikatu. |
+| 5 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 6 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Ponowna próba archiwizacji wiadomości znajdującej się w Archiwum”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

@@ -1,0 +1,38 @@
+ID: EDR-054
+Moduł: e-DORĘCZENIA
+Typ: Warunkowy
+Priorytet: Średni
+Poziom: Zaawansowany
+
+<h1> Ostrzeżenie dla dokumentu PDF przekraczającego 12 kartek </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Ostrzeżenie dla dokumentu PDF przekraczającego 12 kartek” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Wysyłanie dokumentu przez e-Doręczenia
+
+<h2> Warunki wstępne </h2>
+
+- Dostępny jest PDF o liczbie kartek większej niż 12.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Dodaj plik PDF przekraczający wskazany limit kartek. | Plik jest wybrany. |
+| 3 | Przejdź do wysyłki hybrydowej. | System analizuje dokument. |
+| 4 | Zweryfikuj ostrzeżenie. | System informuje o przekroczeniu 12 kartek i wymaga świadomego potwierdzenia dalszej operacji. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Ostrzeżenie dla dokumentu PDF przekraczającego 12 kartek”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

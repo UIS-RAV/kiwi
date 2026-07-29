@@ -1,0 +1,38 @@
+ID: SKL-019
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Dodaj pudło – typ składu widoczny w polu Skład chronologiczny </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja prezentacji typu składu podczas tworzenia pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.1 Dodaj Pudło; Uwagi_KW_20260708, pkt 1
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie pudła. | Widoczny jest formularz. |
+| 2 | Rozwiń Skład chronologiczny. | Wyświetla się lista składów. |
+| 3 | Sprawdź pozycje różnych typów. | Każda pozycja zawiera informację o typie składu, np. Przychodzące. |
+| 4 | Wybierz pozycję. | Wybrana wartość nadal pozwala rozpoznać typ składu. |
+| 5 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 6 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Każda pozycja listy pozwala rozpoznać typ składu.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

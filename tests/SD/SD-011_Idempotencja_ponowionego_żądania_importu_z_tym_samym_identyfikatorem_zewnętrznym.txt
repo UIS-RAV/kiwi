@@ -1,0 +1,37 @@
+ID: SD-011
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Idempotencja ponowionego żądania importu z tym samym identyfikatorem zewnętrznym </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Idempotencja ponowionego żądania importu z tym samym identyfikatorem zewnętrznym.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wyślij poprawne żądanie utworzenia obiektu z identyfikatorem zewnętrznym. | Obiekt zostaje utworzony. |
+| 2 | Wyślij ponownie identyczne żądanie z tym samym identyfikatorem. | System nie tworzy niekontrolowanego duplikatu; zwraca istniejący wynik albo błąd konfliktu zgodny z kontraktem. |
+| 3 | Wyszukaj obiekty w EZD. | Istnieje dokładnie jeden logiczny obiekt dla identyfikatora zewnętrznego. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

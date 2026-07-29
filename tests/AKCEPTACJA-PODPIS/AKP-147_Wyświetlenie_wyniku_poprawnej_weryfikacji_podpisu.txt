@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wyświetlenie wyniku poprawnej weryfikacji podpisu.
+Zweryfikowanie, że funkcja „Wyświetlenie wyniku poprawnej weryfikacji podpisu” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -23,13 +23,18 @@ Akceptacja i podpis — Weryfikacja podpisów elektronicznych
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Wyświetlenie wyniku poprawnej weryfikacji podpisu”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Wyświetlenie wyniku poprawnej weryfikacji podpisu” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się do EZD i otwórz dokument lub załącznik posiadający podpis wymagany w scenariuszu. | Podpisany obiekt jest dostępny do weryfikacji. |
+| 2 | Uruchom funkcję weryfikacji podpisu. | System rozpoczyna proces weryfikacji właściwego podpisu. |
+| 3 | Uruchom funkcję wskazaną w tytule testu. | System otwiera właściwy widok. |
+| 4 | Zweryfikuj identyfikację dokumentu, załącznika lub konfiguracji. | Widok dotyczy właściwego obiektu. |
+| 5 | Zweryfikuj kompletność informacji istotnych dla scenariusza. | Dane wymagane do dalszej operacji są czytelne i spójne. |
+| 6 | Powróć do poprzedniego widoku. | System zachowuje kontekst pracy i nie zmienia danych. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 8 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wyświetlenie wyniku poprawnej weryfikacji podpisu” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Wyświetlenie wyniku poprawnej weryfikacji podpisu” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

@@ -1,0 +1,38 @@
+ID: EPU-002
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Wymiana certyfikatu PZ w ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wymiana certyfikatu PZ w ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja na platformie ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Na platformie ePUAP istnieje skonfigurowany system z aktualnym certyfikatem.
+- Dostępny jest nowy certyfikat PZ.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację systemu na platformie ePUAP. | Wyświetlają się dane systemu i bieżącego certyfikatu. |
+| 2 | Usuń lub zastąp dotychczasowy certyfikat zgodnie z dostępną operacją. | Stary certyfikat przestaje być aktywnym certyfikatem systemu. |
+| 3 | Dodaj nowy certyfikat PZ i zapisz konfigurację. | Nowy certyfikat zostaje przypisany. |
+| 4 | Zweryfikuj konfigurację systemu. | W systemie widoczny jest nowy certyfikat. |
+| 5 | Zweryfikuj aktywny certyfikat po zakończeniu wymiany. | Nowy certyfikat jest używany, a poprzedni nie jest aktywny. |
+| 6 | Wykonaj test komunikacji po wymianie. | Połączenie z ePUAP działa z nowym certyfikatem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wymiana certyfikatu PZ w ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

@@ -1,0 +1,41 @@
+ID: EDR-005
+Moduł: e-DORĘCZENIA
+Typ: Integracyjny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Wymiana certyfikatu systemu integracyjnego przy użyciu nowego CSR </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wymiana certyfikatu systemu integracyjnego przy użyciu nowego CSR” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Wymiana certyfikatu w systemie e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- System integracyjny jest skonfigurowany.
+- Dostępny jest nowy poprawny plik CSR.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wygeneruj nowy poprawny CSR. | Nowy plik CSR jest dostępny. |
+| 3 | Uruchom wymianę certyfikatu i wskaż CSR. | System przyjmuje żądanie wymiany. |
+| 4 | Zatwierdź operację. | Nowy certyfikat zostaje powiązany z systemem integracyjnym. |
+| 5 | Wykonaj test połączenia. | Integracja działa z nowym certyfikatem. |
+| 6 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 8 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 9 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wymiana certyfikatu systemu integracyjnego przy użyciu nowego CSR” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

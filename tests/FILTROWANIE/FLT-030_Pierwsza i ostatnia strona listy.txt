@@ -1,0 +1,39 @@
+ID: FLT-030
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Pierwsza i ostatnia strona listy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Pierwsza i ostatnia strona listy” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista posiada co najmniej dwie strony.
+- Dostępne są kontrolki przechodzenia między stronami.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść na pierwszą stronę. | Pierwsza strona jest aktywna. |
+| 2 | Spróbować przejść do strony wcześniejszej. | Operacja jest niedostępna lub nie zmienia strony. |
+| 3 | Przejść na ostatnią stronę. | Ostatnia strona jest aktywna. |
+| 4 | Spróbować przejść do strony późniejszej. | Operacja jest niedostępna lub nie zmienia strony. |
+| 5 | Zweryfikować liczbę rekordów ostatniej strony. | Nie przekracza ustawionego limitu. |
+| 6 | Na pierwszej stronie spróbować przejść do poprzedniej. | Operacja jest niedostępna. |
+| 7 | Na ostatniej stronie spróbować przejść do następnej. | Operacja jest niedostępna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Pierwsza i ostatnia strona listy”.
+- Niepoprawne, graniczne albo niedające wyników kryterium nie powoduje błędnego stanu listy.
+- Użytkownik otrzymuje jednoznaczny komunikat albo system prezentuje poprawny stan pusty.
+- Filtry, sortowanie, paginacja i liczba rekordów pozostają spójne po odświeżeniu lub ponownym otwarciu listy.

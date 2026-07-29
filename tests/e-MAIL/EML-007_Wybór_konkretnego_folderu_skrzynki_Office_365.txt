@@ -1,0 +1,39 @@
+ID: EML-007
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Wybór konkretnego folderu skrzynki Office 365 </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wybór konkretnego folderu skrzynki Office 365” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie poczty Microsoft 365 do pracy z EZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Formularz Office 365 zawiera poprawne dane połączenia.
+- Skrzynka posiada co najmniej jeden folder.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W formularzu Office 365 wybierz „Pobierz listę folderów”. | System pobiera i wyświetla foldery skrzynki. |
+| 2 | Wybierz konkretny folder z listy. | Folder zostaje wskazany w konfiguracji. |
+| 3 | Wybierz „Zapisz”. | Konfiguracja konta z wybranym folderem zostaje zapisana. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wybór konkretnego folderu skrzynki Office 365” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

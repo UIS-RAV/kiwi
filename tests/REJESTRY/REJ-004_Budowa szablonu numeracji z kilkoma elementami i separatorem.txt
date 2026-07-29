@@ -1,0 +1,43 @@
+ID: REJ-004
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Budowa szablonu numeracji z kilkoma elementami i separatorem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie budowy wieloelementowego szablonu numeracji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz tworzenia numeracji. | Formularz jest widoczny. |
+| 2 | Uzupełnij podstawowe dane numeracji. | Pola wymagane są uzupełnione. |
+| 3 | Dodaj element Numer dokumentu w rejestrze NR. | Element obowiązkowy jest widoczny. |
+| 4 | Wybierz element Separator. | System udostępnia wybór rodzaju separatora. |
+| 5 | Wybierz rodzaj separatora i kliknij Dodaj. | Separator zostaje dodany do szablonu. |
+| 6 | Dodaj kolejny dostępny element szablonu. | Szablon zawiera co najmniej trzy elementy. |
+| 7 | Zmień kolejność elementów metodą przeciągnij i upuść. | Elementy są prezentowane w nowej kolejności. |
+| 8 | Usuń jeden nieobowiązkowy element przyciskiem dostępnym na elemencie. | Wybrany element znika z szablonu. |
+| 9 | Zapisz numerację. | Numeracja zostaje zapisana z końcowym układem szablonu. |
+| 10 | Otwórz numerację ponownie. | Kolejność i separator zostały zachowane. |
+| 11 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 12 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Szablon numeracji zawiera kilka elementów, wybrany separator i ustaloną kolejność.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: walidacja wymaganych danych interesanta.
+Zweryfikowanie, że funkcja „Walidacja wymaganych danych interesanta” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,21 @@ Rejestrowanie dokumentu — Interesanci
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Walidacja wymaganych danych interesanta” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Scenariusz „Walidacja wymaganych danych interesanta” kończy się bez niezamierzonego zapisu lub zmiany danych.
+- System blokuje niedozwoloną operację albo prawidłowo anuluje działanie.
+- Komunikat lub stan formularza jednoznacznie wskazuje wymagane działanie użytkownika.
+- Pozostałe dokumenty, załączniki i powiązania pozostają bez zmian.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Walidacja wymaganych danych interesanta”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wykonać i zatwierdzić operację, o ile scenariusz nie dotyczy anulowania. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Otwórz formularz nowego interesanta. | System udostępnia pola danych interesanta. |
+| 2 | Pozostaw co najmniej jedno pole wymagane puste albo wprowadź wartość niezgodną z regułami. | Formularz zawiera niepoprawne dane. |
+| 3 | Spróbuj zapisać interesanta. | System blokuje zapis i wskazuje pola wymagające poprawy. |
+| 4 | Popraw dane. | Komunikaty walidacyjne znikają dla poprawionych pól. |
+| 5 | Ponownie otwórz właściwy dokument, formularz lub listę. | Stan danych odpowiada wartości sprzed anulowanej albo zablokowanej operacji. |

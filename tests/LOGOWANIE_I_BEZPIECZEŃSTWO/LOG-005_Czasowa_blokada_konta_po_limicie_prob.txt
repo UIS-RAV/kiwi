@@ -1,7 +1,7 @@
 ID: LOG-005
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Procesowy / Negatywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -21,13 +21,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 - Znane są prawidłowa nazwa użytkownika i aktualne hasło.
 - Przygotowano niepoprawne hasło.
 
-<h2> Kryteria akceptacji </h2>
-
-- Próby od 1 do N-1 są odrzucane bez wcześniejszego zablokowania konta.
-- Po wykonaniu N-tej nieudanej próby konto zostaje czasowo zablokowane.
-- W okresie blokady użytkownik nie może zalogować się do systemu.
-- System nie udostępnia chronionego widoku.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -37,3 +30,14 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 | 3 | Powtarzać próbę logowania niepoprawnym hasłem do momentu wykonania N-1 prób. | Każda próba jest odrzucana; do wartości N-1 konto nie zostaje zablokowane. |
 | 4 | Wykonać N-tą próbę logowania przy użyciu niepoprawnego hasła. | System odrzuca próbę i czasowo blokuje konto zgodnie z aktywnym profilem bezpieczeństwa. |
 | 5 | Bez oczekiwania na zakończenie blokady wprowadzić prawidłowe hasło i wybrać „Zaloguj się”. | System nie umożliwia zalogowania w okresie aktywnej blokady. |
+| 6 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 7 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Próby od 1 do N-1 są odrzucane bez wcześniejszego zablokowania konta.
+- Po wykonaniu N-tej nieudanej próby konto zostaje czasowo zablokowane.
+- W okresie blokady użytkownik nie może zalogować się do systemu.
+- System nie udostępnia chronionego widoku.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: utworzenie kopii dokumentu na stanowisku.
+Zweryfikowanie, że funkcja „Utworzenie kopii dokumentu na stanowisku” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na dane dokumentu, jego załączniki, historię, wersje i dostępność na stanowisku.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -20,18 +20,20 @@ Utworzenie kopii dokumentu na stanowisku
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
 - Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja „Utworzenie kopii dokumentu na stanowisku” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
-- System wykonuje lub blokuje operację zgodnie z celem testu.
-- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
-- Dane nieobjęte operacją pozostają spójne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Utworzenie kopii dokumentu na stanowisku”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
-| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |
+| 1 | Zaloguj się do EZD i otwórz listę dokumentów na stanowisku. | System wyświetla dokumenty dostępne użytkownikowi. |
+| 2 | Uruchom tworzenie kopii dokumentu. | System wyświetla wybór stanowiska docelowego. |
+| 3 | Wskaż stanowisko i zatwierdź. | Kopia zostaje utworzona. |
+| 4 | Otwórz listę dokumentów stanowiska docelowego. | Kopia jest dostępna na wskazanym stanowisku. |
+| 5 | Otwórz kopię. | Kopia odpowiada dokumentowi źródłowemu. |
+| 6 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Utworzenie kopii dokumentu na stanowisku” kończy się rezultatem zgodnym z celem testu.
+- Dane dokumentu, załączniki, wersje i historia są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy podglądem, formularzem edycji i listą dokumentów.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu dokumentu.

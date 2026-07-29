@@ -1,0 +1,37 @@
+ID: EPU-036
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Wyświetlenie liczby otrzymanych wiadomości ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wyświetlenie liczby otrzymanych wiadomości ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Pobieranie dokumentów w ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada dostęp do modułu ePUAP.
+- W module znajdują się otrzymane wiadomości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Korespondencja → ePUAP. | Wyświetla się moduł ePUAP. |
+| 2 | Sprawdź informację o liczbie otrzymanych wiadomości. | Na pomarańczowym tle widoczna jest liczba otrzymanych wiadomości. |
+| 3 | Porównaj wartość licznika z liczbą właściwych wiadomości. | Wartość licznika odpowiada liczbie otrzymanych wiadomości. |
+| 4 | Porównaj licznik z liczbą nowych wiadomości na liście. | Licznik odpowiada rzeczywistemu stanowi. |
+| 5 | Otwórz jedną wiadomość i odśwież moduł. | Licznik aktualizuje się zgodnie ze zmianą stanu wiadomości. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyświetlenie liczby otrzymanych wiadomości ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

@@ -1,0 +1,39 @@
+ID: FLT-007
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Funkcjonalny
+Priorytet: Średni
+Poziom: Funkcjonalny
+
+<h1> Informacja o kryterium na kafelku filtra </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Informacja o kryterium na kafelku filtra” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Na pasku filtrów znajduje się co najmniej jeden aktywny kafelek.
+- Test nie ocenia estetyki sposobu prezentacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dowolny filtr. | Na pasku pojawia się kafelek. |
+| 2 | Najechać kursorem na kafelek. | System prezentuje informację o kryterium. |
+| 3 | Porównać informację z ustawioną wartością. | Informacja odpowiada aktywnemu kryterium. |
+| 4 | Odsunąć kursor i zweryfikować wyniki. | Filtr nadal pozostaje aktywny. |
+| 5 | Porównać opis kafelka z wartością ustawioną w formularzu. | Kafelek prezentuje właściwe pole i wartość. |
+| 6 | Zmienić wartość filtra i zastosować ponownie. | Opis kafelka aktualizuje się zgodnie z nowym kryterium. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Informacja o kryterium na kafelku filtra” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

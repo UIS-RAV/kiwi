@@ -1,0 +1,39 @@
+ID: REJ-019
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Włączenie podglądu rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie działania podglądu skonfigurowanego rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Włączenie podglądu rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje skonfigurowany rejestr.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry/Rejestry. | Lista rejestrów jest widoczna. |
+| 2 | Odszukaj właściwy rejestr. | Pozycja jest wskazana. |
+| 3 | Kliknij Podgląd rejestru. | System otwiera podgląd. |
+| 4 | Zweryfikuj nazwę rejestru. | Podgląd dotyczy wybranego rejestru. |
+| 5 | Zweryfikuj kolumny wynikające z przypisanego szablonu. | Układ podglądu odpowiada konfiguracji. |
+| 6 | Powróć do listy rejestrów. | System wraca do konfiguracji bez zmiany danych. |
+| 7 | Odśwież listę rejestrów i ponownie wyszukaj testowany rejestr. | Rejestr pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Otwórz konfigurację rejestru albo jego podgląd, jeżeli operacja jest dostępna. | Przypisana numeracja, szablon, aktywność i dostępne akcje są spójne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System wyświetla podgląd właściwego rejestru.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: przywrócenie poprzedniej wersji dokumentu.
+Zweryfikowanie, że funkcja „Przywrócenie poprzedniej wersji dokumentu” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na dane dokumentu, jego załączniki, historię, wersje i dostępność na stanowisku.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -20,18 +20,19 @@ Przywrócenie poprzedniej wersji dokumentu
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
 - Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja „Przywrócenie poprzedniej wersji dokumentu” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
-- System wykonuje lub blokuje operację zgodnie z celem testu.
-- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
-- Dane nieobjęte operacją pozostają spójne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Przywrócenie poprzedniej wersji dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
-| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany zgodnie z warunkami testu. | Dokument jest dostępny do wykonania scenariusza. |
+| 2 | Otwórz historię wersji i wybierz wcześniejszą wersję. | Wybrana wersja jest jednoznacznie wskazana. |
+| 3 | Uruchom przywrócenie i potwierdź operację. | System tworzy aktualny stan dokumentu na podstawie wybranej wersji. |
+| 4 | Otwórz dokument ponownie. | Treść odpowiada przywróconej wersji. |
+| 5 | Sprawdź historię wersji. | Wcześniejsze wersje pozostają dostępne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przywrócenie poprzedniej wersji dokumentu” kończy się rezultatem zgodnym z celem testu.
+- Dane dokumentu, załączniki, wersje i historia są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy podglądem, formularzem edycji i listą dokumentów.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu dokumentu.

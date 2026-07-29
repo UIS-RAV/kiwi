@@ -1,7 +1,7 @@
 ID: LOG-015
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Funkcjonalny / UI
-Priorytet: Średni
+Priorytet: normalny
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -17,12 +17,6 @@ Zmiana hasła pracownika przez administratora
 - Wyświetlony jest formularz nadania nowego hasła.
 - Aktywny jest profil bezpieczeństwa zawierający określone wymagania hasła.
 
-<h2> Kryteria akceptacji </h2>
-
-- Zielony znak zapytania jest dostępny przy polu nowego hasła.
-- Po jego użyciu system prezentuje wymagania wynikające z aktywnego profilu bezpieczeństwa.
-- Informacja pomocnicza nie zmienia wprowadzonych danych.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -31,3 +25,13 @@ Zmiana hasła pracownika przez administratora
 | 2 | Kliknąć zielony znak zapytania. | System wyświetla wymagania dla nowego hasła. |
 | 3 | Porównać wyświetlone wymagania z aktywnym profilem bezpieczeństwa. | Wyświetlone informacje odpowiadają konfiguracji aktywnego profilu. |
 | 4 | Zamknąć informację pomocniczą. | Formularz pozostaje dostępny, a wcześniej wprowadzone dane nie są utracone. |
+| 5 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 6 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zielony znak zapytania jest dostępny przy polu nowego hasła.
+- Po jego użyciu system prezentuje wymagania wynikające z aktywnego profilu bezpieczeństwa.
+- Informacja pomocnicza nie zmienia wprowadzonych danych.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

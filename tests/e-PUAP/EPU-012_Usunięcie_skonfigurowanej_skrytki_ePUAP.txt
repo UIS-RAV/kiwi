@@ -1,0 +1,39 @@
+ID: EPU-012
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Usunięcie skonfigurowanej skrytki ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie skonfigurowanej skrytki ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Usunięcie skrytki ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- W sekcji Skrytki istnieje skonfigurowana skrytka.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP i przejdź do sekcji skrytek. | Wyświetla się lista skrytek. |
+| 2 | Przy wybranej skrytce kliknij „Usuń”. | System wykonuje operację usunięcia. |
+| 3 | Sprawdź listę skrytek. | Usunięta skrytka nie jest widoczna. |
+| 4 | Odśwież listę skrytek. | Usunięta skrytka nie jest widoczna. |
+| 5 | Zweryfikuj pozostałe skrytki. | Operacja nie zmieniła innych konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie skonfigurowanej skrytki ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

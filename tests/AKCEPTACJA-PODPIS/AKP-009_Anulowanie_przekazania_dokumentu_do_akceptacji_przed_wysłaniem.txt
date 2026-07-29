@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: anulowanie przekazania dokumentu do akceptacji przed wysłaniem.
+Zweryfikowanie, że funkcja „Anulowanie przekazania dokumentu do akceptacji przed wysłaniem” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,16 @@ Akceptacja i podpis — Przekazanie dokumentu do akceptacji
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Anulowanie przekazania dokumentu do akceptacji przed wysłaniem”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Anulowanie przekazania dokumentu do akceptacji przed wysłaniem” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do przekazania do akceptacji. | Dokument jest dostępny w stanie umożliwiającym rozpoczęcie procesu akceptacji. |
+| 2 | Uruchom funkcję przekazania dokumentu do akceptacji. | System wyświetla formularz konfiguracji procesu akceptacji. |
+| 3 | Uzupełnij formularz operacji, ale nie zatwierdzaj jej ostatecznie. | Dane są widoczne, lecz proces nie został uruchomiony. |
+| 4 | Wybierz anulowanie lub zamknij formularz. | System wraca do poprzedniego widoku. |
+| 5 | Odśwież dokument. | Status dokumentu nie uległ zmianie. |
+| 6 | Zweryfikuj listę zadań i historię. | Nie powstało zadanie ani wpis potwierdzający wykonanie anulowanej operacji. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Anulowanie przekazania dokumentu do akceptacji przed wysłaniem” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Anulowanie przekazania dokumentu do akceptacji przed wysłaniem” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

@@ -1,0 +1,37 @@
+ID: SKL-035
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Wycofaj ze składu – anulowanie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja anulowania operacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.3 Wycofaj ze składu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Wycofaj ze składu. | Wyświetla się Wycofanie ze składu z pytaniem zawierającym liczbę dziennika. |
+| 2 | Wybierz Anuluj. | Okno zostaje zamknięte. |
+| 3 | Sprawdź listę. | Przesyłka nadal jest w pudle. |
+| 4 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 5 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Anuluj zamyka okno bez usunięcia powiązania.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

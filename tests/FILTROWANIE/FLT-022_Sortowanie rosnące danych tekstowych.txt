@@ -1,0 +1,38 @@
+ID: FLT-022
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Sortowanie rosnące danych tekstowych </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Sortowanie rosnące danych tekstowych” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera co najmniej pięć rekordów o różnych wartościach tekstowych.
+- Kolumna jest oznaczona jako sortowalna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapisać kolejność wartości przed sortowaniem. | Kolejność początkowa jest znana. |
+| 2 | Wybrać sortowanie po kolumnie tekstowej. | Lista zostaje uporządkowana. |
+| 3 | Zweryfikować kolejność wartości. | Wartości są ułożone rosnąco. |
+| 4 | Zweryfikować liczbę rekordów. | Liczba rekordów nie uległa zmianie. |
+| 5 | Porównać kolejne wartości w kolumnie. | Każda kolejna wartość jest nie mniejsza od poprzedniej. |
+| 6 | Odświeżyć listę. | Kolejność rosnąca pozostaje zachowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Sortowanie rosnące danych tekstowych” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

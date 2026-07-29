@@ -1,0 +1,40 @@
+ID: EPU-011
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie konfiguracji połączenia ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie konfiguracji połączenia ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Usunięcie / edycja połączenia ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje skonfigurowane połączenie ePUAP.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Edytuj ustawienia”. | Wyświetlają się zapisane dane. |
+| 2 | Usuń wszystkie znaki z pól epuap id, klucz prywatny i klucz publiczny. | Wszystkie trzy pola są puste. |
+| 3 | Zapisz zmiany. | Konfiguracja połączenia zostaje usunięta. |
+| 4 | Sprawdź możliwość wykonania operacji wymagających połączenia. | Skrytka nie jest gotowa do użycia bez ponownej konfiguracji. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie konfiguracji połączenia ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

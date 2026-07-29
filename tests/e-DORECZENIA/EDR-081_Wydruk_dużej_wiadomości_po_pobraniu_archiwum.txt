@@ -1,0 +1,37 @@
+ID: EDR-081
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Wydruk dużej wiadomości po pobraniu archiwum </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wydruk dużej wiadomości po pobraniu archiwum” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Wydruk wiadomości e-Doręczeń z wymaganym zamówieniem archiwum
+
+<h2> Warunki wstępne </h2>
+
+- Archiwum dużej wiadomości zostało przygotowane i pobrane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Zamów i pobierz archiwum dużej wiadomości. | Archiwum jest dostępne. |
+| 3 | Uruchom wydruk wiadomości. | System generuje podgląd lub zadanie wydruku. |
+| 4 | Zweryfikuj kompletność treści. | Wydruk obejmuje właściwą wiadomość i załączniki wymagane przez proces. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wydruk dużej wiadomości po pobraniu archiwum” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

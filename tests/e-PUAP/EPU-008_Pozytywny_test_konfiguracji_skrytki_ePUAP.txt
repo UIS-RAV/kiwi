@@ -1,0 +1,39 @@
+ID: EPU-008
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Pozytywny test konfiguracji skrytki ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Pozytywny test konfiguracji skrytki ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Przeprowadzenie testu poprawności konfiguracji ePUAP w systemie
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Połączenie i skrytka zostały skonfigurowane poprawnymi danymi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP. | Wyświetla się sekcja skrytek. |
+| 2 | Kliknij przycisk testu zlokalizowany przy nazwie skrytki. | System wykonuje test konfiguracji. |
+| 3 | Zweryfikuj wynik testu. | Wyświetlany jest pozytywny rezultat testu. |
+| 4 | Otwórz szczegóły wyniku testu. | System prezentuje wynik pozytywny dla właściwej skrytki. |
+| 5 | Uruchom ręczne pobranie dokumentów. | Skrytka umożliwia pobranie danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Pozytywny test konfiguracji skrytki ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

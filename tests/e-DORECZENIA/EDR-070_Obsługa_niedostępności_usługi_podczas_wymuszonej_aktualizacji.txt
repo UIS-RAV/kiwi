@@ -1,0 +1,39 @@
+ID: EDR-070
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Obsługa niedostępności usługi podczas wymuszonej aktualizacji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Obsługa niedostępności usługi podczas wymuszonej aktualizacji” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Wymuszenie aktualizacji statusu przesyłki e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Środowisko umożliwia zasymulowanie niedostępności e-Doręczeń.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz przesyłkę e-Doręczeń posiadającą status możliwy do aktualizacji. | Przesyłka i jej aktualny status są dostępne. |
+| 2 | Uruchom funkcję opisaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System realizuje operację albo prawidłowo ją blokuje. |
+| 4 | Zweryfikuj rezultat w module e-Doręczenia. | Stan wiadomości, konfiguracji lub przesyłki jest zgodny ze scenariuszem. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Obsługa niedostępności usługi podczas wymuszonej aktualizacji”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

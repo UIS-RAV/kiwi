@@ -1,0 +1,38 @@
+ID: SKL-039
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Przyjmij na stan – walidacja pól wymaganych </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wymaganych pól.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.4 Przyjmij na stan
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Przyjmij na stan. | Widoczny jest formularz. |
+| 2 | Pozostaw pola puste i wybierz Dodaj do składu. | Pola są oznaczone jako błędne. |
+| 3 | Zamknij okno. | Przesyłka pozostaje w trakcie przekazania. |
+| 4 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 5 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Skład chronologiczny i Pudło są wymagane.
+- Brak danych nie zmienia statusu.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

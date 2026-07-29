@@ -1,7 +1,7 @@
 ID: LOG-007
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny / Bezpieczeństwo
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 - Okres blokady jeszcze nie upłynął.
 - Znane są prawidłowa nazwa użytkownika oraz aktualne hasło.
 
-<h2> Kryteria akceptacji </h2>
-
-- System nie uwierzytelnia użytkownika podczas aktywnej blokady.
-- Poprawne hasło nie omija mechanizmu blokady.
-- System nie udostępnia chronionego widoku.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +28,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 | 3 | Wprowadzić aktualne, poprawne hasło użytkownika. | Hasło zostaje wprowadzone i jest prezentowane w sposób maskowany. |
 | 4 | Wybrać przycisk „Zaloguj się”. | System nie loguje użytkownika z powodu aktywnej blokady konta. |
 | 5 | Zweryfikować brak dostępu do funkcji systemu. | Chroniony widok nie jest dostępny. |
+| 6 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 7 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie uwierzytelnia użytkownika podczas aktywnej blokady.
+- Poprawne hasło nie omija mechanizmu blokady.
+- System nie udostępnia chronionego widoku.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

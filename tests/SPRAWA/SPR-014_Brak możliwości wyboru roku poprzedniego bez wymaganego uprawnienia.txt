@@ -1,0 +1,40 @@
+ID: SPR-014
+Moduł: SPRAWA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Brak możliwości wyboru roku poprzedniego bez wymaganego uprawnienia </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak możliwości wyboru roku poprzedniego bez wymaganego uprawnienia” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje dane sprawy, dokumenty, interesantów, znak sprawy, JRWA, uprawnienia, historię i powiązane operacje w module Sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł sprawy — Zakładanie spraw
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada stanowisko i uprawnienia wymagane dla scenariusza.
+- przygotowano dane sprawy, dokumenty, JRWA, użytkowników lub komórki organizacyjne.
+- Środowisko posiada konfigurację, uprawnienie lub funkcję wymaganą dla testu warunkowego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Brak możliwości wyboru roku poprzedniego bez wymaganego uprawnienia”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać sprawę, dokument, projekt, podteczkę, stanowisko lub parametr wymagany w scenariuszu. | System przyjmuje wskazaną sprawę, dokument, projekt, podteczkę, stanowisko lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat w podglądzie sprawy, historii, projekcie, podteczce, nadzorze lub na liście. | Rezultat funkcji „Brak możliwości wyboru roku poprzedniego bez wymaganego uprawnienia” jest zgodny z instrukcją. |
+| 5 | Odświeżyć widok i ponownie sprawdzić dostępność funkcji. | Ograniczenie uprawnień nadal obowiązuje. |
+| 6 | Zweryfikować, że dane nie zostały zmienione. | Stan sprawy lub słownika pozostaje bez zmian. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak możliwości wyboru roku poprzedniego bez wymaganego uprawnienia”.
+- Operacja niedozwolona, niekompletna albo wykonywana bez wymaganych uprawnień nie zmienia danych sprawy.
+- Użytkownik otrzymuje jednoznaczny komunikat albo właściwa funkcja pozostaje niedostępna.
+- Stan sprawy, dokumentów, interesantów, podteczek i historii pozostaje spójny po ponownym odczycie.

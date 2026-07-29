@@ -1,0 +1,40 @@
+ID: SKL-021
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Edytuj pudło – puste pudło </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pełnej edycji pustego pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.2 Edytuj pudło
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Edytuj pudło dla pustego pudła. | Wyświetla się Edycja pudła. |
+| 2 | Sprawdź komunikat. | Widoczny jest wymagany komunikat. |
+| 3 | Zmień Nazwa, Rok utworzenia, Typ, Skład chronologiczny i Lokalizacja. | Wszystkie pola są edytowalne. |
+| 4 | Wybierz Zapisz. | Zmiany zostają zapisane. |
+| 5 | Sprawdź listę. | Widoczne są nowe dane. |
+| 6 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 7 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie pola są edytowalne.
+- Widoczny jest komunikat o wpływie zmian na powiązane elementy i spisy AZ.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

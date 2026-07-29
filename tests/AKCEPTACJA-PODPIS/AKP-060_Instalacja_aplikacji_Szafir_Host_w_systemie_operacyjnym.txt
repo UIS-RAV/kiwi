@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: instalacja aplikacji szafir host w systemie operacyjnym.
+Zweryfikowanie, że funkcja „Instalacja aplikacji Szafir Host w systemie operacyjnym” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,17 @@ Akceptacja i podpis — Konfiguracja podpisu KIR Szafir
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Instalacja aplikacji Szafir Host w systemie operacyjnym”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Instalacja aplikacji Szafir Host w systemie operacyjnym” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się do EZD jako użytkownik posiadający uprawnienia do konfiguracji wskazanej funkcji. | Użytkownik uzyskuje dostęp do funkcji administracyjnych wymaganych w scenariuszu. |
+| 2 | Otwórz obszar konfiguracji odpowiadający funkcji opisanej w tytule testu. | System wyświetla właściwy formularz lub listę ustawień. |
+| 3 | Uruchom instalację komponentu wskazanego w tytule testu zgodnie z instrukcją producenta. | Instalator rozpoczyna pracę bez błędu blokującego. |
+| 4 | Zakończ instalację i uruchom ponownie wymagany komponent lub przeglądarkę. | Komponent jest dostępny w środowisku użytkownika. |
+| 5 | Otwórz funkcję podpisu w EZD. | EZD wykrywa zainstalowany komponent. |
+| 6 | Rozpocznij testową operację bez jej finalizowania. | Komponent podpisujący uruchamia się poprawnie. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Instalacja aplikacji Szafir Host w systemie operacyjnym” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Instalacja aplikacji Szafir Host w systemie operacyjnym” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

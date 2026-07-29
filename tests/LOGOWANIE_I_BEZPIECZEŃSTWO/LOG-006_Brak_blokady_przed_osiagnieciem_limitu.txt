@@ -1,7 +1,7 @@
 ID: LOG-006
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Graniczny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -20,12 +20,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 - W aktywnym profilu bezpieczeństwa limit nieudanych prób wynosi N i N jest większe od 1.
 - Znane są prawidłowe dane użytkownika.
 
-<h2> Kryteria akceptacji </h2>
-
-- Po N-1 nieudanych próbach konto pozostaje niezablokowane.
-- Po N-1 nieudanych próbach poprawne hasło umożliwia zalogowanie.
-- System nie blokuje konta wcześniej niż wynika to z aktywnego profilu bezpieczeństwa.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +28,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 | 2 | Wykonać N-1 prób logowania przy użyciu prawidłowej nazwy użytkownika i niepoprawnego hasła. | Wszystkie próby są odrzucone, ale konto nie zostaje zablokowane. |
 | 3 | Wprowadzić prawidłową nazwę użytkownika oraz aktualne, poprawne hasło. | Dane są gotowe do autoryzacji. |
 | 4 | Wybrać przycisk „Zaloguj się”. | Użytkownik zostaje poprawnie zalogowany, co potwierdza brak przedwczesnej blokady. |
+| 5 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 6 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po N-1 nieudanych próbach konto pozostaje niezablokowane.
+- Po N-1 nieudanych próbach poprawne hasło umożliwia zalogowanie.
+- System nie blokuje konta wcześniej niż wynika to z aktywnego profilu bezpieczeństwa.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

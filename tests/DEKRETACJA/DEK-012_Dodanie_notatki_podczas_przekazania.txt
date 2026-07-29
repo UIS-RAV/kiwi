@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: dodanie notatki podczas przekazania.
+Zweryfikowanie, że funkcja „Dodanie notatki podczas przekazania” działa zgodnie z opisanym scenariuszem i prawidłowo wpływa na stan dokumentu, wpisy dekretacji oraz dostępność dokumentu na stanowiskach.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,23 @@ Dekretacja — Przekazanie dokumentu do dekretacji
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
+- Użytkownik posiada wymagane uprawnienia.
 - przygotowano dokument i stanowiska właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Dodanie notatki podczas przekazania”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
-| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
-| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Dodanie notatki podczas przekazania” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i rozpocznij rejestrację dokumentu. | System wyświetla formularz rejestracji dokumentu. |
+| 2 | Uzupełnij minimalny zakres danych wymaganych do zapisania dokumentu. | Dane dokumentu są poprawne i możliwe jest przejście do sekcji dekretacji. |
+| 3 | Dodaj wpis dekretacji i uzupełnij pole notatki. | Treść notatki jest widoczna przy właściwym wpisie. |
+| 4 | Zapisz dokument wraz z dekretacją. | System zapisuje dokument i treść notatki. |
+| 5 | Otwórz dokument na stanowisku docelowym. | Notatka jest dostępna przy dekretacji i odpowiada wprowadzonej treści. |
+| 6 | Otwórz dokument ponownie. | Notatka pozostaje zachowana po ponownym odczycie. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Dodanie notatki podczas przekazania” działa zgodnie z instrukcją.
-- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Dodanie notatki podczas przekazania” kończy się rezultatem zgodnym z celem testu.
+- Stanowisko źródłowe, stanowisko docelowe, typ przekazania i notatka są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Dostępność dokumentu na stanowiskach odpowiada wykonanej dekretacji.
+- Rezultat pozostaje spójny po odświeżeniu widoku lub ponownym otwarciu dokumentu.

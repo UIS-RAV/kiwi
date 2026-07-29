@@ -1,0 +1,37 @@
+ID: EDR-075
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Zamówienie archiwum wiadomości przekraczającej 15 MB </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zamówienie archiwum wiadomości przekraczającej 15 MB” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Zamawianie archiwum wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Łączny rozmiar wiadomości i załączników przekracza 15 MB.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Uruchom pobieranie wiadomości wymagającej przygotowania archiwum. | System proponuje zamówienie archiwum. |
+| 3 | Potwierdź zamówienie. | Zamówienie zostaje zapisane. |
+| 4 | Otwórz zakładkę Zamówione archiwa. | Pozycja jest widoczna ze statusem przygotowania. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zamówienie archiwum wiadomości przekraczającej 15 MB” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

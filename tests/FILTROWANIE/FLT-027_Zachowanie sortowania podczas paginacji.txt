@@ -1,0 +1,40 @@
+ID: FLT-027
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Zachowanie sortowania podczas paginacji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zachowanie sortowania podczas paginacji” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie i stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera dane na co najmniej dwóch stronach.
+- Wybrana kolumna jest sortowalna.
+- Dane pozwalają zweryfikować ciągłość kolejności.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Posortować listę rosnąco po wybranej kolumnie. | Sortowanie jest aktywne. |
+| 2 | Zapisać ostatnią wartość pierwszej strony. | Wartość graniczna jest znana. |
+| 3 | Przejść na następną stronę. | Druga strona zostaje wyświetlona. |
+| 4 | Porównać pierwszą wartość drugiej strony z zapisaną. | Kolejność pozostaje spójna. |
+| 5 | Wrócić na pierwszą stronę. | Sortowanie nadal jest aktywne. |
+| 6 | Przejść na kolejną stronę listy. | Sortowanie pozostaje aktywne. |
+| 7 | Porównać wartości na granicy stron. | Ciągłość kolejności jest zachowana między stronami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zachowanie sortowania podczas paginacji” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

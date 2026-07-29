@@ -1,0 +1,39 @@
+ID: FLT-010
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Wyczyszczenie wszystkich filtrów </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wyczyszczenie wszystkich filtrów” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Aktywnych jest kilka filtrów.
+- Lista bez filtrów zawiera większy zbiór danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować co najmniej dwa filtry. | Lista jest ograniczona, a kafelki widoczne. |
+| 2 | Wybrać „Wyczyść filtry”. | System usuwa aktywne filtry. |
+| 3 | Zweryfikować pasek filtrów. | Kafelki filtrów użytkownika nie są widoczne. |
+| 4 | Zweryfikować listę. | Dane nie są ograniczane usuniętymi filtrami. |
+| 5 | Zweryfikować pasek aktywnych filtrów. | Kafelki filtrów użytkownika nie są widoczne. |
+| 6 | Porównać listę z jej stanem domyślnym. | Zakres danych odpowiada ustawieniom domyślnym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyczyszczenie wszystkich filtrów” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

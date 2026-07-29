@@ -1,0 +1,39 @@
+ID: SPR-039
+Moduł: SPRAWA
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Dodanie interesanta do istniejącej sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Dodanie interesanta do istniejącej sprawy” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje dane sprawy, dokumenty, interesantów, znak sprawy, JRWA, uprawnienia, historię i powiązane operacje w module Sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł sprawy — Dokumenty i interesanci w sprawie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada stanowisko i uprawnienia wymagane dla scenariusza.
+- przygotowano dane sprawy, dokumenty, JRWA, użytkowników lub komórki organizacyjne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Dodanie interesanta do istniejącej sprawy”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać sprawę, dokument, projekt, podteczkę, stanowisko lub parametr wymagany w scenariuszu. | System przyjmuje wskazaną sprawę, dokument, projekt, podteczkę, stanowisko lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat w podglądzie sprawy, historii, projekcie, podteczce, nadzorze lub na liście. | Rezultat funkcji „Dodanie interesanta do istniejącej sprawy” jest zgodny z instrukcją. |
+| 5 | Otworzyć szczegóły sprawy po zapisaniu zmian. | Interesant i jego rola w sprawie są prezentowane poprawnie. |
+| 6 | Zweryfikować powiązane dokumenty lub korespondencję. | Dane interesanta są spójne w powiązanych miejscach. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Dodanie interesanta do istniejącej sprawy” kończy się rezultatem zgodnym z celem testu.
+- Dane sprawy, znak, klasa JRWA, dokumenty, interesanci, terminy i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą spraw, szczegółami sprawy, metryką, historią i powiązanymi dokumentami.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu sprawy.

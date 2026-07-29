@@ -1,0 +1,39 @@
+ID: EDR-033
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Grupowe archiwizowanie kilku wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Grupowe archiwizowanie kilku wiadomości” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Archiwizowanie dokumentu z eDoręczeń
+
+<h2> Warunki wstępne </h2>
+
+- W zakładce znajduje się kilka wiadomości możliwych do archiwizacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz wiadomość e-Doręczeń przygotowaną zgodnie z warunkami testu. | Wiadomość jest dostępna wraz z funkcją archiwizacji. |
+| 2 | Zaznacz kilka wiadomości. | Wybrane pozycje są oznaczone. |
+| 3 | Uruchom archiwizację grupową i potwierdź. | Wszystkie wybrane wiadomości zostają przeniesione. |
+| 4 | Zweryfikuj Archiwum. | Każda wskazana wiadomość jest dostępna i kompletna. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Grupowe archiwizowanie kilku wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

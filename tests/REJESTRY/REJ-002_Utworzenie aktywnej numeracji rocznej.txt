@@ -1,0 +1,41 @@
+ID: REJ-002
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Utworzenie aktywnej numeracji rocznej </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie utworzenia numeracji rocznej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry/Numeracja. | Widoczna jest lista numeracji. |
+| 2 | Kliknij Dodaj numerację. | Otwarty zostaje formularz. |
+| 3 | Uzupełnij nazwę i opis. | Wartości są przyjęte. |
+| 4 | Wybierz status aktywny. | Status aktywny jest ustawiony. |
+| 5 | Wybierz typ roczna. | Formularz wskazuje numerację rozpoczynającą się od nowa w kolejnym roku. |
+| 6 | Dodaj element Numer dokumentu w rejestrze NR. | Element obowiązkowy znajduje się w szablonie. |
+| 7 | Zapisz numerację. | Numeracja zostaje zapisana. |
+| 8 | Otwórz ją ponownie. | Typ roczna i pozostałe wartości zostały zachowane. |
+| 9 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 10 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Numeracja roczna zostaje zapisana i jest dostępna na liście.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

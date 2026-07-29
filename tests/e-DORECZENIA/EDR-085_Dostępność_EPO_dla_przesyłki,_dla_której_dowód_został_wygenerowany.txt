@@ -1,0 +1,37 @@
+ID: EDR-085
+Moduł: e-DORĘCZENIA
+Typ: Warunkowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Dostępność EPO dla przesyłki, dla której dowód został wygenerowany </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Dostępność EPO dla przesyłki, dla której dowód został wygenerowany” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dowodów technicznych i archiwum wiadomości
+
+<h2> Warunki wstępne </h2>
+
+- Przesyłka osiągnęła stan, dla którego operator wygenerował EPO.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Otwórz przesyłkę, dla której wygenerowano EPO. | Przesyłka jest dostępna. |
+| 3 | Otwórz sekcję dowodów. | EPO jest widoczne. |
+| 4 | Pobierz i otwórz EPO. | Dowód dotyczy właściwej przesyłki i jest czytelny. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Dostępność EPO dla przesyłki, dla której dowód został wygenerowany”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

@@ -1,7 +1,7 @@
 ID: LOG-003
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -20,13 +20,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 - Licznik nieudanych prób logowania jest niższy od limitu określonego w aktywnym profilu bezpieczeństwa.
 - Przygotowano hasło różne od aktualnego hasła użytkownika.
 
-<h2> Kryteria akceptacji </h2>
-
-- System nie uwierzytelnia użytkownika.
-- System nie wyświetla widoku dostępnego po zalogowaniu.
-- Konto nie zostaje zablokowane, jeżeli po wykonaniu testu liczba nieudanych prób pozostaje niższa od skonfigurowanego limitu.
-- System nie zmienia aktualnego hasła użytkownika.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -36,3 +29,14 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 | 3 | W polu „Hasło” wprowadzić niepoprawne hasło. | Wartość zostaje wprowadzona i jest prezentowana w sposób maskowany. |
 | 4 | Wybrać przycisk „Zaloguj się”. | System odrzuca próbę logowania i nie wyświetla chronionego widoku. |
 | 5 | Zweryfikować, czy konto nie zostało zablokowane przed osiągnięciem limitu określonego w profilu bezpieczeństwa. | Konto pozostaje niezablokowane, jeżeli limit nieudanych prób nie został osiągnięty. |
+| 6 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 7 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie uwierzytelnia użytkownika.
+- System nie wyświetla widoku dostępnego po zalogowaniu.
+- Konto nie zostaje zablokowane, jeżeli po wykonaniu testu liczba nieudanych prób pozostaje niższa od skonfigurowanego limitu.
+- System nie zmienia aktualnego hasła użytkownika.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

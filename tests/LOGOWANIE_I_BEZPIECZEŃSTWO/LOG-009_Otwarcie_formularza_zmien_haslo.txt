@@ -1,7 +1,7 @@
 ID: LOG-009
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Podstawowy
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 - Wyświetlony jest ekran logowania.
 - Użytkownik nie posiada aktywnej sesji.
 
-<h2> Kryteria akceptacji </h2>
-
-- Na ekranie logowania dostępna jest opcja „Zmień hasło”.
-- Wybranie opcji otwiera formularz zarządzania hasłem.
-- Formularz umożliwia wybór jednego z udokumentowanych trybów obsługi hasła.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -32,3 +26,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 | 2 | Odszukać opcję „Zmień hasło”. | Opcja „Zmień hasło” jest dostępna na ekranie logowania. |
 | 3 | Wybrać opcję „Zmień hasło”. | System otwiera formularz zarządzania hasłem. |
 | 4 | Zweryfikować dostępne tryby formularza. | Dostępne są tryby: „Pamiętam stare hasło”, „Konto zablokowane” oraz „Odśwież hasło”. |
+| 5 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 6 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Na ekranie logowania dostępna jest opcja „Zmień hasło”.
+- Wybranie opcji otwiera formularz zarządzania hasłem.
+- Formularz umożliwia wybór jednego z udokumentowanych trybów obsługi hasła.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -1,0 +1,38 @@
+ID: EDR-012
+Moduł: e-DORĘCZENIA
+Typ: Konfiguracyjny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Usunięcie konfiguracji e-Doręczeń </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie konfiguracji e-Doręczeń” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Konfiguracja e-Doręczeń w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje testowa konfiguracja e-Doręczeń możliwa do usunięcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wybierz istniejącą konfigurację i uruchom usunięcie. | System wyświetla potwierdzenie. |
+| 3 | Potwierdź operację. | Konfiguracja zostaje usunięta. |
+| 4 | Zweryfikuj dostępność modułu lub połączenia. | Usunięta konfiguracja nie jest używana do synchronizacji. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie konfiguracji e-Doręczeń” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

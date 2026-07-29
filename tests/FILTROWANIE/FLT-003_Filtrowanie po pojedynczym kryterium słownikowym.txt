@@ -1,0 +1,40 @@
+ID: FLT-003
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Filtrowanie po pojedynczym kryterium słownikowym </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Filtrowanie po pojedynczym kryterium słownikowym” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Lista zawiera rekordy z co najmniej dwiema różnymi wartościami słownikowymi.
+- Formularz filtrowania zawiera kryterium wybierane z listy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Rozwinąć pole słownikowe. | System prezentuje dostępne wartości. |
+| 3 | Wybrać jedną wartość. | Wartość zostaje ustawiona. |
+| 4 | Wybrać „Szukaj”. | Lista zostaje przefiltrowana. |
+| 5 | Zweryfikować wyniki. | Każdy wynik posiada wybraną wartość słownikową. |
+| 6 | Odświeżyć widok lub otworzyć listę ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Sprawdzić, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe ustawienia listy pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Filtrowanie po pojedynczym kryterium słownikowym” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

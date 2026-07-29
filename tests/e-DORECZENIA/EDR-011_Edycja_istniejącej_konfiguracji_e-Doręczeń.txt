@@ -1,0 +1,39 @@
+ID: EDR-011
+Moduł: e-DORĘCZENIA
+Typ: Konfiguracyjny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja istniejącej konfiguracji e-Doręczeń </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Edycja istniejącej konfiguracji e-Doręczeń” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Konfiguracja e-Doręczeń w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje konfiguracja e-Doręczeń.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Otwórz istniejącą konfigurację do edycji. | Formularz prezentuje aktualne wartości. |
+| 3 | Zmień jedną dopuszczalną wartość i zapisz. | System zapisuje zmianę. |
+| 4 | Otwórz konfigurację ponownie. | Nowa wartość jest zachowana. |
+| 5 | Uruchom test poprawności. | Konfiguracja nadal działa. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Edycja istniejącej konfiguracji e-Doręczeń” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

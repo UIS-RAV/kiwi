@@ -1,0 +1,36 @@
+ID: EML-016
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Brak możliwości edycji przypisań bez roli Administrator </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak możliwości edycji przypisań bez roli Administrator” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Przypisywanie adresu e-mail do użytkowników i stanowisk
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do EZD.
+- Użytkownik nie posiada roli Administrator.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dostępny widok modułu Poczta i spróbuj przejść do zarządzania przypisaniami. | Funkcja edycji przypisań nie jest dostępna. |
+| 2 | Spróbuj zapisać zmianę przypisania, jeżeli formularz został otwarty inną ścieżką. | System nie pozwala zapisać zmian. |
+| 3 | Odśwież widok konfiguracji. | Brak uprawnienia nadal uniemożliwia zmianę przypisań. |
+| 4 | Zweryfikuj, że dotychczasowe przypisania nie uległy zmianie. | Konfiguracja pozostaje spójna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak możliwości edycji przypisań bez roli Administrator”.
+- Niedozwolona, anulowana albo niekompletna operacja nie powoduje zapisania nieprawidłowych danych.
+- Użytkownik otrzymuje jednoznaczny komunikat walidacyjny albo funkcja pozostaje niedostępna.
+- Dotychczasowa konfiguracja, wiadomości i załączniki pozostają niezmienione po odświeżeniu widoku.

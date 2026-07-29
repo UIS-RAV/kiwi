@@ -1,0 +1,38 @@
+ID: EDR-023
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Ponowne pobranie bez duplikowania wcześniej pobranych wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Ponowne pobranie bez duplikowania wcześniej pobranych wiadomości” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dokumentów z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Wiadomości ze skrzynki zostały już pobrane do EZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Wykonaj synchronizację dla wcześniej pobranej wiadomości. | Synchronizacja kończy się poprawnie. |
+| 3 | Wykonaj synchronizację ponownie. | System nie tworzy drugiej kopii tej samej wiadomości. |
+| 4 | Porównaj identyfikatory i liczbę pozycji. | Wiadomość występuje tylko raz. |
+| 5 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 6 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 7 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Ponowne pobranie bez duplikowania wcześniej pobranych wiadomości”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

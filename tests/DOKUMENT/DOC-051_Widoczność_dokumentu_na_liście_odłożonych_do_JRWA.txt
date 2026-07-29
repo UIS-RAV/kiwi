@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: widoczność dokumentu na liście odłożonych do jrwa.
+Zweryfikowanie, że funkcja „Widoczność dokumentu na liście odłożonych do JRWA” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na dane dokumentu, jego załączniki, historię, wersje i dostępność na stanowisku.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -20,18 +20,19 @@ Wyświetlenie listy dokumentów odłożonych do JRWA
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
 - Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja „Widoczność dokumentu na liście odłożonych do JRWA” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
-- System wykonuje lub blokuje operację zgodnie z celem testu.
-- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
-- Dane nieobjęte operacją pozostają spójne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Widoczność dokumentu na liście odłożonych do JRWA”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
-| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do operacji związanej z JRWA. | Dokument jest dostępny na właściwym stanowisku. |
+| 2 | Uruchom funkcję wskazaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System przyjmuje dane i realizuje operację. |
+| 4 | Zweryfikuj stan dokumentu, załączników lub historii. | Rezultat odpowiada wykonanej operacji. |
+| 5 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Widoczność dokumentu na liście odłożonych do JRWA” kończy się rezultatem zgodnym z celem testu.
+- Dane dokumentu, załączniki, wersje i historia są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy podglądem, formularzem edycji i listą dokumentów.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu dokumentu.

@@ -1,0 +1,38 @@
+ID: EDR-055
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Dodanie do kolejki wiadomości wysłanej bezpośrednio z modułu e-Doręczenia </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Dodanie do kolejki wiadomości wysłanej bezpośrednio z modułu e-Doręczenia” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Kolejka dokumentów wychodzących e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Poprawna wiadomość została przygotowana w module.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz kolejkę dokumentów wychodzących e-Doręczeń. | System wyświetla pozycje kolejki zgodne z uprawnieniami użytkownika. |
+| 2 | Wyślij dokument zgodnie ze źródłem wskazanym w tytule testu. | System przyjmuje zlecenie wysyłki. |
+| 3 | Otwórz kolejkę dokumentów wychodzących. | Nowa pozycja jest widoczna. |
+| 4 | Porównaj identyfikator, odbiorcę i źródło dokumentu. | Pozycja odpowiada wysłanemu dokumentowi. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Dodanie do kolejki wiadomości wysłanej bezpośrednio z modułu e-Doręczenia” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

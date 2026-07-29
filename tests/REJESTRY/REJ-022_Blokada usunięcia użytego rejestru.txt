@@ -1,0 +1,39 @@
+ID: REJ-022
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Rozszerzony
+
+<h1> Blokada usunięcia użytego rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że rejestr z wpisami nie może zostać usunięty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Usunięcie rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr użyty co najmniej raz.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę rejestrów. | Lista jest widoczna. |
+| 2 | Odszukaj rejestr zawierający wpisy. | Właściwa pozycja jest wskazana. |
+| 3 | Otwórz menu opcji. | Akcja usunięcia jest niedostępna albo kontrolowana. |
+| 4 | Spróbuj usunąć rejestr, jeżeli akcja jest dostępna. | System blokuje operację. |
+| 5 | Zweryfikuj komunikat. | Komunikat informuje, że rejestr może być usunięty tylko wtedy, gdy nie został użyty. |
+| 6 | Odśwież listę. | Rejestr nadal istnieje i zachowuje wpisy. |
+| 7 | Odśwież listę rejestrów i ponownie wyszukaj testowany rejestr. | Rejestr pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Otwórz konfigurację rejestru albo jego podgląd, jeżeli operacja jest dostępna. | Przypisana numeracja, szablon, aktywność i dostępne akcje są spójne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System blokuje usunięcie użytego rejestru.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

@@ -1,0 +1,40 @@
+ID: FLT-005
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Łączenie filtra tekstowego i zakresu dat </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Łączenie filtra tekstowego i zakresu dat” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Lista zawiera rekordy pasujące do tekstu w różnych datach.
+- Lista zawiera rekordy w i poza przygotowanym zakresem dat.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Wprowadzić wartość tekstową. | Wartość zostaje ustawiona. |
+| 3 | Ustawić datę początkową i końcową. | Zakres dat zostaje ustawiony. |
+| 4 | Wybrać „Szukaj”. | Lista zostaje przefiltrowana. |
+| 5 | Zweryfikować treść i daty wyników. | Każdy wynik spełnia oba warunki. |
+| 6 | Odświeżyć widok lub otworzyć listę ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Sprawdzić, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe ustawienia listy pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Łączenie filtra tekstowego i zakresu dat” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

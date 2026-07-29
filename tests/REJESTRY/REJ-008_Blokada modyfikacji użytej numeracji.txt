@@ -1,0 +1,39 @@
+ID: REJ-008
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Blokada modyfikacji użytej numeracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie zakazu edycji numeracji użytej przez rejestr.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Modyfikacja numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje numeracja przypisana do używanego rejestru.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę numeracji. | Lista jest widoczna. |
+| 2 | Odszukaj numerację, która została użyta. | Właściwa pozycja jest zidentyfikowana. |
+| 3 | Otwórz menu opcji numeracji. | Akcja Edytuj jest niedostępna albo prowadzi do kontrolowanej blokady. |
+| 4 | Spróbuj rozpocząć edycję, jeżeli akcja jest dostępna. | System nie pozwala zapisać zmian. |
+| 5 | Zweryfikuj komunikat. | Użytkownik otrzymuje informację, że użytej numeracji nie można edytować. |
+| 6 | Odśwież listę. | Dane numeracji pozostają bez zmian. |
+| 7 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 8 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie pozwala zmodyfikować użytej numeracji.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

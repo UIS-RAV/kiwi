@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: dostępność operacji zależna od stanu dokumentu.
+Zweryfikowanie, że funkcja „Dostępność operacji zależna od stanu dokumentu” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na dane dokumentu, jego załączniki, historię, wersje i dostępność na stanowisku.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -20,18 +20,19 @@ Dokumenty na stanowisku
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
 - Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja „Dostępność operacji zależna od stanu dokumentu” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
-- System wykonuje lub blokuje operację zgodnie z celem testu.
-- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
-- Dane nieobjęte operacją pozostają spójne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Dostępność operacji zależna od stanu dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
-| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |
+| 1 | Zaloguj się do EZD i otwórz listę dokumentów na stanowisku. | System wyświetla dokumenty dostępne użytkownikowi. |
+| 2 | Otwórz dokument w stanie umożliwiającym wybrane operacje. | System udostępnia funkcje zgodne ze stanem dokumentu. |
+| 3 | Otwórz dokument w stanie ograniczającym te operacje. | Niedozwolone funkcje są ukryte lub zablokowane. |
+| 4 | Porównaj dostępność operacji. | Zakres funkcji odpowiada stanowi dokumentu i uprawnieniom. |
+| 5 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Dostępność operacji zależna od stanu dokumentu”.
+- Niedozwolona, anulowana albo nieuprawniona operacja nie powoduje niezamierzonej zmiany dokumentu ani załączników.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie z warunkami testu.
+- Dane dokumentu i historia pozostają spójne po ponownym odczycie.

@@ -1,7 +1,7 @@
 ID: LOG-019
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Administracyjny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora
 - Administrator posiada dostęp do sekcji „Administracja” → „Pracownicy”.
 - Istnieje pracownik, dla którego można wygenerować kod resetowania hasła.
 
-<h2> Kryteria akceptacji </h2>
-
-- Administrator może uruchomić funkcję generowania kodu.
-- System generuje kod resetowania dla wybranego pracownika.
-- Kod jest możliwy do przekazania użytkownikowi zgodnie z procedurą organizacji.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora
 | 3 | Uruchomić funkcję zmiany lub resetowania hasła pracownika. | System wyświetla opcje dostępne dla administratora. |
 | 4 | Wybrać generowanie kodu resetowania hasła. | System generuje kod powiązany z wybranym pracownikiem. |
 | 5 | Zapisać wygenerowany kod do użycia w dalszym teście. | Kod jest dostępny do weryfikacji w trybie „Konto zablokowane”. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Administrator może uruchomić funkcję generowania kodu.
+- System generuje kod resetowania dla wybranego pracownika.
+- Kod jest możliwy do przekazania użytkownikowi zgodnie z procedurą organizacji.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -1,0 +1,38 @@
+ID: FLT-031
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zmiana liczby rekordów na stronie </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zmiana liczby rekordów na stronie” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera więcej rekordów niż największa z dwóch testowanych wartości strony.
+- Dostępny jest wybór liczby rekordów na stronie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zapisać bieżący limit i liczbę stron. | Stan początkowy jest znany. |
+| 2 | Wybrać inną liczbę rekordów na stronie. | Lista zostaje odświeżona. |
+| 3 | Policzyć widoczne rekordy. | Liczba odpowiada nowemu limitowi. |
+| 4 | Zweryfikować liczbę stron. | Paginacja została przeliczona zgodnie z nowym limitem. |
+| 5 | Porównać liczbę widocznych rekordów z wybraną wartością. | Liczba rekordów odpowiada ustawieniu, z wyjątkiem ostatniej strony. |
+| 6 | Przejść na inną stronę. | Nowy rozmiar strony pozostaje aktywny. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zmiana liczby rekordów na stronie” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

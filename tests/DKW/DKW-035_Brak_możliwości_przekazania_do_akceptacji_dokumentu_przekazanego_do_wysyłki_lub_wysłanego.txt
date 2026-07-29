@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego.
+Zweryfikowanie, że funkcja „Brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,21 +17,22 @@ Dziennik korespondencji wychodzącej — Anulowanie i ręczne oznaczanie wysyłk
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 - Środowisko posiada konfigurację, uprawnienie lub funkcję wymaganą dla testu warunkowego.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i otwórz w DKW dokument przygotowany zgodnie z warunkami testu. | Dokument jest dostępny wraz z aktualnym statusem wysyłki. |
+| 2 | Spróbuj uruchomić funkcję przekazania do akceptacji dokumentu. | Funkcja jest niedostępna albo system blokuje operację. |
+| 3 | Zweryfikuj komunikat lub brak dostępności funkcji. | System jednoznacznie wskazuje ograniczenie wynikające ze statusu wysyłki. |
+| 4 | Odśwież dokument. | Treść, status i historia dokumentu pozostają niezmienione. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- System reaguje zgodnie z celem testu „Brak możliwości przekazania do akceptacji dokumentu przekazanego do wysyłki lub wysłanego”.
+- Niedozwolona albo anulowana operacja nie powoduje zmiany dokumentu, przesyłki, statusu ani danych adresata.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie z warunkami testu.
+- Dane pozostają spójne po odświeżeniu widoku.

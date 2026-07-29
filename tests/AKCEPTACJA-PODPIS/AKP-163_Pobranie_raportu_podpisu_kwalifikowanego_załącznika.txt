@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: pobranie raportu podpisu kwalifikowanego załącznika.
+Zweryfikowanie, że funkcja „Pobranie raportu podpisu kwalifikowanego załącznika” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,19 @@ Akceptacja i podpis — Weryfikacja podpisów elektronicznych
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć wynik weryfikacji podpisanego dokumentu lub załącznika. | Wynik weryfikacji jest dostępny. |
-| 2 | Wybrać funkcję pobrania raportu. | System inicjuje pobieranie raportu. |
-| 3 | Zapisać plik raportu. | Plik zostaje pobrany. |
-| 4 | Otworzyć pobrany plik i sprawdzić jego zawartość. | Raport jest czytelny i dotyczy właściwego dokumentu lub załącznika. |
+| 1 | Zaloguj się do EZD i otwórz dokument lub załącznik posiadający podpis wymagany w scenariuszu. | Podpisany obiekt jest dostępny do weryfikacji. |
+| 2 | Uruchom funkcję weryfikacji podpisu. | System rozpoczyna proces weryfikacji właściwego podpisu. |
+| 3 | Uruchom szczegóły podpisu. | System prezentuje dane podpisu. |
+| 4 | Wybierz funkcję raportu. | Raport dla właściwego dokumentu lub załącznika zostaje wyświetlony. |
+| 5 | Zweryfikuj identyfikację podpisanego obiektu i wynik walidacji. | Raport dotyczy właściwego obiektu i zawiera spójny wynik. |
+| 6 | Pobierz raport. | Plik raportu zostaje zapisany lokalnie. |
+| 7 | Otwórz pobrany plik. | Raport jest czytelny i zgodny z widokiem w EZD. |
+| 8 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 9 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Pobranie raportu podpisu kwalifikowanego załącznika” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Pobranie raportu podpisu kwalifikowanego załącznika” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

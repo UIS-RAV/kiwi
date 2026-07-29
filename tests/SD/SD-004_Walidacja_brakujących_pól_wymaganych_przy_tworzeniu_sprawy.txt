@@ -1,0 +1,37 @@
+ID: SD-004
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja brakujących pól wymaganych przy tworzeniu sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Walidacja brakujących pól wymaganych przy tworzeniu sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wyślij żądanie „nowa-sprawa” bez jednego wymaganego pola. | API zwraca błąd walidacji wskazujący brakujące pole. |
+| 2 | Powtórz test dla pozostałych wymaganych pól. | Każdy brak jest wykrywany i opisany jednoznacznie. |
+| 3 | Wyszukaj sprawy po danych testowych. | Nie powstały częściowe ani niekompletne sprawy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

@@ -1,0 +1,40 @@
+ID: REJ-013
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Modyfikacja nieużytego szablonu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie edycji szablonu nieprzypisanego do używanego rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Modyfikacja szablonu
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje nieużyty szablon.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę szablonów. | Lista jest widoczna. |
+| 2 | Wybierz nieużyty szablon i akcję Edytuj. | Formularz zawiera zapisane pola. |
+| 3 | Zmień opis szablonu. | Nowy opis jest widoczny. |
+| 4 | Dodaj nowe pole standardowe lub zmień istniejące pole. | Układ szablonu ulega zmianie. |
+| 5 | Zapisz szablon. | System zapisuje modyfikację. |
+| 6 | Otwórz szablon ponownie. | Zmiany zostały zachowane. |
+| 7 | Zweryfikuj pola nieobjęte zmianą. | Pozostałe elementy nie zostały utracone. |
+| 8 | Odśwież listę szablonów i ponownie wyszukaj testowany szablon. | Szablon pozostaje widoczny w stanie zgodnym z wynikiem scenariusza. |
+| 9 | Otwórz szczegóły szablonu albo formularz edycji, jeżeli operacja jest dostępna. | Pola standardowe, automatyczne i wymagane ustawienia są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zmodyfikowany szablon zostaje zapisany.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

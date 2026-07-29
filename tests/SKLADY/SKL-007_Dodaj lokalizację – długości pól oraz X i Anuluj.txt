@@ -1,0 +1,40 @@
+ID: SKL-007
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Dodaj lokalizację – długości pól oraz X i Anuluj </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja maksymalnych długości oraz zamykania formularza.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1.1 Dodaj lokalizację
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie lokalizacji. | Widoczny jest formularz. |
+| 2 | Spróbuj przekroczyć 256 znaków w Nazwa. | System blokuje zapis lub oznacza błąd. |
+| 3 | Spróbuj przekroczyć 512 znaków w Adres. | System blokuje zapis lub oznacza błąd. |
+| 4 | Zamknij formularz przyciskiem X. | Okno zostaje zamknięte bez zapisu. |
+| 5 | Ponownie otwórz formularz i wybierz Anuluj. | Okno zostaje zamknięte bez zapisu. |
+| 6 | Odśwież listę lokalizacji i ponownie wyszukaj sprawdzaną pozycję. | Stan lokalizacji jest zgodny z wykonaną operacją i pozostaje zachowany. |
+| 7 | Otwórz szczegóły lokalizacji albo powiązanych składów. | Powiązania i dane lokalizacji są spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa ma maksymalnie 256 znaków, Adres 512 znaków.
+- X i Anuluj zamykają okno bez zapisu.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

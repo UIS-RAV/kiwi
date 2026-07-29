@@ -1,0 +1,40 @@
+ID: EPU-029
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Drukowanie dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Drukowanie dokumentu ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Drukowanie dokumentu ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje dokument ePUAP możliwy do otwarcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP. | Wyświetla się podgląd. |
+| 2 | Wybierz funkcję drukowania. | System generuje podgląd lub wydruk dokumentu. |
+| 3 | Zweryfikuj zawartość wydruku. | Wydruk odpowiada treści dokumentu. |
+| 4 | Zweryfikuj podgląd wydruku. | Wydruk zawiera właściwe dane dokumentu i treść. |
+| 5 | Zapisz wydruk do pliku lub wyślij do drukarki. | Operacja kończy się bez błędu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Drukowanie dokumentu ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

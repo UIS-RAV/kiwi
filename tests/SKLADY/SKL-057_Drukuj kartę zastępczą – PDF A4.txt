@@ -1,0 +1,39 @@
+ID: SKL-057
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Drukuj kartę zastępczą – PDF A4 </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja generowania karty zastępczej.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.11 Drukuj kartę zastępczą
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Drukuj kartę zastępczą. | Generowany jest plik PDF. |
+| 2 | Otwórz plik. | Plik otwiera się poprawnie i ma format A4. |
+| 3 | Sprawdź nagłówek. | Widoczna jest aktualna data i KARTA ZASTĘPCZA. |
+| 4 | Sprawdź dane. | Widoczne są dane wypożyczającego, przesyłki, sprawy, terminu, dodatkowych informacji i podpisu. |
+| 5 | Otwórz wygenerowaną kartę zastępczą. | Karta zawiera dane elementu, wypożyczającego i terminu zwrotu. |
+| 6 | Porównaj dane karty z danymi elementu w systemie. | Dane na wydruku są kompletne i zgodne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Generowany jest poprawny PDF A4.
+- Dokument zawiera wszystkie elementy wskazane w dokumentacji.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

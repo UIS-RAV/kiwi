@@ -1,0 +1,45 @@
+ID: EDR-050
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Wysłanie wiadomości hybrydowej z pojedynczym plikiem PDF </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wysłanie wiadomości hybrydowej z pojedynczym plikiem PDF” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Wysyłanie dokumentu przez e-Doręczenia
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywna konfiguracja e-Doręczeń.
+- Dostępny jest odbiorca z danymi możliwymi do pobrania z BAE.
+- Dostępny jest plik PDF.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Uruchom funkcję opisaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System realizuje operację albo prawidłowo ją blokuje. |
+| 4 | Zweryfikuj rezultat w module e-Doręczenia. | Stan wiadomości, konfiguracji lub przesyłki jest zgodny ze scenariuszem. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+| 9 | Powtórz odczyt danych w innym powiązanym widoku modułu. | Rezultat jest spójny pomiędzy listą, podglądem, kolejką i dokumentem EZD. |
+| 10 | Zweryfikuj dostępność funkcji zgodnie z rolą i stanem procesu. | System udostępnia wyłącznie operacje dozwolone dla użytkownika i bieżącego statusu. |
+| 11 | Zweryfikuj kompletność komunikatów, oznaczeń i wartości prezentowanych użytkownikowi. | System nie pomija informacji niezbędnych do oceny wyniku operacji. |
+| 12 | Zamknij widok i otwórz go ponownie z listy nadrzędnej. | System zachowuje prawidłowy stan danych i nie tworzy duplikatów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wysłanie wiadomości hybrydowej z pojedynczym plikiem PDF” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

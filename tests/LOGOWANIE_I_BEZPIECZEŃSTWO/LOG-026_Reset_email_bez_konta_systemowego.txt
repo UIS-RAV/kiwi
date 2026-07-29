@@ -1,7 +1,7 @@
 ID: LOG-026
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny / Integracyjny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -19,13 +19,6 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie
 - Otwarty jest tryb „Odśwież hasło”.
 - Instrukcja nie określa dokładnego zachowania UI w tej sytuacji.
 
-<h2> Kryteria akceptacji </h2>
-
-- Proces resetowania przez e-mail nie zostaje skutecznie wykonany.
-- Wiadomość resetująca nie zostaje dostarczona.
-- System nie zmienia hasła użytkownika.
-- Test nie narzuca literalnej treści komunikatu ani sposobu zablokowania funkcji.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -35,3 +28,14 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie
 | 3 | Jeżeli formularz jest dostępny, wprowadzić nazwę użytkownika i wybrać „Wyślij email”. | System nie wykonuje skutecznie wysyłki bez wymaganej konfiguracji. |
 | 4 | Sprawdzić skrzynkę odbiorczą użytkownika. | Wiadomość resetująca nie została dostarczona. |
 | 5 | Zweryfikować dotychczasowe hasło użytkownika. | Dotychczasowe hasło pozostaje bez zmian. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Proces resetowania przez e-mail nie zostaje skutecznie wykonany.
+- Wiadomość resetująca nie zostaje dostarczona.
+- System nie zmienia hasła użytkownika.
+- Test nie narzuca literalnej treści komunikatu ani sposobu zablokowania funkcji.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

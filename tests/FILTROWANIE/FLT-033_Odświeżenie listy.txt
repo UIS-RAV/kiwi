@@ -1,0 +1,38 @@
+ID: FLT-033
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Odświeżenie listy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Odświeżenie listy” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Obsługa list w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik ma dostęp do funkcji „Odśwież”.
+- Możliwe jest dodanie lub zmiana rekordu w drugiej sesji albo przez innego uprawnionego użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć listę i zapisać jej bieżący stan. | Stan początkowy jest znany. |
+| 2 | W drugiej sesji dodać lub zmienić rekord należący do listy. | Zmiana zostaje zapisana. |
+| 3 | W pierwszej sesji wybrać „Odśwież”. | Lista zostaje ponownie pobrana. |
+| 4 | Zweryfikować zmieniony rekord. | Aktualny stan jest widoczny bez opuszczania sekcji. |
+| 5 | Porównać dane przed i po odświeżeniu. | Lista prezentuje aktualne dane bez duplikowania rekordów. |
+| 6 | Zweryfikować aktywne ustawienia listy. | Stan filtrów, sortowania i paginacji jest zgodny z wymaganiem produktu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Odświeżenie listy” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

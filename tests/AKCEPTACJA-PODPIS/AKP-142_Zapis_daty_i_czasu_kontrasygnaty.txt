@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: zapis daty i czasu kontrasygnaty.
+Zweryfikowanie, że funkcja „Zapis daty i czasu kontrasygnaty” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,16 @@ Akceptacja i podpis — Kontrasygnata
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Zapis daty i czasu kontrasygnaty”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Zapis daty i czasu kontrasygnaty” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Zaloguj się do EZD jako użytkownik posiadający rolę i uprawnienia wymagane w scenariuszu kontrasygnaty. | Użytkownik ma dostęp do funkcji kontrasygnaty zgodnie z konfiguracją. |
+| 2 | Otwórz dokument przygotowany do operacji w trybie kontrasygnaty. | Dokument jest dostępny w odpowiednim stanie procesu. |
+| 3 | Wykonaj operację wskazaną w tytule testu, używając przygotowanych danych. | System przyjmuje dane i realizuje właściwą funkcję. |
+| 4 | Zweryfikuj bezpośredni rezultat operacji. | Rezultat odpowiada zakresowi scenariusza. |
+| 5 | Odśwież lub ponownie otwórz dokument albo konfigurację. | Stan po operacji został zachowany. |
+| 6 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Zapis daty i czasu kontrasygnaty” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Zapis daty i czasu kontrasygnaty” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

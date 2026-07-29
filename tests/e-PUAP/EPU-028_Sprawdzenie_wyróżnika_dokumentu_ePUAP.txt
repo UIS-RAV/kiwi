@@ -1,0 +1,40 @@
+ID: EPU-028
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Sprawdzenie wyróżnika dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Sprawdzenie wyróżnika dokumentu ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Sprawdzenie wyróżnika dokumentu ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje dokument ePUAP posiadający wyróżnik.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dokument ePUAP. | Wyświetla się podgląd dokumentu. |
+| 2 | Uruchom funkcję sprawdzenia wyróżnika. | System prezentuje wyróżnik dokumentu. |
+| 3 | Porównaj wartość z danymi źródłowymi. | Wyróżnik jest zgodny z dokumentem ePUAP. |
+| 4 | Porównaj wyróżnik z wartością źródłową dokumentu. | Wyróżnik jest zgodny. |
+| 5 | Otwórz dokument ponownie. | Wyróżnik pozostaje dostępny i niezmieniony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Sprawdzenie wyróżnika dokumentu ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

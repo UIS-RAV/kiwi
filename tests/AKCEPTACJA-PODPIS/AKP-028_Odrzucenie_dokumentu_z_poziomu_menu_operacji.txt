@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: odrzucenie dokumentu z poziomu menu operacji.
+Zweryfikowanie, że funkcja „Odrzucenie dokumentu z poziomu menu operacji” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,15 @@ Akceptacja i podpis — Obsługa akceptacji dokumentu
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument oczekujący na akceptację z poziomu wskazanego w nazwie testu. | Dokument jest dostępny do obsługi. |
-| 2 | Wybrać operację odrzucenia dokumentu. | System udostępnia odrzucenie. |
-| 3 | Wprowadzić komentarz, gdy przewiduje go scenariusz, i zatwierdzić. | Odrzucenie zostaje zapisane. |
-| 4 | Sprawdzić status dokumentu, komentarz i historię procesu. | Dokument otrzymuje właściwy status, a komentarz i operacja są widoczne w historii. |
+| 1 | Zaloguj się do EZD i otwórz obszar funkcjonalny wymagany w scenariuszu. | System udostępnia funkcję objętą testem. |
+| 2 | Wykonaj operację wskazaną w tytule testu, używając przygotowanych danych. | System przyjmuje dane i realizuje właściwą funkcję. |
+| 3 | Zweryfikuj bezpośredni rezultat operacji. | Rezultat odpowiada zakresowi scenariusza. |
+| 4 | Odśwież lub ponownie otwórz dokument albo konfigurację. | Stan po operacji został zachowany. |
+| 5 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Odrzucenie dokumentu z poziomu menu operacji” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Odrzucenie dokumentu z poziomu menu operacji” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

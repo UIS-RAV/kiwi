@@ -1,0 +1,39 @@
+ID: EDR-010
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Walidacja niepoprawnego klucza prywatnego w konfiguracji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Walidacja niepoprawnego klucza prywatnego w konfiguracji” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Konfiguracja e-Doręczeń w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- Dostępne są poprawne dane skrzynki oraz niepoprawny klucz prywatny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wprowadź niepoprawny klucz prywatny. | Niepoprawna wartość jest obecna w formularzu. |
+| 3 | Spróbuj zapisać lub przetestować konfigurację. | System odrzuca klucz i prezentuje błąd. |
+| 4 | Zweryfikuj stan aktywnej konfiguracji. | Niepoprawna próba nie nadpisuje działających ustawień. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Walidacja niepoprawnego klucza prywatnego w konfiguracji”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

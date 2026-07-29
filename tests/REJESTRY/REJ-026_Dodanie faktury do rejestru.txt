@@ -1,0 +1,41 @@
+ID: REJ-026
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie faktury do rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie dodania dokumentu typu faktura do rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Dodanie faktury do utworzonego rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr oraz zarejestrowana faktura dostępna dla użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz właściwy rejestr. | Lista wpisów jest widoczna. |
+| 2 | Kliknij Dodaj dokument. | Formularz zostaje otwarty. |
+| 3 | Wskaż dokument typu faktura. | Dane faktury zostają wybrane. |
+| 4 | Zweryfikuj automatycznie uzupełnione dane. | Dane odpowiadają wskazanej fakturze. |
+| 5 | Uzupełnij pola wymagane przez szablon. | Formularz jest kompletny. |
+| 6 | Zapisz wpis. | Faktura zostaje dodana do rejestru. |
+| 7 | Odszukaj wpis faktury. | Pozycja jest widoczna z nadanym numerem. |
+| 8 | Otwórz podgląd wpisu. | Powiązanie z właściwą fakturą jest zachowane. |
+| 9 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 10 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Faktura zostaje dodana jako wpis do rejestru.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

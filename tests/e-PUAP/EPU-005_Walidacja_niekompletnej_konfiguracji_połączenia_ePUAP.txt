@@ -1,0 +1,38 @@
+ID: EPU-005
+Moduł: ePUAP
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja niekompletnej konfiguracji połączenia ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Walidacja niekompletnej konfiguracji połączenia ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja połączenia ePUAP w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz ustawienia połączenia ePUAP. | Wyświetla się formularz konfiguracji. |
+| 2 | Pozostaw co najmniej jedno z pól Epuap ID, Klucz prywatny lub Klucz publiczny puste. | Konfiguracja jest niekompletna. |
+| 3 | Wybierz „Zapisz”. | System nie powinien utworzyć kompletnego, gotowego do użycia połączenia. |
+| 4 | Uzupełnij brakujące dane poprawnymi wartościami. | Formularz może zostać zapisany. |
+| 5 | Zweryfikuj listę konfiguracji przed poprawnym zapisem. | Niekompletna konfiguracja nie została utworzona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Walidacja niekompletnej konfiguracji połączenia ePUAP”.
+- Niepoprawna lub niekompletna operacja nie powoduje zapisania błędnej konfiguracji ani zmiany dokumentów.
+- Użytkownik otrzymuje jednoznaczny komunikat zawierający przyczynę błędu lub wskazanie brakujących danych.
+- Dotychczasowa konfiguracja, dokumenty, załączniki i statusy pozostają spójne po ponownym odczycie.

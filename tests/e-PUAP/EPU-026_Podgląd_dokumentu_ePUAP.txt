@@ -1,0 +1,39 @@
+ID: EPU-026
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Podgląd dokumentu ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Podgląd dokumentu ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Podgląd dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Na liście znajduje się dokument ePUAP.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Kliknij wiersz dokumentu na liście. | System otwiera podgląd dokumentu. |
+| 2 | Sprawdź treść, dane dokumentu i dostępne załączniki. | Informacje odpowiadają pobranej wiadomości. |
+| 3 | Porównaj dane podglądu z pozycją na liście. | Identyfikator, nadawca, data i status są spójne. |
+| 4 | Zamknij podgląd. | Użytkownik wraca do listy w tym samym kontekście. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podgląd dokumentu ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

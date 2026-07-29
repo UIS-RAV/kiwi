@@ -1,0 +1,42 @@
+ID: EPU-030
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Przekazanie wiadomości ePUAP dalej </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Przekazanie wiadomości ePUAP dalej” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Przekazywanie wiadomości dalej na ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Istnieje odebrana wiadomość ePUAP.
+- Znany jest poprawny adres skrytki kolejnego odbiorcy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wiadomość i wybierz operację przekazania dalej. | Wyświetla się formularz przekazywania. |
+| 2 | Wskaż skrytkę odbiorcy i uzupełnij wymagane dane. | Formularz jest gotowy do wysłania. |
+| 3 | Zatwierdź przekazanie. | Wiadomość zostaje wysłana do kolejnego odbiorcy. |
+| 4 | Zweryfikuj rezultat wysyłki. | System prezentuje informację o wykonaniu operacji. |
+| 5 | Otwórz przekazaną wiadomość w zakładce Wysłane. | Wiadomość jest widoczna z właściwym odbiorcą. |
+| 6 | Zweryfikuj treść i załączniki. | Przekazanie zachowuje komplet danych zgodnie ze scenariuszem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przekazanie wiadomości ePUAP dalej” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wyświetlenie dostępnego potwierdzenia wysyłki.
+Zweryfikowanie, że funkcja „Wyświetlenie dostępnego potwierdzenia wysyłki” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dziennik korespondencji wychodzącej — Potwierdzenia i doręczenia
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Wyświetlenie dostępnego potwierdzenia wysyłki”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Wyświetlenie dostępnego potwierdzenia wysyłki” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i otwórz przesyłkę z odpowiednim stanem potwierdzenia. | Dokument i dane wysyłki są dostępne. |
+| 2 | Otwórz szczegóły właściwej przesyłki. | System prezentuje sekcję potwierdzeń. |
+| 3 | Zweryfikuj dostępność potwierdzenia dostarczenia. | Potwierdzenie dostarczenia jest widoczne i powiązane z przesyłką. |
+| 4 | Otwórz potwierdzenie. | Dokument jest czytelny i dotyczy właściwego adresata. |
+| 5 | Odśwież widok lub otwórz szczegóły ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wyświetlenie dostępnego potwierdzenia wysyłki” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Wyświetlenie dostępnego potwierdzenia wysyłki” kończy się rezultatem zgodnym z celem testu.
+- Dokument, przesyłka, adresat, sposób wysyłki i status są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Dane na liście DKW, w podglądzie i w szczegółach wysyłki pozostają spójne.
+- Rezultat pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

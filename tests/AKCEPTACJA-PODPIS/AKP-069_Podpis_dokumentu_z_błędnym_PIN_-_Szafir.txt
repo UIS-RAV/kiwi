@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: podpis dokumentu z błędnym pin - szafir.
+Zweryfikowanie, że funkcja „Podpis dokumentu z błędnym PIN - Szafir” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,17 @@ Akceptacja i podpis — Konfiguracja podpisu KIR Szafir
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument i uruchomić podpis kwalifikowany właściwą aplikacją. | System przekazuje dokument do aplikacji podpisującej. |
-| 2 | Wybrać certyfikat i wprowadzić nieprawidłowy PIN. | Aplikacja przyjmuje dane do weryfikacji, ale PIN jest niepoprawny. |
-| 3 | Zatwierdzić próbę podpisania. | Podpisanie zostaje odrzucone. |
-| 4 | Sprawdzić komunikat, status dokumentu i brak nowego podpisu. | Dokument pozostaje niepodpisany, a system prezentuje czytelny komunikat o błędzie. |
+| 1 | Zaloguj się do EZD jako użytkownik posiadający uprawnienia do konfiguracji wskazanej funkcji. | Użytkownik uzyskuje dostęp do funkcji administracyjnych wymaganych w scenariuszu. |
+| 2 | Otwórz obszar konfiguracji odpowiadający funkcji opisanej w tytule testu. | System wyświetla właściwy formularz lub listę ustawień. |
+| 3 | Wybierz podpis kwalifikowany realizowany przez KIR Szafir. | System uruchamia integrację z komponentem Szafir. |
+| 4 | Potwierdź zakres podpisu i rozpocznij operację. | Dokument zostaje przekazany do komponentu podpisującego. |
+| 5 | Wykonaj czynności wymagane przez komponent podpisujący. | Komponent zwraca wynik operacji do EZD. |
+| 6 | Otwórz dokument po zakończeniu operacji. | Dokument ma status podpisany, a informacja o podpisie jest dostępna. |
+| 7 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Podpis dokumentu z błędnym PIN - Szafir” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Podpis dokumentu z błędnym PIN - Szafir” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

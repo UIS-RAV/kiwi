@@ -1,0 +1,42 @@
+ID: REJ-024
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Funkcjonalny
+
+<h1> Dodanie dokumentu do rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie dodania dokumentu do skonfigurowanego rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Dodanie dokumentu do utworzonego rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywny rejestr. Dostępny jest dokument możliwy do dodania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz właściwy rejestr. | Lista wpisów jest widoczna. |
+| 2 | Kliknij Dodaj dokument. | Formularz zostaje otwarty. |
+| 3 | Wskaż dokument zgodnie z dostępnym mechanizmem. | Właściwy dokument jest wybrany. |
+| 4 | Uzupełnij pole Komentarz. | Wartość jest widoczna. |
+| 5 | Zweryfikuj automatycznie uzupełniony Tytuł dokumentu. | Tytuł odpowiada wybranemu dokumentowi. |
+| 6 | Zapisz wpis. | System dodaje dokument do rejestru. |
+| 7 | Odszukaj nowy wpis. | Dokument jest widoczny na liście. |
+| 8 | Zweryfikuj nadany numer. | Numer odpowiada przypisanej numeracji. |
+| 9 | Otwórz wpis ponownie. | Komentarz, tytuł i powiązanie z dokumentem zostały zachowane. |
+| 10 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 11 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Dokument zostaje zapisany w rejestrze z numerem wynikającym z numeracji i wartościami formularza.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

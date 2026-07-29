@@ -1,0 +1,39 @@
+ID: REJ-020
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Modyfikacja nieużytego rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie edycji rejestru przed jego użyciem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Modyfikacja rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr bez wpisów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę rejestrów. | Lista jest widoczna. |
+| 2 | Otwórz menu opcji przy nieużytym rejestrze i wybierz Edytuj. | Formularz zawiera bieżące dane. |
+| 3 | Zmień wybrane pola rejestru. | Nowe wartości są widoczne. |
+| 4 | Kliknij Zapisz rejestr. | System zapisuje zmiany. |
+| 5 | Otwórz rejestr ponownie. | Zmodyfikowane wartości zostały zachowane. |
+| 6 | Zweryfikuj pola nieobjęte zmianą. | Pozostałe dane nie zostały zmienione. |
+| 7 | Odśwież listę rejestrów i ponownie wyszukaj testowany rejestr. | Rejestr pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Otwórz konfigurację rejestru albo jego podgląd, jeżeli operacja jest dostępna. | Przypisana numeracja, szablon, aktywność i dostępne akcje są spójne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Rejestr zostaje zmodyfikowany, a wartości utrzymują się po ponownym otwarciu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

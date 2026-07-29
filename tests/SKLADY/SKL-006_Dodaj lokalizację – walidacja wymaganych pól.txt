@@ -1,0 +1,40 @@
+ID: SKL-006
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Dodaj lokalizację – walidacja wymaganych pól </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji pól Nazwa i Adres.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1.1 Dodaj lokalizację
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie lokalizacji. | Widoczny jest formularz. |
+| 2 | Pozostaw Nazwa i Adres puste. | Pola są nieuzupełnione. |
+| 3 | Wybierz Utwórz. | System wykonuje walidację. |
+| 4 | Sprawdź formularz. | Pola są oznaczone zgodnie ze standardem w systemie. |
+| 5 | Zamknij okno. | Lokalizacja nie została utworzona. |
+| 6 | Odśwież listę lokalizacji i ponownie wyszukaj sprawdzaną pozycję. | Stan lokalizacji jest zgodny z wykonaną operacją i pozostaje zachowany. |
+| 7 | Otwórz szczegóły lokalizacji albo powiązanych składów. | Powiązania i dane lokalizacji są spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Oba pola są wymagane.
+- Niepoprawny formularz nie tworzy lokalizacji.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

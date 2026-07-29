@@ -1,0 +1,39 @@
+ID: FLT-009
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pojedynczego filtra krzyżykiem </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie pojedynczego filtra krzyżykiem” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Aktywne są co najmniej dwa filtry.
+- Każdy filtr jest prezentowany jako osobny kafelek.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować dwa filtry. | Na pasku widoczne są dwa kafelki. |
+| 2 | Wybrać krzyżyk na pierwszym kafelku. | Wskazany filtr zostaje usunięty. |
+| 3 | Zweryfikować pasek filtrów. | Pozostaje tylko drugi filtr. |
+| 4 | Zweryfikować wyniki. | Wyniki uwzględniają tylko pozostałe kryterium. |
+| 5 | Zweryfikować pozostałe aktywne filtry. | Pozostałe kryteria nadal obowiązują. |
+| 6 | Porównać wyniki przed i po usunięciu filtra. | Lista rozszerza się wyłącznie w zakresie usuniętego kryterium. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie pojedynczego filtra krzyżykiem” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

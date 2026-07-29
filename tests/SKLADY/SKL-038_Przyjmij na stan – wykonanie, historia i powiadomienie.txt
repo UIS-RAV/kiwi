@@ -1,0 +1,42 @@
+ID: SKL-038
+Moduł: Składy chronologiczne
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Przyjmij na stan – wykonanie, historia i powiadomienie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja poprawnego przyjęcia przesyłki.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.4 Przyjmij na stan
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Przyjmij na stan. | Widoczny jest formularz. |
+| 2 | Wybierz Skład chronologiczny i Pudło. | Pola zostają uzupełnione. |
+| 3 | Wybierz Dodaj do składu. | Przesyłka zostaje przyjęta. |
+| 4 | Sprawdź status i powiązanie. | Status to na stanie, wskazane pudło jest zapisane. |
+| 5 | Sprawdź historię. | Widoczny jest wpis Dodano do składu chronologicznego. |
+| 6 | Sprawdź powiadomienie przekazującego i otwórz link. | Powiadomienie ma właściwy tytuł, opis i prowadzi do podglądu przesyłki. |
+| 7 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 8 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Status zmienia się na na stanie.
+- Historia zawiera Dodano do składu chronologicznego.
+- Przekazujący otrzymuje Przyjęcie przesyłki przychodzącej z działającym linkiem.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

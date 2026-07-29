@@ -1,7 +1,7 @@
 ID: LOG-022
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Negatywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
 - Przygotowano kod, który nie jest poprawnym kodem dla użytkownika.
 - Instrukcja nie określa literalnej treści komunikatu.
 
-<h2> Kryteria akceptacji </h2>
-
-- System odrzuca niepoprawny kod.
-- Formularz nadania nowego hasła nie zostaje wyświetlony.
-- Hasło użytkownika nie ulega zmianie.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +28,13 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
 | 3 | Wybrać „Sprawdź kod”. | System odrzuca kod. |
 | 4 | Zweryfikować brak formularza nadania nowego hasła. | Użytkownik nie może kontynuować procesu resetu. |
 | 5 | Zweryfikować możliwość logowania dotychczasowym hasłem, o ile konto nie jest zablokowane. | Dotychczasowe hasło nie zostało zmienione. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System odrzuca niepoprawny kod.
+- Formularz nadania nowego hasła nie zostaje wyświetlony.
+- Hasło użytkownika nie ulega zmianie.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

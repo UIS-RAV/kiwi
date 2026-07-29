@@ -1,0 +1,39 @@
+ID: SD-022
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Pierwszeństwo e-Doręczeń elektronicznych dla interesanta z aktywnym ADE </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Pierwszeństwo e-Doręczeń elektronicznych dla interesanta z aktywnym ADE.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+- Konfiguracja metod doręczeń została przygotowana zgodnie ze scenariuszem.
+- Dokument wychodzący z interesantem został zasilony przez API SD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaimportuj dokument dla interesanta z aktywnym ADE. | Dokument zostaje utworzony. |
+| 2 | Poczekaj na automatyczną kwalifikację. | System wybiera e-Doręczenia elektroniczne. |
+| 3 | Otwórz dokument. | Wybrana metoda i adres ADE interesanta są widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

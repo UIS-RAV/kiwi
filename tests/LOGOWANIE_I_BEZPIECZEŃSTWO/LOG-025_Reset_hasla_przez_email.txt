@@ -1,7 +1,7 @@
 ID: LOG-025
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Integracyjny / Pozytywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -19,13 +19,6 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie
 - Dostępna jest skrzynka odbiorcza użytkownika.
 - Otwarty jest tryb „Odśwież hasło”.
 
-<h2> Kryteria akceptacji </h2>
-
-- System przyjmuje żądanie dla istniejącego użytkownika.
-- Wiadomość dotycząca resetu hasła zostaje wysłana z użyciem skonfigurowanego konta systemowego.
-- Wiadomość dociera na adres użytkownika.
-- Proces nie ujawnia danych innych użytkowników.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -35,3 +28,14 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Odśwież hasło; Ustawienie
 | 3 | Otworzyć skrzynkę odbiorczą użytkownika. | Skrzynka jest dostępna. |
 | 4 | Odszukać wiadomość dotyczącą resetowania hasła. | Wiadomość została dostarczona. |
 | 5 | Zweryfikować, że wiadomość dotyczy właściwego użytkownika i systemu EZD. | Treść pozwala zidentyfikować właściwy proces resetowania hasła. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System przyjmuje żądanie dla istniejącego użytkownika.
+- Wiadomość dotycząca resetu hasła zostaje wysłana z użyciem skonfigurowanego konta systemowego.
+- Wiadomość dociera na adres użytkownika.
+- Proces nie ujawnia danych innych użytkowników.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

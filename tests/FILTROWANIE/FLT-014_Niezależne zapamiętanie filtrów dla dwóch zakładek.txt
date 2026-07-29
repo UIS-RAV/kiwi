@@ -1,0 +1,39 @@
+ID: FLT-014
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Niezależne zapamiętanie filtrów dla dwóch zakładek </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Niezależne zapamiętanie filtrów dla dwóch zakładek” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Sekcja zawiera co najmniej dwie zakładki z możliwością filtrowania.
+- Dostępne są różne wartości testowe dla obu zakładek.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W zakładce A zastosować filtr A. | Filtr A jest aktywny. |
+| 2 | Przejść do zakładki B i zastosować filtr B. | Filtr B jest aktywny w zakładce B. |
+| 3 | Powrócić do zakładki A. | Filtr A jest nadal aktywny. |
+| 4 | Ponownie przejść do zakładki B. | Filtr B jest nadal aktywny. |
+| 5 | Przełączyć się kolejno pomiędzy obiema zakładkami. | Każda zakładka zachowuje własny zestaw filtrów. |
+| 6 | Zweryfikować wyniki w obu zakładkach. | Każda lista odpowiada właściwym filtrom bez przenikania ustawień. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Niezależne zapamiętanie filtrów dla dwóch zakładek” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

@@ -1,0 +1,37 @@
+ID: EDR-031
+Moduł: e-DORĘCZENIA
+Typ: Funkcjonalny
+Priorytet: Średni
+Poziom: Podstawowy
+
+<h1> Przywrócenie domyślnych filtrów </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Przywrócenie domyślnych filtrów” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Filtrowanie dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- Na liście są aktywne filtry użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia zawierający zróżnicowane wiadomości. | Lista wiadomości jest dostępna i umożliwia filtrowanie. |
+| 2 | Zmień domyślne filtry i zastosuj je. | Lista zostaje ograniczona. |
+| 3 | Użyj funkcji przywracania filtrów domyślnych. | Wartości filtrów wracają do ustawień początkowych. |
+| 4 | Zweryfikuj listę. | Zakres danych odpowiada domyślnym filtrom. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przywrócenie domyślnych filtrów” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

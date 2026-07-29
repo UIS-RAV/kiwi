@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wyświetlenie podstawowych danych dokumentu wychodzącego.
+Zweryfikowanie, że funkcja „Wyświetlenie podstawowych danych dokumentu wychodzącego” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dziennik korespondencji wychodzącej — Pobieranie i podgląd dokumentów
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Wyświetlenie podstawowych danych dokumentu wychodzącego”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Wyświetlenie podstawowych danych dokumentu wychodzącego” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i otwórz eKancelaria > Wychodzące. | System wyświetla listę korespondencji wychodzącej zgodną z uprawnieniami użytkownika. |
+| 2 | Otwórz podgląd dokumentu wychodzącego. | System prezentuje szczegóły dokumentu. |
+| 3 | Zweryfikuj podstawowe dane dokumentu. | Numer, tytuł, data i inne dane podstawowe odpowiadają dokumentowi źródłowemu. |
+| 4 | Porównaj dane z pozycją na liście. | Dane na liście i w podglądzie są spójne. |
+| 5 | Odśwież widok lub otwórz szczegóły ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wyświetlenie podstawowych danych dokumentu wychodzącego” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Wyświetlenie podstawowych danych dokumentu wychodzącego” kończy się rezultatem zgodnym z celem testu.
+- Dokument, przesyłka, adresat, sposób wysyłki i status są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Dane na liście DKW, w podglądzie i w szczegółach wysyłki pozostają spójne.
+- Rezultat pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

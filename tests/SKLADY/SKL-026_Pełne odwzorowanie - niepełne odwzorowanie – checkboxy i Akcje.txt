@@ -1,0 +1,40 @@
+ID: SKL-026
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Pełne odwzorowanie / niepełne odwzorowanie – checkboxy i Akcje </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zaznaczania wielu przesyłek.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.1 pełne odwzorowanie / niepełne odwzorowanie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaznacz checkbox jednego wiersza. | Akcje staje się aktywne. |
+| 2 | Odznacz wiersz. | Akcje jest nieaktywne, jeśli brak innych zaznaczeń. |
+| 3 | Zaznacz checkbox nagłówka. | Wszystkie dostępne checkboxy na stronie są zaznaczone. |
+| 4 | Sprawdź checkbox disabled. | Pozostaje niezaznaczony. |
+| 5 | Odznacz checkbox nagłówka. | Zaznaczenia zostają usunięte. |
+| 6 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 7 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Pojedynczy checkbox aktywuje Akcje.
+- Checkbox nagłówka zaznacza wszystkie dostępne checkboxy na stronie poza disabled.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

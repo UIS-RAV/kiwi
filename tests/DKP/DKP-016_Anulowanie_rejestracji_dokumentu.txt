@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: anulowanie rejestracji dokumentu.
+Zweryfikowanie, że funkcja „Anulowanie rejestracji dokumentu” realizuje opisany proces poprawnie, zachowuje spójność danych dokumentu i daje trwały rezultat możliwy do potwierdzenia w DKP, podglądzie lub historii.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -18,20 +18,21 @@ Rejestrowanie dokumentu
 
 - Użytkownik jest zalogowany do systemu EZD.
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
-- Przygotowano dane lub dokument odpowiadający scenariuszowi testowemu.
+- Przygotowano dane, dokumenty lub pliki odpowiadające scenariuszowi testowemu.
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Anulowanie rejestracji dokumentu” jest dostępna dla uprawnionego użytkownika.
-- System wykonuje operację zgodnie z opisanym procesem.
-- Końcowy stan danych odpowiada wykonanej czynności.
-- Nie dochodzi do niezamierzonej zmiany innych dokumentów lub danych.
+- Scenariusz „Anulowanie rejestracji dokumentu” kończy się bez niezamierzonego zapisu lub zmiany danych.
+- System blokuje niedozwoloną operację albo prawidłowo anuluje działanie.
+- Komunikat lub stan formularza jednoznacznie wskazuje wymagane działanie użytkownika.
+- Pozostałe dokumenty, załączniki i powiązania pozostają bez zmian.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Anulowanie rejestracji dokumentu”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Uzupełnić lub wskazać dane wymagane w scenariuszu. | Dane zostają przyjęte zgodnie z formularzem. |
-| 3 | Wybrać anulowanie operacji. | Operacja zostaje przerwana bez wprowadzenia zmiany. |
-| 4 | Ponownie otworzyć dokument, listę lub historię właściwą dla scenariusza. | Można zweryfikować końcowy stan operacji. |
+| 1 | Otwórz formularz rejestracji i wprowadź dane. | Formularz zawiera niezapisane zmiany. |
+| 2 | Uruchom anulowanie rejestracji. | System zamyka formularz lub wyświetla komunikat potwierdzający. |
+| 3 | Potwierdź anulowanie, jeśli jest wymagane. | Rejestracja zostaje przerwana. |
+| 4 | Wyszukaj dokument na liście DKP. | Dokument nie został utworzony. |
+| 5 | Ponownie otwórz właściwy dokument, formularz lub listę. | Stan danych odpowiada wartości sprzed anulowanej albo zablokowanej operacji. |

@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: anulowanie oznaczenia dokumentu jako wysłanego.
+Zweryfikowanie, że funkcja „Anulowanie oznaczenia dokumentu jako wysłanego” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dziennik korespondencji wychodzącej — Anulowanie i ręczne oznaczanie wysyłk
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Anulowanie oznaczenia dokumentu jako wysłanego”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Anulowanie oznaczenia dokumentu jako wysłanego” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i otwórz w DKW dokument przygotowany zgodnie z warunkami testu. | Dokument jest dostępny wraz z aktualnym statusem wysyłki. |
+| 2 | Uruchom funkcję wskazaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System przyjmuje dane i realizuje operację. |
+| 4 | Zweryfikuj rezultat na liście DKW lub w szczegółach wysyłki. | Rezultat odpowiada wykonanemu działaniu. |
+| 5 | Odśwież widok lub otwórz szczegóły ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Anulowanie oznaczenia dokumentu jako wysłanego” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- System reaguje zgodnie z celem testu „Anulowanie oznaczenia dokumentu jako wysłanego”.
+- Niedozwolona albo anulowana operacja nie powoduje zmiany dokumentu, przesyłki, statusu ani danych adresata.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie z warunkami testu.
+- Dane pozostają spójne po odświeżeniu widoku.

@@ -1,0 +1,40 @@
+ID: EPU-007
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie kolejnej skrytki ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Dodanie kolejnej skrytki ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja skrytki ePUAP w systemie
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Połączenie ePUAP jest skonfigurowane.
+- Istnieje już jedna skrytka.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W sekcji Skrytki wybierz „Dodaj skrytkę”. | Wyświetla się pole nazwy. |
+| 2 | Wprowadź nazwę drugiej skrytki i wybierz „Dodaj”. | Druga skrytka zostaje dodana. |
+| 3 | Sprawdź listę skrytek. | Obie skrytki są widoczne jako oddzielne pozycje. |
+| 4 | Otwórz listę skonfigurowanych skrytek. | Nowa skrytka jest widoczna z właściwym adresem i nazwą. |
+| 5 | Uruchom test konfiguracji dodanej skrytki. | System potwierdza poprawność połączenia. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Dodanie kolejnej skrytki ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

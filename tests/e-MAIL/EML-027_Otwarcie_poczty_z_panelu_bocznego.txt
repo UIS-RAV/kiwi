@@ -1,0 +1,37 @@
+ID: EML-027
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Otwarcie poczty z panelu bocznego </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Otwarcie poczty z panelu bocznego” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Wiadomości email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń panel boczny i wybierz Poczta → Poczta. | Wyświetla się komponent skrzynki odbiorczej. |
+| 2 | Sprawdź dostępne zakładki. | Widoczne są: Skrzynka odbiorcza, Wysłane, Oznaczone gwiazdką, Wersje robocze i Kosz. |
+| 3 | Przełącz się pomiędzy dostępnymi zakładkami. | Każda zakładka prezentuje właściwy zakres wiadomości. |
+| 4 | Wróć do pierwotnej zakładki. | System zachowuje poprawny kontekst i nie zgłasza błędu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Otwarcie poczty z panelu bocznego” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

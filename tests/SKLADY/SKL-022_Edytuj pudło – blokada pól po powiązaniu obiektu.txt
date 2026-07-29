@@ -1,0 +1,39 @@
+ID: SKL-022
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Edytuj pudło – blokada pól po powiązaniu obiektu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczeń edycji pudła zawierającego obiekt.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.2 Edytuj pudło
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Edycja pudła dla pudła z obiektem. | Widoczne są aktualne dane. |
+| 2 | Zmień Nazwa i Lokalizacja. | Zmiana jest możliwa. |
+| 3 | Spróbuj zmienić Rok utworzenia, Typ i Skład chronologiczny. | Zmiana nie jest dozwolona. |
+| 4 | Wybierz Zapisz. | Dozwolone zmiany zostają zapisane. |
+| 5 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 6 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa i Lokalizacja są edytowalne.
+- Rok utworzenia, Typ i Skład chronologiczny nie są edytowalne.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

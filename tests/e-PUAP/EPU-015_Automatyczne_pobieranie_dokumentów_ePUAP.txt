@@ -1,0 +1,41 @@
+ID: EPU-015
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Automatyczne pobieranie dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Automatyczne pobieranie dokumentów ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja automatycznej synchronizacji
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Rozszerzenie automatycznej synchronizacji jest dostępne.
+- Na skrytce ePUAP znajduje się nowy dokument.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację automatycznej synchronizacji rozszerzeń. | Wyświetlają się ustawienia usługi. |
+| 2 | Aktywuj synchronizację ePUAP i ustaw harmonogram. | Konfiguracja jest gotowa do zapisu. |
+| 3 | Zapisz ustawienia i poczekaj na wykonanie harmonogramu. | System inicjuje automatyczne pobranie. |
+| 4 | Otwórz moduł ePUAP oraz Log ePUAP. | Dokument jest dostępny, a w logu widnieje zdarzenie cron. |
+| 5 | Poczekaj na termin wykonania harmonogramu. | Zadanie uruchamia się automatycznie. |
+| 6 | Zweryfikuj pobrane dokumenty i log synchronizacji. | Dokumenty są pobrane bez duplikatów, a wynik jest zapisany w logu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Automatyczne pobieranie dokumentów ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

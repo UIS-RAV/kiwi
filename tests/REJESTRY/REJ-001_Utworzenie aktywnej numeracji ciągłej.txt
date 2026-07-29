@@ -1,0 +1,43 @@
+ID: REJ-001
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Utworzenie aktywnej numeracji ciągłej </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie możliwości utworzenia aktywnej numeracji ciągłej z wymaganym elementem numeru dokumentu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie numeracji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora. Istnieje możliwość wejścia do Administracja/Rejestry.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry. | Wyświetlona zostaje strona zarządzania rejestrami, szablonami i numeracją. |
+| 2 | Otwórz zakładkę Numeracja. | Widoczna jest lista istniejących numeracji. |
+| 3 | Kliknij Dodaj numerację. | System otwiera formularz tworzenia numeracji. |
+| 4 | Zweryfikuj pola formularza: nazwa, opis, status, typ i sekcja Szablon numeracji. | Formularz zawiera elementy opisane w instrukcji. |
+| 5 | Wprowadź nazwę i opis numeracji. | Wartości są widoczne w odpowiednich polach. |
+| 6 | Wybierz status aktywny. | Formularz wskazuje aktywny status numeracji. |
+| 7 | Wybierz typ ciągła. | Formularz wskazuje numerację, która nie rozpoczyna się od nowa w kolejnym roku. |
+| 8 | Dodaj do szablonu element Numer dokumentu w rejestrze NR. | Wymagany element jest widoczny w szablonie numeracji. |
+| 9 | Kliknij Zapisz numerację. | System zapisuje numerację. |
+| 10 | Odszukaj utworzoną numerację na liście. | Numeracja jest widoczna z zapisanymi parametrami. |
+| 11 | Odśwież listę numeracji i ponownie wyszukaj testowaną pozycję. | Numeracja pozostaje widoczna w stanie zgodnym z wykonanym scenariuszem. |
+| 12 | Otwórz szczegóły numeracji albo formularz edycji, jeżeli operacja jest dostępna. | Nazwa, typ, aktywność i elementy szablonu numeracji są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Numeracja zostaje zapisana i jest widoczna na liście Numeracja z poprawną nazwą, statusem aktywnym i typem ciągłym.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

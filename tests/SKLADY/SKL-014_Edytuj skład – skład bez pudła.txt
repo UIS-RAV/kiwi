@@ -1,0 +1,40 @@
+ID: SKL-014
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Edytuj skład – skład bez pudła </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja edycji wszystkich pól składu bez powiązanego pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.2.2 Edytuj skład
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Edytuj skład dla składu bez pudła. | Wyświetla się Edycja składu chronologicznego. |
+| 2 | Sprawdź komunikat. | Widoczny jest komunikat o zmianie w powiązanych elementach i spisach AZ. |
+| 3 | Zmień wszystkie pola. | Każde pole jest edytowalne. |
+| 4 | Wybierz Zapisz skład. | Zmiany zostają zapisane. |
+| 5 | Sprawdź listę. | Widoczne są nowe dane. |
+| 6 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 7 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa składu, Typ składu, Lokalizacja i Należy do są edytowalne.
+- Widoczny jest komunikat wymagany dokumentacją.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

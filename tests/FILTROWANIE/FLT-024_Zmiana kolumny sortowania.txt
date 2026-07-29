@@ -1,0 +1,38 @@
+ID: FLT-024
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Zmiana kolumny sortowania </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zmiana kolumny sortowania” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera co najmniej dwie sortowalne kolumny.
+- Dane pozwalają rozróżnić kolejności wynikające z obu kolumn.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Posortować listę po pierwszej kolumnie. | Lista jest uporządkowana według pierwszej kolumny. |
+| 2 | Wybrać sortowanie po drugiej kolumnie. | Lista zostaje uporządkowana ponownie. |
+| 3 | Zweryfikować kolejność według drugiej kolumny. | Kolejność odpowiada drugiej kolumnie. |
+| 4 | Zweryfikować kompletność listy. | Żaden rekord nie został utracony. |
+| 5 | Porównać kolejność rekordów przed i po zmianie kolumny. | Lista jest sortowana według nowej kolumny. |
+| 6 | Zweryfikować wskaźnik sortowania. | Aktywny wskaźnik znajduje się przy właściwej kolumnie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zmiana kolumny sortowania” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

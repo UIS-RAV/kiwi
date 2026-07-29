@@ -1,0 +1,38 @@
+ID: EML-019
+Moduł: POCZTA E-MAIL
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usuwania skrzynki </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Anulowanie usuwania skrzynki” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Usuwanie konta
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Istnieje konto przeznaczone do testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń menu konta i wybierz „Usuń skrzynkę”. | Wyświetla się komunikat potwierdzenia. |
+| 2 | Wybierz „Anuluj”. | Okno zostaje zamknięte. |
+| 3 | Sprawdź listę kont. | Konto nadal jest widoczne. |
+| 4 | Odśwież listę kont e-mail. | Stan konta odpowiada zatwierdzonej lub anulowanej operacji. |
+| 5 | Zweryfikuj inne skonfigurowane skrzynki. | Operacja nie wpływa na pozostałe konta. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Anulowanie usuwania skrzynki”.
+- Niedozwolona, anulowana albo niekompletna operacja nie powoduje zapisania nieprawidłowych danych.
+- Użytkownik otrzymuje jednoznaczny komunikat walidacyjny albo funkcja pozostaje niedostępna.
+- Dotychczasowa konfiguracja, wiadomości i załączniki pozostają niezmienione po odświeżeniu widoku.

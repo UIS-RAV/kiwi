@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu.
+Zweryfikowanie, że funkcja „Brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,18 @@ Akceptacja i podpis — Potwierdzenie zgodności podpisanego dokumentu
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu”. | System wyświetla właściwy widok lub funkcję. |
-| 2 | Wskazać dokument, załącznik, użytkownika, metodę podpisu, certyfikat lub parametr wymagany w scenariuszu. | System przyjmuje dane wymagane w scenariuszu. |
-| 3 | Wykonać i zatwierdzić operację zgodnie z celem testu. | Operacja jest wykonywana zgodnie z wybranymi parametrami. |
-| 4 | Zweryfikować rezultat w podglądzie dokumentu, procesie akceptacji, historii, danych podpisu, raporcie, potwierdzeniu lub komunikacie systemowym. | Rezultat funkcji „Brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu” jest zgodny z instrukcją i nie narusza spójności dokumentu ani procesu. |
+| 1 | Otwórz podpisany dokument lub załącznik objęty scenariuszem. | System prezentuje właściwy podpisany obiekt. |
+| 2 | Otwórz menu operacji związanych z podpisem lub potwierdzeniem zgodności. | Dostępna jest funkcja odpowiednia do stanu dokumentu. |
+| 3 | Przygotuj warunek braku uprawnienia, certyfikatu lub wymaganej konfiguracji opisany w tytule. | Środowisko spełnia warunek negatywny. |
+| 4 | Spróbuj wykonać objętą testem operację. | System nie pozwala jej zakończyć. |
+| 5 | Zweryfikuj komunikat lub niedostępność funkcji. | Sposób blokady jest jednoznaczny i zgodny z przyczyną. |
+| 6 | Sprawdź stan dokumentu i procesu. | Nie powstał podpis, akceptacja ani nieautoryzowana zmiana. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 8 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Brak możliwości wygenerowania potwierdzenia dla dokumentu bez podpisu” kończy się rezultatem zgodnym z celem testu.
+- Niedozwolona lub nieskuteczna operacja nie zmienia dokumentu, załączników ani procesu w sposób sugerujący powodzenie.
+- Komunikat lub niedostępność funkcji jednoznacznie wskazuje przyczynę blokady.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

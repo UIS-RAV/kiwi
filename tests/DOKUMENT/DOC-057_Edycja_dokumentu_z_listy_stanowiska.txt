@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: edycja dokumentu z listy stanowiska.
+Zweryfikowanie, że funkcja „Edycja dokumentu z listy stanowiska” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na dane dokumentu, jego załączniki, historię, wersje i dostępność na stanowisku.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -20,18 +20,19 @@ Dokumenty na stanowisku
 - Użytkownik posiada uprawnienia wymagane do wykonania operacji.
 - Przygotowano dokument, kopię, wersję lub załącznik odpowiedni dla scenariusza.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja „Edycja dokumentu z listy stanowiska” jest dostępna zgodnie z uprawnieniami i stanem dokumentu.
-- System wykonuje lub blokuje operację zgodnie z celem testu.
-- Końcowy stan dokumentu, kopii, wersji lub załącznika jest zgodny z wykonanym działaniem.
-- Dane nieobjęte operacją pozostają spójne.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję związaną z operacją „Edycja dokumentu z listy stanowiska”. | System udostępnia właściwy widok lub formularz. |
-| 2 | Wskazać dokument, wersję, kopię lub załącznik wymagany w scenariuszu. | Właściwy obiekt zostaje wybrany. |
-| 3 | Wykonać operację zgodnie z formularzem. | System przetwarza operację bez błędu technicznego. |
-| 4 | Ponownie otworzyć dokument, historię, kopię lub listę właściwą dla scenariusza. | Można zweryfikować końcowy stan danych. |
+| 1 | Zaloguj się do EZD i otwórz listę dokumentów na stanowisku. | System wyświetla dokumenty dostępne użytkownikowi. |
+| 2 | Wybierz dokument dostępny do edycji. | Dokument jest wskazany. |
+| 3 | Uruchom edycję i zmień dopuszczalną wartość. | Nowa wartość jest widoczna. |
+| 4 | Zapisz zmianę. | System aktualizuje dokument. |
+| 5 | Otwórz dokument z listy ponownie. | Zmiana jest zachowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Edycja dokumentu z listy stanowiska” kończy się rezultatem zgodnym z celem testu.
+- Dane dokumentu, załączniki, wersje i historia są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy podglądem, formularzem edycji i listą dokumentów.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu dokumentu.

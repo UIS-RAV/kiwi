@@ -1,0 +1,39 @@
+ID: REJ-027
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pojedynczego dokumentu z rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie usunięcia pojedynczego wpisu z rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Usunięcie dokumentu z rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje wpis możliwy do usunięcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr zawierający kilka wpisów. | Lista wpisów jest widoczna. |
+| 2 | Zanotuj numer wpisu przeznaczonego do usunięcia. | Wpis jest jednoznacznie zidentyfikowany. |
+| 3 | Uruchom akcję usunięcia dla wpisu. | System żąda potwierdzenia. |
+| 4 | Potwierdź usunięcie. | System usuwa wpis. |
+| 5 | Odśwież listę. | Usunięty wpis nie jest widoczny. |
+| 6 | Zweryfikuj pozostałe wpisy. | Inne dokumenty nadal znajdują się w rejestrze. |
+| 7 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wybrany dokument zostaje usunięty z rejestru bez usunięcia innych wpisów.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

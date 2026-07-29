@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: podpisanie dokumentu i wielu załączników podpisem kwalifikowanym - eca ng.
+Zweryfikowanie, że funkcja „Podpisanie dokumentu i wielu załączników Podpisem Kwalifikowanym - ECA NG” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -26,13 +26,18 @@ Akceptacja i podpis — Podpisywanie dokumentów i załączników
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument zawierający wiele załączników. | System wyświetla listę załączników. |
-| 2 | Uruchomić podpis kwalifikowany i zaznaczyć dokument oraz wiele załączników. | Możliwe jest wybranie wielu elementów. |
-| 3 | Wykonać podpis poprawnym certyfikatem. | Operacja kończy się poprawnie. |
-| 4 | Sprawdzić podpisy wszystkich zaznaczonych elementów. | Dokument i wszystkie wybrane załączniki posiadają prawidłowy podpis. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do podpisania. | Dokument oraz wymagane załączniki są dostępne w wersji przeznaczonej do podpisu. |
+| 2 | Uruchom funkcję podpisania lub akceptacji z podpisem wskazaną w scenariuszu. | System wyświetla dostępne metody podpisu i elementy możliwe do objęcia operacją. |
+| 3 | Wybierz podpis kwalifikowany realizowany przez eCA NG. | System uruchamia integrację z eCA NG. |
+| 4 | Potwierdź zakres podpisu i rozpocznij operację. | Dokument zostaje przekazany do komponentu podpisującego. |
+| 5 | Wykonaj czynności wymagane przez komponent podpisujący. | Komponent zwraca wynik operacji do EZD. |
+| 6 | Otwórz dokument po zakończeniu operacji. | Dokument ma status podpisany, a informacja o podpisie jest dostępna. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 8 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Podpisanie dokumentu i wielu załączników Podpisem Kwalifikowanym - ECA NG” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Podpisanie dokumentu i wielu załączników Podpisem Kwalifikowanym - ECA NG” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

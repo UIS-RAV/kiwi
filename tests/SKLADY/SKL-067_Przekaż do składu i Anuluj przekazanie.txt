@@ -1,0 +1,42 @@
+ID: SKL-067
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Przekaż do składu i Anuluj przekazanie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pełnego przebiegu przekazania i anulowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.5.1 Przesyłka przychodząca – Podgląd – Przekaż do składu; 2.5.2 Anuluj przekazanie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz dopuszczoną przesyłkę bez składu i wybierz Przekaż do składu. | Wyświetla się okno z nazwą przesyłki. |
+| 2 | Potwierdź Przekaż do składu. | Status zmienia się na w trakcie przekazania. |
+| 3 | Sprawdź obie zakładki składów. | Przesyłka jest widoczna bez jednoznacznego składu i pudła. |
+| 4 | Sprawdź historię i powiadomienie operatora. | Widoczny jest wpis Przekazano do składu chronologicznego i powiadomienie z linkiem. |
+| 5 | Wróć do podglądu i wybierz Anuluj przekazanie. | Wyświetla się Anulowanie przekazania. |
+| 6 | Potwierdź Anuluj przekazanie. | Udostępnienie zostaje usunięte. |
+| 7 | Sprawdź historię i powiadomienie. | Widoczny jest wpis Anulowano przekazanie do składu chronologicznego i powiadomienie dla operatorów. |
+| 8 | Otwórz właściwy skład chronologiczny i wyszukaj przekazany element. | Element znajduje się we właściwym składzie i posiada poprawny status. |
+| 9 | Sprawdź historię elementu lub przesyłki. | Historia zawiera informację o dodaniu albo przekazaniu do składu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Przekaż do składu ustawia w trakcie przekazania, udostępnia na obu zakładkach, zapisuje historię i wysyła powiadomienie.
+- Anuluj przekazanie usuwa udostępnienie, zapisuje historię i wysyła powiadomienie.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

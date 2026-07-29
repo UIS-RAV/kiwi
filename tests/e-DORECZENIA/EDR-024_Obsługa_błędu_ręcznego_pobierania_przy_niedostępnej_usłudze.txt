@@ -1,0 +1,38 @@
+ID: EDR-024
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Obsługa błędu ręcznego pobierania przy niedostępnej usłudze </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Obsługa błędu ręcznego pobierania przy niedostępnej usłudze” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dokumentów z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Środowisko umożliwia zasymulowanie niedostępności usługi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Uruchom funkcję opisaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System realizuje operację albo prawidłowo ją blokuje. |
+| 4 | Zweryfikuj rezultat w module e-Doręczenia. | Stan wiadomości, konfiguracji lub przesyłki jest zgodny ze scenariuszem. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Obsługa błędu ręcznego pobierania przy niedostępnej usłudze”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

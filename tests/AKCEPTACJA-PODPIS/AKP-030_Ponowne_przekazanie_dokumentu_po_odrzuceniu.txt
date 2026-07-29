@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: ponowne przekazanie dokumentu po odrzuceniu.
+Zweryfikowanie, że funkcja „Ponowne przekazanie dokumentu po odrzuceniu” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -23,13 +23,15 @@ Akceptacja i podpis — Obsługa akceptacji dokumentu
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument wcześniej odrzucony. | Odrzucony dokument jest dostępny do dalszej obsługi. |
-| 2 | Wprowadzić wymaganą poprawkę lub przygotować dokument do ponownej akceptacji. | System pozwala przygotować dokument do ponownego przekazania. |
-| 3 | Ponownie przekazać dokument do akceptacji. | Nowy etap akceptacji zostaje uruchomiony. |
-| 4 | Sprawdzić status, odbiorcę i historię procesu. | Status i historia wskazują ponowne przekazanie dokumentu. |
+| 1 | Zaloguj się do EZD i otwórz obszar funkcjonalny wymagany w scenariuszu. | System udostępnia funkcję objętą testem. |
+| 2 | Wykonaj operację wskazaną w tytule testu, używając przygotowanych danych. | System przyjmuje dane i realizuje właściwą funkcję. |
+| 3 | Zweryfikuj bezpośredni rezultat operacji. | Rezultat odpowiada zakresowi scenariusza. |
+| 4 | Odśwież lub ponownie otwórz dokument albo konfigurację. | Stan po operacji został zachowany. |
+| 5 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Ponowne przekazanie dokumentu po odrzuceniu” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Ponowne przekazanie dokumentu po odrzuceniu” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

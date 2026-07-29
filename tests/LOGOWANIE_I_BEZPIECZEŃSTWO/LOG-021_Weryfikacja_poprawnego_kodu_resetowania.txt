@@ -1,7 +1,7 @@
 ID: LOG-021
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
 - Znane są nazwa użytkownika i aktualny kod.
 - Otwarty jest tryb „Konto zablokowane”.
 
-<h2> Kryteria akceptacji </h2>
-
-- System uznaje poprawny kod.
-- Po wybraniu „Sprawdź kod” system przechodzi do formularza nadania nowego hasła.
-- Kod jest stosowany do właściwego użytkownika.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -32,3 +26,13 @@ Rozpoczęcie pracy z systemem → Zmień hasło → Konto zablokowane
 | 2 | W polu „Kod zmiany hasła” wprowadzić kod wygenerowany przez administratora. | Kod zostaje wprowadzony. |
 | 3 | Wybrać przycisk „Sprawdź kod”. | System poprawnie weryfikuje kod. |
 | 4 | Zweryfikować wyświetlony widok. | System prezentuje formularz nadania nowego hasła dla właściwego użytkownika. |
+| 5 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 6 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System uznaje poprawny kod.
+- Po wybraniu „Sprawdź kod” system przechodzi do formularza nadania nowego hasła.
+- Kod jest stosowany do właściwego użytkownika.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

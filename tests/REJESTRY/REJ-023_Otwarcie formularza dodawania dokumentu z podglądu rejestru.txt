@@ -1,0 +1,40 @@
+ID: REJ-023
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Otwarcie formularza dodawania dokumentu z podglądu rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie otwarcia formularza wygenerowanego na podstawie przypisanego szablonu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Dodanie dokumentu do utworzonego rejestru z podglądu rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr z szablonem zawierającym pole Komentarz i automatyczne pole Tytuł dokumentu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Z bocznego menu otwórz Rejestry. | Widoczny jest obszar rejestrów. |
+| 2 | Kliknij Wszystkie. | System wyświetla dostępne rejestry. |
+| 3 | Wybierz właściwy rejestr. | Otwarty zostaje podgląd rejestru. |
+| 4 | Kliknij Dodaj dokument. | System otwiera formularz dodawania dokumentu. |
+| 5 | Zweryfikuj pole Komentarz. | Pole standardowe jest dostępne do ręcznego uzupełnienia. |
+| 6 | Zweryfikuj pole Tytuł dokumentu. | Pole automatyczne jest widoczne zgodnie z szablonem. |
+| 7 | Zamknij formularz bez zapisu. | Nie powstaje nowy wpis. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Formularz dodawania dokumentu zawiera pola wynikające z szablonu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

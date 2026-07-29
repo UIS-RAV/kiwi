@@ -1,7 +1,7 @@
 ID: LOG-036
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Bezpieczeństwo / Dobra praktyka
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -19,13 +19,6 @@ Test jakościowy poza bezpośrednim zakresem instrukcji; powiązany z funkcją w
 - Zapamiętano adres URL tego widoku.
 - Test jest świadomie oznaczony jako dobra praktyka bezpieczeństwa, a nie literalne wymaganie instrukcji.
 
-<h2> Kryteria akceptacji </h2>
-
-- Po wylogowaniu chroniony widok nie jest dostępny.
-- Użycie przycisku Wstecz nie przywraca aktywnego dostępu do danych.
-- Bezpośrednie użycie zapamiętanego adresu wymaga ponownego uwierzytelnienia.
-- Nie jest tworzona nowa sesja bez podania danych logowania.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -35,3 +28,14 @@ Test jakościowy poza bezpośrednim zakresem instrukcji; powiązany z funkcją w
 | 3 | Użyć przycisku Wstecz przeglądarki. | System nie przywraca aktywnego dostępu do chronionych funkcji. |
 | 4 | Wprowadzić bezpośrednio zapamiętany adres URL. | System wymaga ponownego zalogowania lub odmawia dostępu. |
 | 5 | Zweryfikować brak dostępu do danych chronionego widoku. | Dane nie są dostępne bez ponownego uwierzytelnienia. |
+| 6 | Użyć przycisku Wstecz lub ponownie wpisać adres ostatnio otwartego chronionego widoku. | System nie udostępnia chronionej zawartości bez ponownego uwierzytelnienia. |
+| 7 | Otworzyć system w nowej karcie tej samej przeglądarki. | Stan sesji jest zgodny z wynikiem scenariusza i nie zapewnia nieuprawnionego dostępu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wylogowaniu chroniony widok nie jest dostępny.
+- Użycie przycisku Wstecz nie przywraca aktywnego dostępu do danych.
+- Bezpośrednie użycie zapamiętanego adresu wymaga ponownego uwierzytelnienia.
+- Nie jest tworzona nowa sesja bez podania danych logowania.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

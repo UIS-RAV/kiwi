@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wyświetlenie informacji o podpisie wiadomości.
+Zweryfikowanie, że funkcja „Wyświetlenie informacji o podpisie wiadomości” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dziennik korespondencji wychodzącej — Załączniki i podpisy wiadomości
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Wyświetlenie informacji o podpisie wiadomości”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Wyświetlenie informacji o podpisie wiadomości” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD. | Użytkownik uzyskuje dostęp do wymaganej funkcji. |
+| 2 | Otwórz szczegóły podpisu wiadomości. | System prezentuje dane podpisu. |
+| 3 | Zweryfikuj osobę podpisującą, datę i typ podpisu. | Dane odpowiadają podpisowi wiadomości. |
+| 4 | Porównaj z dokumentem podpisanym. | Podpis jest powiązany z właściwą wiadomością. |
+| 5 | Odśwież widok lub otwórz szczegóły ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wyświetlenie informacji o podpisie wiadomości” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Wyświetlenie informacji o podpisie wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Dokument, przesyłka, adresat, sposób wysyłki i status są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Dane na liście DKW, w podglądzie i w szczegółach wysyłki pozostają spójne.
+- Rezultat pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

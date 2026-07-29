@@ -1,0 +1,39 @@
+ID: EPU-009
+Moduł: ePUAP
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Negatywny test konfiguracji i podgląd treści błędu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Negatywny test konfiguracji i podgląd treści błędu” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Przeprowadzenie testu poprawności konfiguracji ePUAP w systemie
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Połączenie lub skrytka zawiera dane powodujące niepowodzenie testu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom test konfiguracji przy wskazanej skrytce. | System wykonuje test. |
+| 2 | Zweryfikuj rezultat. | Wyświetlany jest negatywny wynik testu. |
+| 3 | Najedź na symbol „i”. | System wyświetla treść błędu. |
+| 4 | Otwórz szczegóły błędu testu. | System prezentuje czytelną przyczynę błędu. |
+| 5 | Zweryfikuj aktywną konfigurację po nieudanym teście. | Błędne dane nie zastępują poprawnej konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Negatywny test konfiguracji i podgląd treści błędu”.
+- Niepoprawna lub niekompletna operacja nie powoduje zapisania błędnej konfiguracji ani zmiany dokumentów.
+- Użytkownik otrzymuje jednoznaczny komunikat zawierający przyczynę błędu lub wskazanie brakujących danych.
+- Dotychczasowa konfiguracja, dokumenty, załączniki i statusy pozostają spójne po ponownym odczycie.

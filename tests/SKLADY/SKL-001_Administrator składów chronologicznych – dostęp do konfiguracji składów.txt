@@ -1,0 +1,39 @@
+ID: SKL-001
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Administrator składów chronologicznych – dostęp do konfiguracji składów </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu roli Administrator składów chronologicznych do konfiguracji lokalizacji, składów i pudeł.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się jako Administrator składów chronologicznych. | Logowanie kończy się powodzeniem. |
+| 2 | Otwórz ORGANIZACJA -> Składy chronologiczne (zarządzanie). | Wyświetla się widok konfiguracji. |
+| 3 | Otwórz kolejno Lokalizacje, Składy chronologiczne i Pudła. | Każda zakładka jest dostępna i zawiera właściwą listę. |
+| 4 | Sprawdź funkcje dodawania i menu podręczne. | Dostępne są funkcje tworzenia i edycji, a usuwanie zależy od powiązań. |
+| 5 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 6 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Dostępne jest menu ORGANIZACJA -> Składy chronologiczne (zarządzanie).
+- Użytkownik może przeglądać i zarządzać lokalizacjami, składami chronologicznymi i pudłami zgodnie z zależnościami.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

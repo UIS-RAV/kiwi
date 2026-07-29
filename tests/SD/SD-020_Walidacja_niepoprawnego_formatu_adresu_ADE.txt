@@ -1,0 +1,36 @@
+ID: SD-020
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja niepoprawnego formatu adresu ADE </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Walidacja niepoprawnego formatu adresu ADE.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wprowadź wartość niespełniającą formatu ADE. | System oznacza pole jako niepoprawne. |
+| 2 | Spróbuj zapisać konfigurację. | Niepoprawna wartość nie zostaje aktywowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

@@ -1,0 +1,39 @@
+ID: FLT-034
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Zachowanie filtrowania podczas paginacji </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zachowanie filtrowania podczas paginacji” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie i stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Przefiltrowany wynik obejmuje co najmniej dwie strony.
+- Znane są kryteria aktywnego filtra.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować filtr dający wynik wielostronicowy. | Filtr jest aktywny. |
+| 2 | Zweryfikować rekordy pierwszej strony. | Każdy spełnia kryterium. |
+| 3 | Przejść na następną stronę. | Wyświetla się kolejna strona wyników. |
+| 4 | Zweryfikować filtr i rekordy. | Filtr nadal jest aktywny, a wszystkie rekordy go spełniają. |
+| 5 | Wrócić na poprzednią stronę. | Filtr nadal pozostaje aktywny. |
+| 6 | Przejść na następną i poprzednią stronę. | Filtry pozostają aktywne na każdej stronie. |
+| 7 | Zweryfikować wszystkie widoczne rekordy. | Każdy rekord na każdej stronie spełnia zastosowane kryteria. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zachowanie filtrowania podczas paginacji” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

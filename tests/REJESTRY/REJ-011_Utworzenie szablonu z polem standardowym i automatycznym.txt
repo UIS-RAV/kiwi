@@ -1,0 +1,43 @@
+ID: REJ-011
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Utworzenie szablonu z polem standardowym i automatycznym </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie utworzenia szablonu wykorzystywanego przez rejestr.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie szablonu
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje uprawniony administrator.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja/Rejestry i otwórz zakładkę Szablony. | Widoczna jest lista szablonów. |
+| 2 | Kliknij Dodaj szablon. | System otwiera formularz tworzenia szablonu. |
+| 3 | Uzupełnij nazwę i opis szablonu. | Dane podstawowe są widoczne. |
+| 4 | Dodaj pole standardowe. | Pole zostaje dodane do szablonu. |
+| 5 | Nadaj polu nazwę Komentarz. | Nazwa pola jest widoczna. |
+| 6 | Dodaj pole automatyczne. | Pole automatyczne zostaje dodane. |
+| 7 | Wybierz wartość Tytuł dokumentu dla pola automatycznego. | Pole jest powiązane z tytułem dokumentu. |
+| 8 | Ustal kolejność pól. | Formularz prezentuje docelowy układ. |
+| 9 | Zapisz szablon. | System zapisuje szablon. |
+| 10 | Otwórz szablon ponownie. | Oba pola i ich kolejność zostały zachowane. |
+| 11 | Odśwież listę szablonów i ponownie wyszukaj testowany szablon. | Szablon pozostaje widoczny w stanie zgodnym z wynikiem scenariusza. |
+| 12 | Otwórz szczegóły szablonu albo formularz edycji, jeżeli operacja jest dostępna. | Pola standardowe, automatyczne i wymagane ustawienia są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Szablon zostaje zapisany i zawiera pole standardowe Komentarz oraz pole automatyczne Tytuł dokumentu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

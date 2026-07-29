@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: podpis dokumentu metodą wewnętrzną (pades) eca ng.
+Zweryfikowanie, że funkcja „Podpis dokumentu metodą wewnętrzną (PAdES) ECA NG” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -25,13 +25,19 @@ Akceptacja i podpis — Podpisywanie dokumentów i załączników
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument PDF przeznaczony do podpisania. | System udostępnia operację podpisania dokumentu PDF. |
-| 2 | Wybrać podpis kwalifikowany oraz metodę wewnętrzną PAdES. | Wybrana zostaje metoda PAdES. |
-| 3 | Wskazać certyfikat, podać poprawny PIN i zatwierdzić podpis. | Podpis zostaje poprawnie osadzony w dokumencie. |
-| 4 | Sprawdzić dokument i informacje o podpisie. | EZD przechowuje podpisany dokument i prezentuje dane podpisu. |
+| 1 | Zaloguj się do EZD i otwórz dokument przygotowany do podpisania. | Dokument oraz wymagane załączniki są dostępne w wersji przeznaczonej do podpisu. |
+| 2 | Uruchom funkcję podpisania lub akceptacji z podpisem wskazaną w scenariuszu. | System wyświetla dostępne metody podpisu i elementy możliwe do objęcia operacją. |
+| 3 | Wybierz podpis kwalifikowany realizowany przez eCA NG. | System uruchamia integrację z eCA NG. |
+| 4 | Wybierz podpis wewnętrzny PAdES. | System wskazuje podpis osadzony w dokumencie PDF. |
+| 5 | Potwierdź zakres podpisu i rozpocznij operację. | Dokument zostaje przekazany do komponentu podpisującego. |
+| 6 | Wykonaj czynności wymagane przez komponent podpisujący. | Komponent zwraca wynik operacji do EZD. |
+| 7 | Otwórz dokument po zakończeniu operacji. | Dokument ma status podpisany, a informacja o podpisie jest dostępna. |
+| 8 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 9 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Podpis dokumentu metodą wewnętrzną (PAdES) ECA NG” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Podpis dokumentu metodą wewnętrzną (PAdES) ECA NG” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

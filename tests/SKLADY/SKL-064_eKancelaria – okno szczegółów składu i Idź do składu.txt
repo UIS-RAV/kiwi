@@ -1,0 +1,40 @@
+ID: SKL-064
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> eKancelaria – okno szczegółów składu i Idź do składu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja okna otwieranego z ikony Składy.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.4 eKancelaria - przesyłki przychodzące
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Kliknij ikonę Składy. | Wyświetla się okno {LICZBA DZIENNIKA ID_PRZESYŁKI} w składzie. |
+| 2 | Sprawdź dane składu i pudła. | Widoczne są wszystkie pola opisane w dokumentacji. |
+| 3 | Wybierz X i Zamknij w osobnych próbach. | Oba zamykają okno. |
+| 4 | Jako użytkownik z dostępem wybierz Idź do składu. | Następuje przekierowanie do właściwego składu. |
+| 5 | Jako użytkownik bez dostępu sprawdź przycisk. | Idź do składu nie jest dostępne. |
+| 6 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 7 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Okno zawiera Status przesyłki oraz dane składu i pudła.
+- Idź do składu jest dostępne tylko dla użytkownika z dostępem.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

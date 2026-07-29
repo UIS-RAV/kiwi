@@ -1,0 +1,39 @@
+ID: REJ-012
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja wymaganych danych szablonu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że niekompletny szablon nie zostaje zapisany.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie szablonu
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administratora.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz dodawania szablonu. | Formularz jest widoczny. |
+| 2 | Pozostaw wymagane pole nazwy puste. | Formularz jest niekompletny. |
+| 3 | Dodaj przykładowe pole do szablonu. | Konfiguracja pól jest dostępna. |
+| 4 | Kliknij zapis. | System blokuje operację. |
+| 5 | Zweryfikuj oznaczenie brakującego pola. | Użytkownik otrzymuje informację o wymaganej wartości. |
+| 6 | Powróć do listy. | Nie powstał szablon bez nazwy. |
+| 7 | Odśwież listę szablonów i ponownie wyszukaj testowany szablon. | Szablon pozostaje widoczny w stanie zgodnym z wynikiem scenariusza. |
+| 8 | Otwórz szczegóły szablonu albo formularz edycji, jeżeli operacja jest dostępna. | Pola standardowe, automatyczne i wymagane ustawienia są zgodne z zapisanym stanem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System blokuje zapis brakujących wymaganych danych.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

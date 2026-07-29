@@ -1,0 +1,39 @@
+ID: EDR-022
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Automatyczne pobranie nowych wiadomości przez synchronizację </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Automatyczne pobranie nowych wiadomości przez synchronizację” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dokumentów z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Automatyczna synchronizacja jest aktywna.
+- W skrzynce znajduje się nowa wiadomość.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Przygotuj nową wiadomość w usłudze e-Doręczeń. | Wiadomość oczekuje na pobranie. |
+| 3 | Poczekaj na wykonanie harmonogramu synchronizacji. | Zadanie zostaje uruchomione automatycznie. |
+| 4 | Zweryfikuj moduł e-Doręczenia. | Wiadomość została pobrana bez działania użytkownika. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Automatyczne pobranie nowych wiadomości przez synchronizację” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

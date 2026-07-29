@@ -1,7 +1,7 @@
 ID: LOG-035
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Bezpieczeństwo
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Podstawowy
 
 <h2> Cel testu </h2>
@@ -17,12 +17,6 @@ Ogólna budowa systemu; Personalizacja systemu eZD
 - Użytkownik jest poprawnie zalogowany.
 - Aktywna jest sesja użytkownika.
 
-<h2> Kryteria akceptacji </h2>
-
-- Funkcja wylogowania jest dostępna.
-- Po jej użyciu system kończy dostęp użytkownika do chronionych funkcji.
-- System wyświetla ekran logowania lub inny widok niezalogowany.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -31,3 +25,13 @@ Ogólna budowa systemu; Personalizacja systemu eZD
 | 2 | Wybrać funkcję wylogowania. | System kończy bieżącą pracę użytkownika. |
 | 3 | Zweryfikować wyświetlony widok. | Wyświetlony jest ekran logowania lub widok dla niezalogowanego użytkownika. |
 | 4 | Spróbować użyć funkcji wymagającej zalogowania. | Funkcja nie jest dostępna bez ponownego uwierzytelnienia. |
+| 5 | Użyć przycisku Wstecz lub ponownie wpisać adres ostatnio otwartego chronionego widoku. | System nie udostępnia chronionej zawartości bez ponownego uwierzytelnienia. |
+| 6 | Otworzyć system w nowej karcie tej samej przeglądarki. | Stan sesji jest zgodny z wynikiem scenariusza i nie zapewnia nieuprawnionego dostępu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja wylogowania jest dostępna.
+- Po jej użyciu system kończy dostęp użytkownika do chronionych funkcji.
+- System wyświetla ekran logowania lub inny widok niezalogowany.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

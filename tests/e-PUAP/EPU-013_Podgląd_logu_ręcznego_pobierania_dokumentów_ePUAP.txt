@@ -1,0 +1,39 @@
+ID: EPU-013
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Podgląd logu ręcznego pobierania dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Podgląd logu ręcznego pobierania dokumentów ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Log ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Użytkownik wykonał operację „Pobierz dokumenty”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → ePUAP → Log ePUAP. | Wyświetla się lista zdarzeń ePUAP. |
+| 2 | Odszukaj zdarzenie odpowiadające ręcznemu pobraniu dokumentów. | Log zawiera zdarzenie zainicjowane przez użytkownika. |
+| 3 | Sprawdź informacje o pobieraniu wiadomości i załączników. | Dostępne są dane pozwalające ocenić wykonanie operacji. |
+| 4 | Porównaj czas, skrytkę i wynik operacji z wykonanym pobraniem. | Wpis logu odpowiada rzeczywistemu zadaniu. |
+| 5 | Odśwież log. | Wpis pozostaje dostępny i nie jest duplikowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Podgląd logu ręcznego pobierania dokumentów ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

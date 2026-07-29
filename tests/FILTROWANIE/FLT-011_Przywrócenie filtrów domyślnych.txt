@@ -1,0 +1,39 @@
+ID: FLT-011
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Przywrócenie filtrów domyślnych </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Przywrócenie filtrów domyślnych” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Zakładka posiada co najmniej jeden filtr domyślny.
+- Użytkownik zmienił wartości filtrów lub dodał własne kryteria.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do zakładki z filtrami domyślnymi. | Filtry domyślne są aktywne. |
+| 2 | Zmienić filtry i wykonać wyszukiwanie. | Lista uwzględnia ustawienia użytkownika. |
+| 3 | Wybrać „Przywróć domyślne”. | System przywraca wartości domyślne. |
+| 4 | Zweryfikować pasek filtrów i wyniki. | Widoczne są filtry domyślne, a lista odpowiada ich wartościom. |
+| 5 | Porównać ustawienia formularza z wartościami domyślnymi. | Pola zawierają wartości domyślne. |
+| 6 | Zweryfikować wyniki listy. | Lista odpowiada filtrom domyślnym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przywrócenie filtrów domyślnych” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

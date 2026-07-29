@@ -1,0 +1,41 @@
+ID: SKL-004
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Lokalizacje – tabela, sortowanie, filtrowanie i odświeżanie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja widoku Lokalizacje, kolumn, sortowania, filtrowania i odświeżania.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1 Zakładka Lokalizacje
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz ORGANIZACJA -> Składy chronologiczne (zarządzanie) -> Lokalizacje. | Wyświetla się właściwy widok. |
+| 2 | Sprawdź nagłówki tabeli. | Widoczne są kolumny: Lp., Nazwa, Adres, menu podręczne. |
+| 3 | Sprawdź sortowanie dostępnych kolumn. | Kolejność danych zmienia się zgodnie z wybranym sortowaniem. |
+| 4 | Sprawdź filtrowanie. | Lista zawęża się zgodnie z filtrami: Nazwa, Adres. |
+| 5 | Użyj odśwież. | Lista zostaje ponownie pobrana. |
+| 6 | Odśwież listę lokalizacji i ponownie wyszukaj sprawdzaną pozycję. | Stan lokalizacji jest zgodny z wykonaną operacją i pozostaje zachowany. |
+| 7 | Otwórz szczegóły lokalizacji albo powiązanych składów. | Powiązania i dane lokalizacji są spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Tabela zawiera kolumny: Lp., Nazwa, Adres, menu podręczne.
+- Sortowanie i filtrowanie są dostępne zgodnie z dokumentacją: Nazwa, Adres.
+- Funkcja odśwież ponownie pobiera listę.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

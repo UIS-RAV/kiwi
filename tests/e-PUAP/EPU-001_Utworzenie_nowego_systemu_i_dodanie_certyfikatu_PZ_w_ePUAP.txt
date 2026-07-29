@@ -1,0 +1,38 @@
+ID: EPU-001
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Utworzenie nowego systemu i dodanie certyfikatu PZ w ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Utworzenie nowego systemu i dodanie certyfikatu PZ w ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - konfiguracja / Konfiguracja na platformie ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia administracyjne na platformie ePUAP.
+- Dostępny jest certyfikat przeznaczony do integracji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do platformy ePUAP i przejdź do konfiguracji systemów. | Wyświetla się lista skonfigurowanych systemów. |
+| 2 | Utwórz nowy system zgodnie z instrukcją i wskaż dane identyfikujące integrację z EZD. | Nowy system zostaje utworzony. |
+| 3 | Dodaj certyfikat PZ do utworzonego systemu. | Certyfikat zostaje zapisany i przypisany do systemu. |
+| 4 | Zweryfikuj szczegóły utworzonego systemu. | System oraz certyfikat są widoczne w konfiguracji ePUAP. |
+| 5 | Zweryfikuj nowy system na liście systemów ePUAP. | System integracyjny jest widoczny z właściwymi danymi. |
+| 6 | Sprawdź przypisanie certyfikatu PZ do utworzonego systemu. | Certyfikat jest aktywny i powiązany z właściwym systemem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Utworzenie nowego systemu i dodanie certyfikatu PZ w ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

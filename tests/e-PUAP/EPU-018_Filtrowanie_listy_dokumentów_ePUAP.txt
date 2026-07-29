@@ -1,0 +1,40 @@
+ID: EPU-018
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Filtrowanie listy dokumentów ePUAP </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Filtrowanie listy dokumentów ePUAP” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Filtrowanie dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu ePUAP.
+- Połączenie i skrytka ePUAP są poprawnie skonfigurowane oraz mają pozytywny wynik testu.
+- Lista zawiera dokumenty o różnych danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę dokumentów ePUAP i uruchom dostępne filtry. | Pola filtrowania stają się dostępne. |
+| 2 | Wprowadź kryterium odpowiadające jednemu lub kilku dokumentom. | Lista prezentuje pozycje spełniające kryterium. |
+| 3 | Wyczyść filtr. | Pełna lista dokumentów zostaje przywrócona. |
+| 4 | Zastosuj co najmniej dwa kryteria filtrowania. | Lista zawiera wyłącznie dokumenty spełniające oba warunki. |
+| 5 | Wyczyść filtry. | Pełna lista dokumentów zostaje przywrócona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Filtrowanie listy dokumentów ePUAP” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

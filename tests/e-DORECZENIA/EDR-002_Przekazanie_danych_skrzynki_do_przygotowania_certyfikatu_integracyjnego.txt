@@ -1,0 +1,39 @@
+ID: EDR-002
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Przekazanie danych skrzynki do przygotowania certyfikatu integracyjnego </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Przekazanie danych skrzynki do przygotowania certyfikatu integracyjnego” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Przygotowanie Urzędu do obsługi adresu i skrzynki e-Doręczeń oraz integracja z systemem eZD
+
+<h2> Warunki wstępne </h2>
+
+- Adres i skrzynka e-Doręczeń zostały utworzone.
+- Dostępne są dane skrzynki wymagane przez instrukcję.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Odczytaj dane identyfikacyjne skrzynki i systemu integracyjnego. | Dane są kompletne. |
+| 3 | Przekaż dane do przygotowania certyfikatu integracyjnego. | Dane zostają przekazane właściwemu podmiotowi. |
+| 4 | Zweryfikuj otrzymanie danych lub potwierdzenie realizacji. | Proces przygotowania certyfikatu może być kontynuowany. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przekazanie danych skrzynki do przygotowania certyfikatu integracyjnego” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

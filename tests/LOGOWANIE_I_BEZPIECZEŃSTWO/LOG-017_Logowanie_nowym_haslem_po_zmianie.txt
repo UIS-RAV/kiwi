@@ -1,7 +1,7 @@
 ID: LOG-017
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Regresyjny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
 - Konto jest aktywne i niezablokowane.
 - Użytkownik nie posiada aktywnej sesji.
 
-<h2> Kryteria akceptacji </h2>
-
-- Nowe hasło umożliwia poprawne zalogowanie.
-- System wyświetla widok dostępny po zalogowaniu.
-- Użytkownik uzyskuje dostęp zgodny z posiadanymi uprawnieniami.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu → Zmień hasło
 | 2 | Wprowadzić nazwę użytkownika oraz nowe hasło. | Dane zostają wprowadzone. |
 | 3 | Wybrać „Zaloguj się”. | System poprawnie uwierzytelnia użytkownika. |
 | 4 | Zweryfikować widok po zalogowaniu. | Dostępne funkcje odpowiadają uprawnieniom użytkownika. |
+| 5 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 6 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nowe hasło umożliwia poprawne zalogowanie.
+- System wyświetla widok dostępny po zalogowaniu.
+- Użytkownik uzyskuje dostęp zgodny z posiadanymi uprawnieniami.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

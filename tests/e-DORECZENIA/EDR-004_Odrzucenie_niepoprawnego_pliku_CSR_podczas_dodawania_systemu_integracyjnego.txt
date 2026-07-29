@@ -1,0 +1,40 @@
+ID: EDR-004
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Odrzucenie niepoprawnego pliku CSR podczas dodawania systemu integracyjnego </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Odrzucenie niepoprawnego pliku CSR podczas dodawania systemu integracyjnego” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Przygotowanie Urzędu do obsługi adresu i skrzynki e-Doręczeń oraz integracja z systemem eZD
+
+<h2> Warunki wstępne </h2>
+
+- Skrzynka e-Doręczeń jest aktywna.
+- Dostępny jest plik, który nie jest poprawnym CSR.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wskaż niepoprawny lub uszkodzony plik CSR. | Plik jest wybrany do operacji. |
+| 3 | Spróbuj zatwierdzić dodanie lub wymianę certyfikatu. | System odrzuca CSR i prezentuje komunikat walidacyjny. |
+| 4 | Zweryfikuj dotychczasową konfigurację. | Niepoprawna próba nie zmienia aktywnego systemu ani certyfikatu. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Odrzucenie niepoprawnego pliku CSR podczas dodawania systemu integracyjnego”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

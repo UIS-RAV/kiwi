@@ -1,0 +1,40 @@
+ID: SKL-005
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Dodaj lokalizację – poprawne utworzenie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja utworzenia lokalizacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1.1 Dodaj lokalizację
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Lokalizacje i wybierz Dodaj lokalizację. | Wyświetla się Tworzenie lokalizacji. |
+| 2 | Wprowadź Nazwa do 256 znaków. | Wartość zostaje przyjęta. |
+| 3 | Wprowadź Adres do 512 znaków. | Wartość zostaje przyjęta. |
+| 4 | Wybierz Utwórz. | Lokalizacja zostaje utworzona, okno zamknięte. |
+| 5 | Wyszukaj lokalizację. | Jest widoczna z poprawnymi danymi. |
+| 6 | Odśwież listę lokalizacji i ponownie wyszukaj sprawdzaną pozycję. | Stan lokalizacji jest zgodny z wykonaną operacją i pozostaje zachowany. |
+| 7 | Otwórz szczegóły lokalizacji albo powiązanych składów. | Powiązania i dane lokalizacji są spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Okno Tworzenie lokalizacji zawiera pola Nazwa i Adres.
+- Utwórz zapisuje lokalizację i odświeża listę.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

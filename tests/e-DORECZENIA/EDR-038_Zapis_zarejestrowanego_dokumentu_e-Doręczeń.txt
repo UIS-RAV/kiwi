@@ -1,0 +1,40 @@
+ID: EDR-038
+Moduł: e-DORĘCZENIA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapis zarejestrowanego dokumentu e-Doręczeń </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Zapis zarejestrowanego dokumentu e-Doręczeń” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Rejestrowanie dokumentu z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Formularz rejestracji jest otwarty.
+- Wymagane dane są poprawne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz odebraną wiadomość e-Doręczeń. | Wiadomość jest dostępna do rejestracji. |
+| 2 | Otwórz formularz rejestracji i uzupełnij wymagane dane. | Formularz jest kompletny. |
+| 3 | Zapisz dokument. | System tworzy dokument w EZD. |
+| 4 | Otwórz zarejestrowany dokument. | Dokument zawiera dane i załączniki wiadomości. |
+| 5 | Sprawdź powiązanie z wiadomością e-Doręczeń. | Powiązanie jest zachowane. |
+| 6 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 8 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Zapis zarejestrowanego dokumentu e-Doręczeń” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

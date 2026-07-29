@@ -1,0 +1,40 @@
+ID: FLT-017
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Graniczny
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Uwzględnienie dat granicznych zakresu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Uwzględnienie dat granicznych zakresu” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rekord z datą równą dacie początkowej.
+- Istnieje rekord z datą równą dacie końcowej.
+- Istnieją rekordy tuż poza zakresem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Ustawić zakres obejmujący przygotowane daty graniczne. | Zakres zostaje ustawiony. |
+| 2 | Wykonać wyszukiwanie. | Lista zostaje przefiltrowana. |
+| 3 | Odszukać rekord z datą początkową. | Rekord jest widoczny. |
+| 4 | Odszukać rekord z datą końcową. | Rekord jest widoczny. |
+| 5 | Zweryfikować rekordy poza zakresem. | Nie są widoczne. |
+| 6 | Zweryfikować rekord z datą równą początkowi zakresu. | Rekord graniczny jest uwzględniony. |
+| 7 | Zweryfikować rekord z datą równą końcowi zakresu. | Rekord graniczny jest uwzględniony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Uwzględnienie dat granicznych zakresu”.
+- Niepoprawne, graniczne albo niedające wyników kryterium nie powoduje błędnego stanu listy.
+- Użytkownik otrzymuje jednoznaczny komunikat albo system prezentuje poprawny stan pusty.
+- Filtry, sortowanie, paginacja i liczba rekordów pozostają spójne po odświeżeniu lub ponownym otwarciu listy.

@@ -1,0 +1,39 @@
+ID: SPR-083
+Moduł: SPRAWA
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Usunięcie sprawy spełniającej warunki usunięcia </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Usunięcie sprawy spełniającej warunki usunięcia” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje dane sprawy, dokumenty, interesantów, znak sprawy, JRWA, uprawnienia, historię i powiązane operacje w module Sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł sprawy — Usuwanie spraw
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- posiada stanowisko i uprawnienia wymagane dla scenariusza.
+- przygotowano dane sprawy, dokumenty, JRWA, użytkowników lub komórki organizacyjne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć funkcję odpowiadającą wymaganiu „Usunięcie sprawy spełniającej warunki usunięcia”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
+| 2 | Wskazać sprawę, dokument, projekt, podteczkę, stanowisko lub parametr wymagany w scenariuszu. | System przyjmuje wskazaną sprawę, dokument, projekt, podteczkę, stanowisko lub parametr. |
+| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
+| 4 | Zweryfikować rezultat w podglądzie sprawy, historii, projekcie, podteczce, nadzorze lub na liście. | Rezultat funkcji „Usunięcie sprawy spełniającej warunki usunięcia” jest zgodny z instrukcją. |
+| 5 | Odświeżyć listę spraw i wyszukać sprawę po znaku. | Stan sprawy odpowiada wykonanej operacji. |
+| 6 | Zweryfikować dokumenty i historię powiązane ze sprawą. | System zachowuje spójność danych i nie pozostawia błędnych powiązań. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Usunięcie sprawy spełniającej warunki usunięcia” kończy się rezultatem zgodnym z celem testu.
+- Dane sprawy, znak, klasa JRWA, dokumenty, interesanci, terminy i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą spraw, szczegółami sprawy, metryką, historią i powiązanymi dokumentami.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu sprawy.

@@ -1,0 +1,40 @@
+ID: REJ-030
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Wydruk rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie wygenerowania wydruku rejestru.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Wydruk rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje rejestr zawierający wpisy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr zawierający wpisy. | Lista jest widoczna. |
+| 2 | Zweryfikuj zakres danych prezentowanych na liście. | Stan przed wydrukiem jest znany. |
+| 3 | Uruchom funkcję wydruku rejestru. | System otwiera podgląd lub generuje plik wydruku. |
+| 4 | Zweryfikuj nazwę rejestru na wydruku. | Wydruk dotyczy właściwego rejestru. |
+| 5 | Porównaj wybrane wpisy z listą. | Numery i dane wpisów są zgodne. |
+| 6 | Zweryfikuj czytelność układu. | Dane nie są ucięte w sposób uniemożliwiający odczyt. |
+| 7 | Zakończ wydruk lub zapisz plik. | Operacja kończy się bez błędu. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System generuje czytelny wydruk odpowiadający zawartości rejestru.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

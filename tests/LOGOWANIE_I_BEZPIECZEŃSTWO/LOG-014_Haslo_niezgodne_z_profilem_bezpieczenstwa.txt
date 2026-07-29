@@ -1,7 +1,7 @@
 ID: LOG-014
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Walidacja / Reguła biznesowa
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -20,12 +20,6 @@ Moduł administracji → Hasła; Rozpoczęcie pracy z systemem → Zmień hasło
 - Otwarty jest formularz zmiany hasła.
 - Przygotowano osobne hasła niespełniające kolejno każdego z wymagań aktywnego profilu.
 
-<h2> Kryteria akceptacji </h2>
-
-- Każde hasło niespełniające co najmniej jednego wymogu profilu zostaje odrzucone.
-- System nie zapisuje hasła niezgodnego z profilem bezpieczeństwa.
-- Dotychczasowe hasło pozostaje aktywne po każdym odrzuconym wariancie.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -36,3 +30,13 @@ Moduł administracji → Hasła; Rozpoczęcie pracy z systemem → Zmień hasło
 | 4 | Powtórzyć test z hasłem bez wymaganej cyfry. | System odrzuca hasło. |
 | 5 | Powtórzyć test z hasłem bez wymaganego znaku specjalnego. | System odrzuca hasło. |
 | 6 | Zweryfikować logowanie dotychczasowym hasłem. | Dotychczasowe hasło nadal działa. |
+| 7 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 8 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Każde hasło niespełniające co najmniej jednego wymogu profilu zostaje odrzucone.
+- System nie zapisuje hasła niezgodnego z profilem bezpieczeństwa.
+- Dotychczasowe hasło pozostaje aktywne po każdym odrzuconym wariancie.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

@@ -1,0 +1,38 @@
+ID: EDR-062
+Moduł: e-DORĘCZENIA
+Typ: Funkcjonalny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Filtrowanie kolejki po statusie przekazania lub wysyłki </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Filtrowanie kolejki po statusie przekazania lub wysyłki” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Kolejka dokumentów wychodzących e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- W kolejce są przesyłki o różnych statusach.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz kolejkę dokumentów wychodzących e-Doręczeń. | System wyświetla pozycje kolejki zgodne z uprawnieniami użytkownika. |
+| 2 | Wprowadź kryterium filtrowania: statusie przekazania lub wysyłki. | Kryterium jest przyjęte. |
+| 3 | Zastosuj filtr. | Kolejka zawiera tylko pasujące pozycje. |
+| 4 | Zweryfikuj wyniki. | Każda pozycja spełnia warunek. |
+| 5 | Wyczyść filtr. | Pełna kolejka zostaje przywrócona. |
+| 6 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 7 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Filtrowanie kolejki po statusie przekazania lub wysyłki” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

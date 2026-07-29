@@ -1,0 +1,39 @@
+ID: FLT-012
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Negatywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Brak wyników po filtrowaniu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Brak wyników po filtrowaniu” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Znana jest wartość kryterium niepasująca do żadnego rekordu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Wprowadzić wartość niepasującą do żadnego rekordu. | Wartość zostaje przyjęta. |
+| 3 | Wybrać „Szukaj”. | System wykonuje wyszukiwanie. |
+| 4 | Zweryfikować wynik. | Lista nie zawiera rekordów i nie występuje błąd techniczny. |
+| 5 | Usunąć aktywny filtr. | Lista wraca do stanu bez tego ograniczenia. |
+| 6 | Zweryfikować komunikat pustej listy. | Komunikat jednoznacznie informuje o braku wyników. |
+| 7 | Usunąć filtr niedający wyników. | Rekordy ponownie są widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Brak wyników po filtrowaniu”.
+- Niepoprawne, graniczne albo niedające wyników kryterium nie powoduje błędnego stanu listy.
+- Użytkownik otrzymuje jednoznaczny komunikat albo system prezentuje poprawny stan pusty.
+- Filtry, sortowanie, paginacja i liczba rekordów pozostają spójne po odświeżeniu lub ponownym otwarciu listy.

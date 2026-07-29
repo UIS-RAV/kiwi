@@ -1,0 +1,36 @@
+ID: FLT-019
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Szybki filtr dzisiaj </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Szybki filtr dzisiaj” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera rekordy z bieżącego dnia i dni wcześniejszych.
+- Dostępny jest szybki filtr odpowiadający bieżącemu dniowi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybrać szybki filtr „dzisiaj”. | Filtr zostaje aktywowany. |
+| 2 | Zweryfikować daty wszystkich wyników. | Każdy rekord pochodzi z bieżącego dnia. |
+| 3 | Zweryfikować brak rekordów starszych. | Starsze rekordy nie są widoczne. |
+| 4 | Usunąć szybki filtr. | Pełna lista zostaje przywrócona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Szybki filtr dzisiaj” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

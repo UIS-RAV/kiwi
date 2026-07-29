@@ -1,0 +1,41 @@
+ID: FLT-004
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Łączenie dwóch kryteriów filtrowania </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Łączenie dwóch kryteriów filtrowania” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany.
+- Lista zawiera dane obejmujące różne kombinacje dwóch kryteriów.
+- Znany jest co najmniej jeden rekord spełniający oba kryteria.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otworzyć formularz filtrowania. | Formularz zostaje wyświetlony. |
+| 2 | Uzupełnić pierwsze kryterium. | Pierwsze kryterium zostaje ustawione. |
+| 3 | Uzupełnić drugie kryterium. | Drugie kryterium zostaje ustawione. |
+| 4 | Wybrać „Szukaj”. | System filtruje listę według obu wartości. |
+| 5 | Zweryfikować wyniki. | Każdy rekord spełnia oba kryteria. |
+| 6 | Zweryfikować pasek filtrów. | Widoczne są dwa aktywne filtry. |
+| 7 | Odświeżyć widok lub otworzyć listę ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 8 | Sprawdzić, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe ustawienia listy pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Łączenie dwóch kryteriów filtrowania” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

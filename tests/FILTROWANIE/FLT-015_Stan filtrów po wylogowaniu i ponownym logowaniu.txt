@@ -1,0 +1,40 @@
+ID: FLT-015
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Procesowy
+Priorytet: Wysoki
+Poziom: Zaawansowany
+
+<h1> Stan filtrów po wylogowaniu i ponownym logowaniu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Stan filtrów po wylogowaniu i ponownym logowaniu” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik może wylogować się i ponownie zalogować.
+- W wybranej sekcji ustawiono filtr użytkownika.
+- Test należy wykonać w tej samej przeglądarce.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zastosować filtr użytkownika. | Filtr jest aktywny. |
+| 2 | Wylogować się z systemu. | Sesja zostaje zakończona. |
+| 3 | Ponownie zalogować się tym samym użytkownikiem. | Rozpoczyna się nowa sesja. |
+| 4 | Przejść do tej samej sekcji. | Sekcja zostaje wyświetlona. |
+| 5 | Zweryfikować filtry. | Filtr z poprzedniej sesji nie jest aktywny. |
+| 6 | Zalogować się ponownie do systemu. | Użytkownik uzyskuje dostęp do tej samej listy. |
+| 7 | Zweryfikować stan filtrów zgodnie z wymaganiem produktu. | Filtry są zachowane albo przywrócone do wartości domyślnych zgodnie ze specyfikacją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Stan filtrów po wylogowaniu i ponownym logowaniu” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

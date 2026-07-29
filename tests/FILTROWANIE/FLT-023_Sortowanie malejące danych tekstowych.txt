@@ -1,0 +1,38 @@
+ID: FLT-023
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Funkcjonalny
+
+<h1> Sortowanie malejące danych tekstowych </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Sortowanie malejące danych tekstowych” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Sortowanie danych na listach
+
+<h2> Warunki wstępne </h2>
+
+- Lista jest posortowana rosnąco po kolumnie tekstowej.
+- Kolumna zawiera różne wartości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Upewnić się, że lista jest posortowana rosnąco. | Kolejność rosnąca jest widoczna. |
+| 2 | Ponownie wybrać sortowanie tej samej kolumny. | Kierunek sortowania zmienia się. |
+| 3 | Zweryfikować kolejność wartości. | Wartości są ułożone malejąco. |
+| 4 | Zweryfikować liczbę rekordów. | Liczba rekordów nie uległa zmianie. |
+| 5 | Porównać kolejne wartości w kolumnie. | Każda kolejna wartość jest nie większa od poprzedniej. |
+| 6 | Odświeżyć listę. | Kolejność malejąca pozostaje zachowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Sortowanie malejące danych tekstowych” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

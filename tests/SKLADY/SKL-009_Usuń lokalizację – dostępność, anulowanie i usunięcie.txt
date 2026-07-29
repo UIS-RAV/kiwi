@@ -1,0 +1,40 @@
+ID: SKL-009
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usuń lokalizację – dostępność, anulowanie i usunięcie </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja warunku i wykonania usunięcia lokalizacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.1.3 Usuń lokalizację
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz menu lokalizacji powiązanej ze składem. | Usuń lokalizację nie jest dostępne. |
+| 2 | Otwórz menu lokalizacji bez powiązań i wybierz Usuń lokalizację. | Widoczne jest Usunięcie lokalizacji i pytanie z nazwą. |
+| 3 | Wybierz Anuluj. | Lokalizacja pozostaje w systemie. |
+| 4 | Ponownie otwórz okno i wybierz Usuń lokalizację. | Lokalizacja zostaje usunięta. |
+| 5 | Odśwież listę. | Usunięty rekord nie jest widoczny. |
+| 6 | Odśwież listę lokalizacji i ponownie wyszukaj sprawdzaną pozycję. | Stan lokalizacji jest zgodny z wykonaną operacją i pozostaje zachowany. |
+| 7 | Otwórz szczegóły lokalizacji albo powiązanych składów. | Powiązania i dane lokalizacji są spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Usuń lokalizację jest dostępne wyłącznie bez powiązanego składu.
+- Anuluj nie usuwa, Usuń lokalizację wykonuje kasowanie twarde.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

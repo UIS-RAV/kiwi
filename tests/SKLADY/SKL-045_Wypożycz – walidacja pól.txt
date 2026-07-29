@@ -1,0 +1,40 @@
+ID: SKL-045
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Wypożycz – walidacja pól </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wymagalności Wypożyczający i ograniczeń daty oraz Dodatkowe informacje.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.6 Wypożycz
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Wypożycz. | Widoczny jest formularz. |
+| 2 | Pozostaw Wypożyczający pusty i spróbuj zapisać. | Pole jest oznaczone jako wymagane. |
+| 3 | Wprowadź niepoprawną datę. | Data nie jest akceptowana. |
+| 4 | Przekrocz 1024 znaki w Dodatkowe informacje. | System blokuje zapis lub oznacza błąd. |
+| 5 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 6 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wypożyczający jest wymagany.
+- Planowana data zwrotu nie może być wcześniejsza niż data bieżąca + 1.
+- Dodatkowe informacje ma maksymalnie 1024 znaki.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

@@ -1,0 +1,40 @@
+ID: EDR-008
+Moduł: e-DORĘCZENIA
+Typ: Konfiguracyjny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Dodanie poprawnej konfiguracji adresu ADE w EZD </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Dodanie poprawnej konfiguracji adresu ADE w EZD” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Konfiguracja e-Doręczeń w systemie EZD
+
+<h2> Warunki wstępne </h2>
+
+- Rozszerzenie e-Doręczenia jest aktywne.
+- Dostępne są adres ADE, identyfikator klienta i klucz prywatny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wprowadź poprawny adres ADE, identyfikator klienta, klucz prywatny i wymagane dane. | Formularz zawiera komplet poprawnych wartości. |
+| 3 | Zapisz konfigurację. | System zapisuje konfigurację bez błędu. |
+| 4 | Uruchom test połączenia. | Test potwierdza poprawną komunikację z usługą. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Dodanie poprawnej konfiguracji adresu ADE w EZD” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

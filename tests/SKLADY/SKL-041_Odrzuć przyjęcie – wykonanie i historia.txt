@@ -1,0 +1,40 @@
+ID: SKL-041
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Odrzuć przyjęcie – wykonanie i historia </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja odrzucenia przyjęcia.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.5 Odrzuć przyjęcie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Odrzuć przyjęcie. | Widoczny jest formularz. |
+| 2 | Wprowadź poprawny Powód. | Wartość zostaje przyjęta. |
+| 3 | Wybierz Odrzuć. | Operacja zostaje wykonana. |
+| 4 | Sprawdź listę. | Przesyłka nie jest dostępna do przyjęcia. |
+| 5 | Sprawdź historię. | Widoczny jest wpis z powodem. |
+| 6 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 7 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Powiązanie zostaje usunięte.
+- Historia zawiera Odrzucenie przyjęcia ze składu chronologicznego z powodu: {POWÓD}.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

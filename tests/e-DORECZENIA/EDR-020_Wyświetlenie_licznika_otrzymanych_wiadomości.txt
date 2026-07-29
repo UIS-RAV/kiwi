@@ -1,0 +1,37 @@
+ID: EDR-020
+Moduł: e-DORĘCZENIA
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Wyświetlenie licznika otrzymanych wiadomości </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wyświetlenie licznika otrzymanych wiadomości” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dokumentów z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- W skrzynce znajdują się odebrane wiadomości.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Odczytaj licznik otrzymanych wiadomości. | Licznik jest widoczny. |
+| 3 | Porównaj wartość z liczbą nowych wiadomości. | Wartość odpowiada rzeczywistemu stanowi. |
+| 4 | Otwórz wiadomość lub wykonaj synchronizację. | Licznik aktualizuje się zgodnie ze zmianą stanu. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wyświetlenie licznika otrzymanych wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

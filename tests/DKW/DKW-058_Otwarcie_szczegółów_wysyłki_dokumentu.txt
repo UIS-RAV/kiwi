@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: otwarcie szczegółów wysyłki dokumentu.
+Zweryfikowanie, że funkcja „Otwarcie szczegółów wysyłki dokumentu” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,22 @@ Dziennik korespondencji wychodzącej — Szczegóły wysyłki
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Otwarcie szczegółów wysyłki dokumentu”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Otwarcie szczegółów wysyłki dokumentu” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD. | Użytkownik uzyskuje dostęp do wymaganej funkcji. |
+| 2 | Uruchom funkcję wskazaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System przyjmuje dane i realizuje operację. |
+| 4 | Zweryfikuj rezultat na liście DKW lub w szczegółach wysyłki. | Rezultat odpowiada wykonanemu działaniu. |
+| 5 | Odśwież widok lub otwórz szczegóły ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Otwarcie szczegółów wysyłki dokumentu” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Otwarcie szczegółów wysyłki dokumentu” kończy się rezultatem zgodnym z celem testu.
+- Dokument, przesyłka, adresat, sposób wysyłki i status są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Dane na liście DKW, w podglądzie i w szczegółach wysyłki pozostają spójne.
+- Rezultat pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

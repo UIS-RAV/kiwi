@@ -1,0 +1,38 @@
+ID: SKL-012
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Dodaj skład – dostępne typy składu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja wartości Typ składu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.2.1 Dodaj skład
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie składu chronologicznego. | Widoczny jest formularz. |
+| 2 | Rozwiń Typ składu. | Wyświetla się lista. |
+| 3 | Sprawdź wartości. | Lista zawiera przesyłki przychodzące, przesyłki wychodzące i dokumenty wewnętrzne. |
+| 4 | Wybierz kolejno każdą wartość. | Pole obsługuje wybór pojedynczy. |
+| 5 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 6 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Dostępne są dokładnie: przesyłki przychodzące, przesyłki wychodzące, dokumenty wewnętrzne.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

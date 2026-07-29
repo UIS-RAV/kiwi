@@ -1,0 +1,36 @@
+ID: EPU-032
+Moduł: ePUAP
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Rozszerzony
+
+<h1> Archiwizowanie dokumentu z zakładek Wysłane i Wersje robocze </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Archiwizowanie dokumentu z zakładek Wysłane i Wersje robocze” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Archiwizowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik znajduje się w module ePUAP.
+- W zakładce „Wysłane” lub „Wersje robocze” znajduje się dokument możliwy do archiwizacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Wysłane” albo „Wersje robocze”. | Wyświetla się lista dokumentów. |
+| 2 | Wybierz dokument i wykonaj operację archiwizacji. | Dokument zostaje przeniesiony do archiwum. |
+| 3 | Otwórz zakładkę „Zarchiwizowane”. | Dokument jest widoczny na liście zarchiwizowanych. |
+| 4 | Porównaj dane i załączniki z dokumentem źródłowym. | Archiwizacja zachowuje komplet informacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Archiwizowanie dokumentu z zakładek Wysłane i Wersje robocze” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

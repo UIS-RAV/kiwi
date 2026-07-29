@@ -1,7 +1,7 @@
 ID: LOG-008
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny / Procesowy
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 - Znana jest wartość czasu blokady wynikająca z konfiguracji środowiska.
 - Znane są prawidłowa nazwa użytkownika oraz aktualne hasło.
 
-<h2> Kryteria akceptacji </h2>
-
-- Po upływie skonfigurowanego czasu blokady system ponownie umożliwia uwierzytelnienie użytkownika.
-- Poprawne dane logowania prowadzą do wyświetlenia widoku dostępnego po zalogowaniu.
-- System nie wymaga użycia nieudokumentowanego sposobu obejścia blokady.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu; Moduł administracji →
 | 2 | Odczytać czas blokady obowiązujący w środowisku testowym. | Znany jest moment, po którym należy ponowić próbę logowania. |
 | 3 | Odczekać do upływu skonfigurowanego czasu blokady. | Okres blokady konta kończy się. |
 | 4 | Wprowadzić prawidłową nazwę użytkownika oraz aktualne hasło i wybrać „Zaloguj się”. | System poprawnie uwierzytelnia użytkownika i wyświetla widok dostępny po zalogowaniu. |
+| 5 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 6 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po upływie skonfigurowanego czasu blokady system ponownie umożliwia uwierzytelnienie użytkownika.
+- Poprawne dane logowania prowadzą do wyświetlenia widoku dostępnego po zalogowaniu.
+- System nie wymaga użycia nieudokumentowanego sposobu obejścia blokady.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

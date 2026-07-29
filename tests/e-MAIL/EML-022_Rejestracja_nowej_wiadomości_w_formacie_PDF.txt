@@ -1,0 +1,38 @@
+ID: EML-022
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Rejestracja nowej wiadomości w formacie PDF </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Rejestracja nowej wiadomości w formacie PDF” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Zmiana formatu zapisywania wiadomości email podczas rejestracji dokumentu w EZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Dostępna jest nowa wiadomość, która nie została jeszcze pobrana do EZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W Ustawieniach ustaw Typ przekazania e-maila do rejestracji na „.PDF” i zapisz. | Konfiguracja zostaje zapisana. |
+| 2 | Pobierz nową wiadomość i zarejestruj ją jako dokument. | Dokument zostaje utworzony. |
+| 3 | Sprawdź dołączony plik. | Treść wiadomości jest dołączona jako plik .pdf. |
+| 4 | Otwórz zarejestrowany dokument w EZD. | Dokument zawiera wiadomość w formacie zgodnym z konfiguracją. |
+| 5 | Porównaj nadawcę, odbiorców, temat, treść i załączniki z wiadomością źródłową. | Zarejestrowany dokument zachowuje komplet danych wiadomości. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Rejestracja nowej wiadomości w formacie PDF” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

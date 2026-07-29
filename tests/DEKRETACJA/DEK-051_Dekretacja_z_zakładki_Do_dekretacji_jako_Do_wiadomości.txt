@@ -8,7 +8,7 @@ Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: dekretacja z zakładki do dekretacji jako do wiadomości.
+Zweryfikowanie, że funkcja „Dekretacja z zakładki Do dekretacji jako Do wiadomości” działa zgodnie z opisanym scenariuszem i prawidłowo wpływa na stan dokumentu, wpisy dekretacji oraz dostępność dokumentu na stanowiskach.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,21 @@ Dekretacja — Dekretacja z zakładki Do dekretacji
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
+- Użytkownik posiada wymagane uprawnienia.
 - przygotowano dokument i stanowiska właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Dekretacja z zakładki Do dekretacji jako Do wiadomości”. | System wyświetla właściwy widok, formularz, sekcję lub słownik. |
-| 2 | Wskazać dokument, stanowisko, typ przekazania lub ustawienie wymagane w scenariuszu. | System przyjmuje wskazany dokument, stanowisko, typ przekazania lub ustawienie. |
-| 3 | Wykonać i zatwierdzić operację albo ją anulować — zależnie od celu testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować dokument, listę, słownik, historię lub ustawienie po operacji. | Stan końcowy funkcji „Dekretacja z zakładki Do dekretacji jako Do wiadomości” jest zgodny z instrukcją. |
+| 1 | Uruchom funkcję wskazaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 2 | Wykonaj operację zgodnie z celem scenariusza. | System przyjmuje dane i realizuje operację. |
+| 3 | Zweryfikuj stan dokumentu, stanowisk i historii. | Rezultat odpowiada wykonanej operacji. |
+| 4 | Odśwież widok lub otwórz dokument ponownie. | Rezultat operacji pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Dekretacja z zakładki Do dekretacji jako Do wiadomości” działa zgodnie z instrukcją.
-- stan dokumentu, stanowisk lub konfiguracji odpowiada wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Dekretacja z zakładki Do dekretacji jako Do wiadomości” kończy się rezultatem zgodnym z celem testu.
+- Stanowisko źródłowe, stanowisko docelowe, typ przekazania i notatka są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Dostępność dokumentu na stanowiskach odpowiada wykonanej dekretacji.
+- Rezultat pozostaje spójny po odświeżeniu widoku lub ponownym otwarciu dokumentu.

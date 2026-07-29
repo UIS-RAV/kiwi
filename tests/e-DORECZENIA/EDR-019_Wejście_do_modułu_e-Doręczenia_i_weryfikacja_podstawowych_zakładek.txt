@@ -1,0 +1,37 @@
+ID: EDR-019
+Moduł: e-DORĘCZENIA
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Wejście do modułu e-Doręczenia i weryfikacja podstawowych zakładek </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Wejście do modułu e-Doręczenia i weryfikacja podstawowych zakładek” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - użytkowanie / Pobieranie dokumentów z e-Doręczeń
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany i ma dostęp do e-Doręczeń.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD i otwórz moduł e-Doręczenia. | Moduł jest dostępny zgodnie z uprawnieniami użytkownika. |
+| 2 | Uruchom funkcję opisaną w tytule testu. | System wyświetla właściwy widok lub formularz. |
+| 3 | Wykonaj operację zgodnie z celem scenariusza. | System realizuje operację albo prawidłowo ją blokuje. |
+| 4 | Zweryfikuj rezultat w module e-Doręczenia. | Stan wiadomości, konfiguracji lub przesyłki jest zgodny ze scenariuszem. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Wejście do modułu e-Doręczenia i weryfikacja podstawowych zakładek” kończy się rezultatem zgodnym z celem testu.
+- Dane konfiguracji, wiadomości, odbiorcy, załączników, statusów i dowodów są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Wynik jest spójny pomiędzy modułem e-Doręczenia, kolejką, podglądem i dokumentem w EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu lub ponownym otwarciu danych.

@@ -1,0 +1,38 @@
+ID: EML-004
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Nadanie aplikacji uprawnień Microsoft Graph do poczty </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Nadanie aplikacji uprawnień Microsoft Graph do poczty” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfigurowanie poczty Microsoft 365 do pracy z EZD
+
+<h2> Warunki wstępne </h2>
+
+- Aplikacja Microsoft 365 dla EZD jest zarejestrowana.
+- Użytkownik posiada uprawnienia do konfiguracji aplikacji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz aplikację i wybierz Uprawnienia interfejsu API → Dodaj uprawnienie. | Wyświetla się okno żądania uprawnień. |
+| 2 | Wybierz Microsoft Graph → Uprawnienia aplikacji. | Wyświetla się lista uprawnień aplikacji. |
+| 3 | Wyszukaj „Mail”, rozwiń dostępne akcje i zaznacz wymagane uprawnienia. | Uprawnienia pocztowe są zaznaczone. |
+| 4 | Wybierz „Dodaj uprawnienia” i uzyskaj akceptację administratora Microsoft Azure. | Uprawnienia zostają zaakceptowane i oznaczone jako nadane. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane skrzynki i wiadomości pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Nadanie aplikacji uprawnień Microsoft Graph do poczty” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

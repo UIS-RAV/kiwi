@@ -1,0 +1,40 @@
+ID: EDR-014
+Moduł: e-DORĘCZENIA
+Typ: Negatywny
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Negatywny test konfiguracji dla niepoprawnego identyfikatora klienta </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Negatywny test konfiguracji dla niepoprawnego identyfikatora klienta” działa zgodnie z opisanym scenariuszem oraz prawidłowo obsługuje konfigurację, wiadomości, przesyłki, statusy, archiwa i dowody w module e-Doręczenia.
+
+<h2> Rozdział dokumentacji </h2>
+
+e-Doręczenia / e-Doręczenia - konfiguracja / Przeprowadzenie testu poprawności konfiguracji e-Doręczeń w systemie
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje konfiguracja testowa.
+- Identyfikator klienta został celowo ustawiony niepoprawnie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się do EZD jako administrator i otwórz konfigurację e-Doręczeń. | System wyświetla ustawienia rozszerzenia oraz dostępne operacje konfiguracyjne. |
+| 2 | Wprowadź warunek błędny wskazany w tytule testu. | Konfiguracja zawiera kontrolowany błąd. |
+| 3 | Uruchom test poprawności. | System zwraca wynik negatywny z przyczyną. |
+| 4 | Zweryfikuj brak zmian w działającej konfiguracji. | Błąd testu nie aktywuje niepoprawnych ustawień. |
+| 5 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 6 | Porównaj kluczowe dane z wartościami źródłowymi przygotowanymi w warunkach testu. | Identyfikatory, adresy, daty, statusy i powiązania odpowiadają danym źródłowym. |
+| 7 | Zweryfikuj historię operacji, log zadania albo szczegóły techniczne, jeżeli są dostępne dla tej funkcji. | System rejestruje operację wraz z właściwym użytkownikiem, czasem i wynikiem. |
+| 8 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji, wiadomości i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System reaguje zgodnie z celem testu „Negatywny test konfiguracji dla niepoprawnego identyfikatora klienta”.
+- Niedozwolona, błędna albo warunkowo niedostępna operacja nie powoduje utraty, duplikacji ani niezamierzonej zmiany danych.
+- Użytkownik otrzymuje jednoznaczny komunikat lub funkcja pozostaje niedostępna zgodnie ze stanem procesu.
+- Dane konfiguracji, wiadomości i przesyłek pozostają spójne po ponownym odczycie.

@@ -1,0 +1,38 @@
+ID: SD-038
+Moduł: SYSTEMY DZIEDZINOWE
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Obsługa częściowego powodzenia zbiorczej aktualizacji ADE </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Obsługa częściowego powodzenia zbiorczej aktualizacji ADE.
+
+<h2> Rozdział dokumentacji </h2>
+
+SD — SYSTEMY DZIEDZINOWE — Import z SD, adresy ADE, metody wysyłki i aktualizacja danych interesantów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Endpoint API systemu dziedzinowego jest dostępny, o ile scenariusz nie zakłada jego niedostępności.
+- Dostępne są dane autoryzacyjne odpowiednie dla scenariusza.
+- Użytkownik integracyjny posiada stanowisko z rolami API-SD i API-Dokument, o ile scenariusz nie dotyczy braku uprawnień.
+- Dostępne są dane testowe umożliwiające jednoznaczne wyszukanie sprawy, dokumentu i interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przygotuj grupę interesantów: z poprawnym ADE, bez ADE i z błędnymi danymi. | Grupa jest widoczna w SD. |
+| 2 | Uruchom akcję zbiorczą. | System przetwarza wszystkich możliwych interesantów. |
+| 3 | Sprawdź podsumowanie. | Wynik rozróżnia sukcesy, brak adresu i błędy. |
+| 4 | Sprawdź dane. | Poprawne aktualizacje są zapisane, a błędy nie powodują wycofania niezależnych sukcesów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie tworzy niekontrolowanych duplikatów ani niespójnych powiązań.
+- Stan końcowy pozostaje zgodny po odświeżeniu i ponownym otwarciu danych.

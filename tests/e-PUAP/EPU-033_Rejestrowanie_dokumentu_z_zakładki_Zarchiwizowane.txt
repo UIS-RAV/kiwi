@@ -1,0 +1,37 @@
+ID: EPU-033
+Moduł: ePUAP
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Rozszerzony
+
+<h1> Rejestrowanie dokumentu z zakładki Zarchiwizowane </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Rejestrowanie dokumentu z zakładki Zarchiwizowane” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację połączenia i skrytek, synchronizację, pobieranie, rejestrację, wysyłkę, archiwizację i obsługę dokumentów w module ePUAP.
+
+<h2> Rozdział dokumentacji </h2>
+
+ePUAP / ePUAP - użytkowanie / Rejestrowanie dokumentu z ePUAP
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada dostęp do modułu ePUAP.
+- W zakładce „Zarchiwizowane” znajduje się niezarejestrowany dokument.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł ePUAP i przejdź do zakładki „Zarchiwizowane”. | Wyświetla się lista dokumentów zarchiwizowanych. |
+| 2 | Przy wybranym dokumencie uruchom opcję „Zarejestruj dokument”. | System otwiera formularz rejestracji. |
+| 3 | Zweryfikuj dane formularza i zapisz dokument. | Dokument zostaje zapisany w EZD. |
+| 4 | Odśwież widok lub otwórz dane ponownie. | Rezultat pozostaje spójny po ponownym odczycie. |
+| 5 | Sprawdź, czy operacja nie zmieniła danych nieobjętych scenariuszem. | Pozostałe dane konfiguracji i dokumentów pozostają niezmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Rejestrowanie dokumentu z zakładki Zarchiwizowane” kończy się rezultatem zgodnym z celem testu.
+- Dane połączenia, skrytki, dokumentu, nadawcy, odbiorcy, załączników i statusów są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy modułem ePUAP, dokumentem zarejestrowanym w EZD, logiem i właściwą zakładką.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

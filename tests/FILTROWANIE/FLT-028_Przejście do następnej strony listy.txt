@@ -1,0 +1,38 @@
+ID: FLT-028
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Krytyczny
+Poziom: Podstawowy
+
+<h1> Przejście do następnej strony listy </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Przejście do następnej strony listy” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Stronicowanie list
+
+<h2> Warunki wstępne </h2>
+
+- Lista zawiera więcej rekordów niż limit jednej strony.
+- Mechanizm paginacji jest dostępny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do listy wielostronicowej. | Wyświetla się pierwsza strona. |
+| 2 | Zapisać kilka identyfikatorów rekordów. | Rekordy pierwszej strony są znane. |
+| 3 | Wybrać przejście do następnej strony. | Wyświetla się druga strona. |
+| 4 | Zweryfikować wskaźnik strony i rekordy. | Aktywna jest kolejna strona z kolejnym zestawem danych. |
+| 5 | Porównać rekordy z poprzednią stroną. | System prezentuje kolejny, niepowtarzający się zestaw rekordów. |
+| 6 | Zweryfikować numer bieżącej strony. | Wskaźnik strony został zwiększony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Przejście do następnej strony listy” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

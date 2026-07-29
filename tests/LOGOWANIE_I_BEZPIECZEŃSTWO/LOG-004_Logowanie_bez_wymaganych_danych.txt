@@ -1,7 +1,7 @@
 ID: LOG-004
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Walidacja / Negatywny
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Rozszerzony
 
 <h2> Cel testu </h2>
@@ -18,12 +18,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 - Użytkownik nie posiada aktywnej sesji.
 - Instrukcja nie określa literalnych komunikatów ani wizualnego sposobu oznaczenia pustych pól.
 
-<h2> Kryteria akceptacji </h2>
-
-- Żaden z wariantów z nieuzupełnionym wymaganym polem nie prowadzi do poprawnej autoryzacji.
-- System nie udostępnia widoku dostępnego po zalogowaniu.
-- Użytkownik pozostaje na ekranie logowania lub otrzymuje informację o brakujących danych.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -33,3 +27,13 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 | 3 | Wprowadzić prawidłową nazwę użytkownika, pozostawić puste pole „Hasło” i wybrać „Zaloguj się”. | System nie loguje użytkownika i sygnalizuje brak danych niezbędnych do autoryzacji. |
 | 4 | Usunąć nazwę użytkownika, wprowadzić dowolną wartość w polu „Hasło” i wybrać „Zaloguj się”. | System nie loguje użytkownika i sygnalizuje brak danych niezbędnych do autoryzacji. |
 | 5 | Zweryfikować, czy po wszystkich wariantach nie została utworzona sesja użytkownika. | Użytkownik nadal nie ma dostępu do funkcji wymagających zalogowania. |
+| 6 | Odświeżyć stronę lub ponownie otworzyć adres chronionego widoku. | Stan uwierzytelnienia i blokady konta pozostaje zgodny z rezultatem scenariusza. |
+| 7 | Zweryfikować, czy system nie ujawnia w komunikacie szczegółów pozwalających ustalić istnienie konta lub poprawność pojedynczej danej logowania. | Komunikat nie ujawnia informacji wykraczających poza skutek nieudanej próby logowania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Żaden z wariantów z nieuzupełnionym wymaganym polem nie prowadzi do poprawnej autoryzacji.
+- System nie udostępnia widoku dostępnego po zalogowaniu.
+- Użytkownik pozostaje na ekranie logowania lub otrzymuje informację o brakujących danych.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

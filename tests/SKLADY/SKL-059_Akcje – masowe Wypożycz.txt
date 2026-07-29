@@ -1,0 +1,41 @@
+ID: SKL-059
+Moduł: Składy chronologiczne
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Akcje – masowe Wypożycz </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja operacji masowej Wypożycz.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.12 Akcje
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaznacz przesyłki spełniające i niespełniające warunków. | Akcje staje się aktywne. |
+| 2 | Wybierz Akcje -> Wypożycz. | Okno lub komunikat zawiera wszystkie zaznaczone liczby dziennika. |
+| 3 | Uzupełnij formularz, jeśli jest prezentowany, i potwierdź. | Operacja zostaje wykonana. |
+| 4 | Sprawdź przesyłki spełniające warunki. | Uzyskały wynik: status wypożyczona. |
+| 5 | Sprawdź pozostałe przesyłki. | Zostały pominięte bez zmiany. |
+| 6 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 7 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Okno lub komunikat zawiera wszystkie zaznaczone liczby dziennika.
+- Przesyłki niespełniające warunków maszyny stanów są pomijane.
+- Pozostałe otrzymują wynik: status wypożyczona.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

@@ -8,7 +8,7 @@ Poziom: Zaawansowany
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: określenie współrzędnych położenia podpisu pades.
+Zweryfikowanie, że funkcja „Określenie współrzędnych położenia podpisu PAdES” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -23,13 +23,18 @@ Akceptacja i podpis — Konfiguracja podpisu eCA NG
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć dokument PDF przeznaczony do podpisania. | System udostępnia operację podpisania dokumentu PDF. |
-| 2 | Wybrać podpis kwalifikowany oraz metodę wewnętrzną PAdES. | Wybrana zostaje metoda PAdES. |
-| 3 | Wskazać certyfikat, podać poprawny PIN i zatwierdzić podpis. | Podpis zostaje poprawnie osadzony w dokumencie. |
-| 4 | Sprawdzić dokument i informacje o podpisie. | EZD przechowuje podpisany dokument i prezentuje dane podpisu. |
+| 1 | Zaloguj się do EZD jako użytkownik posiadający uprawnienia do konfiguracji wskazanej funkcji. | Użytkownik uzyskuje dostęp do funkcji administracyjnych wymaganych w scenariuszu. |
+| 2 | Otwórz obszar konfiguracji odpowiadający funkcji opisanej w tytule testu. | System wyświetla właściwy formularz lub listę ustawień. |
+| 3 | Odszukaj ustawienie lub pole wskazane w tytule testu. | Właściwy parametr jest dostępny do zmiany. |
+| 4 | Wprowadź lub wybierz wartość wymaganą w scenariuszu. | Nowa wartość jest prezentowana w formularzu. |
+| 5 | Zweryfikuj podgląd konfiguracji, jeżeli jest dostępny. | Podgląd odpowiada wybranej wartości, układowi lub znacznikowi. |
+| 6 | Zapisz konfigurację. | System potwierdza zapis bez błędu. |
+| 7 | Otwórz ustawienie ponownie. | Zapisana wartość została zachowana. |
+| 8 | Uruchom funkcję korzystającą z ustawienia, jeżeli jest dostępna w środowisku. | Efekt operacyjny odpowiada zapisanej konfiguracji. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Określenie współrzędnych położenia podpisu PAdES” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Określenie współrzędnych położenia podpisu PAdES” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

@@ -1,0 +1,40 @@
+ID: SKL-015
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Edytuj skład – blokada Typ składu i Należy do </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja ograniczeń edycji po powiązaniu składu z pudłem.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.2.2 Edytuj skład
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Edycja składu chronologicznego dla składu z pudłem. | Widoczne są aktualne dane. |
+| 2 | Zmień Nazwa składu i Lokalizacja. | Zmiana jest możliwa. |
+| 3 | Spróbuj zmienić Typ składu. | Zmiana nie jest dozwolona. |
+| 4 | Spróbuj zmienić Należy do. | Zmiana nie jest dozwolona. |
+| 5 | Zapisz. | Dozwolone zmiany zostają zapisane. |
+| 6 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 7 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa składu i Lokalizacja są edytowalne.
+- Typ składu i Należy do nie są edytowalne.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

@@ -1,7 +1,7 @@
 ID: LOG-023
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Pozytywny
-Priorytet: Krytyczny
+Priorytet: krytyczny/natychmiastowy
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -19,12 +19,6 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora; 
 - Znane są wymagania aktywnego profilu bezpieczeństwa.
 - Przygotowano nowe hasło zgodne z profilem.
 
-<h2> Kryteria akceptacji </h2>
-
-- System zapisuje nowe hasło.
-- Nowe hasło spełnia wymagania aktywnego profilu bezpieczeństwa.
-- Użytkownik może zalogować się nowym hasłem.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +28,13 @@ Administracja → Pracownicy → Zmiana hasła pracownika przez administratora; 
 | 3 | Zatwierdzić nadanie hasła. | System zapisuje nowe hasło. |
 | 4 | Przejść do ekranu logowania. | Ekran logowania jest widoczny. |
 | 5 | Zalogować się przy użyciu nowego hasła. | Użytkownik zostaje poprawnie zalogowany. |
+| 6 | Ponownie wykorzystać kod lub odnośnik resetowania użyty w scenariuszu. | System zachowuje stan zgodny z wynikiem resetowania i nie umożliwia nieuprawnionego ponownego użycia procesu. |
+| 7 | Zalogować się hasłem właściwym dla końcowego stanu scenariusza. | Uwierzytelnienie jest możliwe wyłącznie przy użyciu aktualnych danych dostępowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System zapisuje nowe hasło.
+- Nowe hasło spełnia wymagania aktywnego profilu bezpieczeństwa.
+- Użytkownik może zalogować się nowym hasłem.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.

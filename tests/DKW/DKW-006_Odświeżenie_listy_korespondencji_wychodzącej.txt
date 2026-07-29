@@ -8,7 +8,7 @@ Poziom: Podstawowy
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: odświeżenie listy korespondencji wychodzącej.
+Zweryfikowanie, że funkcja „Odświeżenie listy korespondencji wychodzącej” działa zgodnie z opisanym scenariuszem oraz prawidłowo prezentuje lub zmienia dane dokumentu wychodzącego, przesyłki, adresata i statusu wysyłki.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -17,20 +17,21 @@ Dziennik korespondencji wychodzącej — Widok DKW i dostęp
 <h2> Warunki wstępne </h2>
 
 - Użytkownik jest zalogowany.
-- posiada wymagane uprawnienia.
-- przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
+- Użytkownik posiada wymagane uprawnienia.
+- Przygotowano dokument wychodzący, przesyłkę, adresata, status lub potwierdzenie właściwe dla scenariusza.
 
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć funkcję opisaną jako „Odświeżenie listy korespondencji wychodzącej”. | System wyświetla właściwy widok, formularz, sekcję lub listę. |
-| 2 | Wskazać dokument wychodzący, przesyłkę, adresata, status lub parametr wymagany w scenariuszu. | System przyjmuje wskazany dokument, przesyłkę, adresata, status lub parametr. |
-| 3 | Wykonać, zatwierdzić albo anulować operację zgodnie z celem testu. | Operacja zostaje anulowana, a dane nie są zmieniane. |
-| 4 | Zweryfikować rezultat na liście DKW, w podglądzie dokumentu, szczegółach wysyłki, potwierdzeniu lub wydruku. | Rezultat funkcji „Odświeżenie listy korespondencji wychodzącej” jest zgodny z instrukcją. |
+| 1 | Zaloguj się do EZD i otwórz eKancelaria > Wychodzące. | System wyświetla listę korespondencji wychodzącej zgodną z uprawnieniami użytkownika. |
+| 2 | Zapamiętaj bieżący zakres i status wybranej pozycji. | Dane punktu odniesienia są znane. |
+| 3 | Wykonaj zmianę statusu dokumentu w drugim kontekście lub sesji. | Stan dokumentu ulega zmianie. |
+| 4 | Użyj funkcji odświeżenia listy DKW. | Lista prezentuje aktualny status bez konieczności ponownego logowania. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Odświeżenie listy korespondencji wychodzącej” działa zgodnie z instrukcją.
-- status, dane wysyłki, potwierdzenie lub wydruk odpowiadają wykonanej operacji.
-- dane nieobjęte operacją pozostają spójne.
+- Funkcja „Odświeżenie listy korespondencji wychodzącej” kończy się rezultatem zgodnym z celem testu.
+- Dokument, przesyłka, adresat, sposób wysyłki i status są prezentowane lub aktualizowane zgodnie ze scenariuszem.
+- Dane na liście DKW, w podglądzie i w szczegółach wysyłki pozostają spójne.
+- Rezultat pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

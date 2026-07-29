@@ -1,0 +1,39 @@
+ID: SKL-040
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Odrzuć przyjęcie – walidacja Powód </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja pola Powód.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.3.2.5 Odrzuć przyjęcie
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz Odrzuć przyjęcie. | Wyświetla się formularz. |
+| 2 | Pozostaw Powód pusty i wybierz Odrzuć. | Pole jest oznaczone jako błędne. |
+| 3 | Wprowadź 4 znaki. | Walidacja blokuje operację. |
+| 4 | Wprowadź od 5 do 1024 znaków. | Wartość jest poprawna. |
+| 5 | Spróbuj przekroczyć 1024 znaki. | System blokuje zapis lub oznacza błąd. |
+| 6 | Odśwież listę składów i otwórz obsługiwany element ponownie. | Status elementu odpowiada wykonanej operacji. |
+| 7 | Sprawdź historię operacji oraz użytkownika i datę wykonania czynności. | Historia zawiera kompletny i zgodny wpis. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Powód jest wymagany, min. 5, max. 1024 znaki.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

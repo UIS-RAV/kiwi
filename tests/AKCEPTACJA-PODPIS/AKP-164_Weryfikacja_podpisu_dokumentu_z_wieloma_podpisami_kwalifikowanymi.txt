@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi.
+Zweryfikowanie, że funkcja „Weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -24,13 +24,17 @@ Akceptacja i podpis — Weryfikacja podpisów elektronicznych
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Przygotować dokument posiadający wiele podpisów kwalifikowanych. | Dokument zawiera wiele podpisów. |
-| 2 | Otworzyć funkcję weryfikacji podpisów. | System rozpoznaje wszystkie podpisy. |
-| 3 | Uruchomić weryfikację wszystkich podpisów. | Każdy podpis jest analizowany. |
-| 4 | Sprawdzić wynik i dane każdego podpisu. | Wynik prezentuje osobno status i dane wszystkich podpisów. |
+| 1 | Zaloguj się do EZD i otwórz dokument lub załącznik posiadający podpis wymagany w scenariuszu. | Podpisany obiekt jest dostępny do weryfikacji. |
+| 2 | Uruchom funkcję weryfikacji podpisu. | System rozpoczyna proces weryfikacji właściwego podpisu. |
+| 3 | Wskaż podpis lub uruchom szczegóły wyniku weryfikacji. | System prezentuje wynik dotyczący właściwego podpisu. |
+| 4 | Zweryfikuj wartość wskazaną w tytule testu. | Wyświetlona wartość odpowiada danym podpisu lub certyfikatu. |
+| 5 | Porównaj dane z dokumentem, certyfikatem lub znanym wynikiem referencyjnym. | Dane prezentowane przez EZD są zgodne ze źródłem. |
+| 6 | Zamknij widok i otwórz go ponownie. | Wynik pozostaje spójny i dotyczy tego samego podpisu. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Weryfikacja podpisu dokumentu z wieloma podpisami kwalifikowanymi” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

@@ -1,0 +1,40 @@
+ID: EML-025
+Moduł: POCZTA E-MAIL
+Typ: Procesowy
+Priorytet: Krytyczny
+Poziom: Zaawansowany
+
+<h1> Automatyczna synchronizacja w określonych odstępach czasu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Automatyczna synchronizacja w określonych odstępach czasu” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - konfiguracja / Konfiguracja automatycznej synchronizacji
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę Administrator.
+- Rozszerzenie automatycznej synchronizacji jest aktywne.
+- Dostępne jest konto e-mail z nową wiadomością.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → Ustawienia ogólne → Rozszerzenia → Konfiguracja synchronizacji. | Wyświetla się konfiguracja usługi. |
+| 2 | Wybierz „Edytuj”, aktywuj usługę i ustaw wywoływanie w określonych odstępach czasu. | Parametry są gotowe do zapisu. |
+| 3 | Zapisz konfigurację i poczekaj na wskazany odstęp. | Usługa wykonuje synchronizację. |
+| 4 | Otwórz skrzynkę w EZD. | Nowa wiadomość jest pobrana. |
+| 5 | Poczekaj na termin wynikający z harmonogramu. | Synchronizacja uruchamia się automatycznie. |
+| 6 | Zweryfikuj nowe wiadomości i czas wykonania zadania. | Wiadomości zostały pobrane zgodnie z harmonogramem bez tworzenia duplikatów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Automatyczna synchronizacja w określonych odstępach czasu” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

@@ -1,0 +1,40 @@
+ID: REJ-029
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Modyfikacja dokumentu znajdującego się w rejestrze </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie edycji danych wpisu w rejestrze.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - użytkowanie / Modyfikacja dokumentu znajdującego się w rejestrze
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje wpis z polem standardowym możliwym do edycji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr i wybierz wpis. | Szczegóły wpisu są widoczne. |
+| 2 | Uruchom akcję edycji. | Formularz prezentuje aktualne dane. |
+| 3 | Zmień wartość pola Komentarz. | Nowa wartość jest widoczna. |
+| 4 | Zweryfikuj pole automatyczne Tytuł dokumentu. | Pole nadal odpowiada dokumentowi źródłowemu. |
+| 5 | Zapisz zmiany. | System potwierdza zapis. |
+| 6 | Otwórz wpis ponownie. | Nowy komentarz został zachowany. |
+| 7 | Zweryfikuj numer i powiązanie z dokumentem. | Identyfikacja wpisu nie uległa zmianie. |
+| 8 | Odśwież widok rejestru i ponownie wyszukaj testowany wpis lub dokument. | Wpis pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 9 | Otwórz ponownie wpis lub powiązany dokument i porównaj zapisane dane. | Numer, pola formularza, załączniki i powiązanie z dokumentem są kompletne oraz spójne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zmodyfikowane dane zostają zapisane i zachowane po ponownym otwarciu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Nadany numer, wartości formularza i powiązanie z dokumentem są zgodne z konfiguracją rejestru.

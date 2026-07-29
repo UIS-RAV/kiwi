@@ -1,0 +1,39 @@
+ID: REJ-018
+Moduł: REJ — REJESTRY DEFINIOWANE
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja braku szablonu przy tworzeniu rejestru </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie wymogu przypisania szablonu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Rejestry definiowane - konfiguracja / Utworzenie rejestru
+
+<h2> Warunki wstępne </h2>
+
+- Istnieje aktywna numeracja.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz dodawania rejestru. | Formularz jest widoczny. |
+| 2 | Uzupełnij dane rejestru i wybierz numerację. | Pozostałe wymagane dane są kompletne. |
+| 3 | Nie wybieraj szablonu. | Pole szablonu pozostaje puste. |
+| 4 | Kliknij Zapisz rejestr. | System blokuje zapis. |
+| 5 | Zweryfikuj komunikat. | Użytkownik otrzymuje informację o wymaganym szablonie. |
+| 6 | Sprawdź listę rejestrów. | Niekompletny rejestr nie został utworzony. |
+| 7 | Odśwież listę rejestrów i ponownie wyszukaj testowany rejestr. | Rejestr pozostaje widoczny w stanie zgodnym z wykonaną operacją. |
+| 8 | Otwórz konfigurację rejestru albo jego podgląd, jeżeli operacja jest dostępna. | Przypisana numeracja, szablon, aktywność i dostępne akcje są spójne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System nie zapisuje rejestru bez szablonu.
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan numeracji, szablonu, rejestru lub wpisu pozostaje spójny po odświeżeniu i ponownym odczycie.
+- Dostępne operacje odpowiadają stanowi użycia elementu i nie naruszają integralności konfiguracji.

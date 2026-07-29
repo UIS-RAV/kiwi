@@ -1,0 +1,40 @@
+ID: SKL-020
+Moduł: Składy chronologiczne
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Dodaj pudło – walidacja pól i długości </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja walidacji formularza pudła.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.1.3.1 Dodaj Pudło
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Tworzenie pudła. | Widoczny jest formularz. |
+| 2 | Pozostaw pola wymagane puste i wybierz Utwórz. | Pola zostają oznaczone jako błędne. |
+| 3 | Przekrocz 256 znaków w Nazwa. | System blokuje zapis lub oznacza błąd. |
+| 4 | Przekrocz 1024 znaki w Lokalizacja. | System blokuje zapis lub oznacza błąd. |
+| 5 | Uzupełnij wymagane pola bez Lokalizacja i zapisz. | Pudło zostaje utworzone. |
+| 6 | Odśwież zakładkę Pudła i ponownie wyszukaj sprawdzane pudło. | Stan pudła jest zgodny z wykonaną operacją. |
+| 7 | Otwórz szczegóły pudła i sprawdź przypisany skład. | Pudło jest powiązane z właściwym składem chronologicznym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa, Rok utworzenia, Typ i Skład chronologiczny są wymagane.
+- Nazwa ma maksymalnie 256 znaków, Lokalizacja 1024 znaki i jest niewymagana.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

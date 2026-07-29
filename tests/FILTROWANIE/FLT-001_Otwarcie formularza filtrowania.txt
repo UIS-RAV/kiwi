@@ -1,0 +1,39 @@
+ID: FLT-001
+Moduł: FILTROWANIE, SORTOWANIE I LISTY
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Podstawowy
+
+<h1> Otwarcie formularza filtrowania </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Otwarcie formularza filtrowania” działa zgodnie z opisanym scenariuszem oraz prawidłowo wpływa na zakres prezentowanych danych, aktywne filtry, kolejność rekordów, stronicowanie i stan listy w systemie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Filtrowanie danych w systemie eZD
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do listy, na której dostępny jest przycisk „Filtr”.
+- Lista zawiera co najmniej jeden rekord.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejść do reprezentatywnej listy posiadającej funkcję filtrowania. | Lista zostaje wyświetlona. |
+| 2 | Odszukać przycisk „Filtr”. | Przycisk „Filtr” jest dostępny. |
+| 3 | Wybrać przycisk „Filtr”. | System otwiera formularz filtrowania. |
+| 4 | Zweryfikować dostępne kryteria. | Formularz prezentuje kryteria odpowiednie dla danych na liście. |
+| 5 | Zamknąć formularz bez zastosowania filtrów. | Lista pozostaje niezmieniona. |
+| 6 | Otworzyć formularz ponownie. | Formularz prezentuje poprawny stan początkowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Otwarcie formularza filtrowania” kończy się rezultatem zgodnym z celem testu.
+- Lista prezentuje wyłącznie rekordy spełniające aktywne kryteria i we właściwej kolejności.
+- Aktywne filtry, sortowanie, numer strony i liczba rekordów są prezentowane spójnie.
+- Stan końcowy pozostaje zachowany zgodnie ze scenariuszem po odświeżeniu, zmianie strony lub powrocie do listy.

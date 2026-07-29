@@ -1,0 +1,38 @@
+ID: EML-052
+Moduł: POCZTA E-MAIL
+Typ: Pozytywny
+Priorytet: Wysoki
+Poziom: Funkcjonalny
+
+<h1> Drukowanie wiadomości z podglądu </h1>
+
+<h2> Cel testu </h2>
+
+Zweryfikowanie, że funkcja „Drukowanie wiadomości z podglądu” działa zgodnie z opisanym procesem oraz prawidłowo obsługuje konfigurację skrzynki, wiadomości, załączniki, synchronizację, przypisania i operacje dostępne w module Poczta e-mail.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł poczta / E-mail - użytkowanie / Opcje dostępne w podglądzie wiadomości email
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada dostęp do modułu Poczta.
+- Konto e-mail jest poprawnie skonfigurowane i przypisane użytkownikowi lub stanowisku.
+- Istnieje wiadomość możliwa do otwarcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wiadomość i wybierz „Drukuj”. | System uruchamia wydruk według norm przyjętych w systemie. |
+| 2 | Sprawdź podgląd lub rezultat wydruku. | Treść wiadomości jest przygotowana do wydruku. |
+| 3 | Zweryfikuj podgląd wydruku. | Podgląd zawiera właściwego nadawcę, odbiorców, temat, datę i treść. |
+| 4 | Zapisz wydruk do pliku albo wyślij do drukarki. | Operacja kończy się bez błędu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja „Drukowanie wiadomości z podglądu” kończy się rezultatem zgodnym z celem testu.
+- Dane skrzynki, wiadomości, przypisania, załączniki i statusy są zapisane lub prezentowane zgodnie ze scenariuszem.
+- Rezultat jest spójny pomiędzy listą wiadomości, podglądem, konfiguracją i powiązanym dokumentem EZD.
+- Stan końcowy pozostaje zachowany po odświeżeniu widoku lub ponownym otwarciu danych.

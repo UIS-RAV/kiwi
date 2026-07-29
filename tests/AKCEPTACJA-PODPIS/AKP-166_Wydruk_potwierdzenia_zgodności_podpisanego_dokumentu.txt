@@ -8,7 +8,7 @@ Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
 
-Zweryfikowanie funkcji: wydruk potwierdzenia zgodności podpisanego dokumentu.
+Zweryfikowanie, że funkcja „Wydruk potwierdzenia zgodności podpisanego dokumentu” działa zgodnie z opisanym scenariuszem, zachowując spójność dokumentu, procesu akceptacji oraz danych podpisu.
 
 <h2> Rozdział dokumentacji </h2>
 
@@ -23,13 +23,18 @@ Akceptacja i podpis — Potwierdzenie zgodności podpisanego dokumentu
 
 | Krok | Czynność | Oczekiwany rezultat |
 |---:|---|---|
-| 1 | Otworzyć podpisany dokument lub podpisany załącznik. | Podpisany element jest dostępny. |
-| 2 | Wybrać funkcję wygenerowania potwierdzenia zgodności. | System udostępnia generowanie potwierdzenia. |
-| 3 | Zatwierdzić generowanie. | Potwierdzenie zostaje wygenerowane. |
-| 4 | Sprawdzić wygenerowane potwierdzenie i jego powiązanie z elementem źródłowym. | Dokument potwierdzenia zawiera właściwe dane i jest powiązany z prawidłowym elementem. |
+| 1 | Otwórz podpisany dokument lub załącznik objęty scenariuszem. | System prezentuje właściwy podpisany obiekt. |
+| 2 | Otwórz menu operacji związanych z podpisem lub potwierdzeniem zgodności. | Dostępna jest funkcja odpowiednia do stanu dokumentu. |
+| 3 | Uruchom funkcję wygenerowania lub pobrania potwierdzenia zgodności. | System tworzy potwierdzenie dla właściwego obiektu. |
+| 4 | Otwórz podgląd wydruku. | Podgląd zawiera identyfikację podpisanego dokumentu lub załącznika. |
+| 5 | Wykonaj wydruk lub zapisz go do pliku. | Operacja kończy się bez błędu. |
+| 6 | Porównaj dane potwierdzenia z podpisanym obiektem. | Identyfikacja, dane podpisu i powiązanie są zgodne. |
+| 7 | Zweryfikuj historię, status lub komunikat końcowy związany z operacją. | System rejestruje rzeczywisty wynik operacji i nie wskazuje wykonania czynności, które nie nastąpiły. |
+| 8 | Odśwież widok lub otwórz obiekt ponownie. | Rezultat pozostaje spójny po ponownym odczycie danych. |
 
 <h2> Kryteria akceptacji </h2>
 
-- Funkcja „Wydruk potwierdzenia zgodności podpisanego dokumentu” działa zgodnie z opisanym scenariuszem.
-- System zachowuje spójny status dokumentu, załączników, akceptacji i podpisów.
-- Historia i komunikaty odzwierciedlają rzeczywisty wynik operacji.
+- Funkcja „Wydruk potwierdzenia zgodności podpisanego dokumentu” kończy się rezultatem zgodnym z celem testu.
+- Status, dane dokumentu, załączników i podpisów są zgodne z wykonaną operacją.
+- Rezultat pozostaje widoczny po odświeżeniu lub ponownym otwarciu obiektu, gdy operacja zapisuje dane.
+- Historia, raport, potwierdzenie lub komunikat systemowy odzwierciedla rzeczywisty wynik operacji, jeżeli taki element występuje w scenariuszu.

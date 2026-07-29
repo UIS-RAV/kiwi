@@ -1,0 +1,39 @@
+ID: SKL-002
+Moduł: Składy chronologiczne
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Operator składów chronologicznych – wszystkie – zakres dostępu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja dostępu operatora do obiektów we wszystkich składach.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienia wymagane do wykonania testowanej funkcji.
+- Dane testowe wymagane w scenariuszu istnieją w systemie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się jako Operator składów chronologicznych – wszystkie. | Logowanie kończy się powodzeniem. |
+| 2 | Otwórz eKancelaria -> Składy chronologiczne (przychodzące). | Wyświetla się lista przesyłek. |
+| 3 | Sprawdź przesyłki przypisane do różnych komórek organizacyjnych. | Widoczne są przesyłki ze wszystkich składów. |
+| 4 | Otwórz menu przesyłki z innej komórki. | Dostępne są dozwolone operacje. |
+| 5 | Odśwież widok i ponownie wykonaj kontrolę rezultatu. | Rezultat pozostaje zachowany po ponownym odczycie. |
+| 6 | Sprawdź historię albo szczegóły obiektu. | System prezentuje spójne dane i właściwy stan końcowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Widoczne są obiekty ze wszystkich składów chronologicznych.
+- Możliwe jest wykonywanie operacji zgodnych z maszyną stanów.
+- Stan końcowy jest zgodny z oczekiwanym rezultatem wszystkich kroków testowych.
+- Zmiana pozostaje zachowana po odświeżeniu widoku lub ponownym otwarciu obiektu.
+- Historia, status oraz powiązania lokalizacji, składu, pudła lub elementu pozostają spójne.

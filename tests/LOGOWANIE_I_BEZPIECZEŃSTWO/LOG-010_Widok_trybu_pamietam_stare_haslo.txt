@@ -1,7 +1,7 @@
 ID: LOG-010
 Moduł: LOGOWANIE I BEZPIECZEŃSTWO
 Typ: Funkcjonalny / UI
-Priorytet: Wysoki
+Priorytet: wysoki
 Poziom: Funkcjonalny
 
 <h2> Cel testu </h2>
@@ -17,13 +17,6 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 - System EZD jest dostępny.
 - Otwarty jest formularz zarządzania hasłem wywołany opcją „Zmień hasło”.
 
-<h2> Kryteria akceptacji </h2>
-
-- Możliwe jest wybranie trybu „Pamiętam stare hasło”.
-- Formularz prezentuje pola „Nazwa użytkownika”, „Stare hasło”, „Nowe hasło” oraz pole potwierdzenia nowego hasła.
-- Formularz nie wymaga kodu zmiany hasła właściwego dla trybu „Konto zablokowane”.
-- Formularz umożliwia zapisanie zmiany po uzupełnieniu prawidłowych danych.
-
 <h2> Kroki testowe </h2>
 
 | Krok | Czynność | Oczekiwany rezultat |
@@ -34,3 +27,14 @@ Rozpoczęcie pracy z systemem → Logowanie do systemu
 | 4 | Zweryfikować obecność pola „Nowe hasło”. | Pole „Nowe hasło” jest widoczne. |
 | 5 | Zweryfikować obecność pola służącego do potwierdzenia nowego hasła. | Pole potwierdzenia nowego hasła jest widoczne. |
 | 6 | Zweryfikować, że formularz nie prezentuje pola „Kod zmiany hasła” jako wymaganego elementu tego trybu. | Pole właściwe dla trybu „Konto zablokowane” nie jest wymagane w trybie „Pamiętam stare hasło”. |
+| 7 | Zakończyć bieżącą sesję i ponownie przejść do ekranu logowania. | System wyświetla ekran logowania bez zachowania dostępu z poprzedniej sesji. |
+| 8 | Zweryfikować możliwość logowania hasłem właściwym dla końcowego stanu scenariusza. | Działa wyłącznie hasło, które zgodnie ze scenariuszem powinno być aktualne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Możliwe jest wybranie trybu „Pamiętam stare hasło”.
+- Formularz prezentuje pola „Nazwa użytkownika”, „Stare hasło”, „Nowe hasło” oraz pole potwierdzenia nowego hasła.
+- Formularz nie wymaga kodu zmiany hasła właściwego dla trybu „Konto zablokowane”.
+- Formularz umożliwia zapisanie zmiany po uzupełnieniu prawidłowych danych.
+- Wszystkie kroki kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konta, hasła, profilu bezpieczeństwa lub sesji pozostaje spójny po ponownym odczycie.
