@@ -242,3 +242,34 @@ def get_run_name(runs, run_id):
 def get_test_executions_from_run(tcms, run_id):
     """Pobiera wykonania testów z Test Run."""
     return tcms.exec.TestExecution.filter({"run": run_id})
+
+def get_test_executions_with_comments_from_run(tcms, run_id):
+    """
+    Pobiera wykonania testów z Test Run
+    wraz z komentarzami przypisanymi do wykonania.
+    """
+    executions = tcms.exec.TestExecution.filter({
+        "run": run_id
+    })
+
+    for execution in executions:
+        execution_id = execution.get("id")
+        execution["comments"] = []
+
+        if execution_id is None:
+            continue
+
+        try:
+            comments = tcms.exec.TestExecution.get_comments(
+                execution_id
+            )
+
+            execution["comments"] = comments or []
+
+        except Exception as error:
+            print(
+                f"Nie udało się pobrać komentarzy "
+                f"dla Execution ID {execution_id}: {error}"
+            )
+
+    return executions

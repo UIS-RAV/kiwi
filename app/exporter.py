@@ -528,3 +528,566 @@ def _add_execution_section(
         _add_case_content(document, case_text)
 
     document.add_paragraph("")
+
+def _report_get_status_name(
+        execution: dict[str, Any],
+        status_map: dict[int, str],
+) -> str:
+    """
+    Zwraca nazwę statusu wykonania testu.
+    """
+    status_id = execution.get("status")
+
+    return str(
+        execution.get("status__name")
+        or execution.get("status_name")
+        or status_map.get(status_id)
+        or status_id
+        or "BRAK STATUSU"
+    )
+
+def _report_get_tester_name(execution: dict[str, Any]) -> str:
+    """
+    Zwraca nazwę testera.
+    """
+    tester = (
+            execution.get("tested_by__username")
+            or execution.get("tested_by__email")
+            or execution.get("tested_by")
+            or ""
+    )
+
+    return _get_value_name(tester)
+
+def _report_get_comment_text(comment: Any) -> str:
+    """
+    Pobiera treść komentarza niezależnie od formatu odpowiedzi Kiwi.
+    """
+    if comment is None:
+        return ""
+
+    if isinstance(comment, str):
+        return clean_inline_formatting(comment)
+
+    if isinstance(comment, dict):
+        value = (
+                comment.get("comment")
+                or comment.get("text")
+                or comment.get("body")
+                or comment.get("content")
+                or comment.get("description")
+                or ""
+        )
+
+        return clean_inline_formatting(str(value))
+
+    return clean_inline_formatting(str(comment))
+
+def _report_get_comment_author(comment: Any) -> str:
+    """
+    Pobiera autora komentarza.
+    """
+    if not isinstance(comment, dict):
+        return ""
+
+    author = (
+            comment.get("user__username")
+            or comment.get("author__username")
+            or comment.get("username")
+            or comment.get("user")
+            or comment.get("author")
+            or comment.get("created_by")
+            or ""
+    )
+
+    return _get_value_name(author)
+
+def _report_get_comment_date(comment: Any) -> str:
+    """
+    Pobiera datę komentarza.
+    """
+    if not isinstance(comment, dict):
+        return ""
+
+    return str(
+        comment.get("submit_date")
+        or comment.get("created_at")
+        or comment.get("created")
+        or comment.get("date")
+        or comment.get("timestamp")
+        or ""
+    )
+
+def _report_add_comments(
+        document: Document,
+        comments: list[Any],
+) -> None:
+    """
+    Dodaje do dokumentu komentarze wykonania testu.
+    """
+    document.add_paragraph(
+        "Komentarze do wykonania",
+        style="Heading 2",
+    )
+
+    if not comments:
+        paragraph = document.add_paragraph("Brak komentarzy.")
+        _set_paragraph_spacing(paragraph)
+        return
+
+    for index, comment in enumerate(comments, start=1):
+        text = _report_get_comment_text(comment)
+        author = _report_get_comment_author(comment)
+        comment_date = _report_get_comment_date(comment)
+
+        header_parts = []
+
+        if author:
+            header_parts.append(f"Autor: {author}")
+
+        if comment_date:
+            header_parts.append(f"Data: {comment_date}")
+
+        header = " | ".join(header_parts)
+
+        comment_table = document.add_table(rows=2, cols=2)
+        comment_table.style = "Table Grid"
+        comment_table.autofit = False
+
+        for row in comment_table.rows:
+            row.cells[0].width = Cm(3.5)
+            row.cells[1].width = Cm(14)
+
+        comment_table.rows[0].cells[0].text = "Komentarz"
+        comment_table.rows[0].cells[1].text = str(index)
+
+        comment_table.rows[1].cells[0].text = "Autor / data"
+        comment_table.rows[1].cells[1].text = header or "Brak danych"
+
+        if text:
+            paragraph = document.add_paragraph()
+            paragraph.add_run(text)
+            _set_paragraph_spacing(
+                paragraph,
+                before=2,
+                after=4,
+            )
+        else:
+            paragraph = document.add_paragraph(
+                "[Komentarz bez treści]"
+            )
+            _set_paragraph_spacing(
+                paragraph,
+                before=2,
+                after=4,
+            )
+
+def _report_build_status_summary(
+        executions: list[dict[str, Any]],
+        status_map: dict[int, str],
+) -> dict[str, int]:
+    """
+    Zlicza wykonania według statusu.
+    """
+    result: dict[str, int] = {}
+
+    for execution in executions:
+        status_name = _report_get_status_name(
+            execution,
+            status_map,
+        )
+
+        result[status_name] = result.get(status_name, 0) + 1
+
+    return result
+
+def _report_add_status_summary(
+        document: Document,
+        executions: list[dict[str, Any]],
+        status_map: dict[int, str],
+) -> None:
+    """
+    Dodaje tabelę podsumowania statusów.
+    """
+    document.add_paragraph(
+        "Podsumowanie realizacji Test Run",
+        style="Heading 1",
+    )
+
+    status_summary = _report_build_status_summary(
+        executions,
+        status_map,
+    )
+
+    total = len(executions)
+
+    table = document.add_table(rows=1, cols=3)
+    table.style = "Table Grid"
+    table.autofit = False
+
+    table.rows[0].cells[0].text = "Status"
+    table.rows[0].cells[1].text = "Liczba"
+    table.rows[0].cells[2].text = "Udział"
+
+    for row in table.rows:
+        row.cells[0].width = Cm(9)
+        row.cells[1].width = Cm(3)
+        row.cells[2].width = Cm(4)
+
+    sorted_statuses = sorted(
+        status_summary.items(),
+        key=lambda item: (-item[1], item[0]),
+    )
+
+    for status_name, count in sorted_statuses:
+        row = table.add_row().cells
+
+        percentage = (
+            count / total * 100
+            if total
+            else 0
+        )
+
+        row[0].text = status_name
+        row[1].text = str(count)
+        row[2].text = f"{percentage:.1f}%".replace(".", ",")
+
+    total_row = table.add_row().cells
+    total_row[0].text = "RAZEM"
+    total_row[1].text = str(total)
+    total_row[2].text = "100,0%" if total else "0,0%"
+
+    document.add_paragraph("")
+
+def _report_add_execution_list(
+        document: Document,
+        executions: list[dict[str, Any]],
+        status_map: dict[int, str],
+) -> None:
+    """
+    Dodaje zbiorczą tabelę wszystkich wykonań.
+    """
+    document.add_paragraph(
+        "Zestawienie wyników testów",
+        style="Heading 1",
+    )
+
+    table = document.add_table(rows=1, cols=6)
+    table.style = "Table Grid"
+    table.autofit = False
+
+    headers = [
+        "Lp.",
+        "Test Case",
+        "Nazwa testu",
+        "Status",
+        "Tester",
+        "Data zakończenia",
+    ]
+
+    for index, header in enumerate(headers):
+        table.rows[0].cells[index].text = header
+
+    widths = [1, 2.2, 6.8, 2.8, 2.5, 2.8]
+
+    for column_index, width in enumerate(widths):
+        _set_column_width(
+            table,
+            column_index,
+            width,
+        )
+
+    sorted_executions = sorted(
+        executions,
+        key=lambda item: item.get("id", 0),
+    )
+
+    for number, execution in enumerate(
+            sorted_executions,
+            start=1,
+    ):
+        row = table.add_row().cells
+
+        case_id = execution.get("case", "")
+        summary = (
+                execution.get("case__summary")
+                or execution.get("summary")
+                or ""
+        )
+
+        row[0].text = str(number)
+        row[1].text = f"TC-{case_id}"
+        row[2].text = str(summary)
+        row[3].text = _report_get_status_name(
+            execution,
+            status_map,
+        )
+        row[4].text = _report_get_tester_name(execution)
+        row[5].text = str(
+            execution.get("stop_date")
+            or ""
+        )
+
+    document.add_paragraph("")
+
+def _report_get_case(
+        tcms,
+        case_id: int | None,
+) -> dict[str, Any] | None:
+    """
+    Pobiera pełny Test Case.
+    """
+    if not case_id:
+        return None
+
+    try:
+        found_cases = tcms.exec.TestCase.filter({
+            "id": case_id
+        })
+
+        if found_cases:
+            return found_cases[0]
+
+    except Exception as error:
+        print(
+            f"Nie udało się pobrać Test Case ID "
+            f"{case_id}: {error}"
+        )
+
+    return None
+
+def _report_add_execution_section(
+        document: Document,
+        tcms,
+        execution: dict[str, Any],
+        status_map: dict[int, str],
+) -> None:
+    """
+    Dodaje rozszerzone informacje o wykonaniu testu.
+    """
+    case_id = execution.get("case")
+    execution_id = execution.get("id")
+
+    case = _report_get_case(
+        tcms,
+        case_id,
+    )
+
+    if case:
+        case_summary = (
+                case.get("summary")
+                or f"TC {case_id}"
+        )
+        case_text = case.get("text") or ""
+    else:
+        case_summary = (
+                execution.get("case__summary")
+                or execution.get("summary")
+                or f"TC {case_id}"
+        )
+        case_text = ""
+
+    heading = document.add_paragraph(
+        style="Heading 1"
+    )
+    heading.add_run(
+        f"TC-{case_id}: {case_summary}"
+    )
+
+    info_table = document.add_table(
+        rows=8,
+        cols=2,
+    )
+    info_table.style = "Table Grid"
+    info_table.autofit = False
+
+    for row in info_table.rows:
+        row.cells[0].width = Cm(4)
+        row.cells[1].width = Cm(13.5)
+
+    values = [
+        ("Execution ID", execution_id),
+        ("Test Case ID", case_id),
+        ("Nazwa testu", case_summary),
+        (
+            "Status",
+            _report_get_status_name(
+                execution,
+                status_map,
+            ),
+        ),
+        (
+            "Tester",
+            _report_get_tester_name(execution),
+        ),
+        (
+            "Data rozpoczęcia",
+            execution.get("start_date") or "",
+        ),
+        (
+            "Data zakończenia",
+            execution.get("stop_date") or "",
+        ),
+        (
+            "Liczba komentarzy",
+            len(execution.get("comments") or []),
+        ),
+    ]
+
+    for row_index, (label, value) in enumerate(values):
+        info_table.rows[row_index].cells[0].text = str(label)
+        info_table.rows[row_index].cells[1].text = str(
+            value or ""
+        )
+
+    actual_result = (
+            execution.get("actual_result")
+            or execution.get("notes")
+            or ""
+    )
+
+    document.add_paragraph(
+        "Wynik wykonania",
+        style="Heading 2",
+    )
+
+    if actual_result:
+        _add_case_content(
+            document,
+            str(actual_result),
+        )
+    else:
+        paragraph = document.add_paragraph(
+            "Brak opisu wyniku wykonania."
+        )
+        _set_paragraph_spacing(paragraph)
+
+    comments = execution.get("comments") or []
+
+    _report_add_comments(
+        document,
+        comments,
+    )
+
+    if case_text:
+        document.add_paragraph(
+            "Treść Test Case",
+            style="Heading 2",
+        )
+
+        _add_case_content(
+            document,
+            case_text,
+        )
+
+    document.add_paragraph("")
+
+def export_run_report_to_docx(
+        tcms,
+        run_name: str,
+        run_id: int,
+        executions: list[dict[str, Any]],
+) -> Path:
+    """
+    Generuje rozszerzony raport wykonania Test Run.
+
+    Funkcja jest niezależna od export_run_to_docx
+    i nie zmienia dotychczasowego formatu eksportu.
+    """
+    document = Document()
+    _set_doc_style(document)
+
+    title = document.add_paragraph()
+    title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+
+    title_run = title.add_run(
+        f"Raport z realizacji Test Run: {run_name}"
+    )
+    title_run.bold = True
+    title_run.font.size = Pt(16)
+
+    subtitle = document.add_paragraph()
+    subtitle.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    subtitle.add_run(
+        f"ID Test Run: {run_id}"
+    )
+
+    execution_count = document.add_paragraph()
+    execution_count.alignment = (
+        WD_PARAGRAPH_ALIGNMENT.CENTER
+    )
+    execution_count.add_run(
+        f"Liczba wykonań: {len(executions)}"
+    )
+
+    generation_date = document.add_paragraph()
+    generation_date.alignment = (
+        WD_PARAGRAPH_ALIGNMENT.CENTER
+    )
+    generation_date.add_run(
+        "Data wygenerowania raportu: "
+        f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    )
+
+    document.add_paragraph("")
+
+    statuses = tcms.exec.TestExecutionStatus.filter({})
+
+    status_map = {
+        status["id"]: status["name"]
+        for status in statuses
+    }
+
+    _report_add_status_summary(
+        document,
+        executions,
+        status_map,
+    )
+
+    _report_add_execution_list(
+        document,
+        executions,
+        status_map,
+    )
+
+    toc_heading = document.add_paragraph()
+    toc_run = toc_heading.add_run(
+        "Spis treści"
+    )
+    toc_run.bold = True
+    toc_run.font.size = Pt(14)
+
+    _add_table_of_contents(document)
+
+    document.add_page_break()
+
+    for execution in sorted(
+            executions,
+            key=lambda item: item.get("id", 0),
+    ):
+        _report_add_execution_section(
+            document=document,
+            tcms=tcms,
+            execution=execution,
+            status_map=status_map,
+        )
+
+    output_dir = _ensure_output_dir()
+    timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    safe_name = re.sub(
+        r"[^a-zA-Z0-9]+",
+        "_",
+        run_name,
+    ).strip("_")
+
+    output_path = output_dir / (
+        f"Raport_Test_Run_{safe_name}_"
+        f"ID-{run_id}_{timestamp}.docx"
+    )
+
+    document.save(output_path)
+
+    return output_path
