@@ -983,10 +983,12 @@ def _report_add_execution_section(
     document.add_paragraph("")
 
 def export_run_report_to_docx(
-        tcms,
-        run_name: str,
-        run_id: int,
-        executions: list[dict[str, Any]],
+    tcms,
+    run_name: str,
+    run_id: int,
+    executions: list[dict[str, Any]],
+    report_title: str | None = None,
+    file_prefix: str = "Raport_Test_Run",
 ) -> Path:
     """
     Generuje rozszerzony raport wykonania Test Run.
@@ -1000,9 +1002,10 @@ def export_run_report_to_docx(
     title = document.add_paragraph()
     title.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
-    title_run = title.add_run(
-        f"Raport z realizacji Test Run: {run_name}"
-    )
+    if report_title is None:
+        report_title = f"Raport z realizacji Test Run: {run_name}"
+
+    title_run = title.add_run(report_title)
     title_run.bold = True
     title_run.font.size = Pt(16)
 
@@ -1084,7 +1087,7 @@ def export_run_report_to_docx(
     ).strip("_")
 
     output_path = output_dir / (
-        f"Raport_Test_Run_{safe_name}_"
+        f"{file_prefix}_{safe_name}_"
         f"ID-{run_id}_{timestamp}.docx"
     )
 

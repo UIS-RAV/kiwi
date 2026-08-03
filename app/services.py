@@ -273,3 +273,38 @@ def get_test_executions_with_comments_from_run(tcms, run_id):
             )
 
     return executions
+
+def get_non_passed_executions(
+    tcms,
+    executions: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    Zwraca wyłącznie wykonania, których status jest inny niż PASSED.
+
+    Status wykonania w danych TestExecution jest identyfikatorem,
+    dlatego nazwy statusów pobierane są z TestExecutionStatus.
+    """
+    statuses = tcms.exec.TestExecutionStatus.filter({})
+
+    status_map = {
+        status["id"]: str(status["name"]).strip()
+        for status in statuses
+    }
+
+    non_passed_executions = []
+
+    for execution in executions:
+        status_id = execution.get("status")
+
+        status_name = str(
+            execution.get("status__name")
+            or execution.get("status_name")
+            or status_map.get(status_id)
+            or status_id
+            or ""
+        ).strip()
+
+        if status_name.upper() != "PASSED":
+            non_passed_executions.append(execution)
+
+    return non_passed_executions
