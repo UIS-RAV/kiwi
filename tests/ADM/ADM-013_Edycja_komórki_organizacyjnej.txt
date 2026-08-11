@@ -1,0 +1,35 @@
+ID: ADM-013
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja komórki organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Edycja komórki organizacyjnej” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W strukturze istnieje komórka możliwa do edycji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz edycję komórki organizacyjnej. | System udostępnia formularz edycji. |
+| 2 | Zmień dane komórki. | Zmiany są widoczne w formularzu. |
+| 3 | Zapisz formularz. | System zapisuje zmienione dane. |
+| 4 | Otwórz komórkę ponownie. | Zmiany pozostają widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

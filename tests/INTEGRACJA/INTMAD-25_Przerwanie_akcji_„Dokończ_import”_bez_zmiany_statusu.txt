@@ -1,0 +1,37 @@
+ID: INTMAD-25
+Moduł: INTEGRACJA MADKOM
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Przerwanie akcji „Dokończ import” bez zmiany statusu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Przerwanie akcji „Dokończ import” bez zmiany statusu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz akcję „Dokończ import” dla sprawy częściowej. | Lista dokumentów jest dostępna. |
+| 2 | Anuluj operację przed zatwierdzeniem. | Import nie jest wykonywany. |
+| 3 | Odśwież sprawę. | Licznik i status pozostają bez zmian. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

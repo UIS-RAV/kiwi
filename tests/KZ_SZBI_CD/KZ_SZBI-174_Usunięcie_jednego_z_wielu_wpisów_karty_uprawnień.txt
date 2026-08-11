@@ -1,0 +1,36 @@
+ID: KZ_SZBI-174
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie jednego z wielu wpisów karty uprawnień </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie usunięcia wybranego wpisu z karty zawierającej co najmniej dwa wpisy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do modyfikacji i podglądu kart.
+- Karta posiada co najmniej dwa wpisy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz kartę pracownika zawierającą co najmniej dwa wpisy i wybierz „Edytuj”. | Formularz edycji karty jest widoczny. |
+| 2 | Przy jednym wpisie wybierz „Usuń wpis”. | Wpis zostaje oznaczony do usunięcia. |
+| 3 | Wybierz „Edytuj kartę uprawnień”. | System zapisuje zmianę. |
+| 4 | Otwórz kartę ponownie. | Usuniętego wpisu nie ma, a pozostałe wpisy są zachowane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

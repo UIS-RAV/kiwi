@@ -1,0 +1,37 @@
+ID: INTMAD-20
+Moduł: INTEGRACJA MADKOM
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Rozszerzony
+
+<h1> Dostępność akcji „Dokończ import” dla częściowo zaimportowanej sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dostępność akcji „Dokończ import” dla częściowo zaimportowanej sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz szczegóły sprawy z częściowym importem dokumentów. | Sprawa ma status częściowego importu. |
+| 2 | Zweryfikuj dostępne akcje. | Akcja „Dokończ import” jest widoczna i aktywna. |
+| 3 | Otwórz akcję. | System prezentuje dokumenty oczekujące na import. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

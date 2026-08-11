@@ -1,0 +1,35 @@
+ID: ADM-022
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Zmiana ustawień stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Zmiana ustawień stanowiska” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W strukturze istnieje stanowisko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy stanowisku wybierz „Ustawienia dla stanowiska”. | System otwiera ustawienia stanowiska. |
+| 2 | Zmień wybrane ustawienia stanowiska. | Zmiany są widoczne w formularzu. |
+| 3 | Zapisz zmiany. | System zapisuje ustawienia. |
+| 4 | Otwórz ustawienia ponownie. | Zapisane wartości są widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

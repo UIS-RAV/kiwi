@@ -1,0 +1,36 @@
+ID: ADM-031
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja danych pracownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Edycja danych pracownika” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W systemie istnieje pracownik.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę Pracowników. | Pracownik jest widoczny. |
+| 2 | Rozwiń menu przy pracowniku i wybierz „Edytuj pracownika”. | System otwiera formularz edycji. |
+| 3 | Zmień dane pracownika. | Zmiany są widoczne. |
+| 4 | Wybierz „Zapisz”. | System zapisuje zmiany. |
+| 5 | Otwórz pracownika ponownie. | Zmienione dane pozostają widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

@@ -1,0 +1,35 @@
+ID: KZ_SZBI-172
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Rozszerzony
+
+<h1> Podgląd kart uprawnień pracownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Podgląd kart uprawnień pracownika” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - karty uprawnień - podgląd”.
+- Pracownik posiada kartę uprawnień.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Karty uprawnień. | Sekcja „Karty pracowników” jest widoczna. |
+| 2 | Wyszukaj pracownika. | Pracownik jest widoczny na liście. |
+| 3 | Wybierz pracownika. | System wyświetla wszystkie karty i wpisy uprawnień pracownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

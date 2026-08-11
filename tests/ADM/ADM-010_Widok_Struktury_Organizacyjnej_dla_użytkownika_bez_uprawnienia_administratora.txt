@@ -1,0 +1,32 @@
+ID: ADM-010
+Moduł: ADMINISTRACJA
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Funkcjonalny
+
+<h1> Widok Struktury Organizacyjnej dla użytkownika bez uprawnienia administratora </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Widok Struktury Organizacyjnej dla użytkownika bez uprawnienia administratora” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik posiada uprawnienie do modułu Struktury Organizacyjnej, ale nie posiada !Admin.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Struktury Organizacyjnej. | System wyświetla strukturę zgodnie z zakresem uprawnień. |
+| 2 | Zweryfikuj dostępność operacji administracyjnych. | Użytkownik nie uzyskuje funkcji zastrzeżonych dla administratora. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

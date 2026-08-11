@@ -1,0 +1,37 @@
+ID: INTMAD-31
+Moduł: INTEGRACJA MADKOM
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Pierwszeństwo statusu ZPO nad istniejącym mapowaniem dokumentu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Pierwszeństwo statusu ZPO nad istniejącym mapowaniem dokumentu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przygotuj dokument typu ZPO posiadający dane historycznego mapowania lub nietypowy stan testowy. | Dokument jest dostępny do weryfikacji. |
+| 2 | Otwórz listę dokumentów i szczegóły. | UI prezentuje status import_unavailable jako nadrzędny. |
+| 3 | Zweryfikuj ikonę i kolor. | Widoczny jest szary minus, bez statusu zielonego lub żółtego wynikającego z lokalizacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

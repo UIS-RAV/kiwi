@@ -1,0 +1,38 @@
+ID: INTMAD-32
+Moduł: INTEGRACJA MADKOM
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Status dokumentu wynika z rzeczywistej lokalizacji, a nie punktu wejścia importu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Status dokumentu wynika z rzeczywistej lokalizacji, a nie punktu wejścia importu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaimportuj dokument z listy dokumentów do powiązanej sprawy EZD. | import_entry_point ma wartość document_list. |
+| 2 | Zweryfikuj status dokumentu. | Status wynosi in_origin_case, niezależnie od punktu wejścia. |
+| 3 | Zaimportuj inny dokument z listy spraw do innej sprawy EZD. | import_entry_point ma wartość case_list. |
+| 4 | Zweryfikuj status. | Status wynosi in_other_case zgodnie z lokalizacją, a nie punktem wejścia. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

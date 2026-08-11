@@ -1,0 +1,38 @@
+ID: KZ_SZBI-128
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Utworzenie ankiety anonimowej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawnego utworzenia ankiety anonimowej zgodnie z instrukcją, tak aby wyniki ankiety są anonimowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada role „KZ - Ankiety tworzenie” oraz „KZ - ankiety”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Kontrola Zarządcza” → „Ankiety” i wybierz „Nowa ankieta”. | System otwiera formularz tworzenia ankiety. |
+| 2 | Ustaw tryb ankiety jako anonimowej. | System zapisuje tryb ankiety jako anonimowej. |
+| 3 | Uzupełnij stanowisko tworzące, tytuł, kategorię, daty oraz opis. | Wymagane dane podstawowe zostają uzupełnione. |
+| 4 | Dodaj co najmniej jedną sekcję i pytania wymaganych rodzajów. | Sekcja i pytania zostają dodane. |
+| 5 | Dodaj uczestników i przypisz im role. | Uczestnicy otrzymują wskazane role. |
+| 6 | Wybierz „Utwórz ankietę”. | Ankieta zostaje utworzona z właściwym trybem anonimowości i statusem wynikającym z daty rozpoczęcia. |
+| 7 | Otwórz ankietę ponownie. | Tryb anonimowości, pytania i uczestnicy pozostają zgodne z konfiguracją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

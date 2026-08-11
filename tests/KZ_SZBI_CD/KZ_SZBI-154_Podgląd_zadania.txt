@@ -1,0 +1,35 @@
+ID: KZ_SZBI-154
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Podgląd zadania </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Podgląd zadania” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - zadania”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Zadania i dowolną zakładkę. | Lista zadań jest widoczna. |
+| 2 | Z menu zadania wybierz „Podgląd”. | System otwiera podgląd zadania. |
+| 3 | Zweryfikuj dane, wykonanie, osoby, powiązania, załączniki i podzagadnienia. | Sekcja zadania zawiera komplet informacji. |
+| 4 | Zweryfikuj Historię i Komentarze. | Sekcje są dostępne i powiązane z zadaniem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,36 @@
+ID: KZ_SZBI-138
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Kopiowanie folderu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Kopiowanie folderu” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - foldery”.
+- Istnieje folder z przypisanymi użytkownikami i uprawnieniami.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Foldery. | Folder źródłowy jest widoczny. |
+| 2 | Przy folderze wybierz „Utwórz kopię”. | System tworzy kopię folderu. |
+| 3 | Otwórz kopię. | Kopia zawiera uprawnienia i użytkowników folderu źródłowego. |
+| 4 | Porównaj kopię z folderem źródłowym. | Powiązania użytkowników i uprawnienia są zgodne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,37 @@
+ID: KZ_SZBI-166
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Rozszerzony
+
+<h1> Edycja ryzyka </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Edycja ryzyka” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada role „KZ - zadania”, „KZ - ryzyko tworzenie” i „KZ - ryzyko”.
+- Istnieje ryzyko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz ryzyko z podglądu zadania. | Podgląd ryzyka jest widoczny. |
+| 2 | W sekcji informacji podstawowych wybierz „Edytuj”. | System udostępnia formularz. |
+| 3 | Zmień wartości ryzyka. | Zmiany są widoczne. |
+| 4 | Wybierz „Zapisz”. | System zapisuje zmiany. |
+| 5 | Otwórz ryzyko ponownie. | Zmiany i historia są zgodne z operacją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

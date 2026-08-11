@@ -1,0 +1,38 @@
+ID: INTMAD-23
+Moduł: INTEGRACJA MADKOM
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dokończenie importu częściowego do pełnego odwzorowania </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dokończenie importu częściowego do pełnego odwzorowania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz sprawę z 2 z 5 dokumentów zaimportowanych do właściwej sprawy EZD. | Status jest częściowy i zielony. |
+| 2 | Uruchom „Dokończ import” i wybierz pozostałe 3 dokumenty. | System importuje dokumenty do powiązanej sprawy EZD. |
+| 3 | Odśwież widok. | Status zmienia się na ptaszek zielony 5 z 5. |
+| 4 | Zweryfikuj szczegóły dokumentów. | Każdy dokument ma status in_origin_case. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

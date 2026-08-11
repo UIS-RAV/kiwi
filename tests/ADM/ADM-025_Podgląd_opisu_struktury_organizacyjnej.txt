@@ -1,0 +1,32 @@
+ID: ADM-025
+Moduł: ADMINISTRACJA
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Podgląd opisu struktury organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Podgląd opisu struktury organizacyjnej” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Struktury Organizacyjnej. | Struktura jest widoczna. |
+| 2 | Otwórz opis struktury. | System prezentuje opis struktury organizacyjnej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

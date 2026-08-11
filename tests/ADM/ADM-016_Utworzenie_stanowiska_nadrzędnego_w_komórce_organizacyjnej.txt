@@ -1,0 +1,35 @@
+ID: ADM-016
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Utworzenie stanowiska nadrzędnego w komórce organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Utworzenie stanowiska nadrzędnego w komórce organizacyjnej” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- Istnieje komórka organizacyjna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz komórkę organizacyjną. | Komórka zostaje wskazana. |
+| 2 | Wybierz opcję utworzenia stanowiska nadrzędnego. | System otwiera formularz stanowiska. |
+| 3 | Uzupełnij wymagane dane stanowiska. | Formularz jest kompletny. |
+| 4 | Zapisz stanowisko. | Stanowisko nadrzędne zostaje utworzone w wybranej komórce. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

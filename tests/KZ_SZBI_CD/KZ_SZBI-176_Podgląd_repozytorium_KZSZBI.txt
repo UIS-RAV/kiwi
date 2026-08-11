@@ -1,0 +1,34 @@
+ID: KZ_SZBI-176
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Podgląd repozytorium KZ/SZBI </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Podgląd repozytorium KZ/SZBI” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „Repozytorium KZ/SZBI - dostęp”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Kontrola Zarządcza” → „Repozytorium KZ/SZBI”. | Lista folderów repozytorium jest widoczna. |
+| 2 | Wybierz nazwę folderu. | System wyświetla podgląd folderu. |
+| 3 | Zweryfikuj dokumenty znajdujące się w folderze. | Zawartość folderu jest widoczna zgodnie z uprawnieniami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,36 @@
+ID: ADM-011
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dodanie podrzędnej komórki organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Dodanie podrzędnej komórki organizacyjnej” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- Istnieje komórka nadrzędna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Struktury Organizacyjne i wybierz komórkę nadrzędną. | Komórka nadrzędna jest wskazana. |
+| 2 | Wybierz opcję dodania podrzędnej komórki organizacyjnej. | System otwiera formularz nowej komórki. |
+| 3 | Uzupełnij wymagane dane komórki. | Pola wymagane są uzupełnione. |
+| 4 | Zapisz komórkę. | Nowa komórka zostaje dodana pod właściwą komórką nadrzędną. |
+| 5 | Odśwież strukturę. | Nowa komórka pozostaje widoczna we właściwym miejscu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

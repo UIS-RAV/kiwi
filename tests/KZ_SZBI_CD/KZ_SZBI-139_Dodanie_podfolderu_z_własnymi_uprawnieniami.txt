@@ -1,0 +1,37 @@
+ID: KZ_SZBI-139
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie podfolderu z własnymi uprawnieniami </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Dodanie podfolderu z własnymi uprawnieniami” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - foldery”.
+- Istnieje folder nadrzędny.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Foldery i wybierz „Dodaj podfolder”. | System otwiera formularz podfolderu. |
+| 2 | Uzupełnij stanowisko, nazwę i opis. | Wymagane pola są uzupełnione. |
+| 3 | W polu praw dostępu wybierz „Określone dla podfolderu”. | System udostępnia sekcję pracowników. |
+| 4 | Dodaj osoby i przypisz role dostępu. | Uprawnienia podfolderu zostają określone niezależnie. |
+| 5 | Wybierz „Dodaj folder”. | Podfolder zostaje utworzony pod właściwym folderem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

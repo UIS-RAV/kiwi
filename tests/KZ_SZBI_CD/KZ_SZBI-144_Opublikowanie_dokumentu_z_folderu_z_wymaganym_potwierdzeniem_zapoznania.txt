@@ -1,0 +1,37 @@
+ID: KZ_SZBI-144
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Opublikowanie dokumentu z folderu z wymaganym potwierdzeniem zapoznania </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie publikacji dokumentu w folderze z wymaganym potwierdzeniem zapoznania.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - foldery”.
+- W folderze istnieje dokument.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz folder zawierający dokument i wybierz przy nim „Publikacja”. | System otwiera okno publikacji. |
+| 2 | Wskaż odbiorców publikacji. | Wybrani użytkownicy są widoczni na liście odbiorców. |
+| 3 | Włącz wymaganie potwierdzenia zapoznania. | System oznacza publikację jako wymagającą potwierdzenia. |
+| 4 | Wybierz „Zapisz zmiany”. | Dokument zostaje opublikowany zgodnie z wybranym wariantem. |
+| 5 | Zaloguj się jako odbiorca i otwórz dokument. | Dokument jest dostępny; wymaganie potwierdzenia jest zgodne z konfiguracją publikacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

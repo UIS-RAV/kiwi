@@ -1,0 +1,36 @@
+ID: KZ_SZBI-152
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Usuwanie folderu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Usuwanie folderu” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - foldery”.
+- Istnieje folder możliwy do usunięcia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Foldery. | Folder jest widoczny. |
+| 2 | Przy folderze wybierz „Usuń”. | System wyświetla okno potwierdzenia. |
+| 3 | Potwierdź usunięcie. | Folder zostaje usunięty. |
+| 4 | Odśwież listę. | Folder nie jest widoczny. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

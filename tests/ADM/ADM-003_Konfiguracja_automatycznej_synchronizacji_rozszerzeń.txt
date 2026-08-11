@@ -1,0 +1,36 @@
+ID: ADM-003
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja automatycznej synchronizacji rozszerzeń </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Konfiguracja automatycznej synchronizacji rozszerzeń” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W systemie aktywne jest rozszerzenie obsługujące automatyczną synchronizację.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Administracja” → „Ustawienia ogólne” → „Rozszerzenia”. | System prezentuje konfigurację rozszerzeń. |
+| 2 | Otwórz ustawienia automatycznej synchronizacji wybranego rozszerzenia. | System wyświetla parametry synchronizacji. |
+| 3 | Ustaw automatyczną synchronizację zgodnie z dostępnymi parametrami. | Nowe wartości są widoczne w formularzu. |
+| 4 | Zapisz konfigurację. | System zapisuje ustawienia synchronizacji. |
+| 5 | Odśwież widok. | Zapisane ustawienia pozostają widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

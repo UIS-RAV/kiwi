@@ -1,0 +1,36 @@
+ID: KZ_SZBI-157
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Zwrot zadania do autora </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Zwrot zadania do autora” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - zadania”.
+- Użytkownik jest realizatorem zadania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Moje”. | Przypisane zadanie jest widoczne. |
+| 2 | Z menu zadania wybierz „Zwróć”. | System otwiera formularz zwrotu. |
+| 3 | Opcjonalnie dodaj komentarz i wybierz „Zapisz”. | Zadanie zostaje zwrócone do autora. |
+| 4 | Sprawdź zakładkę „Zwrócone”. | Zwrócone zadanie jest widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

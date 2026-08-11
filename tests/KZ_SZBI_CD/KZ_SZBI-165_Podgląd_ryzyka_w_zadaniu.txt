@@ -1,0 +1,36 @@
+ID: KZ_SZBI-165
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Podgląd ryzyka w zadaniu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Podgląd ryzyka w zadaniu” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada role „KZ - zadania” i „KZ - ryzyko”.
+- Zadanie posiada ryzyko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz podgląd zadania. | Sekcja Ryzyko jest widoczna. |
+| 2 | Wybierz identyfikator ryzyka. | System otwiera podgląd ryzyka. |
+| 3 | Zweryfikuj informacje podstawowe, monitorowanie i powiązania z zadaniem, dokumentem lub folderem. | Dane są widoczne. |
+| 4 | Zweryfikuj historię ryzyka. | Historia zmian jest dostępna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,36 @@
+ID: ADM-041
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Przypisanie roli do stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Przypisanie roli do stanowiska” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W systemie istnieje stanowisko i rola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Struktury Organizacyjne i ustawienia stanowiska. | System wyświetla ustawienia stanowiska. |
+| 2 | W sekcji Uprawnienia wybierz rolę. | Rola zostaje wskazana. |
+| 3 | Wybierz „Dodaj rolę”. | Rola pojawia się na liście ról stanowiska. |
+| 4 | Zapisz zmiany. | System przypisuje rolę do stanowiska. |
+| 5 | Zaloguj się jako pracownik stanowiska. | Użytkownik posiada funkcje wynikające z przypisanej roli. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

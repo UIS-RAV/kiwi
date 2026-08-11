@@ -1,0 +1,35 @@
+ID: ADM-006
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Oznaczenie klasy JRWA jako elektronicznej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Oznaczenie klasy JRWA jako elektronicznej” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- W systemie istnieje klasa JRWA możliwa do konfiguracji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację klasy JRWA w module administracji. | System prezentuje dane klasy JRWA. |
+| 2 | Włącz oznaczenie klasy jako elektronicznej. | Klasa zostaje oznaczona jako elektroniczna w formularzu. |
+| 3 | Zapisz zmianę. | System zapisuje konfigurację klasy JRWA. |
+| 4 | Otwórz klasę ponownie. | Oznaczenie klasy jako elektronicznej pozostaje aktywne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

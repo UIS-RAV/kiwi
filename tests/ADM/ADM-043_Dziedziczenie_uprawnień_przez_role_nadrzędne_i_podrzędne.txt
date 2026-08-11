@@ -1,0 +1,35 @@
+ID: ADM-043
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dziedziczenie uprawnień przez role nadrzędne i podrzędne </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Dziedziczenie uprawnień przez role nadrzędne i podrzędne” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+- Istnieją role nadrzędna i podrzędna możliwe do powiązania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz edycję roli. | Formularz relacji ról jest widoczny. |
+| 2 | Dodaj rolę podrzędną lub nadrzędną. | Relacja zostaje ustawiona. |
+| 3 | Zapisz rolę. | System zapisuje powiązanie. |
+| 4 | Przypisz rolę do stanowiska i zaloguj się jako pracownik. | Dostęp odpowiada zapisanym relacjom ról. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

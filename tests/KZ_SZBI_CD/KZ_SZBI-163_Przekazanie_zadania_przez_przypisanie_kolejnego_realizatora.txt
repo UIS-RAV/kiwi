@@ -1,0 +1,38 @@
+ID: KZ_SZBI-163
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Przekazanie zadania przez przypisanie kolejnego realizatora </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie przekazania zadania w wariancie „Kolejny realizator”.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - zadania”.
+- Zadanie ma status „Do zrobienia”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zadanie o statusie „Do zrobienia” w zakładce „Moje”. | Zadanie jest dostępne do przekazania. |
+| 2 | Wybierz akcję przekazania do realizacji. | System otwiera formularz przekazania. |
+| 3 | Wybierz wariant „Kolejny realizator”. | Wybrany wariant zostaje ustawiony. |
+| 4 | Wskaż pracownika docelowego i uzupełnij wymagane dane. | Pracownik i dane przekazania zostają zapisane w formularzu. |
+| 5 | Wybierz „Zapisz”. | System wykonuje przekazanie zgodnie z wybranym wariantem. |
+| 6 | Otwórz podgląd zadania. | Nowy realizator, delegowanie albo podzagadnienie jest widoczne zgodnie z wariantem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

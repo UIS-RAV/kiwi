@@ -1,0 +1,38 @@
+ID: KZ_SZBI-135
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Udział użytkownika w ankiecie </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Udział użytkownika w ankiecie” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - ankiety”.
+- Użytkownik jest przypisany jako ankietowany do ankiety o statusie „W toku”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Ankiety i zakładkę „Do wypełnienia”. | Ankieta jest widoczna. |
+| 2 | Z menu ankiety wybierz „Wypełnij”. | System otwiera formularz ankiety. |
+| 3 | Uzupełnij odpowiedzi na pytania. | Odpowiedzi zostają zapisane w formularzu. |
+| 4 | Wybierz „Zapisz szkic”. | System zapisuje odpowiedzi bez wysyłania ankiety. |
+| 5 | Otwórz szkic, uzupełnij brakujące odpowiedzi i wybierz „Wyślij”. | Ankieta zostaje wysłana. |
+| 6 | Przejdź do zakładki „Wypełnione”. | Wysłana ankieta jest widoczna w zakładce. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

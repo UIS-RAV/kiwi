@@ -1,0 +1,34 @@
+ID: ADM-030
+Moduł: ADMINISTRACJA
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja wymaganych pól przy dodawaniu pracownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Walidacja wymaganych pól przy dodawaniu pracownika” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD i posiada uprawnienie administratora systemu !Admin.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Dodaj pracownika”. | Formularz jest widoczny. |
+| 2 | Pozostaw wymagane pole puste i spróbuj zapisać. | System nie zapisuje pracownika i wskazuje brakujące pole. |
+| 3 | Uzupełnij wymagane dane. | Walidacja zostaje usunięta. |
+| 4 | Zapisz formularz. | Pracownik zostaje utworzony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

@@ -1,0 +1,36 @@
+ID: KZ_SZBI-170
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Przypisanie użytkownika do rejestru ryzyka </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Przypisanie użytkownika do rejestru ryzyka” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia administratora struktury organizacyjnej.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Administracja → Struktura organizacyjna. | Struktura jest widoczna. |
+| 2 | Przy stanowisku wybierz „Ustawienia dla stanowiska”. | Ustawienia stanowiska są otwarte. |
+| 3 | W sekcji Uprawnienia wybierz rolę „KZ - Rejestry” i dodaj ją. | Rola zostaje przypisana. |
+| 4 | Zapisz zmiany. | Zmiany zostają utrwalone. |
+| 5 | Zaloguj się jako użytkownik stanowiska i otwórz rejestr ryzyka. | Użytkownik ma dostęp wynikający z przypisanej roli. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

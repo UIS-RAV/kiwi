@@ -1,0 +1,38 @@
+ID: KZ_SZBI-153
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Utworzenie zadania </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Utworzenie zadania” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada role „KZ - zadania tworzenie” oraz „KZ - zadania”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Kontrola Zarządcza” → „Zadania” i wybierz „Utwórz zadanie”. | System otwiera formularz. |
+| 2 | Uzupełnij stanowisko, tytuł, kategorię, rodzaj, priorytet, wagę, termin i opis. | Dane podstawowe są uzupełnione. |
+| 3 | Jeżeli zadanie ma być cykliczne, określ częstotliwość i liczbę powtórzeń. | Parametry cykliczności zostają zapisane. |
+| 4 | Ustaw automatyczną finalizację lub powiadomienie, jeżeli jest wymagane. | Wybrane opcje są ustawione. |
+| 5 | Dodaj załączniki. | Załączniki są widoczne w formularzu. |
+| 6 | Wskaż realizatorów, współpracowników i obserwatorów. | Osoby otrzymują właściwe role. |
+| 7 | Wybierz „Zapisz”. | Zadanie zostaje utworzone i jest widoczne w zakładce „Zlecone”. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,36 @@
+ID: INTMAD-29
+Moduł: INTEGRACJA MADKOM
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Funkcjonalny
+
+<h1> Status dokumentu zaimportowanego bez przypisania do sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Status dokumentu zaimportowanego bez przypisania do sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaimportuj dokument do EZD bez przypisania do sprawy. | Dokument istnieje w EZD bez kontekstu sprawy. |
+| 2 | Zweryfikuj status w dostępnych widokach. | System prezentuje minus w kółku, kolor żółty i tooltip „Zaimportowano dokument. Brak przypisania do sprawy.” |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

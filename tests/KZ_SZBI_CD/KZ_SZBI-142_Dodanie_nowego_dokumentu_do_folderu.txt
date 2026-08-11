@@ -1,0 +1,37 @@
+ID: KZ_SZBI-142
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie nowego dokumentu do folderu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Dodanie nowego dokumentu do folderu” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - foldery”.
+- Użytkownik ma uprawnienie do dodawania dokumentów do folderu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wybrany folder. | Widoczna jest zawartość folderu. |
+| 2 | Wybierz „Dodaj dokument”. | System otwiera formularz dokumentu. |
+| 3 | Uzupełnij metadane dokumentu. | Dane zostają wprowadzone. |
+| 4 | Wybierz „Zapisz”. | Dokument zostaje dodany do folderu. |
+| 5 | Odśwież zawartość folderu. | Dokument pozostaje widoczny. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

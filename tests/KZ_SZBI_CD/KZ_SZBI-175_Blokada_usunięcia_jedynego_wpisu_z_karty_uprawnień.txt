@@ -1,0 +1,36 @@
+ID: KZ_SZBI-175
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Blokada usunięcia jedynego wpisu z karty uprawnień </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie blokady usunięcia jedynego wpisu pozostającego w karcie uprawnień.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do modyfikacji i podglądu kart.
+- Karta posiada co najmniej dwa wpisy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz kartę pracownika zawierającą dokładnie jeden wpis i wybierz „Edytuj”. | Formularz edycji jest widoczny. |
+| 2 | Zweryfikuj możliwość usunięcia jedynego wpisu. | Funkcja usunięcia jest niedostępna albo system blokuje operację. |
+| 3 | Spróbuj zapisać kartę bez jedynego wpisu, jeżeli interfejs na to pozwala. | System nie zapisuje pustej karty i prezentuje właściwą walidację. |
+| 4 | Otwórz kartę ponownie. | Jedyny wpis nadal znajduje się w karcie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

@@ -1,0 +1,36 @@
+ID: KZ_SZBI-148
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Potwierdzenie zapoznania się z komunikatem </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Potwierdzenie zapoznania się z komunikatem” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - komunikaty”.
+- Użytkownik otrzymał komunikat w folderze.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Kontrola Zarządcza” → „Komunikaty”. | Lista komunikatów jest widoczna. |
+| 2 | Otwórz folder zawierający komunikat. | Komunikat jest dostępny. |
+| 3 | Otwórz podgląd komunikatu. | Treść komunikatu jest widoczna. |
+| 4 | Potwierdź zapoznanie się. | System zapisuje potwierdzenie użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

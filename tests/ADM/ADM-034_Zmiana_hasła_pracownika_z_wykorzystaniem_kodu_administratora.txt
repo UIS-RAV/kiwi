@@ -1,0 +1,36 @@
+ID: ADM-034
+Moduł: ADMINISTRACJA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Zmiana hasła pracownika z wykorzystaniem kodu administratora </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Zmiana hasła pracownika z wykorzystaniem kodu administratora” zgodnie z instrukcją obsługi systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Administracja — ustawienia ogólne, struktura organizacyjna, pracownicy, role, uprawnienia, słowniki i konfiguracje globalne
+
+<h2> Warunki wstępne </h2>
+
+- Administrator wygenerował kod resetowania hasła dla pracownika.
+- Pracownik ma dostęp do ekranu logowania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na ekranie logowania wybierz „Zmień hasło”. | System wyświetla formularz zmiany hasła. |
+| 2 | Zaznacz „Konto zablokowane”. | System udostępnia pola nazwy użytkownika i kodu. |
+| 3 | Wprowadź nazwę użytkownika oraz kod zmiany hasła i wybierz „Sprawdź kod”. | System akceptuje poprawny kod i wyświetla formularz nowego hasła. |
+| 4 | Wprowadź nowe hasło spełniające wymagania i zapisz. | System zapisuje nowe hasło. |
+| 5 | Zaloguj się nowym hasłem. | Logowanie kończy się powodzeniem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zapisane dane i stan końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do funkcji odpowiada rolom i uprawnieniom przypisanym do stanowiska użytkownika.

@@ -88,27 +88,77 @@ def main():
     selected_category_id = None
     selected_category_name = None
 
-    if args.choose_category or args.category_id is not None:
-        categories = get_categories_for_product(tcms, selected_product_id)
+    categories = get_categories_for_product(
+        tcms,
+        selected_product_id,
+    )
 
-        if not categories:
-            print("Brak kategorii dla tego produktu.")
+    if not categories:
+        print("Brak kategorii dla tego produktu.")
+        return
+
+    if args.category_id is not None:
+        # Kategoria została podana parametrem
+        if not validate_category_id(
+                categories,
+                args.category_id,
+        ):
+            print(
+                f"Nie istnieje kategoria o ID "
+                f"{args.category_id} dla produktu {product_name}"
+            )
+            print("\nDostępne kategorie:\n")
+            show_categories(categories)
             return
 
-        if args.category_id is not None:
-            if not validate_category_id(categories, args.category_id):
-                print(f"Nie istnieje kategoria o ID {args.category_id} dla produktu {product_name}")
-                print("\nDostępne kategorie:\n")
-                show_categories(categories)
-                return
+        selected_category_id = args.category_id
+        selected_category_name = get_category_name(
+            categories,
+            selected_category_id,
+        )
 
-            selected_category_id = args.category_id
-            selected_category_name = get_category_name(categories, selected_category_id)
+    else:
+        # Tryb interaktywny
+        print("\nDostępne kategorie:\n")
+        print("0 | Wszystkie kategorie")
 
-        elif args.choose_category:
-            show_categories(categories)
-            selected_category_id = ask_for_category_id(categories)
-            selected_category_name = get_category_name(categories, selected_category_id)
+        show_categories(categories)
+
+        valid_ids = {
+            category["id"]
+            for category in categories
+        }
+
+        while True:
+            user_input = input(
+                "\nPodaj ID kategorii "
+                "lub 0, aby eksportować cały projekt: "
+            ).strip()
+
+            if not user_input.isdigit():
+                print("To nie jest liczba. Spróbuj ponownie.")
+                continue
+
+            category_id = int(user_input)
+
+            if category_id == 0:
+                selected_category_id = None
+                selected_category_name = None
+                break
+
+            if category_id not in valid_ids:
+                print(
+                    "Nie ma takiej kategorii dla tego produktu. "
+                    "Spróbuj ponownie."
+                )
+                continue
+
+            selected_category_id = category_id
+            selected_category_name = get_category_name(
+                categories,
+                selected_category_id,
+            )
+            break
 
     print(f"\nPobieranie test case z produktu ID = {selected_product_id}...")
     if selected_category_id is not None:

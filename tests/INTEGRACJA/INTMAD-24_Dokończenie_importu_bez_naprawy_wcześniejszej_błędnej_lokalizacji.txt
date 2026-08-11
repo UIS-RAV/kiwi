@@ -1,0 +1,38 @@
+ID: INTMAD-24
+Moduł: INTEGRACJA MADKOM
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dokończenie importu bez naprawy wcześniejszej błędnej lokalizacji </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dokończenie importu bez naprawy wcześniejszej błędnej lokalizacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz sprawę z jednym dokumentem w innej sprawie EZD i pozostałymi oczekującymi. | Status jest częściowy i żółty. |
+| 2 | Uruchom „Dokończ import” i zaimportuj pozostałe dokumenty do właściwej sprawy. | Wszystkie dokumenty są zmapowane. |
+| 3 | Zweryfikuj status. | Status zmienia się na pełny ilościowo, lecz pozostaje żółty. |
+| 4 | Zweryfikuj tooltip. | Tooltip nadal informuje o dokumencie poza powiązaną sprawą. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

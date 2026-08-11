@@ -1,0 +1,36 @@
+ID: KZ_SZBI-133
+Moduł: KZ/SZBI – POZOSTAŁE MODUŁY
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Edycja daty zakończenia ankiety </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie poprawności funkcji „Edycja daty zakończenia ankiety” zgodnie z instrukcją obsługi modułu KZ/SZBI.
+
+<h2> Rozdział dokumentacji </h2>
+
+Kontrola zarządcza — ankiety, foldery, zadania, ryzyko, słowniki, rejestry, karta uprawnień i repozytorium
+
+<h2> Warunki wstępne </h2>
+
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę „KZ - ankiety”.
+- Istnieje ankieta o statusie „W toku”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Ankiety i zakładkę „Administrowane”. | Ankieta w toku jest widoczna. |
+| 2 | Z menu ankiety wybierz „Data zakończenia”. | System otwiera okno zmiany daty. |
+| 3 | Wskaż nową datę zakończenia i wybierz „Zapisz”. | System zapisuje nową datę. |
+| 4 | Otwórz ankietę ponownie. | Nowa data zakończenia jest widoczna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dane i status końcowy pozostają zgodne po odświeżeniu lub ponownym otwarciu obiektu.
+- System udostępnia funkcję wyłącznie użytkownikowi posiadającemu wymagane role lub uprawnienia.

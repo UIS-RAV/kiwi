@@ -1,0 +1,38 @@
+ID: INTMAD-15
+Moduł: INTEGRACJA MADKOM
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Pełny niepełny import sprawy — co najmniej jeden dokument poza właściwą sprawą EZD </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Pełny niepełny import sprawy — co najmniej jeden dokument poza właściwą sprawą EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przygotuj sprawę MADKOM z 5 dokumentami możliwymi do importu. | Sprawa zawiera 5 dokumentów. |
+| 2 | Zaimportuj wszystkie dokumenty, lecz co najmniej jeden umieść w innej sprawie EZD albo bez sprawy. | Wszystkie dokumenty są zmapowane, ale lokalizacje są mieszane. |
+| 3 | Zweryfikuj status na liście spraw. | System prezentuje ptaszek, kolor żółty i wartości 5 z 5. |
+| 4 | Zweryfikuj tooltip. | Tooltip informuje o pełnym ilościowo, lecz niepełnym lokalizacyjnie odwzorowaniu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.

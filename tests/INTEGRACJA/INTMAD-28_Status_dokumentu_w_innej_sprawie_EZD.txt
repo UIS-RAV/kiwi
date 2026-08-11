@@ -1,0 +1,36 @@
+ID: INTMAD-28
+Moduł: INTEGRACJA MADKOM
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Funkcjonalny
+
+<h1> Status dokumentu w innej sprawie EZD </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Status dokumentu w innej sprawie EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Import spraw i dokumentów MADKOM — statusy importu, lokalizacja w EZD i dokończenie importu
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Integracja MADKOM jest poprawnie skonfigurowana.
+- Użytkownik posiada rolę „Madkom - podgląd” oraz uprawnienia do importu, o ile scenariusz nie stanowi inaczej.
+- Użytkownik ma poprawnie skonfigurowane mapowanie ze stanowiskiem MADKOM.
+- Dane testowe MADKOM i odpowiadające im obiekty EZD są przygotowane zgodnie ze scenariuszem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaimportuj dokument do innej sprawy EZD niż sprawa powiązana. | Dokument zostaje zmapowany poza właściwą sprawą. |
+| 2 | Zweryfikuj status na liście, w aktach i szczegółach. | System prezentuje wykrzyknik w kółku, kolor żółty i tooltip „Zaimportowano dokument w innej sprawie EZD.” |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ikona, kolor i tooltip odpowiadają regułom biznesowym statusu importu.
+- Stan pozostaje spójny po odświeżeniu widoku i ponownym pobraniu danych.
