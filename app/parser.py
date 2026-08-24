@@ -44,6 +44,24 @@ def split_case_text(raw_text: str | None) -> list[dict[str, Any]]:
             index += 1
             continue
 
+        h1_match = re.match(
+            r"<h1>\s*(.*?)\s*</h1>",
+            line,
+            re.IGNORECASE,
+        )
+
+        if h1_match:
+            blocks.append(
+                {
+                    "type": "bold_text",
+                    "text": clean_inline_formatting(
+                        h1_match.group(1)
+                    ),
+                }
+            )
+            index += 1
+            continue
+
         heading_match = re.match(r"<h2>\s*(.*?)\s*</h2>", line, re.IGNORECASE)
         if heading_match:
             blocks.append(

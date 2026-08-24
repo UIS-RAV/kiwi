@@ -172,6 +172,11 @@ def _add_case_content(document: Document, raw_text: str | None) -> None:
 
         if block_type == "heading":
             document.add_paragraph(block["text"], style="Heading 3")
+        elif block_type == "bold_text":
+            paragraph = document.add_paragraph()
+            run = paragraph.add_run(block["text"])
+            run.bold = True
+            _set_paragraph_spacing(paragraph)
         elif block_type == "paragraph":
             _add_paragraph(document, block["text"])
         elif block_type == "bullet":
