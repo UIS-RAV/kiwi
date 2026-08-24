@@ -1,0 +1,36 @@
+ID: CRU-76
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie nieużywanej konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie nieużywanej konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje konfiguracja CRU API, która nigdy nie została użyta i nie jest powiązana z wpisem w Rejestrze umów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukaj konfigurację, dla której zgodnie z maszyną stanów dostępna jest funkcja „Usuń”. | Funkcja usunięcia jest dostępna. |
+| 2 | Uruchom „Usuń” i wykonaj operację zgodnie z mechanizmem usuwania konfiguracji. | System usuwa konfigurację. |
+| 3 | Odśwież listę konfiguracji. | Usunięty wpis nie jest widoczny w konfiguracji CRU API. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

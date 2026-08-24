@@ -1,0 +1,37 @@
+ID: CRU-102
+Moduł: CRU
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dostęp konfiguracji CRU przypisanej do opcji Wszystkie na różnych stanowiskach </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dostęp konfiguracji CRU przypisanej do opcji Wszystkie na różnych stanowiskach.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany na stanowisku posiadającym dostęp do Rejestru umów.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Konfiguracja CRU API ma w polu „Przypisane stanowiska” wartość „Wszystkie”.
+- Użytkownik posiada dostęp do pracy na co najmniej dwóch stanowiskach.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na pierwszym stanowisku otwórz formularz dodawania umowy. | Konfiguracja oznaczona „Wszystkie” jest dostępna, jeżeli lista konfiguracji jest prezentowana. |
+| 2 | Przełącz użytkownika na drugie stanowisko. | Kontekst stanowiska zostaje zmieniony. |
+| 3 | Otwórz formularz dodawania umowy na drugim stanowisku. | Ta sama konfiguracja oznaczona „Wszystkie” jest dostępna również na drugim stanowisku. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

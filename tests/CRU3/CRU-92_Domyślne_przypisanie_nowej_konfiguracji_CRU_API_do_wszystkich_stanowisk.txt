@@ -1,0 +1,36 @@
+ID: CRU-92
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Domyślne przypisanie nowej konfiguracji CRU API do wszystkich stanowisk </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Domyślne przypisanie nowej konfiguracji CRU API do wszystkich stanowisk.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Konfiguracja nowego połączenia”. | System wyświetla pola Nazwa, Środowisko, Token i Regon. Formularz nie wymaga wskazania stanowiska. |
+| 2 | Uzupełnij wszystkie wymagane pola poprawnymi wartościami. | Formularz przechodzi walidację danych wejściowych. |
+| 3 | Wybierz „Zapisz”. | System tworzy nową konfigurację ze statusem aktywnym. |
+| 4 | Odszukaj utworzony wpis w zakładce „Aktywne”. | Nowa konfiguracja jest widoczna na liście. |
+| 5 | Zweryfikuj „Przypisane stanowiska” oraz „Domyślna konfiguracja”. | Konfiguracja posiada przypisanie „Wszystkie”, a wartość konfiguracji domyślnej jest ustawiona na NIE. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

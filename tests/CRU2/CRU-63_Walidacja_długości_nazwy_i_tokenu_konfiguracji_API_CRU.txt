@@ -1,0 +1,38 @@
+ID: CRU-63
+Moduł: CRU
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Walidacja długości nazwy i tokenu konfiguracji API CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Walidacja długości nazwy i tokenu konfiguracji API CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowej konfiguracji CRU API. | Formularz zostaje wyświetlony. |
+| 2 | Wprowadź nazwę przekraczającą 100 znaków i poprawne pozostałe dane. | Formularz zawiera nazwę poza dozwolonym zakresem. |
+| 3 | Spróbuj zapisać konfigurację. | System nie zapisuje konfiguracji i wskazuje błąd pola Nazwa. |
+| 4 | Wprowadź poprawną nazwę oraz token przekraczający 250 znaków. | Formularz zawiera token poza dozwolonym zakresem. |
+| 5 | Spróbuj zapisać konfigurację. | System nie zapisuje konfiguracji i wskazuje błąd pola Token. |
+| 6 | Wprowadź wartości mieszczące się w dozwolonych zakresach i zapisz. | Konfiguracja zostaje zapisana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

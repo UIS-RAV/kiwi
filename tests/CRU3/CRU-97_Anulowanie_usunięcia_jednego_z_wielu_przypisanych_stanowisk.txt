@@ -1,0 +1,35 @@
+ID: CRU-97
+Moduł: CRU
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usunięcia jednego z wielu przypisanych stanowisk </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Anulowanie usunięcia jednego z wielu przypisanych stanowisk.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Konfiguracja CRU API ma przypisane co najmniej dwa konkretne stanowiska.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W trybie edycji przypisań wybierz „Usuń” przy jednym z nieostatnich stanowisk. | System wyświetla modal potwierdzenia usunięcia przypisania. |
+| 2 | Wybierz „Anuluj”. | Modal zostaje zamknięty bez usunięcia przypisania. |
+| 3 | Zweryfikuj listę przypisań. | Stanowisko nadal pozostaje przypisane do konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

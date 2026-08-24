@@ -1,0 +1,38 @@
+ID: CRU-82
+Moduł: CRU
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Zmiana dostępnych konfiguracji CRU po przełączeniu stanowiska użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zmiana dostępnych konfiguracji CRU po przełączeniu stanowiska użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę RejestUmowModyfikacjaDodaj.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Użytkownik może pracować na dwóch stanowiskach, dla których przygotowano różne przypisane konfiguracje CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na pierwszym stanowisku otwórz formularz dodawania umowy i sprawdź dostępne konfiguracje CRU. | Lista zawiera konfiguracje dostępne dla pierwszego stanowiska. |
+| 2 | Zmień aktywne stanowisko użytkownika na drugie. | System przełącza kontekst pracy użytkownika. |
+| 3 | Ponownie otwórz formularz dodawania umowy. | Formularz zostaje otwarty w kontekście drugiego stanowiska. |
+| 4 | Zweryfikuj listę konfiguracji CRU. | Lista uwzględnia konfiguracje dostępne dla drugiego stanowiska, a konfiguracja przypisana wyłącznie do pierwszego stanowiska nie jest dostępna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

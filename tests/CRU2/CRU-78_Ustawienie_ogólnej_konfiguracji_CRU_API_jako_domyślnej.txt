@@ -1,0 +1,36 @@
+ID: CRU-78
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Ustawienie ogólnej konfiguracji CRU API jako domyślnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie ogólnej konfiguracji CRU API jako domyślnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje aktywna konfiguracja CRU API bez przypisanego stanowiska/użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Aktywne” i odszukaj ogólną konfigurację. | Konfiguracja bez wartości „Należy do” jest widoczna. |
+| 2 | Uruchom funkcję „Ustaw jako domyślną”. | System wykonuje zmianę konfiguracji domyślnej. |
+| 3 | Zweryfikuj kolumnę „Domyślna konfiguracja”. | Przy wybranej konfiguracji widoczny jest znacznik konfiguracji domyślnej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

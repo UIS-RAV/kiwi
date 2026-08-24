@@ -1,0 +1,36 @@
+ID: CRU-96
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie jednego z wielu przypisanych stanowisk konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie jednego z wielu przypisanych stanowisk konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Konfiguracja CRU API ma przypisane co najmniej dwa konkretne stanowiska.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom edycję pola „Przypisane stanowiska”. | System prezentuje listę przypisanych stanowisk z funkcją „Usuń”. |
+| 2 | Wybierz „Usuń” przy jednym z przypisań, które nie jest ostatnim. | System wyświetla modal z informacją, że stanowisko przestanie być przypisane do konfiguracji CRU. |
+| 3 | Potwierdź przyciskiem „Usuń”. | System usuwa wybrane stanowisko z przypisania. |
+| 4 | Zweryfikuj pozostałe przypisania. | Pozostałe stanowiska są nadal przypisane, a wartość „Wszystkie” nie jest ustawiona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

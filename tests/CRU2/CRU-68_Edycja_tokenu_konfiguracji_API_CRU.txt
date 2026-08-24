@@ -1,0 +1,37 @@
+ID: CRU-68
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Edycja tokenu konfiguracji API CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Edycja tokenu konfiguracji API CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje aktywna konfiguracja CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W zakładce „Aktywne” wybierz „Edytuj” w kolumnie Token. | System wyświetla nieuzupełnione wielolinijkowe pole tekstowe oraz przyciski Zapisz i Anuluj. |
+| 2 | Wprowadź nowy token o długości od 1 do 250 znaków. | Nowa wartość jest wprowadzona. |
+| 3 | Wybierz „Zapisz”. | System zapisuje token, wychodzi z trybu edycji i odświeża ekran. |
+| 4 | Uruchom ponownie edycję tokenu. | Pole edycji tokenu jest ponownie nieuzupełnione, zgodnie z dokumentacją. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

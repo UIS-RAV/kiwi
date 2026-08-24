@@ -1,0 +1,37 @@
+ID: CRU-70
+Moduł: CRU
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Anulowanie edycji atrybutu konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Anulowanie edycji atrybutu konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje aktywna konfiguracja CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom edycję wybranego edytowalnego atrybutu konfiguracji. | System wyświetla pole edycji oraz przyciski Zapisz i Anuluj. |
+| 2 | Zmień wartość w polu, ale nie zapisuj jej. | Zmiana jest widoczna wyłącznie w trybie edycji. |
+| 3 | Wybierz „Anuluj”. | System wychodzi z trybu edycji bez zapisu. |
+| 4 | Odśwież ekran i zweryfikuj wartość. | Poprzednia zapisana wartość pozostaje bez zmian. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

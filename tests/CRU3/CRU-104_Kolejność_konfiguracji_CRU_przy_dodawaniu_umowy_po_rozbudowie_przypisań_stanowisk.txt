@@ -1,0 +1,39 @@
+ID: CRU-104
+Moduł: CRU
+Typ: Pozytywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Kolejność konfiguracji CRU przy dodawaniu umowy po rozbudowie przypisań stanowisk </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Kolejność konfiguracji CRU przy dodawaniu umowy po rozbudowie przypisań stanowisk.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany na stanowisku posiadającym dostęp do Rejestru umów.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Dostępna jest konfiguracja domyślna.
+- Dostępne są co najmniej dwie aktywne konfiguracje przypisane do bieżącego stanowiska.
+- Dostępne są co najmniej dwie aktywne konfiguracje dostępne dla wszystkich stanowisk.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz dodawania umowy i rozwiń pole „Konfiguracja CRU”. | System prezentuje listę dostępnych aktywnych konfiguracji. |
+| 2 | Zweryfikuj pierwszą pozycję. | Na początku listy znajduje się konfiguracja oznaczona jako domyślna. |
+| 3 | Zweryfikuj kolejną grupę. | Następnie znajdują się konfiguracje przypisane do bieżącego stanowiska, posortowane alfabetycznie po Nazwie. |
+| 4 | Zweryfikuj ostatnią grupę. | Na końcu znajdują się konfiguracje nieprzypisane do konkretnych stanowisk, posortowane alfabetycznie po Nazwie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

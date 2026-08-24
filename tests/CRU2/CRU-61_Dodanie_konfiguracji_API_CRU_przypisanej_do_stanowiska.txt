@@ -1,0 +1,38 @@
+ID: CRU-61
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dodanie konfiguracji API CRU przypisanej do stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie konfiguracji API CRU przypisanej do stanowiska.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje aktywne stanowisko z powiązanym użytkownikiem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowego połączenia CRU API. | Formularz zostaje wyświetlony. |
+| 2 | Uzupełnij wymagane pola konfiguracji. | Dane wymagane są poprawne. |
+| 3 | W polu „Należy do” wskaż aktywne stanowisko z powiązanym użytkownikiem. | Wybrana wartość jest prezentowana w formacie stanowisko (symbol komórki) – imię i nazwisko. |
+| 4 | Wybierz „Zapisz”. | System tworzy konfigurację o statusie aktywnym. |
+| 5 | Zweryfikuj wpis w zakładce „Aktywne”. | W kolumnie „Należy do” widoczne są wskazane stanowisko i użytkownik, a konfiguracja ma charakter przypisany do tego stanowiska/użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

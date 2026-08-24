@@ -1,0 +1,37 @@
+ID: CRU-100
+Moduł: CRU
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja przypisanych stanowisk nieaktywnej konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Edycja przypisanych stanowisk nieaktywnej konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Istnieje nieaktywna konfiguracja CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Nieaktywne”. | Nieaktywna konfiguracja jest widoczna. |
+| 2 | W kolumnie „Przypisane stanowiska” wybierz „Edytuj”. | System udostępnia edycję przypisań również dla konfiguracji nieaktywnej. |
+| 3 | Dodaj aktywne stanowisko albo zmień przypisanie zgodnie z dostępnymi opcjami. | Zmiana jest przygotowana do zapisu. |
+| 4 | Wybierz „Zapisz”. | System zapisuje przypisanie i odświeża listę przypisań. |
+| 5 | Ponownie otwórz konfigurację w zakładce „Nieaktywne”. | Zapisane przypisanie pozostaje widoczne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

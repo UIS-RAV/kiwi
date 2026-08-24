@@ -1,0 +1,39 @@
+ID: CRU-80
+Moduł: CRU
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dostępność konfiguracji CRU API przypisanej do właściwego stanowiska i użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dostępność konfiguracji CRU API przypisanej do właściwego stanowiska i użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę RejestUmowModyfikacjaDodaj.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Aktywna konfiguracja CRU API jest przypisana do aktualnego stanowiska i zalogowanego użytkownika.
+- Dostępna jest co najmniej jedna dodatkowa aktywna konfiguracja, aby pole „Konfiguracja CRU” było widoczne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na właściwym stanowisku otwórz formularz „Dodaj umowę”. | Formularz zostaje wyświetlony. |
+| 2 | Rozwiń pole „Konfiguracja CRU”. | Na liście widoczna jest konfiguracja przypisana do bieżącego użytkownika i stanowiska. |
+| 3 | Wybierz przypisaną konfigurację. | Konfiguracja zostaje wskazana dla tworzonej umowy. |
+| 4 | Zapisz umowę z poprawnymi danymi. | Umowa zostaje utworzona z wybraną konfiguracją CRU. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

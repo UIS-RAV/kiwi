@@ -1,0 +1,37 @@
+ID: CRU-60
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dodanie ogólnej konfiguracji API CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie ogólnej konfiguracji API CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz sekcję „Konfiguracja nowego połączenia”. | System wyświetla formularz nowej konfiguracji CRU API. |
+| 2 | Uzupełnij Nazwę, pozostaw domyślne środowisko produkcyjne, wprowadź Token i poprawny Regon; pole „Należy do” pozostaw puste. | Formularz zawiera wszystkie wymagane dane, a konfiguracja nie jest przypisana do stanowiska. |
+| 3 | Wybierz „Zapisz”. | System wykonuje walidację i tworzy nową konfigurację ze statusem aktywnym. |
+| 4 | Otwórz zakładkę „Aktywne”. | Nowa konfiguracja jest widoczna na liście aktywnych. |
+| 5 | Zweryfikuj kolumnę „Należy do”. | Dla konfiguracji ogólnej prezentowany jest znak „-”. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

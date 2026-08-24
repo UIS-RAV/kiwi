@@ -1,0 +1,36 @@
+ID: CRU-77
+Moduł: CRU
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Brak możliwości usunięcia konfiguracji CRU API użytej przez umowę </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Brak możliwości usunięcia konfiguracji CRU API użytej przez umowę.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje konfiguracja CRU API powiązana z co najmniej jednym wpisem w Rejestrze umów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukaj konfigurację powiązaną z wpisem Rejestru umów. | Konfiguracja jest widoczna. |
+| 2 | Zweryfikuj dostępne funkcje zgodnie z maszyną stanów. | Funkcja „Usuń” nie jest dostępna dla konfiguracji, która została użyta/powiązana z wpisem. |
+| 3 | Odśwież ekran. | Konfiguracja nadal jest dostępna w systemie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

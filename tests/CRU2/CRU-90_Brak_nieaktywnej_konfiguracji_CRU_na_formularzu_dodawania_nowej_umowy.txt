@@ -1,0 +1,37 @@
+ID: CRU-90
+Moduł: CRU
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Brak nieaktywnej konfiguracji CRU na formularzu dodawania nowej umowy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Brak nieaktywnej konfiguracji CRU na formularzu dodawania nowej umowy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę RejestUmowModyfikacjaDodaj.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Dla użytkownika dostępne są co najmniej dwie aktywne konfiguracje oraz istnieje co najmniej jedna konfiguracja nieaktywna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Dodaj umowę”. | Pole „Konfiguracja CRU” jest widoczne. |
+| 2 | Rozwiń listę konfiguracji. | System prezentuje konfiguracje aktywne dostępne dla użytkownika na stanowisku. |
+| 3 | Wyszukaj konfigurację nieaktywną. | Nieaktywna konfiguracja nie jest dostępna przy dodawaniu nowej umowy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

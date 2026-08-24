@@ -1,0 +1,36 @@
+ID: CRU-98
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie ostatniego przypisanego stanowiska konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie ostatniego przypisanego stanowiska konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Konfiguracja CRU API ma przypisane dokładnie jedno konkretne stanowisko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom edycję pola „Przypisane stanowiska”. | System prezentuje jedno przypisane stanowisko. |
+| 2 | Wybierz „Usuń” przy ostatnim przypisaniu. | System wyświetla modal informujący, że usunięcie ostatniego przypisania udostępni konfigurację wszystkim stanowiskom. |
+| 3 | Potwierdź przyciskiem „Usuń”. | System usuwa ostatnie stanowisko i przypisuje wartość „Wszystkie”. |
+| 4 | Zweryfikuj listę przypisań. | Konfiguracja posiada wyłącznie wartość „Wszystkie”. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

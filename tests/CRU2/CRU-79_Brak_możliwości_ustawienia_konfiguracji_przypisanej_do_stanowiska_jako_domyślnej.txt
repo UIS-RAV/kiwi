@@ -1,0 +1,36 @@
+ID: CRU-79
+Moduł: CRU
+Typ: Negatywny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Brak możliwości ustawienia konfiguracji przypisanej do stanowiska jako domyślnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Brak możliwości ustawienia konfiguracji przypisanej do stanowiska jako domyślnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+- Istnieje aktywna konfiguracja z uzupełnionym polem „Należy do”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Aktywne” i odszukaj konfigurację przypisaną do stanowiska/użytkownika. | W kolumnie „Należy do” widoczne jest przypisanie. |
+| 2 | Zweryfikuj kolumnę „Domyślna konfiguracja”. | System prezentuje brak możliwości określenia tej konfiguracji jako domyślnej. |
+| 3 | Zweryfikuj dostępne akcje. | Funkcja „Ustaw jako domyślną” nie jest dostępna dla konfiguracji przypisanej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

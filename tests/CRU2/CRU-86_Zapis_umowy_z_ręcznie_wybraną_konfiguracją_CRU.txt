@@ -1,0 +1,38 @@
+ID: CRU-86
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Zapis umowy z ręcznie wybraną konfiguracją CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zapis umowy z ręcznie wybraną konfiguracją CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada rolę RejestUmowModyfikacjaDodaj.
+- W systemie istnieją konfiguracje CRU API przygotowane zgodnie ze scenariuszem.
+- Dla bieżącego stanowiska dostępne są co najmniej dwie aktywne konfiguracje CRU API.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Dodaj umowę”. | Pole „Konfiguracja CRU” jest widoczne. |
+| 2 | Wybierz jedną z dostępnych konfiguracji CRU. | Wybrana konfiguracja jest wskazana w formularzu. |
+| 3 | Uzupełnij pozostałe wymagane dane i wybierz „Zapisz”. | System tworzy wpis w Rejestrze umów. |
+| 4 | Otwórz edycję utworzonej umowy. | Konfiguracja, w ramach której umowa została utworzona, jest rozpoznawana przez formularz edycji zgodnie z zasadami dokumentacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

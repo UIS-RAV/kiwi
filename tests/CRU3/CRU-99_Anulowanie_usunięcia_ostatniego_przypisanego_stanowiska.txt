@@ -1,0 +1,35 @@
+ID: CRU-99
+Moduł: CRU
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usunięcia ostatniego przypisanego stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Anulowanie usunięcia ostatniego przypisanego stanowiska.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Konfiguracja CRU API ma przypisane dokładnie jedno konkretne stanowisko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Usuń” przy ostatnim przypisanym stanowisku. | System wyświetla modal z informacją o udostępnieniu konfiguracji wszystkim stanowiskom po usunięciu. |
+| 2 | Wybierz „Anuluj”. | Modal zostaje zamknięty. |
+| 3 | Zweryfikuj przypisania. | Ostatnie stanowisko pozostaje przypisane, a wartość „Wszystkie” nie jest ustawiona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

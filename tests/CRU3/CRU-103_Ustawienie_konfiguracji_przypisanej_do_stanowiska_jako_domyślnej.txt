@@ -1,0 +1,36 @@
+ID: CRU-103
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Ustawienie konfiguracji przypisanej do stanowiska jako domyślnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie konfiguracji przypisanej do stanowiska jako domyślnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Istnieje aktywna konfiguracja CRU API przypisana do co najmniej jednego konkretnego stanowiska.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukaj aktywną konfigurację przypisaną do stanowiska. | Konfiguracja jest widoczna na liście aktywnych. |
+| 2 | Uruchom funkcję „Ustaw jako domyślną”. | System wykonuje zmianę konfiguracji domyślnej zgodnie z maszyną stanów. |
+| 3 | Zweryfikuj kolumnę „Domyślna konfiguracja”. | Przy wybranej konfiguracji prezentowany jest znacznik konfiguracji domyślnej. |
+| 4 | Zweryfikuj przypisane stanowiska. | Ustawienie konfiguracji jako domyślnej nie usuwa przypisań stanowisk. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

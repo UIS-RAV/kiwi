@@ -1,0 +1,36 @@
+ID: CRU-95
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Zastąpienie przypisanych stanowisk opcją Wszystkie </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zastąpienie przypisanych stanowisk opcją Wszystkie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Konfiguracja CRU API ma przypisane co najmniej dwa konkretne stanowiska.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom edycję pola „Przypisane stanowiska”. | System prezentuje aktualne przypisania. |
+| 2 | Wybierz z listy wartość „Wszystkie”. | Wartość „Wszystkie” zostaje wskazana. |
+| 3 | Wybierz „Zapisz”. | System usuwa wszystkie przypisane wcześniej stanowiska i pozostawia wyłącznie wartość „Wszystkie”. |
+| 4 | Zweryfikuj listę przypisań. | Konfiguracja jest dostępna dla wszystkich stanowisk i nie zawiera pojedynczych przypisań. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

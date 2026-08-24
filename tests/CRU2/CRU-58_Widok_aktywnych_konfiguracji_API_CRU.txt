@@ -1,0 +1,37 @@
+ID: CRU-58
+Moduł: CRU
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Widok aktywnych konfiguracji API CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Widok aktywnych konfiguracji API CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU. | System otwiera konfigurację CRU API. |
+| 2 | Otwórz zakładkę „Aktywne”. | System prezentuje wyłącznie konfiguracje o statusie aktywnym. |
+| 3 | Zweryfikuj kolumny tabeli. | Widoczne są kolumny Nazwa, Środowisko, Token, Regon, Domyślna konfiguracja, Należy do oraz kolumna funkcji. |
+| 4 | Zweryfikuj funkcje przy aktywnym wpisie. | Dostępne są funkcje zgodne z maszyną stanów, w tym edycja właściwych atrybutów, Testuj połączenie i Dezaktywuj. |
+| 5 | Zweryfikuj prezentację wartości „Należy do”. | Dla konfiguracji przypisanej widoczne są stanowisko i użytkownik; dla nieprzypisanej prezentowany jest znak „-”. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

@@ -1,0 +1,37 @@
+ID: CRU-65
+Moduł: CRU
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Domyślne i alternatywne środowisko konfiguracji CRU API </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Domyślne i alternatywne środowisko konfiguracji CRU API.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowej konfiguracji CRU API. | Formularz zostaje wyświetlony. |
+| 2 | Zweryfikuj wartość pola „Środowisko”. | Domyślnie wybrana jest „Wersja produkcyjna (prawdziwe podmioty i skutki prawne)”. |
+| 3 | Rozwiń listę środowisk. | Dostępne są wartości produkcyjna i testowa. |
+| 4 | Wybierz „Wersja testowa”, uzupełnij pozostałe dane i zapisz. | Konfiguracja zostaje utworzona dla środowiska testowego. |
+| 5 | Zweryfikuj wartość na liście konfiguracji. | Kolumna Środowisko prezentuje zapisane środowisko testowe. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.

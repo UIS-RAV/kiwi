@@ -1,0 +1,36 @@
+ID: CRU-93
+Moduł: CRU
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dodanie pierwszego stanowiska do konfiguracji dostępnej dla wszystkich </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie pierwszego stanowiska do konfiguracji dostępnej dla wszystkich.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, przypisane stanowiska i wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany i posiada dostęp do konfiguracji CRU API.
+- Istnieje aktywna konfiguracja CRU API z wartością „Wszystkie” w polu „Przypisane stanowiska”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W kolumnie „Przypisane stanowiska” wybierz „Edytuj”. | System pozostaje w trybie edycji przypisań i prezentuje wartość „Wszystkie” oraz listę aktywnych stanowisk. |
+| 2 | Wybierz konkretne aktywne stanowisko. | Wybrane stanowisko jest wskazane do dodania. |
+| 3 | Wybierz „Zapisz”. | System dopisuje wskazane stanowisko i automatycznie usuwa wartość „Wszystkie”. |
+| 4 | Zweryfikuj listę przypisań pozostając w trybie edycji. | Widoczne jest wskazane stanowisko, a wartość „Wszystkie” nie jest prezentowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji pozostaje zgodny po odświeżeniu lub ponownym otwarciu widoku.
+- Dostęp do konfiguracji wynika z przypisania do stanowiska oraz reguł określonych w dokumentacji.

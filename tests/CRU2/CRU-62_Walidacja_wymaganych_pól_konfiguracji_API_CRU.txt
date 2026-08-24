@@ -1,0 +1,36 @@
+ID: CRU-62
+Moduł: CRU
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Walidacja wymaganych pól konfiguracji API CRU </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Walidacja wymaganych pól konfiguracji API CRU.
+
+<h2> Rozdział dokumentacji </h2>
+
+Konfiguracja CRU API — token per stanowisko, konfiguracje aktywne/nieaktywne oraz wybór konfiguracji dla umowy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu EZD.
+- Użytkownik posiada uprawnienia do Administracja → Ustawienia Ogólne → Rozszerzenia → Ustawienia rozszerzeń → CRU.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowej konfiguracji CRU API. | Formularz zostaje wyświetlony. |
+| 2 | Pozostaw puste pola Nazwa, Token i Regon. | Formularz nie zawiera wymaganych danych. |
+| 3 | Wybierz „Zapisz”. | System uruchamia walidację formularza. |
+| 4 | Zweryfikuj pola wymagane. | Pola wymagające uzupełnienia są oznaczone zgodnie ze standardem EZD, a konfiguracja nie zostaje utworzona. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Stan konfiguracji lub przypisania pozostaje zgodny po odświeżeniu widoku.
+- System nie udostępnia konfiguracji CRU poza zakresem wynikającym z jej statusu oraz przypisania do użytkownika i stanowiska.
