@@ -1,0 +1,38 @@
+ID: UIX-030
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja liczby kafli w rzędzie sekcji Korespondencja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie liczby kafli prezentowanych w jednym rzędzie sekcji Korespondencja.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Korespondencja
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Korespondencja”. | System prezentuje parametry sekcji. |
+| 2 | W polu „Ilość kafli w rzędzie” ustaw wartość 3. | W konfiguracji widoczna jest wartość 3. |
+| 3 | Dodaj co najmniej sześć pól do sekcji. | Konfiguracja zawiera pola pozwalające zweryfikować więcej niż jeden rząd. |
+| 4 | Utwórz sekcję. | System dodaje sekcję do pulpitu. |
+| 5 | Zweryfikuj układ kafli. | System prezentuje po trzy kafle w jednym rzędzie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Ustawienie liczby kafli jest respektowane.
+- Dla wartości 3 kafle są rozmieszczone po trzy w rzędzie.

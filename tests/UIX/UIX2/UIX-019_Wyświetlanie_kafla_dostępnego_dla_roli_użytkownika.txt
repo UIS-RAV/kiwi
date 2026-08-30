@@ -1,0 +1,39 @@
+ID: UIX-019
+Moduł: UIX
+Typ: Uprawnieniowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Wyświetlanie kafla dostępnego dla roli użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Wyświetlenie i udostępnienie kafla sekcji Listy, do którego użytkownik posiada uprawnienia wynikające z pełnionej roli.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Na pulpicie skonfigurowano i zapisano sekcję Listy zawierającą kafel dostępny dla roli użytkownika.
+- Użytkownik posiada uprawnienia do danych reprezentowanych przez kafel.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit zawierający sekcję Listy. | System wyświetla sekcję i jej kafle. |
+| 2 | Przejdź do zakładki zawierającej kafel dostępny dla użytkownika. | Kafel jest prezentowany jako aktywny. |
+| 3 | Zweryfikuj sposób prezentacji kafla. | Kafel nie jest oznaczony blokadą wynikającą z braku uprawnień. |
+| 4 | Użyj kafla zgodnie z jego przeznaczeniem. | System umożliwia użytkownikowi skorzystanie z dostępnej funkcji lub danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kafel dostępny dla roli użytkownika jest prezentowany jako aktywny.
+- Uprawniony użytkownik może skorzystać z funkcjonalności reprezentowanej przez kafel.

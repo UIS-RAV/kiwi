@@ -1,0 +1,37 @@
+ID: UIX-005
+Moduł: UIX
+Typ: Walidacyjny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Wymagalność nazwy podczas tworzenia nowego pulpitu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Próba utworzenia nowego pulpitu bez podania jego nazwy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom funkcję „Nowy pulpit”. | System wyświetla formularz tworzenia pulpitu. |
+| 2 | Nie wprowadzaj nazwy pulpitu. | Pole nazwy pozostaje puste. |
+| 3 | Spróbuj zakończyć tworzenie pulpitu. | System nie tworzy pulpitu bez wymaganej nazwy. |
+| 4 | Wprowadź nazwę pulpitu. | Formularz zawiera nazwę nowego pulpitu. |
+| 5 | Ponownie zakończ tworzenie pulpitu. | System tworzy pulpit pod wprowadzoną nazwą. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System nie pozwala utworzyć pulpitu bez wymaganej nazwy.
+- Po uzupełnieniu nazwy pulpit może zostać utworzony.

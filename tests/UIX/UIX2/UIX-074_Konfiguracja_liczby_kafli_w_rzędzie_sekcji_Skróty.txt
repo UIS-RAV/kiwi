@@ -1,0 +1,38 @@
+ID: UIX-074
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja liczby kafli w rzędzie sekcji Skróty </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie liczby skrótów prezentowanych w jednym rzędzie sekcji Skróty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Skróty”. | System prezentuje parametry sekcji. |
+| 2 | W polu „Ilość kafli w rzędzie” ustaw dostępną wartość. | Wybrana wartość jest widoczna w konfiguracji. |
+| 3 | Dodaj liczbę skrótów pozwalającą zweryfikować układ. | Skróty są widoczne na liście konfiguracji. |
+| 4 | Utwórz sekcję. | System dodaje sekcję do pulpitu. |
+| 5 | Zweryfikuj rozmieszczenie skrótów. | Liczba elementów w rzędzie odpowiada zapisanej konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Parametr liczby kafli w rzędzie jest uwzględniany.
+- Układ skrótów odpowiada konfiguracji sekcji.

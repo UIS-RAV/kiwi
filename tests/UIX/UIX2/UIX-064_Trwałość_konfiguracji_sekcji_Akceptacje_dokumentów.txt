@@ -1,0 +1,38 @@
+ID: UIX-064
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Trwałość konfiguracji sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zachowanie konfiguracji sekcji Akceptacje dokumentów po ponownym otwarciu pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Pulpit zawierający sekcję Akceptacje dokumentów został zapisany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit. | System wyświetla sekcję Akceptacje dokumentów. |
+| 2 | Zweryfikuj obszary, zakładki i pola sekcji. | Widoczna konfiguracja odpowiada zapisanym ustawieniom. |
+| 3 | Odśwież stronę lub przejdź do innego pulpitu i wróć do badanego pulpitu. | System ponownie ładuje badaną konfigurację. |
+| 4 | Ponownie zweryfikuj sekcję. | Obszary, zakładki, pola i ich kolejność pozostają zachowane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Konfiguracja sekcji jest trwała.
+- Ponowne załadowanie pulpitu nie powoduje utraty konfiguracji.

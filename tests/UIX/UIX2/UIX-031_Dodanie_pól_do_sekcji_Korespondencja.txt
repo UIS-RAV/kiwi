@@ -1,0 +1,41 @@
+ID: UIX-031
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie pól do sekcji Korespondencja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie pól korespondencji prezentowanych jako kafle sekcji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Korespondencja
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Korespondencja”. | System wyświetla konfigurację zawartości. |
+| 2 | Dodaj pole „Poczta e-mail”. | Pole zostaje dodane do konfiguracji. |
+| 3 | Dodaj pole „ePUAP”. | Pole zostaje dodane do konfiguracji. |
+| 4 | Dodaj pole „e-Doręczenia”. | Pole zostaje dodane do konfiguracji. |
+| 5 | Dodaj pole „PEP”. | Pole zostaje dodane do konfiguracji. |
+| 6 | Dodaj pole „KERP”. | Pole zostaje dodane do konfiguracji. |
+| 7 | Dodaj pole „Współpraca systemu Multi-AZD”. | Pole zostaje dodane do konfiguracji. |
+| 8 | Utwórz sekcję. | System tworzy sekcję z kaflami odpowiadającymi skonfigurowanym polom. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- W konfiguracji można dodać pola widoczne na nagraniu.
+- Każde dodane pole jest odwzorowane jako kafel.

@@ -1,0 +1,37 @@
+ID: UIX-048
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie sekcji Urlopy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie do pulpitu sekcji Urlopy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Urlopy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na edytowanym pulpicie wybierz „Dodaj sekcję”. | System wyświetla okno „Nowa sekcja”. |
+| 2 | W polu „Funkcjonalność” wybierz „Urlopy”. | System ustawia funkcjonalność „Urlopy” i prezentuje parametry właściwe dla sekcji. |
+| 3 | Wybierz „Utwórz sekcję”. | System dodaje sekcję Urlopy do edytowanego pulpitu. |
+| 4 | Zweryfikuj sekcję przed zapisaniem. | Sekcja Urlopy jest widoczna w konfiguracji pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Urlopy może zostać dodana do pulpitu.
+- Dodana sekcja jest widoczna przed zapisaniem zmian.

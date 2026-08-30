@@ -1,0 +1,37 @@
+ID: UIX-016
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie kolejnej sekcji przed zapisaniem zmian pulpitu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Kontynuowanie konfiguracji pulpitu przez dodanie kolejnej sekcji bez wcześniejszego zapisywania całego pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Dodaj i utwórz pierwszą sekcję Listy. | Pierwsza sekcja jest widoczna w trybie edycji pulpitu. |
+| 2 | Bez wybierania przycisku „Zapisz” wybierz ponownie „Dodaj sekcję”. | System ponownie otwiera formularz nowej sekcji. |
+| 3 | Skonfiguruj i utwórz drugą sekcję. | Druga sekcja zostaje dodana do edytowanego pulpitu. |
+| 4 | Zweryfikuj pulpit przed zapisaniem. | W trybie edycji widoczne są obie dodane sekcje. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Po utworzeniu sekcji możliwe jest dalsze dodawanie kolejnych sekcji.
+- Nie jest wymagane zapisywanie pulpitu po każdej pojedynczej sekcji.

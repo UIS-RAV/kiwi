@@ -1,0 +1,50 @@
+ID: UIX-082
+Moduł: UIX
+Typ: Procesowy
+Priorytet: krytyczny
+Poziom: Zaawansowany
+
+<h1> Przekrojowa weryfikacja przechodzenia z kafli pulpitu do właściwych widoków </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest przekrojowe sprawdzenie, czy kafle skonfigurowane w sekcjach nowego pulpitu użytkownika prowadzą do właściwych widoków i zakresów danych systemu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – nawigacja z kafli sekcji i pluginów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Istnieje zapisany pulpit zawierający skonfigurowane sekcje i pluginy objęte testem.
+- W sekcjach skonfigurowano kafle dostępne dla badanego użytkownika.
+- Użytkownik posiada uprawnienia pozwalające otworzyć widoki wskazywane przez testowane kafle.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający skonfigurowane sekcje i pluginy. | System wyświetla pulpit wraz z zapisanymi sekcjami i kaflami. |
+| 2 | W sekcji „Listy” wybierz kolejno dostępne kafle i po każdym przejściu wróć do pulpitu. | Każdy kafel otwiera widok odpowiadający jego nazwie i zakresowi, np. właściwy widok dokumentów. |
+| 3 | W sekcji „Dokumenty finansowe” wybierz kolejno dostępne kafle, w tym „Faktury”, „Rachunki” i „Noty księgowe”, wracając po każdej weryfikacji do pulpitu. | Każdy kafel otwiera właściwy widok dokumentów finansowych odpowiadający wybranemu rodzajowi dokumentu. |
+| 4 | W sekcji „Korespondencja” wybierz kolejno dostępne kafle i po każdym przejściu wróć do pulpitu. | Każdy kafel otwiera właściwy widok odpowiadający wybranemu rodzajowi lub kanałowi korespondencji. |
+| 5 | W sekcji „Sprawy” wybierz kolejno kafle „Moje sprawy”, „Wszystkie sprawy” i „Przeterminowane”, wracając po każdej weryfikacji do pulpitu. | System otwiera właściwy widok spraw z zakresem zgodnym z wybranym kaflem. |
+| 6 | W sekcji „Kalendarz” wybierz dostępny element umożliwiający przejście do powiązanego widoku, jeżeli taki element występuje w konfiguracji. | System otwiera widok lub dane odpowiadające wybranemu elementowi kalendarza. |
+| 7 | W sekcji „Urlopy” wybierz dostępny element umożliwiający przejście do szczegółowego widoku, jeżeli taki element występuje. | System otwiera właściwy widok danych urlopowych użytkownika. |
+| 8 | W sekcji „Informacje” wybierz dostępną pozycję prowadzącą do szczegółów, jeżeli taka pozycja występuje. | System prezentuje właściwą treść lub widok szczegółowy wybranej informacji. |
+| 9 | W sekcji „Akceptacje dokumentów” wybierz kolejno dostępne kafle w skonfigurowanych obszarach lub zakładkach, wracając po każdej weryfikacji do pulpitu. | Każdy kafel otwiera właściwy widok dokumentów przeznaczonych do odpowiedniego rodzaju akceptacji i zachowuje zakres wynikający z wybranego kafla. |
+| 10 | W sekcji „Dekretacje dokumentów” wybierz kafel „Do dekretacji”, a następnie po powrocie do pulpitu kafel „Zwroty do dekretacji”. | Pierwszy kafel otwiera właściwy widok dokumentów do dekretacji, a drugi właściwy widok dokumentów zwróconych do dekretacji. |
+| 11 | W sekcji „Skróty” wybierz kolejno skonfigurowane skróty, wracając po każdej weryfikacji do pulpitu. | Każdy skrót prowadzi do funkcji lub widoku systemu przypisanego do danego skrótu. |
+| 12 | Po wykonaniu przejść z kafli ponownie otwórz badany pulpit. | Pulpit ładuje się prawidłowo, a wykonane przejścia nie powodują utraty ani zmiany jego zapisanej konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Każdy aktywny kafel prowadzi do funkcji, widoku lub zakresu danych odpowiadającego jego nazwie i konfiguracji.
+- Wybranie kafla nie powoduje przejścia do niepowiązanego widoku ani prezentacji niewłaściwego zakresu danych.
+- Powrót do pulpitu umożliwia kontynuowanie weryfikacji kolejnych kafli.
+- Nawigacja z kafli respektuje uprawnienia zalogowanego użytkownika.
+- Wykonywanie przejść z kafli nie zmienia zapisanej konfiguracji pulpitu.

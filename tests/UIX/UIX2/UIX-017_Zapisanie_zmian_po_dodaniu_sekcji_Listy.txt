@@ -1,0 +1,38 @@
+ID: UIX-017
+Moduł: UIX
+Typ: Procesowy
+Priorytet: krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapisanie zmian po dodaniu sekcji Listy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zapisanie zmian pulpitu po dodaniu i skonfigurowaniu sekcji Listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do edytowanego pulpitu została dodana co najmniej jedna nowa sekcja Listy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj dodaną sekcję w trybie edycji pulpitu. | Sekcja jest widoczna wraz ze skonfigurowanymi zakładkami i kaflami. |
+| 2 | Wybierz przycisk „Zapisz”. | System zapisuje zmiany pulpitu i kończy edycję. |
+| 3 | Ponownie otwórz lub odśwież pulpit. | System wyświetla zapisany pulpit. |
+| 4 | Zweryfikuj sekcję Listy. | Sekcja, zakładki, kafle i ich układ odpowiadają zapisanej konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zmiany pulpitu zostają zapisane.
+- Konfiguracja sekcji pozostaje zachowana po odświeżeniu lub ponownym otwarciu pulpitu.

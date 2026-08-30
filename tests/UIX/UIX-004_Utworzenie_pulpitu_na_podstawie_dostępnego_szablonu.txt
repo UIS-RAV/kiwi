@@ -1,0 +1,40 @@
+ID: UIX-004
+Moduł: UIX
+Typ: Pozytywny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Utworzenie pulpitu na podstawie dostępnego szablonu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Utworzenie pulpitu z wykorzystaniem szablonu dostępnego w formularzu tworzenia pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do funkcji pulpitu użytkownika.
+- W systemie dostępny jest co najmniej jeden szablon pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom funkcję „Nowy pulpit”. | System wyświetla okno tworzenia pulpitu. |
+| 2 | Wybierz wariant tworzenia pulpitu wykorzystujący szablon. | System udostępnia wybór szablonu pulpitu. |
+| 3 | Rozwiń listę dostępnych szablonów. | System prezentuje dostępne szablony. |
+| 4 | Wskaż wybrany szablon i wprowadź nazwę pulpitu. | Wybrany szablon i nazwa są widoczne w formularzu. |
+| 5 | Wybierz „Utwórz pulpit”. | System tworzy nowy pulpit na podstawie wskazanego szablonu. |
+| 6 | Zweryfikuj zawartość utworzonego pulpitu. | Pulpit zawiera elementy wynikające z wybranego szablonu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- System umożliwia wskazanie dostępnego szablonu.
+- Nowy pulpit zostaje utworzony na podstawie wybranego szablonu.

@@ -1,0 +1,38 @@
+ID: UIX-077
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie skrótu z konfiguracji sekcji Skróty </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie wybranego skrótu z konfiguracji sekcji Skróty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji sekcji znajdują się co najmniej dwa skróty.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy wybranym skrócie użyj funkcji usunięcia. | System rozpoczyna usuwanie wskazanego elementu. |
+| 2 | Potwierdź usunięcie, jeżeli system wymaga potwierdzenia. | Wybrany skrót zostaje usunięty z konfiguracji. |
+| 3 | Utwórz sekcję. | System tworzy sekcję bez usuniętego skrótu. |
+| 4 | Zweryfikuj zawartość sekcji. | Usunięty skrót nie jest prezentowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Wybrany skrót może zostać usunięty z konfiguracji.
+- Usunięty skrót nie występuje w utworzonej sekcji.

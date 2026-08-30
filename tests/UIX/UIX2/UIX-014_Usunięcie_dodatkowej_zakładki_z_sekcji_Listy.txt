@@ -1,0 +1,38 @@
+ID: UIX-014
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Usunięcie dodatkowej zakładki z sekcji Listy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie dodatkowej zakładki podczas konfiguracji sekcji Listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji sekcji Listy znajdują się co najmniej dwie zakładki.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację sekcji zawierającej więcej niż jedną zakładkę. | System prezentuje wszystkie skonfigurowane zakładki. |
+| 2 | Przy wybranej dodatkowej zakładce wybierz „Usuń”. | Wybrana zakładka zostaje usunięta z konfiguracji sekcji. |
+| 3 | Utwórz sekcję i zapisz zmiany pulpitu. | System zapisuje sekcję bez usuniętej zakładki. |
+| 4 | Zweryfikuj zakładki widoczne w sekcji. | Usunięta zakładka nie jest dostępna na zapisanym pulpicie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dodatkową zakładkę można usunąć z konfiguracji.
+- Po zapisaniu usunięta zakładka nie jest prezentowana.

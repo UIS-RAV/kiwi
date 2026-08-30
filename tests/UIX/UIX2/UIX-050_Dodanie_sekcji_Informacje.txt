@@ -1,0 +1,37 @@
+ID: UIX-050
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie sekcji Informacje </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie do pulpitu sekcji Informacje.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Informacje
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na edytowanym pulpicie wybierz „Dodaj sekcję”. | System wyświetla okno „Nowa sekcja”. |
+| 2 | W polu „Funkcjonalność” wybierz „Informacje”. | System ustawia funkcjonalność „Informacje” i prezentuje parametry właściwe dla sekcji. |
+| 3 | Wybierz „Utwórz sekcję”. | System dodaje sekcję Informacje do edytowanego pulpitu. |
+| 4 | Zweryfikuj sekcję przed zapisaniem. | Sekcja Informacje jest widoczna na edytowanym pulpicie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Informacje może zostać dodana do pulpitu.
+- Sekcja jest dostępna w konfiguracji pulpitu przed zapisaniem.

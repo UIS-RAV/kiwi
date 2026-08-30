@@ -1,0 +1,38 @@
+ID: UIX-013
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pola z zakładki sekcji Listy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie jednego z pól skonfigurowanych w zakładce sekcji Listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji zakładki znajdują się co najmniej dwa pola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację zakładki zawierającej kilka pól. | System prezentuje listę skonfigurowanych pól. |
+| 2 | Przy wybranym polu użyj funkcji usunięcia. | Pole zostaje usunięte z listy konfiguracji. |
+| 3 | Utwórz sekcję i zapisz zmiany pulpitu. | System zapisuje konfigurację bez usuniętego pola. |
+| 4 | Zweryfikuj zawartość sekcji. | Kafel odpowiadający usuniętemu polu nie jest prezentowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Pole może zostać usunięte z konfiguracji zakładki.
+- Usunięte pole nie jest prezentowane jako kafel po zapisaniu zmian.

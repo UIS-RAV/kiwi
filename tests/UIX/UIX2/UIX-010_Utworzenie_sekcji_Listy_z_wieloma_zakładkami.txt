@@ -1,0 +1,39 @@
+ID: UIX-010
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Utworzenie sekcji Listy z wieloma zakładkami </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Utworzenie sekcji Listy zawierającej więcej niż jedną zakładkę z niezależną konfiguracją danych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Listy” z włączoną opcją „Użyj zakładek”. | System wyświetla konfigurację pierwszej zakładki. |
+| 2 | Skonfiguruj pierwszą zakładkę, podając jej nazwę, zakres danych i pola. | Pierwsza zakładka posiada kompletną konfigurację. |
+| 3 | Wybierz „Dodaj zakładkę”. | System dodaje kolejną zakładkę do konfiguracji sekcji. |
+| 4 | Nadaj drugiej zakładce inną nazwę oraz wybierz dla niej zakres danych i pola. | Druga zakładka posiada własną konfigurację niezależną od pierwszej. |
+| 5 | Wybierz „Utwórz sekcję”. | System dodaje sekcję Listy zawierającą skonfigurowane zakładki. |
+| 6 | Przełącz się pomiędzy zakładkami na utworzonej sekcji. | Każda zakładka prezentuje skonfigurowany dla niej zestaw kafli. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja może zawierać wiele zakładek.
+- Każda zakładka zachowuje własną nazwę, zakres danych i zestaw pól.

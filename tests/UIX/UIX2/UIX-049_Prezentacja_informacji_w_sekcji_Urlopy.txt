@@ -1,0 +1,37 @@
+ID: UIX-049
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja informacji w sekcji Urlopy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja danych urlopowych użytkownika w sekcji Urlopy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Urlopy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Urlopy została dodana i zapisana na pulpicie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Urlopy. | System wyświetla sekcję Urlopy. |
+| 2 | Zweryfikuj informacje prezentowane w sekcji. | System prezentuje dane urlopowe dostępne dla zalogowanego użytkownika. |
+| 3 | Zweryfikuj zachowanie sekcji w przypadku braku danych do prezentacji. | Sekcja nie prezentuje danych nieistniejących ani danych niedostępnych dla użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja prezentuje dane zgodnie z zakresem dostępnym dla użytkownika.
+- Brak danych nie powoduje błędu działania pulpitu.

@@ -1,0 +1,39 @@
+ID: UIX-079
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Przejście do funkcji systemu za pomocą skrótu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Uruchomienie funkcji systemu z poziomu skonfigurowanego skrótu na pulpicie.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Skróty została skonfigurowana i zapisana.
+- W sekcji znajduje się co najmniej jeden skrót do funkcji dostępnej dla użytkownika.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Skróty. | System wyświetla skonfigurowane skróty. |
+| 2 | Wybierz jeden z dostępnych skrótów. | System uruchamia funkcję lub widok przypisany do wybranego skrótu. |
+| 3 | Zweryfikuj otwarty widok. | System prezentuje właściwy obszar funkcjonalny odpowiadający wybranemu skrótowi. |
+| 4 | Wróć do pulpitu. | System umożliwia ponowne wyświetlenie pulpitu z sekcją Skróty. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Wybranie skrótu prowadzi do odpowiadającej mu funkcji systemu.
+- Użytkownik nie jest kierowany do innego, niepowiązanego obszaru.

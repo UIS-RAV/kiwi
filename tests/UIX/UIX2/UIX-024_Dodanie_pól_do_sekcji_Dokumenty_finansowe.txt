@@ -1,0 +1,39 @@
+ID: UIX-024
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie pól do sekcji Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie wielu pól do zawartości sekcji Dokumenty finansowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Dokumenty finansowe”. | System wyświetla konfigurację zawartości sekcji. |
+| 2 | Wybierz „Dodaj pole”. | System dodaje wiersz umożliwiający wybór pola. |
+| 3 | Wybierz pole „Faktury”. | Pole „Faktury” zostaje dodane do konfiguracji. |
+| 4 | Ponownie wybierz „Dodaj pole” i wskaż „Rachunki”. | Pole „Rachunki” zostaje dodane do konfiguracji. |
+| 5 | Ponownie wybierz „Dodaj pole” i wskaż „Noty księgowe”. | Pole „Noty księgowe” zostaje dodane do konfiguracji. |
+| 6 | Wybierz „Utwórz sekcję”. | System tworzy sekcję zawierającą kafle Faktury, Rachunki i Noty księgowe. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Do sekcji można dodać wiele pól.
+- Każde skonfigurowane pole jest odwzorowane jako kafel sekcji.

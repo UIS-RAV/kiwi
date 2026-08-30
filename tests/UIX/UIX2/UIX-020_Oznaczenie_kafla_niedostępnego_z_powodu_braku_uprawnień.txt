@@ -1,0 +1,39 @@
+ID: UIX-020
+Moduł: UIX
+Typ: Uprawnieniowy
+Priorytet: krytyczny
+Poziom: Rozszerzony
+
+<h1> Oznaczenie kafla niedostępnego z powodu braku uprawnień </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja skonfigurowanego kafla sekcji Listy, do którego użytkownik nie posiada uprawnień wynikających z pełnionej roli.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Na pulpicie skonfigurowano sekcję Listy zawierającą kafel, do którego użytkownik nie posiada uprawnień.
+- Konfiguracja pulpitu została zapisana.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit zawierający sekcję Listy. | System wyświetla sekcję wraz ze skonfigurowanymi kaflami. |
+| 2 | Przejdź do zakładki zawierającej kafel niedostępny dla roli użytkownika. | Kafel pozostaje widoczny w sekcji. |
+| 3 | Zweryfikuj sposób prezentacji niedostępnego kafla, np. „Dokumenty nadzór”. | Kafel jest wyszarzony i oznaczony symbolem blokady. |
+| 4 | Spróbuj użyć niedostępnego kafla. | System nie udostępnia użytkownikowi chronionych danych lub funkcji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Brak uprawnień nie powoduje nieautoryzowanego udostępnienia danych.
+- Niedostępny kafel jest jednoznacznie oznaczony symbolem blokady i stanem nieaktywnym.

@@ -1,0 +1,38 @@
+ID: UIX-043
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja liczników na kaflach sekcji Sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja liczby spraw na kaflach sekcji Sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Sprawy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Na zapisanym pulpicie znajduje się sekcja Sprawy zawierająca kafle Moje sprawy, Wszystkie sprawy i Przeterminowane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Sprawy. | System wyświetla zapisaną sekcję. |
+| 2 | Zweryfikuj kafel „Moje sprawy”. | Kafel prezentuje wartość odpowiadającą sprawom użytkownika. |
+| 3 | Zweryfikuj kafel „Wszystkie sprawy”. | Kafel prezentuje wartość odpowiadającą wszystkim sprawom dostępnym dla użytkownika. |
+| 4 | Zweryfikuj kafel „Przeterminowane”. | Kafel prezentuje wartość odpowiadającą przeterminowanym sprawom dostępnym dla użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Każdy kafel prezentuje licznik właściwy dla swojego zakresu.
+- Liczniki są prezentowane niezależnie dla skonfigurowanych rodzajów spraw.

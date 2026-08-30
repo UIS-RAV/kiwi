@@ -1,0 +1,39 @@
+ID: UIX-055
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja zakładek sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Konfiguracja zakładek prezentujących różne zakresy dokumentów w sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Akceptacje dokumentów”. | System wyświetla konfigurację sekcji. |
+| 2 | Włącz wykorzystanie zakładek dla konfigurowanego obszaru, jeżeli opcja jest dostępna. | System udostępnia parametry zakładki. |
+| 3 | Wprowadź nazwę zakładki. | Nazwa zakładki jest widoczna w konfiguracji. |
+| 4 | Wybierz zakres danych dla zakładki. | Wybrany zakres zostaje przypisany do zakładki. |
+| 5 | Dodaj pola prezentowane w zakładce. | Pola zostają dodane do konfiguracji zakładki. |
+| 6 | Utwórz sekcję. | System tworzy sekcję zawierającą skonfigurowaną zakładkę. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Zakładka zachowuje nazwę, zakres danych i skonfigurowane pola.
+- Sekcja prezentuje dane zgodnie z konfiguracją zakładki.

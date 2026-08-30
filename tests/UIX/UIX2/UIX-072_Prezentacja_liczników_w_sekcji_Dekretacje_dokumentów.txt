@@ -1,0 +1,38 @@
+ID: UIX-072
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja liczników w sekcji Dekretacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja liczby dokumentów na kaflach sekcji Dekretacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dekretacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Na zapisanym pulpicie znajduje się sekcja Dekretacje dokumentów z kaflami „Do dekretacji” i „Zwroty do dekretacji”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Dekretacje dokumentów. | System wyświetla zapisaną sekcję. |
+| 2 | Zweryfikuj kafel „Do dekretacji”. | Kafel prezentuje wartość liczbową odpowiadającą dokumentom oczekującym na dekretację. |
+| 3 | Zweryfikuj kafel „Zwroty do dekretacji”. | Kafel prezentuje wartość liczbową odpowiadającą dokumentom zwróconym do dekretacji. |
+| 4 | Porównaj wartości obu kafli. | Każdy kafel prezentuje niezależny licznik właściwy dla swojego zakresu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kafle prezentują niezależne liczniki.
+- Prezentowane wartości odpowiadają zakresom „Do dekretacji” i „Zwroty do dekretacji”.

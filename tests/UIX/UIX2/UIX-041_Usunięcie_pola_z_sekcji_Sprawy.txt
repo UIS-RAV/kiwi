@@ -1,0 +1,37 @@
+ID: UIX-041
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pola z sekcji Sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie wybranego pola z konfiguracji sekcji Sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Sprawy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji sekcji znajdują się co najmniej dwa pola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy wybranym polu użyj funkcji usunięcia. | Pole zostaje usunięte z konfiguracji. |
+| 2 | Utwórz sekcję. | System tworzy sekcję bez usuniętego pola. |
+| 3 | Zweryfikuj kafle sekcji. | Kafel odpowiadający usuniętemu polu nie jest prezentowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Pole może zostać usunięte z konfiguracji.
+- Usunięte pole nie jest prezentowane jako kafel.

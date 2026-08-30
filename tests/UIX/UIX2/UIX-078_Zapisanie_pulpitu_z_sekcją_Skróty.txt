@@ -1,0 +1,38 @@
+ID: UIX-078
+Moduł: UIX
+Typ: Procesowy
+Priorytet: krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapisanie pulpitu z sekcją Skróty </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zapisanie pulpitu po dodaniu sekcji Skróty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do edytowanego pulpitu została dodana sekcja Skróty.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj sekcję Skróty przed zapisaniem. | Sekcja jest widoczna wraz ze skonfigurowanymi elementami. |
+| 2 | Wybierz „Zapisz”. | System zapisuje zmiany pulpitu. |
+| 3 | Poczekaj na ponowne załadowanie pulpitu. | System wyświetla zapisaną konfigurację. |
+| 4 | Zweryfikuj sekcję Skróty. | Sekcja oraz skonfigurowane skróty pozostają dostępne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Skróty zostaje zachowana po zapisaniu pulpitu.
+- Zapisana konfiguracja skrótów jest ponownie prezentowana.

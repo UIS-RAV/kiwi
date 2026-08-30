@@ -1,0 +1,38 @@
+ID: UIX-036
+Moduł: UIX
+Typ: Uprawnieniowy
+Priorytet: krytyczny
+Poziom: Rozszerzony
+
+<h1> Prezentacja niedostępnych kafli sekcji Korespondencja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Oznaczenie kafli sekcji Korespondencja niedostępnych dla użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Korespondencja
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Korespondencja zawiera kafel, do którego użytkownik nie posiada dostępu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit z sekcją Korespondencja. | System wyświetla sekcję wraz ze skonfigurowanymi kaflami. |
+| 2 | Zweryfikuj kafel niedostępny dla użytkownika. | Kafel jest wyszarzony i oznaczony symbolem blokady. |
+| 3 | Porównaj kafel z dostępnymi kaflami sekcji. | Dostępne kafle prezentują dane, natomiast niedostępny kafel pozostaje nieaktywny. |
+| 4 | Spróbuj użyć zablokowanego kafla. | System nie udostępnia użytkownikowi funkcji lub danych, do których nie posiada uprawnień. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Niedostępny kafel jest oznaczony symbolem blokady.
+- Brak uprawnień nie prowadzi do udostępnienia chronionych danych lub funkcji.

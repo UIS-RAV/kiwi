@@ -1,0 +1,38 @@
+ID: UIX-002
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Utworzenie nowego pulpitu z poziomu widoku pulpitów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Utworzenie nowego pulpitu z poziomu widoku pulpitów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do funkcji tworzenia pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Z poziomu nowego widoku wybierz funkcję „Nowy pulpit”. | System wyświetla okno „Nowy pulpit”. |
+| 2 | Zweryfikuj formularz tworzenia pulpitu. | Formularz umożliwia określenie rodzaju tworzonego pulpitu oraz jego nazwy. |
+| 3 | Wprowadź nazwę nowego pulpitu i pozostaw wybrany wariant tworzenia pustego pulpitu. | Dane pulpitu są wprowadzone w formularzu. |
+| 4 | Wybierz przycisk „Utwórz pulpit”. | System tworzy nowy pulpit i zamyka formularz. |
+| 5 | Zweryfikuj utworzony pulpit w interfejsie. | Nowy pulpit jest dostępny pod nadaną nazwą i może zostać wybrany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Nowy pulpit zostaje utworzony pod wskazaną nazwą.
+- Utworzony pulpit jest dostępny w interfejsie użytkownika.

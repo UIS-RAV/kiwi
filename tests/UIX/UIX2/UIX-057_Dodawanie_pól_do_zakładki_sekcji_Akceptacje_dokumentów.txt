@@ -1,0 +1,38 @@
+ID: UIX-057
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodawanie pól do zakładki sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie wielu pól prezentowanych jako kafle w zakładce sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację zakładki sekcji Akceptacje dokumentów. | System prezentuje listę pól zakładki. |
+| 2 | Wybierz „Dodaj pole”. | System dodaje nowy wiersz wyboru pola. |
+| 3 | Wybierz jedną z dostępnych wartości pola. | Wybrane pole zostaje dodane do konfiguracji. |
+| 4 | Powtórz operację dla kolejnych dostępnych pól. | Zakładka zawiera kilka skonfigurowanych pól. |
+| 5 | Utwórz sekcję. | System prezentuje kafle odpowiadające skonfigurowanym polom. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Do zakładki można dodać wiele pól.
+- Każde zapisane pole jest odwzorowane w sekcji.

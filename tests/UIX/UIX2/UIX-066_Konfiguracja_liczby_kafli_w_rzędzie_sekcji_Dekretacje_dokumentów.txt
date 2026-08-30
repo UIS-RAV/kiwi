@@ -1,0 +1,38 @@
+ID: UIX-066
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja liczby kafli w rzędzie sekcji Dekretacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie liczby kafli prezentowanych w jednym rzędzie sekcji Dekretacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dekretacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Dekretacje dokumentów”. | System prezentuje parametry sekcji. |
+| 2 | W polu „Ilość kafli w rzędzie” ustaw wartość 2. | W konfiguracji widoczna jest wartość 2. |
+| 3 | Dodaj pola „Do dekretacji” oraz „Zwroty do dekretacji”. | Oba pola są widoczne w konfiguracji sekcji. |
+| 4 | Wybierz „Utwórz sekcję”. | System dodaje sekcję do pulpitu. |
+| 5 | Zweryfikuj rozmieszczenie kafli. | Kafle „Do dekretacji” i „Zwroty do dekretacji” są prezentowane w jednym rzędzie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Parametr liczby kafli w rzędzie jest uwzględniany.
+- Dla wartości 2 system prezentuje dwa kafle w jednym rzędzie.

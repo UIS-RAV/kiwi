@@ -1,0 +1,38 @@
+ID: UIX-056
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie wielu zakładek w sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie kilku niezależnie skonfigurowanych zakładek do sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Skonfiguruj pierwszą zakładkę sekcji, podając nazwę, zakres danych i pola. | Pierwsza zakładka posiada kompletną konfigurację. |
+| 2 | Wybierz funkcję dodania kolejnej zakładki. | System dodaje następną zakładkę do konfiguracji. |
+| 3 | Skonfiguruj drugą zakładkę z inną nazwą lub zakresem danych. | Druga zakładka posiada własną konfigurację. |
+| 4 | Utwórz sekcję. | System dodaje sekcję zawierającą obie zakładki. |
+| 5 | Przełącz się pomiędzy zakładkami. | Każda zakładka prezentuje dane wynikające z własnej konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja może zawierać wiele zakładek.
+- Konfiguracje poszczególnych zakładek pozostają od siebie niezależne.

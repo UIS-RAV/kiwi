@@ -1,0 +1,38 @@
+ID: UIX-025
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Zmiana kolejności pól sekcji Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zmiana kolejności pól sekcji Dokumenty finansowe przed jej utworzeniem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji sekcji dodano co najmniej trzy pola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj aktualną kolejność pól w konfiguracji sekcji. | System prezentuje pola w ustalonej kolejności. |
+| 2 | Za pomocą uchwytu zmiany kolejności przenieś wybrane pole na inną pozycję. | Kolejność pól w konfiguracji zostaje zmieniona. |
+| 3 | Wybierz „Utwórz sekcję”. | System dodaje sekcję do pulpitu. |
+| 4 | Zweryfikuj kolejność kafli w utworzonej sekcji. | Kafle są prezentowane zgodnie z kolejnością ustawioną podczas konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kolejność pól może zostać zmieniona przed utworzeniem sekcji.
+- Kolejność kafli odpowiada kolejności skonfigurowanych pól.

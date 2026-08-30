@@ -1,0 +1,38 @@
+ID: UIX-022
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie sekcji Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie do pulpitu sekcji Dokumenty finansowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na edytowanym pulpicie wybierz przycisk „Dodaj sekcję”. | System wyświetla okno „Nowa sekcja”. |
+| 2 | Rozwiń pole „Funkcjonalność”. | System prezentuje listę dostępnych funkcjonalności sekcji. |
+| 3 | Wybierz funkcjonalność „Dokumenty finansowe”. | System ustawia funkcjonalność „Dokumenty finansowe” i prezentuje parametry sekcji. |
+| 4 | Skonfiguruj zawartość sekcji i wybierz „Utwórz sekcję”. | System dodaje sekcję Dokumenty finansowe do edytowanego pulpitu. |
+| 5 | Zweryfikuj sekcję przed zapisaniem pulpitu. | Sekcja Dokumenty finansowe jest widoczna na pulpicie wraz ze skonfigurowanymi kaflami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Dokumenty finansowe może zostać dodana do pulpitu.
+- Dodana sekcja prezentuje skonfigurowane kafle.

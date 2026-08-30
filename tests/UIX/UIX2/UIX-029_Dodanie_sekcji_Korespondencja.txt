@@ -1,0 +1,37 @@
+ID: UIX-029
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie sekcji Korespondencja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie do pulpitu sekcji Korespondencja.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Korespondencja
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na edytowanym pulpicie wybierz „Dodaj sekcję”. | System wyświetla okno „Nowa sekcja”. |
+| 2 | W polu „Funkcjonalność” wybierz „Korespondencja”. | System ustawia funkcjonalność „Korespondencja” i prezentuje parametry sekcji. |
+| 3 | Skonfiguruj zawartość sekcji. | System umożliwia dodawanie pól prezentowanych jako kafle. |
+| 4 | Wybierz „Utwórz sekcję”. | System dodaje sekcję Korespondencja do edytowanego pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Korespondencja może zostać dodana do pulpitu.
+- Sekcja zawiera skonfigurowane kafle.

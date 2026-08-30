@@ -1,0 +1,38 @@
+ID: UIX-044
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Zachowanie sekcji Sprawy po zapisaniu zmian pulpitu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zachowanie konfiguracji sekcji Sprawy po zapisaniu i ponownym wejściu do pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Sprawy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Sprawy została skonfigurowana i zapisana.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit z zapisaną sekcją Sprawy. | System wyświetla sekcję Sprawy. |
+| 2 | Zweryfikuj obecność skonfigurowanych kafli. | Widoczne są kafle zapisane podczas konfiguracji. |
+| 3 | Odśwież stronę lub przejdź do innego pulpitu i wróć do badanego pulpitu. | System ponownie ładuje badany pulpit. |
+| 4 | Ponownie zweryfikuj sekcję Sprawy. | Sekcja zachowuje skonfigurowane kafle oraz ich układ. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Konfiguracja sekcji jest trwała.
+- Ponowne załadowanie pulpitu nie powoduje utraty skonfigurowanych kafli ani ich układu.

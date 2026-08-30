@@ -1,0 +1,38 @@
+ID: UIX-023
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja liczby kafli w rzędzie sekcji Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Ustawienie liczby kafli prezentowanych w jednym rzędzie sekcji Dokumenty finansowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Dokumenty finansowe”. | System prezentuje parametry sekcji. |
+| 2 | W polu „Ilość kafli w rzędzie” ustaw wartość 3. | W konfiguracji sekcji widoczna jest wartość 3. |
+| 3 | Dodaj trzy różne pola do zawartości sekcji. | Konfiguracja zawiera trzy pola. |
+| 4 | Wybierz „Utwórz sekcję”. | System dodaje sekcję do pulpitu. |
+| 5 | Zweryfikuj rozmieszczenie kafli. | W jednym rzędzie prezentowane są trzy skonfigurowane kafle. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Parametr liczby kafli w rzędzie jest uwzględniany w układzie sekcji.
+- Dla wartości 3 system prezentuje trzy kafle w jednym rzędzie.

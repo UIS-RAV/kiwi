@@ -1,0 +1,37 @@
+ID: UIX-001
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Włączenie nowego widoku pulpitów użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Włączenie nowego widoku pulpitów użytkownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Użytkownik posiada dostęp do funkcji pulpitu użytkownika.
+- Użytkownik korzysta ze starego widoku pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz menu użytkownika w prawym górnym obszarze ekranu. | System wyświetla menu użytkownika z dostępnymi akcjami. |
+| 2 | Wybierz funkcję przejścia do nowego widoku pulpitu. | System rozpoczyna przełączanie widoku i ładuje nowy interfejs pulpitu. |
+| 3 | Poczekaj na zakończenie ładowania. | System wyświetla nowy widok pulpitów użytkownika. |
+| 4 | Zweryfikuj dostępność funkcji zarządzania pulpitami. | W nowym widoku dostępne są elementy umożliwiające wybór i tworzenie pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Po przełączeniu system wyświetla nowy interfejs pulpitów użytkownika.
+- Funkcje wyboru i tworzenia pulpitu są dostępne w nowym widoku.

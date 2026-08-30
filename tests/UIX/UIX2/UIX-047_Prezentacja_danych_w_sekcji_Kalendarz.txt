@@ -1,0 +1,37 @@
+ID: UIX-047
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja danych w sekcji Kalendarz </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja kalendarza oraz informacji związanych z wybranym dniem.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Kalendarz
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Kalendarz została dodana i zapisana na pulpicie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Kalendarz. | System wyświetla widok kalendarza. |
+| 2 | Wybierz dzień dostępny w widoku kalendarza. | System oznacza wybrany dzień. |
+| 3 | Zweryfikuj informacje prezentowane dla wybranego dnia. | System prezentuje dane powiązane z wybraną datą zgodnie z konfiguracją i uprawnieniami użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kalendarz umożliwia wybór dnia.
+- Dane prezentowane dla dnia odpowiadają wybranej dacie.

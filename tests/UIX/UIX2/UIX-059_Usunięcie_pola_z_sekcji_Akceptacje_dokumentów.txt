@@ -1,0 +1,37 @@
+ID: UIX-059
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie pola z sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie wybranego pola z konfiguracji sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji zakładki znajdują się co najmniej dwa pola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy wybranym polu użyj funkcji usunięcia. | Pole zostaje usunięte z konfiguracji. |
+| 2 | Utwórz sekcję i zapisz zmiany pulpitu. | System zapisuje konfigurację bez usuniętego pola. |
+| 3 | Zweryfikuj zawartość sekcji. | Element odpowiadający usuniętemu polu nie jest prezentowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Pole może zostać usunięte z konfiguracji.
+- Usunięte pole nie występuje w zapisanej sekcji.

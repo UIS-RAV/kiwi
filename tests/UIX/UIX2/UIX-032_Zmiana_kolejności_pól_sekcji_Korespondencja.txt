@@ -1,0 +1,38 @@
+ID: UIX-032
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Zmiana kolejności pól sekcji Korespondencja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zmiana kolejności pól sekcji Korespondencja.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Korespondencja
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do konfiguracji sekcji dodano kilka pól.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj kolejność pól w konfiguracji. | System prezentuje pola w aktualnej kolejności. |
+| 2 | Przenieś wybrane pole na inną pozycję za pomocą uchwytu kolejności. | Pozycja pola zostaje zmieniona. |
+| 3 | Utwórz sekcję. | System dodaje sekcję do pulpitu. |
+| 4 | Zweryfikuj kolejność kafli. | Kafle są prezentowane zgodnie z kolejnością skonfigurowanych pól. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kolejność pól można zmienić.
+- Kolejność kafli odpowiada konfiguracji.

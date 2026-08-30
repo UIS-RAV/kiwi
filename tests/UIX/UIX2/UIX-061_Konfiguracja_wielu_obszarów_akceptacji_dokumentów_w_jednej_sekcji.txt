@@ -1,0 +1,38 @@
+ID: UIX-061
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja wielu obszarów akceptacji dokumentów w jednej sekcji </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Niezależna konfiguracja kilku obszarów akceptacji dostępnych w sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Akceptacje dokumentów”. | System prezentuje kilka obszarów konfiguracji akceptacji dokumentów. |
+| 2 | Skonfiguruj pierwszy obszar, wskazując jego zakres danych i pola. | Pierwszy obszar posiada własną konfigurację. |
+| 3 | Skonfiguruj kolejny dostępny obszar z innym zakresem danych lub zestawem pól. | Drugi obszar posiada niezależną konfigurację. |
+| 4 | Utwórz sekcję. | System tworzy sekcję zawierającą skonfigurowane obszary. |
+| 5 | Zweryfikuj ich zawartość. | Każdy obszar prezentuje elementy wynikające z przypisanej mu konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Poszczególne obszary sekcji mogą być konfigurowane niezależnie.
+- Konfiguracja jednego obszaru nie nadpisuje konfiguracji pozostałych.

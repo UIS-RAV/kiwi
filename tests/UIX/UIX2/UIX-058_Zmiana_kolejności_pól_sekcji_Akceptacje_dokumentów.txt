@@ -1,0 +1,38 @@
+ID: UIX-058
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Zmiana kolejności pól sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zmiana kolejności pól skonfigurowanych w sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji wybranej zakładki znajdują się co najmniej trzy pola.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj aktualną kolejność pól. | System prezentuje pola w ustalonej kolejności. |
+| 2 | Przenieś wybrane pole na inną pozycję za pomocą uchwytu zmiany kolejności. | Kolejność pól zostaje zmieniona. |
+| 3 | Utwórz sekcję i zapisz pulpit. | System zapisuje zmienioną konfigurację. |
+| 4 | Zweryfikuj kolejność kafli. | Kafle są prezentowane zgodnie z ustawioną kolejnością pól. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Kolejność pól może zostać zmieniona.
+- Kolejność prezentowanych elementów odpowiada zapisanej konfiguracji.

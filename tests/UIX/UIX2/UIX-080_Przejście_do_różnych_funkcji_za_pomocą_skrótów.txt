@@ -1,0 +1,38 @@
+ID: UIX-080
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Przejście do różnych funkcji za pomocą skrótów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Poprawne działanie wielu różnych skrótów skonfigurowanych w jednej sekcji.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Skróty zawiera kilka różnych skrótów do funkcji dostępnych użytkownikowi.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit z sekcją Skróty. | System prezentuje wszystkie zapisane skróty. |
+| 2 | Wybierz pierwszy skrót i zweryfikuj otwartą funkcję. | System otwiera funkcję przypisaną do pierwszego skrótu. |
+| 3 | Wróć do pulpitu i wybierz inny skrót. | System otwiera funkcję przypisaną do drugiego skrótu. |
+| 4 | Powtórz weryfikację dla pozostałych skonfigurowanych skrótów. | Każdy skrót prowadzi do właściwego obszaru systemu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Każdy skrót działa niezależnie.
+- Każdy skonfigurowany skrót prowadzi do właściwej funkcji systemu.

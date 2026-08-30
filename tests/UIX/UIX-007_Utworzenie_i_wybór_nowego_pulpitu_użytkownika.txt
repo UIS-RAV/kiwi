@@ -1,0 +1,36 @@
+ID: UIX-007
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Utworzenie i wybór nowego pulpitu użytkownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Utworzenie pulpitu, dodanie go do listy dostępnych pulpitów i przejście do nowego pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Utwórz nowy pulpit, podając jednoznaczną nazwę. | System kończy tworzenie pulpitu. |
+| 2 | Otwórz listę dostępnych pulpitów. | Na liście widoczny jest nowo utworzony pulpit. |
+| 3 | Wybierz utworzony pulpit. | System przełącza widok na wskazany pulpit. |
+| 4 | Zweryfikuj nazwę aktywnego pulpitu. | Interfejs wskazuje utworzony pulpit jako aktualnie wybrany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Nowo utworzony pulpit jest dostępny na liście pulpitów.
+- Wybranie pulpitu powoduje przełączenie widoku na wskazany pulpit.

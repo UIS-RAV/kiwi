@@ -1,0 +1,38 @@
+ID: UIX-028
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja wartości na kaflach sekcji Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja liczby dokumentów na kaflach sekcji Dokumenty finansowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Na zapisanym pulpicie znajduje się sekcja Dokumenty finansowe z kaflami Faktury, Rachunki i Noty księgowe.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Dokumenty finansowe. | System wyświetla sekcję Dokumenty finansowe. |
+| 2 | Zweryfikuj kafel „Faktury”. | Kafel prezentuje wartość odpowiadającą dokumentom typu Faktury dostępnym dla użytkownika. |
+| 3 | Zweryfikuj kafel „Rachunki”. | Kafel prezentuje wartość odpowiadającą dokumentom typu Rachunki dostępnym dla użytkownika. |
+| 4 | Zweryfikuj kafel „Noty księgowe”. | Kafel prezentuje wartość odpowiadającą dokumentom typu Noty księgowe dostępnym dla użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Każdy kafel prezentuje wartość dla odpowiadającego mu rodzaju dokumentu.
+- Wartości są prezentowane niezależnie dla Faktur, Rachunków i Not księgowych.

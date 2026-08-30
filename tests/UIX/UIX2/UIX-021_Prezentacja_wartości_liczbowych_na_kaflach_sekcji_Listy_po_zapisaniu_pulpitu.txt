@@ -1,0 +1,39 @@
+ID: UIX-021
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja wartości liczbowych na kaflach sekcji Listy po zapisaniu pulpitu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja wartości odpowiadających danym na dostępnych kaflach sekcji Listy po zapisaniu konfiguracji pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Listy zawierająca kilka dostępnych kafli została skonfigurowana i zapisana.
+- Dla co najmniej jednego kafla istnieją dane możliwe do policzenia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit. | System ładuje sekcję Listy. |
+| 2 | Przejdź do zakładki zawierającej dostępne kafle. | System prezentuje kafle skonfigurowane dla zakładki. |
+| 3 | Zweryfikuj wartości prezentowane na kaflach. | Na dostępnych kaflach system prezentuje aktualne wartości lub liczniki odpowiadające ich zakresom danych. |
+| 4 | Porównaj prezentację kafla dostępnego i kafla zablokowanego z powodu braku uprawnień. | Kafel dostępny prezentuje dane zgodnie z uprawnieniami, a kafel niedostępny pozostaje zablokowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dostępne kafle prezentują dane zgodnie ze skonfigurowanym zakresem.
+- Prezentacja danych respektuje uprawnienia użytkownika.

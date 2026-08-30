@@ -1,0 +1,38 @@
+ID: UIX-011
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodawanie wielu pól do zakładki sekcji Listy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie wielu pól do jednej zakładki sekcji Listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz konfigurację nowej sekcji „Listy” i skonfiguruj zakładkę. | System wyświetla sekcję konfiguracji pól zakładki. |
+| 2 | Wybierz „Dodaj pole”. | System dodaje nowy wiersz pola do zakładki. |
+| 3 | Wybierz wartość dla dodanego pola. | Wybrane pole jest widoczne w konfiguracji zakładki. |
+| 4 | Powtarzaj dodawanie pól, aż zakładka będzie zawierała kilka różnych pozycji. | Lista pól zawiera wszystkie dodane pozycje. |
+| 5 | Utwórz sekcję. | Na pulpicie widoczne są kafle odpowiadające skonfigurowanym polom. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Do jednej zakładki można dodać wiele pól.
+- Każde skonfigurowane pole jest odwzorowane jako kafel w sekcji.

@@ -1,0 +1,38 @@
+ID: UIX-027
+Moduł: UIX
+Typ: Procesowy
+Priorytet: krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapisanie pulpitu z sekcją Dokumenty finansowe </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zapisanie pulpitu po dodaniu sekcji Dokumenty finansowe.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dokumenty finansowe
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do edytowanego pulpitu została dodana sekcja Dokumenty finansowe.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj sekcję Dokumenty finansowe przed zapisaniem. | Sekcja jest widoczna wraz ze skonfigurowanymi kaflami. |
+| 2 | Wybierz przycisk „Zapisz”. | System zapisuje zmiany pulpitu. |
+| 3 | Odśwież lub ponownie otwórz pulpit. | System wyświetla zapisaną konfigurację pulpitu. |
+| 4 | Zweryfikuj sekcję Dokumenty finansowe. | Sekcja oraz skonfigurowane kafle pozostają dostępne po ponownym otwarciu pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Dokumenty finansowe zostaje zapisana w konfiguracji pulpitu.
+- Konfiguracja sekcji pozostaje zachowana po odświeżeniu lub ponownym otwarciu pulpitu.

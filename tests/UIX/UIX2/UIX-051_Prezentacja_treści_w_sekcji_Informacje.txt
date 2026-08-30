@@ -1,0 +1,37 @@
+ID: UIX-051
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Prezentacja treści w sekcji Informacje </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Prezentacja treści udostępnianych użytkownikowi w sekcji Informacje.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Informacje
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Sekcja Informacje została dodana i zapisana na pulpicie.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz pulpit zawierający sekcję Informacje. | System wyświetla sekcję Informacje. |
+| 2 | Zweryfikuj widoczne pozycje informacyjne. | System prezentuje informacje dostępne dla zalogowanego użytkownika. |
+| 3 | Zweryfikuj możliwość zapoznania się z prezentowaną informacją. | Użytkownik może odczytać udostępnioną treść w zakresie przewidzianym przez sekcję. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja prezentuje informacje dostępne dla użytkownika.
+- Prezentowane treści są czytelne i dostępne z poziomu pulpitu.

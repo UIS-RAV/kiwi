@@ -1,0 +1,39 @@
+ID: UIX-009
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Utworzenie sekcji Listy z jedną zakładką </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Utworzenie sekcji Listy z jedną zakładką i wskazanym zakresem danych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Dodaj sekcję” i ustaw funkcjonalność „Listy”. | System wyświetla konfigurację sekcji Listy. |
+| 2 | Pozostaw zaznaczoną opcję „Użyj zakładek”. | System udostępnia konfigurację zakładki. |
+| 3 | W polu „Nazwa zakładki” wprowadź nazwę zakładki. | Nazwa zakładki jest widoczna w formularzu. |
+| 4 | W polu „Zakres danych” wybierz dostępny zakres danych. | Wybrany zakres danych zostaje przypisany do zakładki. |
+| 5 | Dodaj co najmniej jedno pole do zakładki. | Wybrane pole jest widoczne na liście pól zakładki. |
+| 6 | Wybierz „Utwórz sekcję”. | Sekcja Listy zostaje dodana do edytowanego pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Listy może zostać utworzona z jedną zakładką.
+- Zakładka zawiera wskazany zakres danych oraz skonfigurowane pola.

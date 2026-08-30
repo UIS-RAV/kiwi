@@ -1,0 +1,38 @@
+ID: UIX-053
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Trwałość konfiguracji sekcji Kalendarz, Urlopy i Informacje </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Zachowanie sekcji Kalendarz, Urlopy i Informacje po ponownym otwarciu pulpitu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcje Kalendarz, Urlopy i Informacje
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Pulpit zawierający sekcje Kalendarz, Urlopy i Informacje został zapisany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zapisany pulpit. | System wyświetla wszystkie zapisane sekcje. |
+| 2 | Odśwież stronę lub przejdź do innego pulpitu. | System opuszcza lub ponownie ładuje badany pulpit. |
+| 3 | Ponownie otwórz badany pulpit. | System ładuje zapisaną konfigurację. |
+| 4 | Zweryfikuj sekcje Kalendarz, Urlopy i Informacje. | Wszystkie sekcje oraz ich konfiguracja pozostają zachowane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Konfiguracja sekcji jest trwała.
+- Ponowne otwarcie pulpitu nie powoduje utraty sekcji ani ich ustawień.

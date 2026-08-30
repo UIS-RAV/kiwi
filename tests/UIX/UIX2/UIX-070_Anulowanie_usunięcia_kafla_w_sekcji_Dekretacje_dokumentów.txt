@@ -1,0 +1,38 @@
+ID: UIX-070
+Moduł: UIX
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usunięcia kafla w sekcji Dekretacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Anulowanie usunięcia pola z konfiguracji sekcji Dekretacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Dekretacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji sekcji znajduje się co najmniej jedno pole.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy wybranym polu użyj ikony usunięcia. | System wyświetla okno „Usuwanie kafla”. |
+| 2 | Wybierz „Anuluj”. | Okno potwierdzenia zostaje zamknięte. |
+| 3 | Zweryfikuj konfigurację sekcji. | Pole pozostaje na liście i nie zostaje usunięte. |
+| 4 | Utwórz sekcję. | System tworzy sekcję zawierającą pole, którego usunięcie anulowano. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Anulowanie operacji nie usuwa pola.
+- Pole pozostaje dostępne w utworzonej sekcji.

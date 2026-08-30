@@ -1,0 +1,36 @@
+ID: UIX-006
+Moduł: UIX
+Typ: Negatywny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Anulowanie tworzenia nowego pulpitu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Rezygnacja z tworzenia pulpitu bez zapisania wprowadzonych danych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – włączenie widoku i tworzenie pulpitów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom funkcję „Nowy pulpit”. | System wyświetla okno tworzenia pulpitu. |
+| 2 | Wprowadź nazwę pulpitu i zmień dostępne ustawienia formularza. | Zmodyfikowane dane są widoczne w oknie. |
+| 3 | Wybierz funkcję anulowania lub zamknij okno bez utworzenia pulpitu. | Okno zostaje zamknięte bez utworzenia pulpitu. |
+| 4 | Zweryfikuj listę dostępnych pulpitów. | Pulpit o wprowadzonej nazwie nie został dodany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Anulowanie operacji nie powoduje utworzenia nowego pulpitu.
+- Lista dostępnych pulpitów pozostaje bez zmian.

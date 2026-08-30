@@ -1,0 +1,38 @@
+ID: UIX-046
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Konfiguracja elementów prezentowanych w sekcji Kalendarz </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Wybór elementów uwzględnianych w sekcji Kalendarz.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Kalendarz
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Kalendarz”. | System prezentuje listę dostępnych elementów kalendarza. |
+| 2 | Zaznacz wybrane pozycje na liście. | Wybrane pozycje zostają oznaczone jako aktywne. |
+| 3 | Odznacz co najmniej jedną z dostępnych pozycji. | Odznaczona pozycja nie jest wybrana w konfiguracji. |
+| 4 | Wybierz „Utwórz sekcję”. | System tworzy sekcję Kalendarz zgodnie z wybranym zakresem. |
+| 5 | Zweryfikuj zawartość sekcji. | Sekcja uwzględnia wybrane elementy i nie prezentuje elementów wyłączonych z konfiguracji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Możliwe jest niezależne zaznaczanie i odznaczanie dostępnych elementów kalendarza.
+- Zawartość sekcji odpowiada zapisanej konfiguracji.

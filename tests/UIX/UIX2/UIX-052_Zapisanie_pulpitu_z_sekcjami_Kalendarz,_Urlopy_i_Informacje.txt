@@ -1,0 +1,38 @@
+ID: UIX-052
+Moduł: UIX
+Typ: Procesowy
+Priorytet: krytyczny
+Poziom: Funkcjonalny
+
+<h1> Zapisanie pulpitu z sekcjami Kalendarz, Urlopy i Informacje </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Jednoczesne zapisanie pulpitu zawierającego sekcje Kalendarz, Urlopy i Informacje.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcje Kalendarz, Urlopy i Informacje
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do edytowanego pulpitu dodano sekcje Kalendarz, Urlopy i Informacje.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj obecność wszystkich trzech sekcji przed zapisaniem. | Sekcje Kalendarz, Urlopy i Informacje są widoczne w trybie edycji. |
+| 2 | Wybierz „Zapisz”. | System zapisuje zmiany pulpitu. |
+| 3 | Poczekaj na ponowne załadowanie pulpitu. | System wyświetla zapisaną konfigurację. |
+| 4 | Zweryfikuj wszystkie trzy sekcje. | Kalendarz, Urlopy i Informacje są dostępne po zapisaniu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Wszystkie dodane sekcje zostają zapisane podczas jednej operacji.
+- Po zapisaniu żadna z dodanych sekcji nie zostaje utracona.

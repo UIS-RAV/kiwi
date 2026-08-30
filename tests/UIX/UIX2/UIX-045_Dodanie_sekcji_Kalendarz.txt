@@ -1,0 +1,37 @@
+ID: UIX-045
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie sekcji Kalendarz </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie do pulpitu sekcji Kalendarz.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Kalendarz
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Na edytowanym pulpicie wybierz „Dodaj sekcję”. | System wyświetla okno „Nowa sekcja”. |
+| 2 | W polu „Funkcjonalność” wybierz „Kalendarz”. | System ustawia funkcjonalność „Kalendarz” i prezentuje parametry właściwe dla tej sekcji. |
+| 3 | Skonfiguruj dostępne elementy kalendarza. | Wybrane elementy są zaznaczone w konfiguracji. |
+| 4 | Wybierz „Utwórz sekcję”. | System dodaje sekcję Kalendarz do edytowanego pulpitu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Sekcja Kalendarz może zostać dodana do pulpitu.
+- Utworzona sekcja odpowiada konfiguracji wskazanej podczas jej dodawania.

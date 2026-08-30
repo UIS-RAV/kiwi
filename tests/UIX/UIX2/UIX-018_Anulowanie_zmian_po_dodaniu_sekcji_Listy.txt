@@ -1,0 +1,38 @@
+ID: UIX-018
+Moduł: UIX
+Typ: Negatywny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Anulowanie zmian po dodaniu sekcji Listy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Rezygnacja z niezapisanych zmian po dodaniu sekcji Listy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Listy
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- Do edytowanego pulpitu została dodana nowa sekcja Listy, ale zmiany nie zostały zapisane.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zweryfikuj nową sekcję widoczną w trybie edycji pulpitu. | Nowa sekcja jest widoczna jako niezapisana zmiana. |
+| 2 | Wybierz „Anuluj zmiany”. | System rezygnuje z niezapisanych zmian pulpitu. |
+| 3 | Ponownie otwórz lub odśwież pulpit. | System wyświetla ostatnio zapisaną konfigurację pulpitu. |
+| 4 | Zweryfikuj listę sekcji. | Sekcja dodana przed anulowaniem zmian nie jest dostępna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Anulowanie zmian nie zapisuje nowo dodanej sekcji.
+- Pulpit zachowuje konfigurację sprzed rozpoczęcia anulowanej edycji.

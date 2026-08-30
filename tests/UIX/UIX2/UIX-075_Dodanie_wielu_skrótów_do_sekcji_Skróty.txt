@@ -1,0 +1,38 @@
+ID: UIX-075
+Moduł: UIX
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dodanie wielu skrótów do sekcji Skróty </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Dodanie wielu dostępnych skrótów do jednej sekcji Skróty.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Skróty
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij dodawanie sekcji „Skróty”. | System wyświetla konfigurację zawartości. |
+| 2 | Wybierz „Dodaj pole”. | System dodaje nowy wiersz wyboru skrótu. |
+| 3 | Wybierz jeden z dostępnych skrótów. | Wybrany skrót zostaje dodany do konfiguracji. |
+| 4 | Powtórz operację dla kolejnych dostępnych skrótów. | Konfiguracja zawiera wiele różnych skrótów. |
+| 5 | Wybierz „Utwórz sekcję”. | System tworzy sekcję zawierającą skonfigurowane skróty. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Do sekcji można dodać wiele skrótów.
+- Każdy skonfigurowany skrót jest prezentowany w utworzonej sekcji.

@@ -1,0 +1,38 @@
+ID: UIX-060
+Moduł: UIX
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Rozszerzony
+
+<h1> Usunięcie dodatkowej zakładki sekcji Akceptacje dokumentów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest sprawdzenie scenariusza: Usunięcie jednej z dodatkowych zakładek podczas konfiguracji sekcji Akceptacje dokumentów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Nowy interfejs pulpitu użytkownika – sekcja Akceptacje dokumentów
+
+<h2> Warunki wstępne </h2>
+
+- System EZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu.
+- Nowy widok pulpitów jest włączony.
+- Użytkownik posiada dostęp do edycji wybranego pulpitu.
+- W konfiguracji wybranego obszaru znajdują się co najmniej dwie zakładki.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz dodatkową zakładkę przeznaczoną do usunięcia. | System prezentuje jej konfigurację. |
+| 2 | Wybierz funkcję usunięcia zakładki. | Zakładka zostaje usunięta z konfiguracji. |
+| 3 | Utwórz sekcję i zapisz pulpit. | System zapisuje sekcję bez usuniętej zakładki. |
+| 4 | Zweryfikuj dostępne zakładki. | Usunięta zakładka nie jest prezentowana. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wszystkie kroki testowe kończą się rezultatem zgodnym z oczekiwaniem.
+- Dodatkowa zakładka może zostać usunięta.
+- Usunięta zakładka nie jest dostępna po zapisaniu.
