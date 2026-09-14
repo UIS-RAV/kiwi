@@ -1,0 +1,37 @@
+ID: INT-027
+Moduł: INTERESANCI
+Typ: Reguła biznesowa
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Brak wpływu zmian grupy interesantów na dokumenty i sprawy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Brak wpływu zmian grupy interesantów na dokumenty i sprawy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Istnieje grupa interesantów używana wcześniej operacyjnie.
+- Istnieją dokumenty lub sprawy powiązane z interesantami z tej grupy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zmień skład istniejącej grupy lub usuń grupę. | Operacja grupowa zostaje wykonana. |
+| 2 | Otwórz dokument lub sprawę, w której wcześniej wskazano interesanta należącego do grupy. | Obiekt zostaje wyświetlony. |
+| 3 | Zweryfikuj przypisanego interesanta i dane dokumentu lub sprawy. | Istniejące powiązania dokumentów i spraw nie zostały zmienione przez zmianę grupy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Grupy pełnią funkcję organizacyjną.
+- Zmiana lub usunięcie grupy nie wpływa na istniejące dokumenty i sprawy.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

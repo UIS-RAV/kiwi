@@ -1,0 +1,37 @@
+ID: INT-019
+Moduł: INTERESANCI
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Podgląd historii zmian interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Podgląd historii zmian interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada !Admin lub uprawnienie „Interesanci - podgląd historii”.
+- Dla interesanta wykonano wcześniej zmianę.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | Lista interesantów jest widoczna. |
+| 2 | Otwórz podgląd interesanta ikoną lupy. | System prezentuje dane interesanta. |
+| 3 | Wybierz „Historia zmian”. | System wyświetla historię interesanta. |
+| 4 | Zweryfikuj wpis dotyczący wcześniej wykonanej zmiany. | Historia zawiera informację odpowiadającą wykonanej operacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Historia jest dostępna użytkownikowi posiadającemu właściwe uprawnienie.
+- Zmiany interesanta są możliwe do prześledzenia.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

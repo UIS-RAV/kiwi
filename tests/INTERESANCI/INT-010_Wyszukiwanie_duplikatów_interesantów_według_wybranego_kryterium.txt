@@ -1,0 +1,38 @@
+ID: INT-010
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Wyszukiwanie duplikatów interesantów według wybranego kryterium </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wyszukiwanie duplikatów interesantów według wybranego kryterium.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- W bazie istnieją co najmniej dwa rekordy posiadające identyczną wartość wybranego kryterium.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | Lista interesantów jest widoczna. |
+| 2 | Wybierz „Szukaj duplikatów”. | System przechodzi do widoku wyszukiwania duplikatów. |
+| 3 | Wybierz „Zmień kryterium”. | System udostępnia wybór kryterium grupowania. |
+| 4 | Wskaż kryterium, np. PESEL. | System wyszukuje i grupuje rekordy posiadające identyczną wartość wskazanego kryterium. |
+| 5 | Zweryfikuj utworzone grupy duplikatów. | W jednej grupie znajdują się rekordy z identyczną wartością kryterium. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Duplikaty są grupowane według wybranego kryterium.
+- Rekordy niespełniające kryterium nie są błędnie łączone z grupą.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

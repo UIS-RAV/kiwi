@@ -1,0 +1,38 @@
+ID: INT-012
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Scalenie duplikatów interesantów z wyborem wartości pojedynczych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Scalenie duplikatów interesantów z wyborem wartości pojedynczych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Zidentyfikowano co najmniej dwa rekordy interesanta przeznaczone do scalenia.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W widoku duplikatów zaznacz rekordy przeznaczone do scalenia. | Wybrane rekordy zostają objęte operacją. |
+| 2 | Dla pól Typ, Źródło, Nazwa, PESEL, NIP, REGON, Adres zamieszkania oraz adres korespondencyjny wskaż wartości, które mają pozostać. | System przyjmuje po jednej wybranej wartości dla pól pojedynczych. |
+| 3 | Zweryfikuj podsumowanie wyboru. | Dla każdego pola pojedynczego wskazana jest wartość wynikowa. |
+| 4 | Uruchom scalenie przyciskiem znajdującym się na dole strony. | System wykonuje operację scalenia. |
+| 5 | Otwórz wynikowego interesanta. | Pola pojedyncze zawierają wartości wskazane przed scaleniem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scalenie zachowuje wybrane wartości pól pojedynczych.
+- Operacja tworzy spójny wynikowy rekord interesanta.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

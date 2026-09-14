@@ -1,0 +1,40 @@
+ID: ORG-004
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dodanie podrzędnej komórki organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dodanie podrzędnej komórki organizacyjnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy komórce wybierz dodanie podrzędnej komórki. | System otwiera formularz. |
+| 2 | Wskaż komórkę nadrzędną. | Komórka nadrzędna zostaje wybrana. |
+| 3 | Uzupełnij nazwę i symbol. | Dane zostają przyjęte. |
+| 4 | Ustaw dodawanie inicjałów do symbolu sprawy zgodnie ze scenariuszem. | Parametr zostaje ustawiony. |
+| 5 | Wybierz typ: wydział, referat, biuro, departament, pion lub samodzielne stanowisko. | Typ zostaje wskazany. |
+| 6 | Ustaw „Aktywna” oraz uzupełnij adres, opis i telefon. | Formularz zawiera komplet danych. |
+| 7 | Zapisz formularz. | Komórka zostaje utworzona. |
+| 8 | Zweryfikuj jej położenie. | Komórka jest podrzędna względem wskazanej komórki. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,37 @@
+ID: ORG-009
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie komórki organizacyjnej bez stanowisk </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Usunięcie komórki organizacyjnej bez stanowisk.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+- Komórka nie posiada stanowisk.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukaj komórkę. | Przycisk „Usuń” jest dostępny. |
+| 2 | Wybierz „Usuń”. | System wyświetla potwierdzenie. |
+| 3 | Potwierdź usunięcie. | Komórka zostaje usunięta. |
+| 4 | Zweryfikuj strukturę. | Komórka nie jest już widoczna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

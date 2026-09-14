@@ -1,0 +1,36 @@
+ID: ORG-012
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Utworzenie stanowiska podrzędnego z poziomu stanowiska nadrzędnego </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Utworzenie stanowiska podrzędnego z poziomu stanowiska nadrzędnego.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+- Istnieje stanowisko nadrzędne.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy stanowisku nadrzędnym wybierz dodanie stanowiska podrzędnego. | Formularz zostaje otwarty w kontekście stanowiska nadrzędnego. |
+| 2 | Uzupełnij dane i zapisz. | Stanowisko zostaje utworzone. |
+| 3 | Zweryfikuj hierarchię. | Nowe stanowisko znajduje się pod właściwym stanowiskiem nadrzędnym. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

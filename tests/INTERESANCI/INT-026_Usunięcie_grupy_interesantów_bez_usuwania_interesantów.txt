@@ -1,0 +1,38 @@
+ID: INT-026
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie grupy interesantów bez usuwania interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Usunięcie grupy interesantów bez usuwania interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Istnieje grupa zawierająca co najmniej jednego interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz listę grup interesantów. | Badana grupa jest widoczna. |
+| 2 | Uruchom usunięcie grupy. | System wykonuje operację usunięcia grupy zgodnie z dostępną akcją. |
+| 3 | Zweryfikuj listę grup. | Usunięta grupa nie jest już widoczna. |
+| 4 | Przejdź do modułu Interesanci i wyszukaj członków usuniętej grupy. | Interesanci nadal istnieją w systemie. |
+| 5 | Otwórz ich dane. | Dane interesantów nie zostały zmienione przez usunięcie grupy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Usunięcie grupy usuwa wyłącznie powiązanie grupowe.
+- Interesanci nie są usuwani ani modyfikowani.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,37 @@
+ID: INT-028
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Wykorzystanie zapisanej grupy interesantów przy wyborze adresatów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wykorzystanie zapisanej grupy interesantów przy wyborze adresatów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Istnieje zapisana grupa interesantów.
+- Użytkownik wykonuje proces umożliwiający wskazanie wielu adresatów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do funkcji wyboru interesantów w procesie obsługującym wielu adresatów. | System udostępnia sposoby wskazywania interesantów. |
+| 2 | Wybierz opcję „Moje grupy”. | System prezentuje wcześniej zdefiniowane grupy interesantów. |
+| 3 | Wskaż przygotowaną grupę. | System umożliwia wykorzystanie interesantów należących do grupy. |
+| 4 | Zweryfikuj wybranych adresatów. | Adresaci odpowiadają członkom wskazanej grupy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zapisane grupy mogą być ponownie wykorzystywane operacyjnie.
+- Grupa ułatwia wskazanie wielu adresatów.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,39 @@
+ID: INT-024
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja składu grupy interesantów — dodanie interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Edycja składu grupy interesantów — dodanie interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Istnieje grupa interesantów.
+- Istnieje interesant nienależący do badanej grupy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz edycję grupy. | Widoczne są sekcje „Interesanci w grupie” oraz „Wyszukaj i dodaj do grupy”. |
+| 2 | W sekcji wyszukiwania odszukaj interesanta według nazwy, adresu, miejscowości, identyfikatora lub danych kontaktowych. | System prezentuje pasujący rekord. |
+| 3 | Wybierz dodanie interesanta do grupy. | Interesant pojawia się w sekcji „Interesanci w grupie”. |
+| 4 | Zapisz zmiany. | Skład grupy zostaje zaktualizowany. |
+| 5 | Ponownie otwórz grupę. | Dodany interesant nadal jest członkiem grupy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Skład istniejącej grupy można rozszerzyć.
+- Dodanie do grupy nie modyfikuje danych karty interesanta.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,40 @@
+ID: ORG-010
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Utworzenie stanowiska nadrzędnego w komórce organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Utworzenie stanowiska nadrzędnego w komórce organizacyjnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+- Istnieje aktywna komórka organizacyjna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przy komórce wybierz dodanie podrzędnego stanowiska. | System otwiera formularz z domyślnie wskazaną komórką. |
+| 2 | Pozostaw „Stanowisko nadrzędne” puste. | Stanowisko będzie nadrzędne. |
+| 3 | Wprowadź nazwę stanowiska. | Nazwa zostaje przyjęta. |
+| 4 | Zweryfikuj symbol. | Symbol jest automatycznie zgodny z symbolem komórki. |
+| 5 | Ustaw „Dekretacja na wszystkich” i „Podpis w trybie kontrasygnaty” zgodnie ze scenariuszem. | Parametry zostają ustawione. |
+| 6 | Zapisz. | Stanowisko zostaje utworzone w komórce. |
+| 7 | Zweryfikuj hierarchię. | Stanowisko nie posiada stanowiska nadrzędnego. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,37 @@
+ID: INT-017
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Usunięcie interesanta niepowiązanego z innymi obiektami </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Usunięcie interesanta niepowiązanego z innymi obiektami.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada !Admin lub !Kancelaria.
+- Istnieje interesant niepowiązany z dokumentem, sprawą ani innym obiektem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | Lista interesantów jest widoczna. |
+| 2 | Przy badanym interesancie wybierz „Usuń interesanta”. | System wyświetla komunikat potwierdzenia. |
+| 3 | Potwierdź przyciskiem „Usuń interesanta”. | Interesant zostaje usunięty. |
+| 4 | Wyszukaj usunięty rekord. | Interesant nie jest dostępny w bazie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Usunięcie jest dostępne dla !Admin lub !Kancelaria.
+- Interesant bez powiązań może zostać usunięty.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

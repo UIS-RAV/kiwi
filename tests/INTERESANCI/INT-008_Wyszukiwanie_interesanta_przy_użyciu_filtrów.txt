@@ -1,0 +1,38 @@
+ID: INT-008
+Moduł: INTERESANCI
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Wyszukiwanie interesanta przy użyciu filtrów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wyszukiwanie interesanta przy użyciu filtrów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada dostęp do modułu Interesanci.
+- W bazie istnieją interesanci o zróżnicowanych danych.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | Lista interesantów jest widoczna. |
+| 2 | Wybierz „Filtry”. | System wyświetla formularz kryteriów wyszukiwania. |
+| 3 | Wprowadź jedno z kryteriów, np. imię, nazwisko, miejscowość, PESEL, NIP, REGON, Nazwa, Ulica, Budynek, Lokal, Kod pocztowy, Skrytka ePUAP, Adres email, Telefon lub Zgody na korespondencję. | Wybrane kryterium jest ustawione. |
+| 4 | Wybierz „Szukaj”. | System prezentuje interesantów odpowiadających kryterium. |
+| 5 | Wyczyść filtry. | System usuwa kryteria i przywraca listę zgodnie z widokiem bez filtrów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Filtrowanie zwraca rekordy zgodne z ustawionymi kryteriami.
+- Filtry można wyczyścić.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

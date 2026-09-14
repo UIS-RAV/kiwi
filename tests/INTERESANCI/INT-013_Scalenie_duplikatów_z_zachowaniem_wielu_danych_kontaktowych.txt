@@ -1,0 +1,38 @@
+ID: INT-013
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Scalenie duplikatów z zachowaniem wielu danych kontaktowych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Scalenie duplikatów z zachowaniem wielu danych kontaktowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Scalane rekordy posiadają różne wartości Skrytki ePUAP, adresu Email, telefonu lub Fax.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz przygotowaną grupę duplikatów i zaznacz rekordy do scalenia. | Rekordy są wybrane. |
+| 2 | Dla Skrytki ePUAP wskaż więcej niż jedną wartość do zachowania. | System pozwala zaznaczyć wiele wartości. |
+| 3 | Analogicznie wskaż wiele wartości dla Email, telefonu lub Fax, jeśli są dostępne. | Wartości zostają wybrane. |
+| 4 | Wykonaj scalenie. | System scala rekordy. |
+| 5 | Otwórz wynikowego interesanta. | Wskazane wielokrotne dane kontaktowe zostały zachowane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Dla Skrytki ePUAP, Email, telefonu i Fax można zachować więcej niż jedną wartość.
+- Scalenie nie redukuje wybranych danych wielowartościowych do pojedynczej wartości.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

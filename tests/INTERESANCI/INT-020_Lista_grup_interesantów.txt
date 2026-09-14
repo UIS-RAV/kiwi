@@ -1,0 +1,36 @@
+ID: INT-020
+Moduł: INTERESANCI
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Lista grup interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Lista grup interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- W systemie istnieje co najmniej jedna grupa interesantów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci” → „Grupy interesantów”. | System wyświetla listę grup. |
+| 2 | Zweryfikuj dane grupy. | Dla grupy widoczna jest nazwa, opis oraz lista przypisanych interesantów. |
+| 3 | Zweryfikuj dostępne akcje. | Dostępne są funkcje edycji, usunięcia oraz przycisk „Dodaj grupę”. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Lista grup prezentuje dane opisane w instrukcji.
+- Z poziomu listy dostępne są operacje zarządzania grupami.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

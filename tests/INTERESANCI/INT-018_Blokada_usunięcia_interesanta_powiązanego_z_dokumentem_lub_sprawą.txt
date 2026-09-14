@@ -1,0 +1,36 @@
+ID: INT-018
+Moduł: INTERESANCI
+Typ: Walidacyjny
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Blokada usunięcia interesanta powiązanego z dokumentem lub sprawą </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Blokada usunięcia interesanta powiązanego z dokumentem lub sprawą.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada !Admin lub !Kancelaria.
+- Interesant jest powiązany z co najmniej jednym dokumentem, sprawą lub innym obiektem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Interesanci i odszukaj powiązanego interesanta. | Rekord jest widoczny. |
+| 2 | Spróbuj wykonać operację usunięcia. | System nie pozwala skutecznie usunąć interesanta posiadającego powiązania. |
+| 3 | Ponownie wyszukaj interesanta. | Rekord nadal istnieje, a powiązania nie zostały naruszone. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Interesant powiązany z dokumentem, sprawą lub innym obiektem nie może zostać usunięty.
+- Operacja nie może naruszać istniejących powiązań.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,36 @@
+ID: INT-023
+Moduł: INTERESANCI
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Walidacja wymaganej nazwy i opisu grupy interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Walidacja wymaganej nazwy i opisu grupy interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Dodaj grupę”. | Formularz zostaje wyświetlony. |
+| 2 | Pozostaw pole „Nazwa grupy” puste i spróbuj zapisać. | System nie powinien utworzyć grupy bez wymaganej nazwy. |
+| 3 | Uzupełnij nazwę, pozostaw puste pole „Opis grupy” i spróbuj zapisać. | System nie powinien utworzyć grupy bez wymaganego opisu. |
+| 4 | Uzupełnij oba pola i zapisz. | Formularz może zostać poprawnie zapisany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Nazwa grupy jest polem wymaganym.
+- Opis grupy jest polem wymaganym.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

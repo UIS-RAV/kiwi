@@ -1,0 +1,41 @@
+ID: INT-022
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Utworzenie grupy interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Utworzenie grupy interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- W systemie istnieją interesanci możliwi do przypisania do grupy.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Grupy interesantów” i wybierz „Dodaj grupę”. | System wyświetla formularz definiowania grupy. |
+| 2 | Uzupełnij wymagane pola „Nazwa grupy” i „Opis grupy”. | Dane grupy są wprowadzone. |
+| 3 | W sekcji „Wyszukaj i dodaj do grupy” wyszukaj interesanta po dostępnych danych identyfikacyjnych. | System prezentuje pasujących interesantów. |
+| 4 | Przy wybranym rekordzie wybierz „Dodaj do grupy”. | Interesant zostaje przeniesiony do sekcji „Interesanci w grupie”. |
+| 5 | Dodaj kolejnego interesanta. | Grupa zawiera wielu interesantów. |
+| 6 | Zapisz grupę. | System zapisuje grupę. |
+| 7 | Otwórz listę grup. | Nowa grupa jest widoczna wraz z informacją o przypisanych podmiotach. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Grupa posiada wymaganą nazwę i opis.
+- Do grupy można dodać wielu interesantów.
+- Po zapisaniu grupa jest dostępna do dalszego wykorzystania.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

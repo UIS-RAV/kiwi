@@ -1,0 +1,35 @@
+ID: ORG-001
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Przejście do modułu Struktury Organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Przejście do modułu Struktury Organizacyjnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada dostęp do modułu Struktury Organizacyjnej.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Administracja”. | Moduł Administracja zostaje otwarty. |
+| 2 | Wybierz „Struktura organizacyjna”. | System przekierowuje do Struktury Organizacyjnej. |
+| 3 | Zweryfikuj strukturę. | Widoczna jest główna komórka wraz z dostępnymi elementami struktury. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

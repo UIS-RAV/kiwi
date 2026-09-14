@@ -1,0 +1,36 @@
+ID: INT-009
+Moduł: INTERESANCI
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Ograniczenie widoczności PESEL interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Ograniczenie widoczności PESEL interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Przygotowano użytkownika bez uprawnienia do podglądu PESEL oraz użytkownika z wymaganym uprawnieniem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się jako użytkownik bez wymaganego uprawnienia do podglądu PESEL i otwórz listę interesantów. | Dostęp do wartości PESEL jest ograniczony. |
+| 2 | Otwórz podgląd interesanta posiadającego PESEL. | Wartość PESEL nie jest ujawniona nieuprawnionemu użytkownikowi. |
+| 3 | Zaloguj się jako użytkownik posiadający uprawnienie „Interesant -- podgląd PESEL” oraz wymagane uprawnienie systemowe (!Kancelaria, API lub !Admin). | Użytkownik posiada wymagany zakres dostępu. |
+| 4 | Otwórz tego samego interesanta. | System wyświetla wartość PESEL zgodnie z uprawnieniami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- PESEL nie jest ujawniany użytkownikowi bez wymaganych uprawnień.
+- Uprawniony użytkownik może zobaczyć PESEL.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

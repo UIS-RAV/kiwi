@@ -1,0 +1,37 @@
+ID: INT-001
+Moduł: INTERESANCI
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Funkcjonalny
+
+<h1> Dostępność klasyfikacji interesantów podczas rejestracji i wyboru podmiotu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dostępność klasyfikacji interesantów podczas rejestracji i wyboru podmiotu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada dostęp do funkcji dodawania lub wyboru interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozpocznij rejestrację nowego interesanta. | System wyświetla formularz pozwalający wskazać typ interesanta. |
+| 2 | Zweryfikuj dostępne typy interesantów. | Dostępne są typy: Inny, Instytucja, Osoba fizyczna, Podmiot gospodarczy, Komornik, Organizacja, Podmiot gospodarczy (spoza RP), Osoba fizyczna będąca zawodem zaufania publicznego. |
+| 3 | Przejdź do funkcji wyboru istniejącego interesanta. | System prezentuje klasyfikację także podczas wyboru podmiotu. |
+| 4 | Zweryfikuj oznaczenia graficzne typów. | Każdy typ posiada dedykowaną ikonę widoczną w listach, formularzach lub widokach szczegółowych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System obsługuje wszystkie typy interesantów opisane w instrukcji.
+- Klasyfikacja jest dostępna podczas rejestracji oraz wyboru podmiotu.
+- Typ interesanta jest rozpoznawalny graficznie.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,36 @@
+ID: INT-021
+Moduł: INTERESANCI
+Typ: Funkcjonalny
+Priorytet: normalny
+Poziom: Podstawowy
+
+<h1> Widok listy grup interesantów bez zdefiniowanych grup </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Widok listy grup interesantów bez zdefiniowanych grup.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- W systemie nie zdefiniowano żadnej grupy interesantów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Grupy interesantów”. | System otwiera widok listy. |
+| 2 | Zweryfikuj zawartość widoku. | System prezentuje komunikat informujący o braku danych. |
+| 3 | Zweryfikuj przycisk „Dodaj grupę”. | Funkcja utworzenia pierwszej grupy pozostaje dostępna. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Brak grup jest prezentowany czytelnym komunikatem.
+- Użytkownik nadal może rozpocząć tworzenie grupy.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

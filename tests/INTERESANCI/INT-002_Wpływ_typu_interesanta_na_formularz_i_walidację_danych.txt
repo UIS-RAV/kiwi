@@ -1,0 +1,37 @@
+ID: INT-002
+Moduł: INTERESANCI
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Wpływ typu interesanta na formularz i walidację danych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wpływ typu interesanta na formularz i walidację danych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz „Utwórz nowego interesanta”. | Formularz zostaje wyświetlony. |
+| 2 | Wybierz typ „Inny”. | System ogranicza zakres formularza do pól właściwych dla tego typu. |
+| 3 | Zmień typ na „Osoba fizyczna”. | Zakres pól i reguł formularza zmienia się zgodnie z typem osoby fizycznej. |
+| 4 | Zmień typ na „Podmiot gospodarczy”. | System prezentuje pola i walidacje odpowiednie dla podmiotu gospodarczego. |
+| 5 | Zweryfikuj analogicznie co najmniej jeden kolejny typ interesanta. | Zakres danych formularza odpowiada wskazanej klasyfikacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wybór typu wpływa na zakres pól formularza.
+- Walidacja danych jest zależna od klasyfikacji interesanta.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

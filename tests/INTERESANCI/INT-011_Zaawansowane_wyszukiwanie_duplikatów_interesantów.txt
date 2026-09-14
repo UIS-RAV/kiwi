@@ -1,0 +1,38 @@
+ID: INT-011
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Zaawansowane wyszukiwanie duplikatów interesantów </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Zaawansowane wyszukiwanie duplikatów interesantów.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- W bazie istnieją dane umożliwiające sprawdzenie wyszukiwania zaawansowanego.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Szukaj duplikatów”. | Widok duplikatów zostaje wyświetlony. |
+| 2 | Wybierz „Wyszukiwanie zaawansowane”. | System wyświetla ustawienia zaawansowanego grupowania. |
+| 3 | Ogranicz wyszukiwanie do określonego typu interesanta. | Typ zostaje wskazany. |
+| 4 | Wskaż wartości, po których mają być wyszukiwane powielone rekordy. | Kryteria zostają ustawione. |
+| 5 | Uruchom wyszukiwanie. | System prezentuje duplikaty zgodne z typem i wskazanymi wartościami. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zaawansowane wyszukiwanie umożliwia zawężenie po typie interesanta.
+- System uwzględnia wybrane wartości grupowania.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

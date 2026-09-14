@@ -1,0 +1,36 @@
+ID: ORG-018
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Historia zmian na stanowisku </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Historia zmian na stanowisku.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+- Istnieje stanowisko odpowiednie do scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz stanowisko, dla którego wykonano wcześniej zmianę. | Stanowisko jest dostępne. |
+| 2 | Przejdź do historii zmian. | System prezentuje historię. |
+| 3 | Zweryfikuj ostatnią zmianę. | Historia zawiera wpis odpowiadający wykonanej zmianie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

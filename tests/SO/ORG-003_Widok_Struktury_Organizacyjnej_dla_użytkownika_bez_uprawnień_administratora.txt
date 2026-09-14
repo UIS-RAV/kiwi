@@ -1,0 +1,35 @@
+ID: ORG-003
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Widok Struktury Organizacyjnej dla użytkownika bez uprawnień administratora </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Widok Struktury Organizacyjnej dla użytkownika bez uprawnień administratora.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada dostęp do przeglądania Struktury Organizacyjnej, ale nie jest administratorem.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Strukturę Organizacyjną. | Struktura zostaje wyświetlona. |
+| 2 | Rozwiń komórki i stanowiska. | Użytkownik widzi budowę struktury. |
+| 3 | Zweryfikuj akcje administracyjne. | Użytkownik może jedynie przeglądać strukturę i nie może nią zarządzać. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

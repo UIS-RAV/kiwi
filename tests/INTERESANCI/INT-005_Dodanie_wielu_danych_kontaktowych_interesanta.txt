@@ -1,0 +1,39 @@
+ID: INT-005
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie wielu danych kontaktowych interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dodanie wielu danych kontaktowych interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowego lub edytowanego interesanta. | Formularz danych kontaktowych jest dostępny. |
+| 2 | Wybierz typ kontaktu „adres e-mail” i wprowadź wartość. | Kontakt e-mail zostaje dodany. |
+| 3 | Wybierz „Dodaj nowy kontakt”. | System dodaje kolejny wiersz kontaktu. |
+| 4 | Wybierz typ kontaktu „numer telefonu” i wprowadź wartość. | Numer telefonu zostaje dodany. |
+| 5 | Oznacz jeden z kontaktów jako „Preferowany”. | Wybrany kontakt otrzymuje oznaczenie preferowanego. |
+| 6 | Zapisz interesanta. | System zapisuje dane kontaktowe. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Interesant może posiadać wiele danych kontaktowych.
+- Typ kontaktu determinuje wprowadzaną wartość.
+- Oznaczenie preferowanego kontaktu zostaje zapisane.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

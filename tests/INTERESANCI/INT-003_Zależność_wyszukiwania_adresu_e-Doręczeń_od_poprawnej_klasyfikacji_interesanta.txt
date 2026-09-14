@@ -1,0 +1,37 @@
+ID: INT-003
+Moduł: INTERESANCI
+Typ: Integracyjny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Zależność wyszukiwania adresu e-Doręczeń od poprawnej klasyfikacji interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Zależność wyszukiwania adresu e-Doręczeń od poprawnej klasyfikacji interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Dostępna jest funkcja wyszukiwania adresu e-Doręczeń interesanta.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Utwórz lub otwórz interesanta z poprawnie wskazanym typem. | Interesant posiada poprawną klasyfikację. |
+| 2 | Uruchom wyszukiwanie adresu e-Doręczeń. | System wykonuje wyszukiwanie w oparciu o dane i typ interesanta. |
+| 3 | Powtórz próbę dla danych sklasyfikowanych niezgodnie z rzeczywistym rodzajem podmiotu. | Wyszukiwanie może nie odnaleźć adresu ADE, zgodnie z ograniczeniem opisanym w instrukcji. |
+| 4 | Przywróć poprawną klasyfikację i ponów operację. | System ponownie wykonuje wyszukiwanie dla prawidłowego typu. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Klasyfikacja interesanta jest uwzględniana przy wyszukiwaniu adresu e-Doręczeń.
+- Nieprawidłowy typ nie może być traktowany jako równoważny poprawnej klasyfikacji.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,35 @@
+ID: ORG-005
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Funkcjonalny
+Priorytet: normalny
+Poziom: Zaawansowany
+
+<h1> Podgląd komórki organizacyjnej </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Podgląd komórki organizacyjnej.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Istnieje komórka organizacyjna.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz strukturę. | Struktura jest widoczna. |
+| 2 | Wybierz podgląd komórki. | System prezentuje dane komórki. |
+| 3 | Porównaj dane z konfiguracją. | Prezentowane dane są zgodne z badaną komórką. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

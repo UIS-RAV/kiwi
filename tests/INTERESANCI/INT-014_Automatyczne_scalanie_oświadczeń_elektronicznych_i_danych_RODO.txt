@@ -1,0 +1,38 @@
+ID: INT-014
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Automatyczne scalanie oświadczeń elektronicznych i danych RODO </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Automatyczne scalanie oświadczeń elektronicznych i danych RODO.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Scalane rekordy posiadają różne dane w zakresie oświadczeń o korespondencji elektronicznej oraz sekcji RODO.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wskaż rekordy przeznaczone do scalenia. | Rekordy zostają wybrane. |
+| 2 | Przejdź do konfiguracji wartości wynikowych. | System prezentuje dane do scalenia. |
+| 3 | Zweryfikuj sekcję oświadczeń dotyczących otrzymywania korespondencji drogą elektroniczną oraz RODO. | System nie wymaga ręcznego wyboru pojedynczej wartości dla tych danych. |
+| 4 | Wykonaj scalenie. | System tworzy wynikowego interesanta. |
+| 5 | Otwórz dane wynikowego interesanta. | Oświadczenia i dane RODO zostały automatycznie połączone ze wskazanych rekordów. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Oświadczenia elektroniczne oraz dane RODO są scalane automatycznie.
+- Dane po scaleniu odzwierciedlają informacje z rekordów źródłowych.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

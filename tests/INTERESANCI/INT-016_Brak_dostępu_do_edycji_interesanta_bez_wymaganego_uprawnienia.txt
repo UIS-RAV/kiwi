@@ -1,0 +1,35 @@
+ID: INT-016
+Moduł: INTERESANCI
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Brak dostępu do edycji interesanta bez wymaganego uprawnienia </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Brak dostępu do edycji interesanta bez wymaganego uprawnienia.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik nie posiada !Admin ani uprawnienia „Interesanci - edycja”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz „Administracja” → „Interesanci”. | System prezentuje zakres danych dostępny użytkownikowi. |
+| 2 | Rozwiń menu akcji przy interesancie. | Akcja „Edytuj interesanta” nie jest dostępna dla nieuprawnionego użytkownika. |
+| 3 | Jeżeli środowisko pozwala, spróbuj otworzyć funkcję edycji bezpośrednio. | System nie umożliwia nieuprawnionej modyfikacji danych. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik bez uprawnienia nie może edytować danych interesanta.
+- Brak uprawnień jest egzekwowany również poza standardowym interfejsem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,37 @@
+ID: INT-025
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Edycja składu grupy interesantów — usunięcie interesanta z grupy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Edycja składu grupy interesantów — usunięcie interesanta z grupy.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Grupa zawiera co najmniej dwóch interesantów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz edycję grupy. | System prezentuje aktualnych członków grupy. |
+| 2 | W sekcji „Interesanci w grupie” usuń wybranego interesanta z grupy. | Interesant zostaje usunięty ze składu grupy. |
+| 3 | Zapisz zmiany. | Nowy skład grupy zostaje zapisany. |
+| 4 | Wyszukaj usuniętego z grupy interesanta w module Interesanci. | Karta interesanta nadal istnieje i jej dane nie zostały zmienione. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Usunięcie z grupy usuwa wyłącznie powiązanie grupowe.
+- Karta interesanta pozostaje bez zmian.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

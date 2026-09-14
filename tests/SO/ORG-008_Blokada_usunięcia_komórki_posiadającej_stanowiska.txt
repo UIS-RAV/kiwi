@@ -1,0 +1,35 @@
+ID: ORG-008
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Blokada usunięcia komórki posiadającej stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Blokada usunięcia komórki posiadającej stanowiska.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienia administratora do zarządzania Strukturą Organizacyjną.
+- Komórka posiada co najmniej jedno stanowisko.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Odszukaj badaną komórkę. | Komórka i stanowisko są widoczne. |
+| 2 | Zweryfikuj akcję „Usuń”. | Przycisk „Usuń” nie jest aktywny, dopóki komórka posiada stanowiska. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

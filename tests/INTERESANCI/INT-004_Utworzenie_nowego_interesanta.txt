@@ -1,0 +1,41 @@
+ID: INT-004
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Utworzenie nowego interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Utworzenie nowego interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | System wyświetla moduł Interesanci. |
+| 2 | Wybierz „Utwórz nowego interesanta”. | System otwiera formularz tworzenia interesanta. |
+| 3 | Wskaż właściwy typ interesanta. | Formularz dostosowuje zakres danych do klasyfikacji. |
+| 4 | Uzupełnij dane podstawowe wymagane dla wybranego typu. | Dane zostają wprowadzone. |
+| 5 | Uzupełnij co najmniej jedną daną kontaktową. | Dane kontaktowe są widoczne w formularzu. |
+| 6 | Uzupełnij adres zgodnie ze scenariuszem. | Dane adresowe są widoczne. |
+| 7 | Wybierz „Zapisz interesanta”. | System zapisuje rekord i wyświetla podgląd zapisanego interesanta. |
+| 8 | Wróć do listy i wyszukaj nowy rekord. | Nowy interesant jest dostępny w bazie. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Interesant zostaje zapisany w bazie.
+- Po zapisie system prezentuje jego podgląd.
+- Zapisany interesant może być ponownie wyszukany i wykorzystany.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

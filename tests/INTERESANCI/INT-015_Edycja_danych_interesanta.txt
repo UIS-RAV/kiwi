@@ -1,0 +1,38 @@
+ID: INT-015
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Edycja danych interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Edycja danych interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada !Admin lub uprawnienie „Interesanci - edycja”.
+- Istnieje interesant możliwy do edycji.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Administracja” → „Interesanci”. | Lista interesantów jest widoczna. |
+| 2 | Przy interesancie rozwiń menu i wybierz „Edytuj interesanta”. | System wyświetla formularz z aktualnymi danymi. |
+| 3 | Zmień lub uzupełnij wybrane dane. | Zmodyfikowane wartości są widoczne. |
+| 4 | Wybierz „Zapisz interesanta”. | System zapisuje zmiany. |
+| 5 | Ponownie otwórz interesanta. | Widoczne są nowe dane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Edycja jest dostępna dla użytkownika posiadającego wymagane uprawnienie.
+- Zmiany danych interesanta są trwałe.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,39 @@
+ID: INT-007
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Dodanie adresu interesanta i określenie typu adresu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dodanie adresu interesanta i określenie typu adresu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz interesanta i przejdź do sekcji adresowej. | Sekcja adresowa jest dostępna. |
+| 2 | W komponencie „Adres zameldowania” zaznacz „Dodaj adresy”. | System wyświetla pola adresowe. |
+| 3 | Wprowadź dane adresowe. | Adres zostaje uzupełniony. |
+| 4 | Dodaj inny adres i wskaż jego typ z listy słownikowej. | Typ adresu zostaje przypisany. |
+| 5 | Jeżeli scenariusz tego wymaga, przypisz adres do JRWA. | Powiązanie adresu z JRWA zostaje ustawione. |
+| 6 | Zapisz interesanta. | Dane adresowe zostają zapisane. |
+
+<h2> Kryteria akceptacji </h2>
+
+- System umożliwia dodawanie adresów interesanta.
+- Dla innych adresów można określić typ słownikowy.
+- Powiązanie adresu z JRWA jest zapisywane, jeżeli zostało ustawione.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

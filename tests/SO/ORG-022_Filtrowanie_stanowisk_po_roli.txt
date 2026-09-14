@@ -1,0 +1,37 @@
+ID: ORG-022
+Moduł: STRUKTURA ORGANIZACYJNA
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Filtrowanie stanowisk po roli </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Filtrowanie stanowisk po roli.
+
+<h2> Rozdział dokumentacji </h2>
+
+Struktura organizacyjna — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Istnieją stanowiska posiadające różne role.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Strukturę Organizacyjną. | Struktura jest widoczna. |
+| 2 | Uruchom filtrowanie po roli. | System umożliwia wskazanie roli. |
+| 3 | Wskaż rolę. | Filtr zostaje zastosowany. |
+| 4 | Zweryfikuj wynik. | Prezentowane są stanowiska odpowiadające wybranej roli. |
+| 5 | Usuń filtr. | Pełny widok zostaje przywrócony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Funkcja działa zgodnie z opisanym scenariuszem i uprawnieniami użytkownika.
+- Dane i stan końcowy są zgodne po ponownym otwarciu struktury.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

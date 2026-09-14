@@ -1,0 +1,37 @@
+ID: INT-006
+Moduł: INTERESANCI
+Typ: Procesowy
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Usunięcie danych kontaktowych z formularza interesanta </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Usunięcie danych kontaktowych z formularza interesanta.
+
+<h2> Rozdział dokumentacji </h2>
+
+Interesanci — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada uprawnienie !Admin lub inne uprawnienie wymagane dla badanego scenariusza.
+- Formularz interesanta zawiera co najmniej dwa wpisy kontaktowe.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz edycji interesanta. | Dane kontaktowe są widoczne. |
+| 2 | Przy wybranym kontakcie użyj czerwonej ikony usunięcia. | Wybrany wpis kontaktowy zostaje usunięty z formularza. |
+| 3 | Zapisz interesanta. | System zapisuje zmodyfikowane dane. |
+| 4 | Ponownie otwórz edycję. | Usunięty kontakt nie jest już widoczny. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Wybraną daną kontaktową można usunąć.
+- Pozostałe dane interesanta nie są usuwane.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.
