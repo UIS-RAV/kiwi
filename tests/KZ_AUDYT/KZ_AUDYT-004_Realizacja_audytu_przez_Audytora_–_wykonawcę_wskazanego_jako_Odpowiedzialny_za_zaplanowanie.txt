@@ -1,0 +1,43 @@
+ID: KZ_AUDYT-004
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Realizacja audytu przez Audytora – wykonawcę wskazanego jako Odpowiedzialny za zaplanowanie </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja czynności dostępnych dla użytkownika z rolą „Audytor – wykonawca” przypisanego jako „Odpowiedzialny za zaplanowanie”.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada rolę „Audytor – wykonawca”.
+- Użytkownik jest wskazany jako „Odpowiedzialny za zaplanowanie” w badanych audytach.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Dla audytu „planowany” otwórz menu podręczne. | Menu jest dostępne. |
+| 2 | Zweryfikuj akcje „Usuń”, „Do akceptacji” i „Edytuj”. | Akcje są dostępne zgodnie z macierzą ról. |
+| 3 | Dla audytu „zaplanowany” zweryfikuj „Rozpocznij audyt”. | Akcja jest dostępna. |
+| 4 | Dla audytu „w trakcie” zweryfikuj „Dodaj zadanie”, „Uzupełnij audyt” i „Wykonaj”. | Akcje realizacyjne są dostępne. |
+| 5 | Dla audytu „wykonany” zweryfikuj „Popraw audyt” i „Do akceptacji wynik”. | Akcje są dostępne. |
+| 6 | Otwórz listę załączników audytu. | Lista załączników jest dostępna. |
+| 7 | Pobierz załącznik. | Pobranie jest dostępne. |
+| 8 | Dla stanu, w którym dokumentacja pozwala na usunięcie załącznika, zweryfikuj ikonę usunięcia. | Usunięcie załącznika jest dostępne dla przypisanego wykonawcy. |
+| 9 | Zweryfikuj brak akcji „Zaakceptuj”, „Odrzuć”, „Zaakceptuj wynik” i „Odrzuć wynik”. | Akcje akceptacyjne nie wynikają z roli wykonawcy. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Przypisany wykonawca uzyskuje czynności realizacyjne określone w macierzy ról.
+- Uprawnienia są zależne jednocześnie od roli, przypisania i statusu audytu.
+- Rola wykonawcy nie zastępuje roli akceptującej.

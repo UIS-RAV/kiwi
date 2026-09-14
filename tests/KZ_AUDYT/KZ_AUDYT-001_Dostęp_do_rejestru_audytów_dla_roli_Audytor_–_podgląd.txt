@@ -1,0 +1,47 @@
+ID: KZ_AUDYT-001
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dostęp do rejestru audytów dla roli Audytor – podgląd </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja zakresu uprawnień roli „Audytor – podgląd” zgodnie z macierzą ról wersji 1.04.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada wyłącznie rolę „Audytor – podgląd”.
+- Co najmniej jeden audyt posiada załącznik możliwy do pobrania.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Przejdź do „Kontrola zarządcza” → „Audyty” → zakładka „Audyty”. | Rejestr audytów zostaje wyświetlony. |
+| 2 | Otwórz podgląd wybranego audytu. | Dane audytu są prezentowane wyłącznie do odczytu. |
+| 3 | Otwórz listę załączników audytu posiadającego plik. | Lista załączników zostaje wyświetlona. |
+| 4 | Pobierz wybrany załącznik. | Plik zostaje pobrany zgodnie z macierzą ról. |
+| 5 | Zweryfikuj brak przycisku „Zaplanuj audyt”. | Funkcja tworzenia audytu nie jest dostępna. |
+| 6 | Dla audytu „planowany” sprawdź brak akcji „Edytuj”, „Usuń” i „Do akceptacji”. | Akcje modyfikujące plan nie są dostępne. |
+| 7 | Dla audytu „zaplanowany” sprawdź brak akcji „Rozpocznij audyt”. | Akcja realizacyjna nie jest dostępna. |
+| 8 | Dla audytu „w trakcie” sprawdź brak akcji „Dodaj zadanie”, „Uzupełnij audyt” i „Wykonaj”. | Akcje realizacyjne nie są dostępne. |
+| 9 | Dla audytu „w akceptacji” sprawdź brak akcji „Zaakceptuj”, „Odrzuć” i „Do poprawy”. | Akcje akceptacyjne nie są dostępne. |
+| 10 | Dla audytu „wykonany” sprawdź brak akcji „Popraw audyt” i „Do akceptacji wynik”. | Akcje realizacyjne wyniku nie są dostępne. |
+| 11 | Dla audytu „wykonany w akceptacji” sprawdź brak akcji „Zaakceptuj wynik” i „Odrzuć wynik”. | Akcje akceptacji wyniku nie są dostępne. |
+| 12 | Spróbuj wykonać niedozwoloną operację bezpośrednim żądaniem, jeżeli środowisko testowe to umożliwia. | System odmawia operacji, a audyt nie zostaje zmodyfikowany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Rola zapewnia dostęp do rejestru i podglądu audytów.
+- Rola pozwala pobrać załącznik audytu.
+- Rola nie zapewnia uprawnień do planowania, realizacji ani akceptacji audytu.
+- Niedozwolona operacja nie może zostać wykonana z pominięciem interfejsu.

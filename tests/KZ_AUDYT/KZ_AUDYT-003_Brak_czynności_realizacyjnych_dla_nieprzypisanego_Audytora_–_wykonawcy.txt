@@ -1,0 +1,41 @@
+ID: KZ_AUDYT-003
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Brak czynności realizacyjnych dla nieprzypisanego Audytora – wykonawcy </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest potwierdzenie, że sama rola „Audytor – wykonawca” nie wystarcza do realizacji audytu bez przypisania do audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada rolę „Audytor – wykonawca”.
+- Użytkownik nie jest wskazany jako „Odpowiedzialny za zaplanowanie” ani członek „Zespołu audytowego” w badanych audytach.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr audytów. | Rejestr audytów jest dostępny do podglądu. |
+| 2 | Zweryfikuj brak przycisku „Zaplanuj audyt”. | Rola wykonawcy nie udostępnia funkcji utworzenia nowego audytu. |
+| 3 | Dla audytu „planowany” zweryfikuj brak akcji „Usuń”, „Do akceptacji” i „Edytuj”. | Akcje wymagające przypisania nie są dostępne. |
+| 4 | Dla audytu „zaplanowany” zweryfikuj brak „Rozpocznij audyt”. | Akcja realizacyjna nie jest dostępna. |
+| 5 | Dla audytu „w trakcie” zweryfikuj brak „Dodaj zadanie”, „Uzupełnij audyt” i „Wykonaj”. | Akcje realizacyjne nie są dostępne. |
+| 6 | Dla audytu „wykonany” zweryfikuj brak „Popraw audyt” i „Do akceptacji wynik”. | Akcje dotyczące wyniku nie są dostępne. |
+| 7 | Spróbuj wywołać jedną z akcji realizacyjnych bezpośrednim żądaniem, jeżeli środowisko na to pozwala. | System odmawia wykonania operacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Użytkownik z rolą wykonawcy ma dostęp do rejestru i podglądu.
+- Czynności realizacyjne wymagają dodatkowo przypisania użytkownika do audytu.
+- Brak przypisania nie może zostać ominięty przez bezpośrednie wywołanie operacji.

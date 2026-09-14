@@ -1,0 +1,41 @@
+ID: KZ_AUDYT-005
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Realizacja audytu przez Audytora – wykonawcę wskazanego w Zespole audytowym </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja czynności dostępnych dla użytkownika z rolą „Audytor – wykonawca” wskazanego w Zespole audytowym.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada rolę „Audytor – wykonawca”.
+- Użytkownik jest wskazany w „Zespole audytowym” badanych audytów.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz audyt „planowany” przypisany użytkownikowi poprzez Zespół audytowy. | Audyt jest dostępny. |
+| 2 | Zweryfikuj akcje „Usuń”, „Do akceptacji” i „Edytuj”. | Akcje są dostępne zgodnie z macierzą ról. |
+| 3 | Dla audytu „zaplanowany” zweryfikuj „Rozpocznij audyt”. | Akcja jest dostępna. |
+| 4 | Dla audytu „w trakcie” zweryfikuj „Dodaj zadanie”, „Uzupełnij audyt” i „Wykonaj”. | Akcje realizacyjne są dostępne. |
+| 5 | Dla audytu „wykonany” zweryfikuj „Popraw audyt” i „Do akceptacji wynik”. | Akcje są dostępne. |
+| 6 | Zweryfikuj możliwość pobrania załącznika oraz, w dozwolonym stanie, usunięcia załącznika. | Akcje załączników są dostępne zgodnie z macierzą. |
+| 7 | Porównaj z audytem, w którym użytkownik nie należy do Zespołu audytowego ani nie jest Odpowiedzialnym za zaplanowanie. | Czynności realizacyjne nie są dostępne dla audytu bez przypisania. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Przypisanie poprzez Zespół audytowy spełnia warunek realizacyjny dla roli wykonawcy.
+- Zakres akcji zależy od statusu audytu.
+- Brak przypisania do konkretnego audytu blokuje czynności realizacyjne.

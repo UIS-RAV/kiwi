@@ -1,0 +1,45 @@
+ID: KZ_AUDYT-006
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dostęp do akceptacji dla roli Audytor – akceptujący przypisanej do procesu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja zakresu uprawnień roli „Audytor – akceptujący” oraz zależności akcji od przypisania do procesu akceptacji.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada rolę „Audytor – akceptujący”.
+- Istnieją audyty w stanach „w akceptacji” i „wykonany w akceptacji”, do których użytkownik jest przypisany.
+- Istnieją analogiczne audyty, do których użytkownik nie jest przypisany.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę „Do zatwierdzenia”. | Widoczne są audyty przypisane użytkownikowi w aktualnym stanie procesu akceptacji. |
+| 2 | Dla przypisanego audytu „w akceptacji” otwórz menu podręczne. | Menu zostaje wyświetlone. |
+| 3 | Zweryfikuj „Zaakceptuj”, „Odrzuć”, „Do poprawy” i „Edytuj”. | Akcje są dostępne zgodnie z macierzą ról. |
+| 4 | Dla przypisanego audytu „wykonany” zweryfikuj „Popraw audyt”, jeżeli akcja jest dostępna w danym stanie. | Akcja odpowiada macierzy ról i maszynie stanów. |
+| 5 | Dla przypisanego audytu „wykonany w akceptacji” zweryfikuj „Zaakceptuj wynik” i „Odrzuć wynik”. | Akcje są dostępne. |
+| 6 | Otwórz audyt nieprzypisany do użytkownika. | Audyt może być dostępny do podglądu, ale nie udostępnia czynności akceptacyjnych. |
+| 7 | Zweryfikuj brak akcji akceptacyjnych dla nieprzypisanego audytu. | Akcje są niedostępne. |
+| 8 | Zweryfikuj brak przycisku „Zaplanuj audyt”. | Rola akceptująca nie udostępnia tworzenia audytu. |
+| 9 | Dla audytu „zaplanowany” i „w trakcie” zweryfikuj brak czynności realizacyjnych. | Rola akceptująca nie udostępnia realizacji audytu. |
+| 10 | Spróbuj wykonać akcję akceptacyjną dla nieprzypisanego audytu bezpośrednim żądaniem, jeżeli środowisko to umożliwia. | System odmawia wykonania operacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Akcje akceptacyjne są dostępne tylko użytkownikowi z rolą akceptującą przypisanemu do procesu.
+- Rola akceptująca nie daje uprawnień do planowania ani realizacji.
+- Brak przypisania do procesu blokuje wykonanie akcji również poza interfejsem.

@@ -1,0 +1,33 @@
+ID: KZ_AUDYT-113
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: wysoki
+Poziom: Rozszerzony
+
+<h1> Zakładka Audyty - zakres danych i role </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja zakładki Audyty, która zawiera wszystkie obiekty audytu i jest dostępna dla trzech ról audytowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.5 Zakładki rejestru audytu
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj się kolejno użytkownikami posiadającymi role: Audytor – podgląd, Audytor – wykonawca planista, Audytor – wykonawca i Audytor – akceptujący. | Każdy z użytkowników posiada dostęp do modułu Audyty zgodnie z zakresem roli. |
+| 2 | Dla każdego użytkownika otwórz zakładkę „Audyty”. | Zakładka jest dostępna i prezentuje rejestr audytów. |
+| 3 | Zweryfikuj dostępność danych i porównaj z rolą użytkownika. | Dane są dostępne do podglądu, a akcje modyfikujące są ograniczone zgodnie z macierzą ról. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Zakładka „Audyty” jest dostępna dla użytkowników z rolami audytowymi posiadającymi dostęp do rejestru: Audytor – podgląd, Audytor – wykonawca planista, Audytor – wykonawca oraz Audytor – akceptujący.
+- Zakładka zawiera wszystkie obiekty audytu dostępne użytkownikowi.

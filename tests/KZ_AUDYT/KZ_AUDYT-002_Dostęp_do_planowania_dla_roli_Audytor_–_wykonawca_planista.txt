@@ -1,0 +1,44 @@
+ID: KZ_AUDYT-002
+Moduł: KZ_AUDYT
+Typ: Uprawnieniowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Dostęp do planowania dla roli Audytor – wykonawca planista </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja zakresu uprawnień roli „Audytor – wykonawca planista” po zmianach w wersji 1.04.
+
+<h2> Rozdział dokumentacji </h2>
+
+1.2 Role
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- W rejestrze istnieją audyty przygotowane w statusach wymaganych przez scenariusz.
+- Użytkownik posiada wyłącznie rolę „Audytor – wykonawca planista”.
+- Użytkownik nie posiada roli „Audytor – wykonawca” ani „Audytor – akceptujący”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz rejestr audytów. | Rejestr jest dostępny. |
+| 2 | Zweryfikuj przycisk „Zaplanuj audyt”. | Przycisk jest dostępny. |
+| 3 | Otwórz formularz „Zaplanuj audyt”, a następnie zamknij go bez zapisu. | Formularz jest dostępny i może zostać zamknięty. |
+| 4 | Dla audytu „planowany” otwórz menu podręczne. | Menu zostaje wyświetlone. |
+| 5 | Zweryfikuj akcje „Edytuj audyt”, „Usuń audyt” i „Do akceptacji”. | Wymienione akcje są dostępne. |
+| 6 | Otwórz listę załączników audytu i pobierz plik. | Pobranie załącznika jest dostępne. |
+| 7 | Dla audytu „zaplanowany” zweryfikuj brak akcji „Rozpocznij audyt”. | Akcja realizacji nie wynika z roli planisty. |
+| 8 | Dla audytu „w trakcie” zweryfikuj brak akcji „Dodaj zadanie”, „Uzupełnij audyt” i „Wykonaj”. | Akcje realizacji nie są dostępne. |
+| 9 | Dla audytu „w akceptacji” zweryfikuj brak akcji „Zaakceptuj”, „Odrzuć” i „Do poprawy”. | Akcje akceptacyjne nie są dostępne. |
+| 10 | Dla audytu „wykonany w akceptacji” zweryfikuj brak akcji akceptacji wyniku. | Akcje akceptacji wyniku nie są dostępne. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Planista może tworzyć i planować audyty.
+- Planista może wykonywać akcje planistyczne określone w macierzy ról.
+- Sama rola planisty nie daje uprawnień do realizacji ani akceptacji audytu.

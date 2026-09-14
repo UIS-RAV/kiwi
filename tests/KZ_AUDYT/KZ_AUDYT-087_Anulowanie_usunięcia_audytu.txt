@@ -1,0 +1,35 @@
+ID: KZ_AUDYT-087
+Moduł: KZ_AUDYT
+Typ: Walidacyjny
+Priorytet: normalny
+Poziom: Funkcjonalny
+
+<h1> Anulowanie usunięcia audytu </h1>
+
+<h2> Cel testu </h2>
+
+Weryfikacja anulowania operacji usunięcia audytu.
+
+<h2> Rozdział dokumentacji </h2>
+
+2.2.4.3 Usuń audyt
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+- Użytkownik posiada rolę Audytor – wykonawca planista.
+- Słowniki wymagane przez formularz zawierają wartości.
+- Istnieje audyt w statusie „planowany”.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz funkcję „Usuń audyt”. | Wyświetlone zostaje okno potwierdzenia. |
+| 2 | Kliknij „Anuluj”. | Okno zostaje zamknięte. |
+| 3 | Zweryfikuj audyt w rejestrze. | Audyt nadal istnieje i zachował dane oraz status. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Po wybraniu „Anuluj” okno zostaje zamknięte, a audyt pozostaje w rejestrze.
