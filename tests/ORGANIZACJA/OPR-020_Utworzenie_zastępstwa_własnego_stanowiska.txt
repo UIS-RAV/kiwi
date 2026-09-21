@@ -1,0 +1,35 @@
+ID: OPR-020
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Utworzenie zastępstwa własnego stanowiska </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Utworzenie zastępstwa własnego stanowiska.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Zastępstwa — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Organizacja → Zastępstwa i rozpocznij dodawanie zastępstwa. | Formularz jest widoczny. |
+| 2 | Wskaż osobę zastępującą i stanowisko do zastępstwa. | Dane zostają ustawione. |
+| 3 | Ustaw początek zastępstwa; opcjonalnie zakończenie i powód. | Okres zostaje określony; zakończenie nie jest obowiązkowe. |
+| 4 | Wybierz „Zapisz zastępstwo”. | Zastępstwo zostaje utworzone. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Utworzenie zastępstwa własnego stanowiska” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

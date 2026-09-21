@@ -1,0 +1,34 @@
+ID: OPR-027
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Dodanie zewnętrznego kalendarza iCal </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dodanie zewnętrznego kalendarza iCal.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Kalendarz — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Organizacja → Kalendarz i w „Moje kalendarze” wybierz „Dodaj kalendarz”. | Formularz zostaje otwarty. |
+| 2 | Wpisz nazwę i zaznacz „Zewnętrzny kalendarz”. | Formularz zostaje ustawiony dla źródła zewnętrznego. |
+| 3 | Wklej adres w formacie iCal i zapisz. | Kalendarz staje się dostępny w EZD. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Dodanie zewnętrznego kalendarza iCal” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

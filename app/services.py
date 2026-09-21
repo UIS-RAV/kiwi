@@ -247,30 +247,48 @@ def get_test_executions_with_comments_from_run(tcms, run_id):
     """
     Pobiera wykonania testów z Test Run
     wraz z komentarzami przypisanymi do wykonania.
+    Pokazuje postęp pobierania komentarzy.
     """
     executions = tcms.exec.TestExecution.filter({
         "run": run_id
     })
 
-    for execution in executions:
+    total = len(executions)
+
+    print(f"Znaleziono {total} wykonań.")
+    print("Pobieranie komentarzy...")
+
+    for index, execution in enumerate(executions, start=1):
         execution_id = execution.get("id")
         execution["comments"] = []
 
-        if execution_id is None:
-            continue
+        if execution_id is not None:
+            try:
+                comments = tcms.exec.TestExecution.get_comments(
+                    execution_id
+                )
 
-        try:
-            comments = tcms.exec.TestExecution.get_comments(
-                execution_id
-            )
+                execution["comments"] = comments or []
 
-            execution["comments"] = comments or []
+            except Exception as error:
+                print(
+                    f"\nNie udało się pobrać komentarzy "
+                    f"dla Execution ID {execution_id}: {error}"
+                )
 
-        except Exception as error:
+        # pokazuj postęp co 10 testów oraz na końcu
+        if index % 10 == 0 or index == total:
+            percent = (index / total * 100) if total else 100
+
             print(
-                f"Nie udało się pobrać komentarzy "
-                f"dla Execution ID {execution_id}: {error}"
+                f"\rPobrano komentarze: "
+                f"{index}/{total} "
+                f"({percent:.1f}%)",
+                end="",
+                flush=True,
             )
+
+    print("\nKomentarze pobrane.")
 
     return executions
 

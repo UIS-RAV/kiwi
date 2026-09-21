@@ -1,0 +1,34 @@
+ID: OPR-009
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Edycja oczekującego wniosku urlopowego </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Edycja oczekującego wniosku urlopowego.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz oczekujący wniosek i uruchom edycję. | Formularz edycji jest dostępny. |
+| 2 | Zmień dopuszczone dane i zapisz. | Wniosek zostaje zaktualizowany. |
+| 3 | Ponownie otwórz podgląd. | Widoczne są zapisane zmiany. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Edycja oczekującego wniosku urlopowego” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

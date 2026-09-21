@@ -1,0 +1,35 @@
+ID: OPR-003
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Akceptacja wniosku o delegację </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Akceptacja wniosku o delegację.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Delegacje — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz wniosek wymagający decyzji. | Dane wniosku są widoczne. |
+| 2 | Wybierz akcję akceptacji. | System umożliwia potwierdzenie. |
+| 3 | Naciśnij „Akceptuj wniosek”. | Wniosek zostaje zaakceptowany. |
+| 4 | Otwórz widok „zatwierdzone przeze mnie”. | Wniosek jest dostępny w tym widoku. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Akceptacja wniosku o delegację” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

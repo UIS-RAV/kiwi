@@ -1,0 +1,35 @@
+ID: OPR-014
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Wycofanie zaakceptowanego urlopu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wycofanie zaakceptowanego urlopu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Uruchom wycofanie zaakceptowanego urlopu. | Proces wycofania zostaje rozpoczęty. |
+| 2 | Przekaż wycofanie do akceptacji. | Wniosek otrzymuje status „W trakcie wycofania”. |
+| 3 | Doprowadź do akceptacji wycofania. | Wniosek otrzymuje status „Wycofany”. |
+| 4 | Zweryfikuj kalendarz i zastępstwo. | Wpis urlopowy i zastępstwo zostają usunięte. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Wycofanie zaakceptowanego urlopu” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

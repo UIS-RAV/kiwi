@@ -1,0 +1,34 @@
+ID: OPR-005
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Podgląd delegacji zatwierdzonych i odrzuconych przez osobę zatwierdzającą </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Podgląd delegacji zatwierdzonych i odrzuconych przez osobę zatwierdzającą.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Delegacje — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Organizacja → Delegacje i rozwiń listę widoków. | Dostępne są widoki delegacji. |
+| 2 | Wybierz „zatwierdzone przeze mnie” i otwórz wniosek. | Podgląd zaakceptowanego wniosku zostaje otwarty. |
+| 3 | Wybierz „odrzucone przeze mnie” i otwórz wniosek. | Podgląd odrzuconego wniosku zostaje otwarty. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Podgląd delegacji zatwierdzonych i odrzuconych przez osobę zatwierdzającą” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

@@ -1,0 +1,33 @@
+ID: OPR-015
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Uprawnieniowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Wgląd do wszystkich wniosków urlopowych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Wgląd do wszystkich wniosków urlopowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj użytkownika z uprawnieniem „Wnioski urlopowe – wszystkie” i otwórz moduł. | Dostępna jest zakładka „Wszystkie”. |
+| 2 | Otwórz zakładkę „Wszystkie”. | System prezentuje pełną listę wniosków niezależnie od autora i osoby akceptującej. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Wgląd do wszystkich wniosków urlopowych” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

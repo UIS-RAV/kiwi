@@ -1,0 +1,33 @@
+ID: OPR-016
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Funkcjonalny
+Priorytet: normalny
+Poziom: Zaawansowany
+
+<h1> Zbiorczy wydruk kilku wniosków urlopowych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Zbiorczy wydruk kilku wniosków urlopowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | W zakładce Wszystkie zaznacz kilka wniosków. | Wnioski zostają wybrane. |
+| 2 | Wybierz Akcje → „Drukuj wnioski urlopowe”. | System generuje zbiorczy wydruk zaznaczonych wniosków. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Zbiorczy wydruk kilku wniosków urlopowych” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

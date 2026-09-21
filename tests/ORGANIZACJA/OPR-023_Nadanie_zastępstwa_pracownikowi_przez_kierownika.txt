@@ -1,0 +1,36 @@
+ID: OPR-023
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Nadanie zastępstwa pracownikowi przez kierownika </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Nadanie zastępstwa pracownikowi przez kierownika.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Zastępstwa — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Wybierz „Dodaj zastępstwo pracownika”. | Formularz zostaje otwarty. |
+| 2 | Wskaż osobę zastępowaną z listy podległych pracowników. | Osoba zostaje wybrana zgodnie z hierarchią. |
+| 3 | Wskaż osobę zastępującą. | Osoba zastępująca zostaje dodana. |
+| 4 | Ustaw początek; opcjonalnie zakończenie i powód. | Okres zostaje ustawiony. |
+| 5 | Zapisz zastępstwo. | Zastępstwo pracownika zostaje utworzone. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Nadanie zastępstwa pracownikowi przez kierownika” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

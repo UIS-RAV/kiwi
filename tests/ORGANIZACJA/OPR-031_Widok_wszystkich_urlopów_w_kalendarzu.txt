@@ -1,0 +1,33 @@
+ID: OPR-031
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Uprawnieniowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Widok wszystkich urlopów w kalendarzu </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Widok wszystkich urlopów w kalendarzu.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Kalendarz — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj użytkownika z „Wnioski urlopowe – wszystkie” i otwórz kalendarz. | Kalendarz jest widoczny. |
+| 2 | Dla kalendarza urlopów zaznacz „Wszystkie”. | System prezentuje listę wszystkich urlopów zgodnie z uprawnieniem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Widok wszystkich urlopów w kalendarzu” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

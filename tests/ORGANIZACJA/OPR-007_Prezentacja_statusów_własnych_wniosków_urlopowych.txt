@@ -1,0 +1,33 @@
+ID: OPR-007
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Funkcjonalny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Prezentacja statusów własnych wniosków urlopowych </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Prezentacja statusów własnych wniosków urlopowych.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz moduł Wnioski urlopowe. | Moduł jest widoczny. |
+| 2 | Sprawdź zakładki Zatwierdzone, Oczekujące i Odrzucone. | W każdej zakładce prezentowane są wnioski odpowiadające danemu etapowi obsługi. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Prezentacja statusów własnych wniosków urlopowych” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

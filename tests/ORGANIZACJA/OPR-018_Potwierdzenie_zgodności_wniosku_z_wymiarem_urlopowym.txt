@@ -1,0 +1,34 @@
+ID: OPR-018
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Potwierdzenie zgodności wniosku z wymiarem urlopowym </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Potwierdzenie zgodności wniosku z wymiarem urlopowym.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz zakładkę Wszystkie przy aktywnej funkcji potwierdzania zgodności. | Dostępne są operacje potwierdzenia. |
+| 2 | Przy wniosku wybierz „Oznacz jako zgodny z wymiarem urlopowym”. | Wniosek zostaje oznaczony odpowiednią ikoną. |
+| 3 | Wygeneruj wydruk. | Wydruk zawiera informację o potwierdzeniu zgodności. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Potwierdzenie zgodności wniosku z wymiarem urlopowym” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

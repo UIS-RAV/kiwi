@@ -1,0 +1,34 @@
+ID: OPR-011
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Walidacyjny
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Blokada usunięcia wniosku przekazanego do innego systemu EZD </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Blokada usunięcia wniosku przekazanego do innego systemu EZD.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz oczekujący wniosek przekazany do innego systemu EZD. | Wniosek jest widoczny. |
+| 2 | Spróbuj go usunąć. | System nie umożliwia usunięcia przekazanego wniosku. |
+| 3 | Ponownie wyszukaj wniosek. | Wniosek nadal istnieje. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Blokada usunięcia wniosku przekazanego do innego systemu EZD” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

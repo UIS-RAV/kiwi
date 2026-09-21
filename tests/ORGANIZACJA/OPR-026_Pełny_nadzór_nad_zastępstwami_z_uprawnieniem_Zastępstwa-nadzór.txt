@@ -1,0 +1,33 @@
+ID: OPR-026
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Uprawnieniowy
+Priorytet: wysoki
+Poziom: Zaawansowany
+
+<h1> Pełny nadzór nad zastępstwami z uprawnieniem Zastępstwa-nadzór </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Pełny nadzór nad zastępstwami z uprawnieniem Zastępstwa-nadzór.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Zastępstwa — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Zaloguj użytkownika z „Zastępstwa-nadzór” lub !Admin i otwórz pełny widok zastępstw. | System udostępnia zastępstwa objęte pełnym nadzorem. |
+| 2 | Rozpocznij nadanie zastępstwa dla dowolnego pracownika. | System umożliwia definiowanie nowego zastępstwa zgodnie z uprawnieniem. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Pełny nadzór nad zastępstwami z uprawnieniem Zastępstwa-nadzór” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

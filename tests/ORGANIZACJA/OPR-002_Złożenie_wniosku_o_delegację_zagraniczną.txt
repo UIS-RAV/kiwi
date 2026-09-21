@@ -1,0 +1,35 @@
+ID: OPR-002
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Złożenie wniosku o delegację zagraniczną </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Złożenie wniosku o delegację zagraniczną.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Delegacje — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz formularz nowej delegacji. | Formularz jest widoczny. |
+| 2 | Wybierz delegację zagraniczną. | System przełącza formularz na wariant zagraniczny. |
+| 3 | Uzupełnij wymagane dane zgodnie z formularzem. | Dane zostają przyjęte. |
+| 4 | Złóż wniosek. | Wniosek zostaje utworzony. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Złożenie wniosku o delegację zagraniczną” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

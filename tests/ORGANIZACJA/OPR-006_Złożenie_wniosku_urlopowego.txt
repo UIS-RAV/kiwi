@@ -1,0 +1,37 @@
+ID: OPR-006
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Złożenie wniosku urlopowego </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Złożenie wniosku urlopowego.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Urlopy — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Organizacja → Wnioski urlopowe i wybierz „Złóż wniosek o urlop”. | Formularz zostaje otwarty. |
+| 2 | Wskaż stanowisko rejestrujące dokument i rodzaj urlopu. | Dane zostają ustawione. |
+| 3 | Wskaż osobę lub osoby zastępujące, jeśli przewiduje to scenariusz. | Zastępcy zostają dodani. |
+| 4 | Uzupełnij okres urlopu, uzasadnienie i ewentualne załączniki. | Dane są kompletne. |
+| 5 | Wybierz „Złóż wniosek o urlop”. | Wniosek zostaje utworzony. |
+| 6 | Wskaż osobę odpowiedzialną za akceptację. | Wniosek zostaje przekazany do akceptacji. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Złożenie wniosku urlopowego” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

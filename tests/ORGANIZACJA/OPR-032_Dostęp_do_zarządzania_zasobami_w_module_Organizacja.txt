@@ -1,0 +1,34 @@
+ID: OPR-032
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Funkcjonalny
+Priorytet: normalny
+Poziom: Zaawansowany
+
+<h1> Dostęp do zarządzania zasobami w module Organizacja </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Dostęp do zarządzania zasobami w module Organizacja.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Zasoby — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Rozwiń menu „Organizacja”. | System prezentuje dostępne funkcje organizacyjne. |
+| 2 | Otwórz funkcję zarządzania zasobami, jeśli jest aktywna w środowisku. | System przechodzi do widoku zasobów. |
+| 3 | Zweryfikuj prezentowane zasoby. | System prezentuje zasoby dostępne w środowisku użytkownika. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Dostęp do zarządzania zasobami w module Organizacja” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.

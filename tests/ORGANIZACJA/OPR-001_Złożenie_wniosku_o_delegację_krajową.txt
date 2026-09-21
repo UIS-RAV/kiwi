@@ -1,0 +1,37 @@
+ID: OPR-001
+Moduł: ORGANIZACJA PRACOWNIKA
+Typ: Procesowy
+Priorytet: krytyczny/natychmiastowy
+Poziom: Zaawansowany
+
+<h1> Złożenie wniosku o delegację krajową </h1>
+
+<h2> Cel testu </h2>
+
+Celem testu jest weryfikacja scenariusza: Złożenie wniosku o delegację krajową.
+
+<h2> Rozdział dokumentacji </h2>
+
+Moduł organizacji — Delegacje — instrukcja eZD v1.4.1
+
+<h2> Warunki wstępne </h2>
+
+- System eZD jest uruchomiony i dostępny.
+- Użytkownik jest zalogowany do systemu eZD.
+
+<h2> Kroki testowe </h2>
+
+| Krok | Czynność | Oczekiwany rezultat |
+|---:|---|---|
+| 1 | Otwórz Organizacja → Delegacje → Złóż wniosek o delegację. | System otwiera formularz. |
+| 2 | Wybierz „Delegacja krajowa”. | Formularz zostaje ustawiony dla delegacji krajowej. |
+| 3 | Opcjonalnie uzupełnij numer legitymacji i Numer Polecenia Służbowego. | Dane opcjonalne są przyjmowane. |
+| 4 | Wskaż tryb delegacji, w tym zaproszenie lub wezwanie, zgodnie ze scenariuszem. | Wybrany tryb zostaje ustawiony. |
+| 5 | Uzupełnij pozostałe wymagane dane wyjazdu. | Formularz jest gotowy do złożenia. |
+| 6 | Złóż wniosek. | Wniosek zostaje utworzony i przekazany do dalszej obsługi. |
+
+<h2> Kryteria akceptacji </h2>
+
+- Scenariusz „Złożenie wniosku o delegację krajową” działa zgodnie z instrukcją eZD v1.4.1.
+- Stan końcowy i uprawnienia użytkownika są zgodne z oczekiwanym rezultatem.
+- Wszystkie kroki testowe zakończyły się wynikiem zgodnym z oczekiwanym rezultatem.
