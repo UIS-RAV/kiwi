@@ -1069,9 +1069,18 @@ def export_run_report_to_docx(
 
     document.add_page_break()
 
-    for execution in sorted(
-            executions,
-            key=lambda item: item.get("id", 0),
+    sorted_executions = sorted(
+        executions,
+        key=lambda item: item.get("id", 0),
+    )
+
+    total = len(sorted_executions)
+
+    print(f"\nGenerowanie raportu dla {total} wykonań...")
+
+    for index, execution in enumerate(
+            sorted_executions,
+            start=1,
     ):
         _report_add_execution_section(
             document=document,
@@ -1079,6 +1088,19 @@ def export_run_report_to_docx(
             execution=execution,
             status_map=status_map,
         )
+
+        if index % 10 == 0 or index == total:
+            percent = (index / total * 100) if total else 100
+
+            print(
+                f"\rGenerowanie raportu: "
+                f"{index}/{total} "
+                f"({percent:.1f}%)",
+                end="",
+                flush=True,
+            )
+
+    print("\nRaport wygenerowany. Zapisywanie pliku DOCX...")
 
     output_dir = _ensure_output_dir()
     timestamp = datetime.now().strftime(
